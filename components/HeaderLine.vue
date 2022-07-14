@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full md:w-7/12 py-6">
+  <div class="relative w-full md:w-7/12 py-6 mt-10">
     <div class="absolute inset-0 flex items-center" aria-hidden="true">
       <div class="w-full border-t border-accent" />
     </div>
