@@ -13,16 +13,16 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
   ],
-  // daisyui: {
-  //   themes: [
-  //     {
-  //       'default': {
-  //         "primary": "#E8E8E8", // Primary theme color (logo, buttons)
-  //         "primary-content": "#2E2E2E",
-  //         "secondary": "#000000", // Secondary theme color (alt icons)
-  //         "secondary-content": "#2BFB02",
-  //       },
-  //     },
-  //   ],
-  // },
+  daisyui: {
+    themes: [
+      {
+        'default': {
+          "primary": "#28292A", // Primary theme color (logo, buttons)
+          "secondary": "#586CB2", // Secondary theme color (alt icons)
+          "accent": "#CCCCCC",
+          "neutral": "#F1F3F9"
+        },
+      },
+    ],
+  },
 }
