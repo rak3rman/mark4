@@ -1,0 +1,8 @@
+/* Fit to page on Nuxt.js using Tailwinds CSS */
+#__nuxt {
+  height: 100%
+}
+
+#__layout {
+  height: 100%
+}
