@@ -4,7 +4,7 @@
     <RAFBanner />
 
     <div class="pb-16">
-      <Popover class="fixed top-0 left-0 right-0 py-4 backdrop-blur-xl">
+      <Popover class="fixed top-0 left-0 right-0 py-4 backdrop-blur-xl z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
           <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
             <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
@@ -23,10 +23,10 @@
             </div>
             <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
               <div class="md:space-x-8 pr-6">
-                <a v-for="(item, index) in navigation" :key="item.name" :href="item.href" class="font-mono text-accent hover:text-secondary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
+                <a v-for="(item, index) in navigation" :key="item.name" :href="item.href" class="font-mono text-sm text-accent hover:text-secondary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
               </div>
               <span class="inline-flex rounded-md shadow">
-                <a href="/resume" class="inline-flex items-center px-4 py-2 border border-secondary text-base font-mono rounded-md text-secondary hover:bg-primary-focus"> Resume </a>
+                <a href="/resume" class="inline-flex items-center px-4 py-2 border border-secondary text-sm font-mono rounded-md text-secondary hover:bg-primary-focus"> Resume </a>
               </span>
             </div>
           </nav>
@@ -83,7 +83,7 @@
               <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
                 <figure>
                   <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-                    <img class="rounded-lg shadow-lg object-cover object-center" src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/fa35b458-67ec-4711-0256-9f68535cbd00/xl" alt="Portrait of Radison" width="1184" height="1376" />
+                    <img class="rounded-lg shadow-lg object-cover object-top" src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/60165710-ba66-465f-f366-ba1c3b73cd00/xl" alt="Portrait of Radison" width="1184" height="1376" />
                   </div>
                 </figure>
               </div>
@@ -106,23 +106,40 @@
 
           <!--  02. Experience  -->
           <HeaderLine num="02." title="Experience" id="experience" />
-          <div class="w-full">
+          <div class="w-full pb-1">
             <div class="sm:hidden">
               <label for="tabs" class="sr-only">Select a tab</label>
               <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-              <select id="tabs" name="tabs" class="block w-full focus:ring-secondary focus:border-secondary border-accent rounded-md">
-                <option v-for="tab in experience" :key="tab.name" :selected="tab.current">{{ tab.name }}</option>
+              <select id="tabs" name="tabs" class="block w-full bg-primary focus:ring-secondary focus:border-secondary border-neutral text-neutral rounded-md">
+                <option v-for="tab in expTabs" :key="tab.id" :selected="tab.id === selectedExpTab">{{ tab.name }}</option>
               </select>
             </div>
             <div class="hidden sm:block">
               <div class="border-b border-gray-200">
                 <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-                  <a v-for="tab in experience" :key="tab.name" :href="tab.href" :class="[tab.current ? 'border-secondary text-secondary-focus' : 'border-transparent text-accent hover:text-accent-focus hover:border-accent', 'group inline-flex items-center py-4 px-1 border-b-2 font-medium text-sm']" :aria-current="tab.current ? 'page' : undefined">
-                    <component :is="tab.icon" :class="[tab.current ? 'text-secondary' : 'text-accent group-hover:text-accent-focus', '-ml-0.5 mr-2 h-5 w-5']" aria-hidden="true" />
+                  <button v-for="tab in expTabs" :key="tab.id" @click="updateExpTab(tab.id)" :class="[tab.id === selectedExpTab ? 'border-secondary text-secondary' : 'border-transparent text-accent hover:text-secondary hover:border-accent', 'group inline-flex items-center py-4 px-1 border-b-2 font-medium text-sm']" :aria-current="tab.id === selectedExpTab ? 'page' : undefined">
+                    <component :is="tab.icon" :class="[tab.id === selectedExpTab ? 'text-secondary' : 'text-accent group-hover:text-secondary', '-ml-0.5 mr-2 h-5 w-5']" aria-hidden="true" />
                     <span>{{ tab.name }}</span>
-                  </a>
+                  </button>
                 </nav>
               </div>
+            </div>
+          </div>
+
+          <!--  02. Experience, Tab Content  -->
+          <div v-for="entry in expEntries">
+            <div v-if="entry.tags.includes(selectedExpTab)" class="pt-2">
+              <h3 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
+                {{ entry.title }} <span class="text-accent">@ {{ entry.company }}</span>
+              </h3>
+              <h4 class="leading-normal text-neutral text-sm font-mono text-left">
+                {{ entry.period }} // {{ entry.location }}
+              </h4>
+              <ul class="list-disc text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pl-5">
+                <li v-for="bullet in entry.bullets">
+                  {{ bullet }}
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -159,73 +176,94 @@ const navigation = [
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ]
+</script>
 
-const experience = [
+<script>
+import {CameraIcon, DesktopComputerIcon, UserGroupIcon} from "@heroicons/vue/solid";
+
+const selectedExpTab = 'cs'
+const expTabs = [
+  { id: 'cs', name: 'Computer Science', icon: DesktopComputerIcon },
+  { id: 'lead', name: 'Leadership', icon: UserGroupIcon },
+  { id: 'photo', name: 'Photography', icon: CameraIcon},
+]
+const expEntries = [
   {
-    name: 'Computer Science',
-    href: '#',
-    icon: DesktopComputerIcon,
-    current: true,
-    entries: [
-      {
-        title: 'Project Manager & Info Sec Analyst',
-        company: 'University of Illinois Chicago',
-        period: 'Feb 2022 - Present',
-        location: 'Chicago, IL',
-        bullets: [
-            'Managed a team of 7 web and database developers working on over 10 large-scale, full-stack web applications',
-            'Integrated new project management software (Paymo) and maintained framework templates/documentation in Github',
-            'Single-handedly developed and published a Shibboleth (SAML SSO) to Express (Node.js) authentication package on npm',
-            'Drafted and enforced university IT policies by working with UI system auditors and department leadership',
-            'Aggregated sensitive data usages/locations and identified exposure risks across all 500+ faculty and staff',
-        ]
-      },
-      {
-        title: 'Digital Lead',
-        company: 'Steven Olikara for U.S. Senate',
-        period: 'Apr 2022 - Present',
-        location: 'Milwaukee, WI',
-        bullets: [
-          'Completely rebuilt campaign website from the ground up using Nuxt v3, Tailwinds, visited by 1,000’s of Wisconsinites daily' +
-          'Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN, Informr' +
-          'Coordinated a team of web developers and content creators to rapidly push media; took photographs in the field',
-        ]
-      },
-      {
-        title: 'Web Security Intern',
-        company: 'U.S. Department of Veterans Affairs',
-        period: 'Sept 2021 - May 2022',
-        location: 'Remote',
-        bullets: [
-          'Examined and improved the operational protection strategies of dmeinterns.org through phishing campaigns, pen testing, web scanning tools, WordPress plugin security evaluations, and creation of strict security standards for interns' +
-          'Educated other VA departments on password protocol and breach prevention through Slack',
-        ]
-      },
-      {
-        title: 'Web & Database Developer',
-        company: 'University of Illinois Chicago',
-        period: 'June 2021 - Feb 2022',
-        location: 'Chicago, IL',
-        bullets: [
-          'Developed and maintained custom full-stack web applications using Laravel, Vue, and SQL, used by 3,000+ active users' +
-          'Created new documentation and issue reporting standards with Atlassian Jira, Bitbucket, increasing readability by 3-fold' +
-          'Presented projects to university admin and trained faculty/staff on application usage regularly (via MS Teams, Calendly)',
-        ]
-      },
-      {
-        title: 'Dev-Ops Intern',
-        company: 'Montel Technologies',
-        period: 'Nov 2017 - Sept 2018',
-        location: 'Loves Park, IL',
-        bullets: [
-          'Lead front-end web developer on an enterprise-grade security unification solution (MTOP) utilizing Node.js, MongoDB' +
-          'Configured mission-critical SLA networks and infrastructure in the field by installing switches, IP cameras, access control' +
-          'Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge units',
-        ]
-      },
+    title: 'Project Manager & Info Sec Analyst',
+    company: 'University of Illinois Chicago',
+    period: 'Feb 2022 - Present',
+    location: 'Chicago, IL',
+    tags: ['cs', 'lead'],
+    bullets: [
+      'Managed a team of 7 web and database developers working on over 10 large-scale, full-stack web applications',
+      'Integrated new project management software (Paymo) and maintained framework templates/documentation in Github',
+      'Single-handedly developed and published a Shibboleth (SAML SSO) to Express (Node.js) authentication package on npm',
+      'Drafted and enforced university IT policies by working with UI system auditors and department leadership',
+      'Aggregated sensitive data usages/locations and identified exposure risks across all 500+ faculty and staff',
     ]
   },
-  { name: 'Leadership', href: '#', icon: UserGroupIcon, current: false },
-  { name: 'Photography', href: '#', icon: CameraIcon, current: false },
+  {
+    title: 'Digital Lead',
+    company: 'Steven Olikara for U.S. Senate',
+    period: 'Apr 2022 - Present',
+    location: 'Milwaukee, WI',
+    tags: ['cs', 'lead', 'photo'],
+    bullets: [
+      'Completely rebuilt campaign website from the ground up using Nuxt v3, Tailwinds, visited by 1,000’s of Wisconsinites daily',
+      'Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN, Informr',
+      'Coordinated a team of web developers and content creators to rapidly push media; took photographs in the field',
+    ]
+  },
+  {
+    title: 'Web Security Intern',
+    company: 'U.S. Department of Veterans Affairs',
+    period: 'Sept 2021 - May 2022',
+    location: 'Remote',
+    tags: ['cs'],
+    bullets: [
+      'Examined and improved the operational protection strategies of dmeinterns.org through phishing campaigns, pen testing, web scanning tools, WordPress plugin security evaluations, and creation of strict security standards for interns',
+      'Educated other VA departments on password protocol and breach prevention through Slack',
+    ]
+  },
+  {
+    title: 'Web & Database Developer',
+    company: 'University of Illinois Chicago',
+    period: 'June 2021 - Feb 2022',
+    location: 'Chicago, IL',
+    tags: ['cs'],
+    bullets: [
+      'Developed and maintained custom full-stack web applications using Laravel, Vue, and SQL, used by 3,000+ active users',
+      'Created new documentation and issue reporting standards with Atlassian Jira, Bitbucket, increasing readability by 3-fold',
+      'Presented projects to university admin and trained faculty/staff on application usage regularly (via MS Teams, Calendly)',
+    ]
+  },
+  {
+    title: 'Dev-Ops Intern',
+    company: 'Montel Technologies',
+    period: 'Nov 2017 - Sept 2018',
+    location: 'Loves Park, IL',
+    tags: ['cs'],
+    bullets: [
+      'Lead front-end web developer on an enterprise-grade security unification solution (MTOP) utilizing Node.js, MongoDB',
+      'Configured mission-critical SLA networks and infrastructure in the field by installing switches, IP cameras, access control',
+      'Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge units',
+    ]
+  },
 ]
-</script>s
+
+export default {
+  data() {
+    return {
+      selectedExpTab: selectedExpTab,
+      expTabs: expTabs,
+      expEntries: expEntries,
+    }
+  },
+  methods: {
+    updateExpTab: function (val) {
+      this.selectedExpTab = val
+      console.log(this.selectedExpTab)
+    }
+  }
+}
+</script>
