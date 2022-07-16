@@ -74,7 +74,7 @@
           </div>
         </div>
 
-        <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <div class="container mx-auto items-center">
 
           <!--  01. About  -->
           <HeaderLine num="01." title="About Me" id="about" />
@@ -117,10 +117,10 @@
             <div class="hidden sm:block">
               <div class="border-b border-gray-200">
                 <nav class="-mb-px flex space-x-8" aria-label="Tabs">
-                  <button v-for="tab in expTabs" :key="tab.id" @click="updateExpTab(tab.id)" :class="[tab.id === selectedExpTab ? 'border-secondary text-secondary' : 'border-transparent text-accent hover:text-secondary hover:border-accent', 'group inline-flex items-center py-4 px-1 border-b-2 font-medium text-sm']" :aria-current="tab.id === selectedExpTab ? 'page' : undefined">
+                  <a v-for="tab in expTabs" href="#experience" :key="tab.id" @click="updateExpTab(tab.id)" :class="[tab.id === selectedExpTab ? 'border-secondary text-secondary' : 'border-transparent text-accent hover:text-secondary hover:border-accent', 'group inline-flex items-center py-4 px-1 border-b-2 font-medium text-sm']" :aria-current="tab.id === selectedExpTab ? 'page' : undefined">
                     <component :is="tab.icon" :class="[tab.id === selectedExpTab ? 'text-secondary' : 'text-accent group-hover:text-secondary', '-ml-0.5 mr-2 h-5 w-5']" aria-hidden="true" />
                     <span>{{ tab.name }}</span>
-                  </button>
+                  </a>
                 </nav>
               </div>
             </div>
@@ -181,13 +181,13 @@ const navigation = [
 <script>
 import {CameraIcon, DesktopComputerIcon, UserGroupIcon} from "@heroicons/vue/solid";
 
-const selectedExpTab = 'cs'
-const expTabs = [
+const selected_exp_tab = 'cs'
+const exp_tabs = [
   { id: 'cs', name: 'Computer Science', icon: DesktopComputerIcon },
   { id: 'lead', name: 'Leadership', icon: UserGroupIcon },
   { id: 'photo', name: 'Photography', icon: CameraIcon},
 ]
-const expEntries = [
+const exp_entries = [
   {
     title: 'Project Manager & Info Sec Analyst',
     company: 'University of Illinois Chicago',
@@ -249,20 +249,67 @@ const expEntries = [
       'Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge units',
     ]
   },
+  // {
+  //   title: 'Executive Operations Director',
+  //   company: 'Pulqra',
+  //   period: 'Feb 2020 - Present',
+  //   location: 'United States',
+  //   tags: ['cs', 'lead', 'photo'],
+  //   bullets: [
+  //     'Lorem ipsum.',
+  //   ]
+  // },
+  // {
+  //   title: 'Executive Director',
+  //   company: 'RAkerman Foundation',
+  //   period: 'Apr 2022 - Present',
+  //   location: 'Remote',
+  //   tags: ['cs', 'lead'],
+  //   bullets: [
+  //     'Lorem ipsum.',
+  //   ]
+  // },
+  // {
+  //   title: 'Section Leader',
+  //   company: 'Stanford University',
+  //   period: 'Apr 2021 - May 2021',
+  //   location: 'Remote',
+  //   tags: ['cs', 'lead'],
+  //   bullets: [
+  //     'Lorem ipsum.',
+  //   ]
+  // },
+  // {
+  //   title: 'Event Captain',
+  //   company: 'Life Time',
+  //   period: 'Aug 2021 - Present',
+  //   location: 'Chicago, IL',
+  //   tags: ['lead'],
+  //   bullets: [
+  //     'Lorem ipsum.',
+  //   ]
+  // },
 ]
 
 export default {
   data() {
     return {
-      selectedExpTab: selectedExpTab,
-      expTabs: expTabs,
-      expEntries: expEntries,
+      selectedExpTab: selected_exp_tab,
+    }
+  },
+  computed: {
+    expTabs() {
+      this.selectedExpTab
+      return exp_tabs
+    },
+    expEntries() {
+      this.selectedExpTab
+      return exp_entries
     }
   },
   methods: {
     updateExpTab: function (val) {
       this.selectedExpTab = val
-      console.log(this.selectedExpTab)
     }
   }
 }
