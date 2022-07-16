@@ -109,9 +109,8 @@
           <div class="w-full pb-1">
             <div class="sm:hidden">
               <label for="tabs" class="sr-only">Select a tab</label>
-              <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-              <select id="tabs" name="tabs" class="block w-full bg-primary focus:ring-secondary focus:border-secondary border-neutral text-neutral rounded-md">
-                <option v-for="tab in expTabs" :key="tab.id" :selected="tab.id === selectedExpTab">{{ tab.name }}</option>
+              <select id="tabs" v-model="selectedExpTab" name="tabs" class="block w-full bg-primary focus:ring-secondary focus:border-secondary border-neutral text-neutral rounded-md">
+                <option v-for="tab in expTabs" :value="tab.id" :selected="tab.id === selectedExpTab">{{ tab.name }}</option>
               </select>
             </div>
             <div class="hidden sm:block">
