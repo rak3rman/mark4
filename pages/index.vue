@@ -152,7 +152,7 @@
 
           <ul role="list" class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
             <li v-for="(group, index) in testimonials" class="space-y-8">
-              <figure class="rounded-xl p-8 shadow-md ring-1 ring-primary-focus" v-for="testimonial in group" :class="index < 1 ? 'hidden lg:block' : ''">
+              <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">
                 <blockquote>
                   <p class="text-lg tracking-tight text-neutral">
                     "{{ testimonial.quote }}"
@@ -167,7 +167,7 @@
                       {{ testimonial.name }}
                     </div>
                     <div class="mt-1 text-sm text-accent">
-                      {{testimonial.title }}
+                      {{ testimonial.title }}
                     </div>
                   </div>
                 </figcaption>
@@ -177,6 +177,42 @@
 
           <!--  03. Projects  -->
           <HeaderLine num="03." title="Projects" id="projects" />
+          <ul role="list" class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <li v-for="(project, index) in projects" class="space-y-8">
+              <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus" :class="index > 1 ? 'hidden lg:block' : ''">
+                <blockquote>
+                  <div class="flex items-center mb-4 flow-root">
+                    <FolderIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true" />
+                    <div class="float-right flex">
+                      <a class="transition ease-in-out duration-300 hover:text-secondary" :href="project.links.github" v-if="project.links.github">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 mt-3 mr-2.5">
+                          <title>GitHub</title>
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                      <a class="transition ease-in-out duration-300 hover:text-secondary" :href="project.links.ext" v-if="project.links.ext">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 mt-2">
+                          <title>External Link</title>
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="text-lg font-medium tracking-tight text-neutral">
+                    {{ project.title }}
+                  </p>
+                  <p class="mt-1.5 text-sm text-accent">
+                    {{ project.desc }}
+                  </p>
+                  <div class="mt-1.5 text-sm text-accent font-light flex space-x-3">
+                    <p v-for="tool in project.tools">{{ tool }}</p>
+                  </div>
+                </blockquote>
+              </figure>
+            </li>
+          </ul>
 
           <!--  04. Contact  -->
           <HeaderLine num="04." title="Get In Touch" id="contact" />
@@ -198,7 +234,7 @@
 
 <script setup>
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
-import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+import { MenuIcon, FolderIcon, ExternalLinkIcon, XIcon } from '@heroicons/vue/outline'
 import { DesktopComputerIcon, CameraIcon, UserGroupIcon } from '@heroicons/vue/solid'
 
 const config = useRuntimeConfig()
@@ -223,6 +259,32 @@ const testimonials = [
     { name: 'Radison Akerman', title: 'Front-end Developer', quote: "The complete package is worth it for the weekly teardown videos alone. I’ve learned so much watching Mira take apart other icons and recreate them from scratch.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
     { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I never thought I would enjoy designing icons but using the ideas in this book, it’s become a great way for me to relax while still being creative.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
+]
+
+const projects = [
+  {
+    title: 'Exploding Chickens',
+    desc: 'A beautiful, online alternative to the popular Exploding Kittens card game (just with chickens)',
+    links: {
+      ext: 'https://chickens.rakerman.com',
+    },
+    tools: ['Node.js', 'Tailwinds CSS', 'MongoDB'],
+    made_at: 'RAkerman Foundation',
+    is_featured: true,
+    is_archived: false,
+  },
+  // {
+  //   title: '',
+  //   desc: '',
+  //   links: {
+  //     ext: '',
+  //     github: '',
+  //   },
+  //   tools: [],
+  //   made_at: '',
+  //   is_featured: false,
+  //   is_archived: false,
+  // },
 ]
 </script>
 
