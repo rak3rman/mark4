@@ -57,20 +57,27 @@
 
       <main class="max-w-7xl mx-auto px-4 sm:px-6">
         <!--  Hero Section  -->
-        <div class="container mx-auto flex flex-wrap flex-row items-center min-h-screen">
-          <div class="flex flex-col w-full justify-center overflow-y-hidden">
-            <p class="py-2 leading-normal text-secondary font-mono text-lg md:text-xl text-left">
-              Hi there, my name is
-            </p>
-            <h1 class="pt-1 pb-1 text-5xl md:text-7xl text-neutral font-bold leading-tight text-left">
-              Radison Akerman.
-            </h1>
-            <p class="py-2 leading-normal text-accent text-lg md:text-xl max-w-2xl text-left">
-              I am highly skilled in internet. You might find me solving niche problems with full-blown web applications, out in the middle of nowhere with my camera, learning a random skill, or just cracking a laugh with my friends.
-            </p>
-            <span class="py-3 inline-flex rounded-md shadow">
-              <a href="/resume" class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"> Check out my lecture at UIC! </a>
-            </span>
+        <div class="container mx-auto flex items-center min-h-screen">
+          <div class="mt-8 lg:grid lg:grid-cols-5 lg:gap-8 w-full">
+            <div class="flex items-center justify-center lg:row-start-1 lg:col-start-4 lg:col-span-2">
+              <PortraitSVG1 class="max-w-sm lg:max-w-full"/>
+            </div>
+            <div class="lg:col-span-3 flex items-center z-20">
+              <div class="flex flex-col w-full justify-center overflow-y-hidden">
+                <p class="py-2 leading-normal text-secondary font-mono text-lg md:text-xl text-left">
+                  Hi there, my name is
+                </p>
+                <h1 class="pt-1 pb-1 text-5xl md:text-6xl text-neutral font-bold leading-tight text-left">
+                  Radison Akerman.
+                </h1>
+                <p class="py-2 leading-normal text-accent text-lg md:text-lg max-w-2xl text-left">
+                  I am highly skilled in internet. You might find me solving niche problems with full-blown web applications, out in the middle of nowhere with my camera, learning a random skill, or just cracking a laugh with my friends.
+                </p>
+                <span class="py-3 inline-flex rounded-md shadow">
+                  <a href="/resume" class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"> Check out my lecture at UIC! </a>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -236,6 +243,7 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, FolderIcon, ExternalLinkIcon, XIcon } from '@heroicons/vue/outline'
 import { DesktopComputerIcon, CameraIcon, UserGroupIcon } from '@heroicons/vue/solid'
+import PortraitSVG1 from "../components/PortraitSVG1.vue";
 
 const config = useRuntimeConfig()
 
