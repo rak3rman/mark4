@@ -211,7 +211,7 @@
                     {{ project.title }}
                   </p>
                   <p class="mt-1.5 text-sm text-accent">
-                    {{ project.desc }}
+                    {{ project.sub }}
                   </p>
                   <div class="mt-1.5 text-sm text-accent font-light flex space-x-3">
                     <p v-for="tool in project.tools">{{ tool }}</p>
@@ -243,7 +243,6 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, FolderIcon, ExternalLinkIcon, XIcon } from '@heroicons/vue/outline'
 import { DesktopComputerIcon, CameraIcon, UserGroupIcon } from '@heroicons/vue/solid'
-import PortraitSVG1 from "../components/PortraitSVG1.vue";
 
 const config = useRuntimeConfig()
 
@@ -256,33 +255,148 @@ const navigation = [
 
 const testimonials = [
   [
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Mira’s teaching style is second to none. Everything was easy to follow every step of the way.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I run an ecommerce store selling rare vintage gummy bears and could never find a good gummy bear icon. Now I can design my own in minutes.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Mira’s teaching style is second to none. Everything was easy to follow every step of the way.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I run an ecommerce store selling rare vintage gummy bears and could never find a good gummy bear icon. Now I can design my own in minutes.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
   [
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I couldn’t believe how fast Mira moved in Figma compared to my own workflow. I’m designing icons more accurately in half the time with the shortcuts I learned from her videos.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Even though I was excited to learn, I was pessimistic that I wouldn’t actually ever get good enough to design my own icons. I was wrong — this book is all I needed.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I couldn’t believe how fast Mira moved in Figma compared to my own workflow. I’m designing icons more accurately in half the time with the shortcuts I learned from her videos.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Even though I was excited to learn, I was pessimistic that I wouldn’t actually ever get good enough to design my own icons. I was wrong — this book is all I needed.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
   [
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "The complete package is worth it for the weekly teardown videos alone. I’ve learned so much watching Mira take apart other icons and recreate them from scratch.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I never thought I would enjoy designing icons but using the ideas in this book, it’s become a great way for me to relax while still being creative.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "The complete package is worth it for the weekly teardown videos alone. I’ve learned so much watching Mira take apart other icons and recreate them from scratch.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I never thought I would enjoy designing icons but using the ideas in this book, it’s become a great way for me to relax while still being creative.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
 ]
 
 const projects = [
   {
     title: 'Exploding Chickens',
-    desc: 'A beautiful, online alternative to the popular Exploding Kittens card game (just with chickens)',
+    sub: 'A beautiful, online alternative to the popular Exploding Kittens card game (just with chickens)',
+    desc: '',
     links: {
       ext: 'https://chickens.rakerman.com',
     },
     tools: ['Node.js', 'Tailwinds CSS', 'MongoDB'],
     made_at: 'RAkerman Foundation',
+    start: '',
+    end: 'inf',
     is_featured: true,
+    is_archived: false,
+  },
+  {
+    title: 'Rock River Anything That Floats Race Manager',
+    sub: '',
+    desc: 'An effort to streamline the organizational efforts of the Rock River Anything That Floats Race. Running on Node.js, this project displays a powerful web interface where administrators can manage raft information, conduct raft timing, and display results to the public. A smart timing plugin and a custom web voting limiter for the People\'s Choice Award were both built from scratch.',
+    links: {
+      ext: 'https://rratfr.rakerman.com',
+      github: 'https://github.com/rak3rman/rratfr-manager'
+    },
+    tools: ['Node.js', 'Bootstrap', 'MongoDB'],
+    made_at: 'Personal Project',
+    start: '2019-05',
+    end: '2020-08',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'RAkerman Status',
+    sub: '',
+    desc: 'A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all "subscribers" via RAkerman Notify. Pretty cool right?',
+    links: {
+      ext: 'https://status.rakerman.com',
+      github: 'https://github.com/rak3rman/rakerman-status',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers', 'Typescript'],
+    made_at: 'Personal Project',
+    start: '2021-06',
+    end: '2022-07',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'ImpackAI',
+    sub: '',
+    desc: 'An inventory management platform unlike any other. ImpackAI puts analytics at the center of your workflow all while keeping a simple and intuitive interface. Keep track of inventory with varying amounts of stock at different stages in the production process. Help employees work more efficiently with an advanced metrics system. Predict purchase orders in the future. All in just a couple clicks.',
+    links: {},
+    tools: ['Node.js', 'Bootstrap', 'MongoDB'],
+    made_at: 'Rock Valley Packaging',
+    start: '2020-04',
+    end: '2020-08',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Homebase',
+    sub: '',
+    desc: 'A personal take on home automation. Homebase is a set of home controllers designed to monitor and manage literally anything. Homebase SPKR is a fully-inclusive smart sprinkler system controller. Just specify what zones you want watered and when, and SPKR will do the rest. Homebase GARA watches over the garage with a few neat tricks. GARA can automatically close all open garage doors and turn the lights on and off whenever you open a door. Homebase MNTR receives the wired input of any door sensors in your home and notifies you if it detects a breach. All built from scratch, by myself.',
+    links: {
+      github: 'https://github.com/rak3rman/homebase',
+    },
+    tools: ['Particle.io', 'IoT', 'C++', 'Small Electronics'],
+    made_at: 'Personal Project',
+    start: '2021-04',
+    end: '2021-06',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Passport UIC Shibboleth',
+    sub: '',
+    desc: 'A Nodejs-Express-Passport authentication strategy that works with the University of Illinois Chicago\'s Shibboleth single-sign on service. Extends the passport-saml npm module, but sets all the default options so that it works with the UIC Shibboleth Identity Provider (IdP). Built out an entire sample project using Vite, Vue 3, and Tailwinds along with a "Shibalike" emulator for local testing. Wrote extensive documentation and recorded a walkthrough video for others to understand how to use passport-uicshib.',
+    links: {
+      github: 'https://github.com/rak3rman/passport-uicshib',
+    },
+    tools: ['Node.js', 'SAML', 'Vite', 'Tailwinds CSS'],
+    made_at: 'University of Illinois Chicago',
+    start: '2022-02',
+    end: '2022-06',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'RAkerman Linker',
+    sub: '',
+    desc: 'A simple url shortener that can be deployed over multiple domains simultaneously. RAkerman Linker leverages the power of Nuxt 3 and Cloudflare Workers KV to handle a unified list of custom redirects on a global scale. Specify a shortened url along with a target url in the Cloudflare Workers KV interface, and this service will handle the rest.',
+    links: {
+      ext: 'https://link.rakerman.com',
+      github: 'https://github.com/rak3rman/rakerman-linker',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers', 'Typescript'],
+    made_at: 'Personal Project',
+    start: '2022-05',
+    end: '2022-06',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Particlecord',
+    sub: '',
+    desc: 'Particlecord listens to the data stream from Particle.io devices and notifies the user when a particular event occurs. Think of Particlecord as an "API middleman" that filters a real-time data stream from Particle.io and sends smart push notifications through Discord. Devices can also be managed using the Discord bot by setting friendly names, changing alert frequencies, and outputting the status of any device.',
+    links: {
+      github: 'https://github.com/rak3rman/particlecord',
+    },
+    tools: ['Particle.io', 'Discord API', 'Node.js'],
+    made_at: 'Personal Project',
+    start: '2020-10',
+    end: '2021-01',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'RAkerman Pace Clock',
+    sub: '',
+    desc: 'Have you ever had to deal with 2 overpriced and outdated pace clocks breaking for seemingly no reason during swim practice in high school? Well, I did. (drumroll sounds) Introducing the RAkerman Pace Clock (RAPC), a state-of-the-art, multi-color, over-engineered digital clock system designed for pacing swim practices. The RAPC is essentially a strip of RGB leds (Neopixels) connected to a microcontroller (Particle Argon) that displays the time from 0:00 to 59:59 (mm:ss) over and over (in any color you\'d like). It probably doesn\'t sound that cool, but trust me, it is a far cry from what it used to be.',
+    links: {},
+    tools: [],
+    made_at: 'Auburn High School',
+    start: '2019-10',
+    end: '2019-12',
+    is_featured: false,
     is_archived: false,
   },
   // {
   //   title: '',
+  //   sub: '',
   //   desc: '',
   //   links: {
   //     ext: '',
@@ -290,6 +404,8 @@ const projects = [
   //   },
   //   tools: [],
   //   made_at: '',
+  //   start: '',
+  //   end: '',
   //   is_featured: false,
   //   is_archived: false,
   // },
