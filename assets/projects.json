@@ -4,7 +4,10 @@
     "sub": "A beautiful, online alternative to the popular Exploding Kittens card game",
     "desc": "",
     "links": {
-      "ext": "https://chickens.rakerman.com"
+      "ext": "https://chickens.rakerman.com",
+      "images": [
+        "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/f432fa0c-b42c-446c-0d09-2916c5aa3100/xl"
+      ]
     },
     "tools": ["Node.js", "MongoDB", "Mocha", "Handlebars", "Vue", "Tailwinds", "Auth0", "Stripe"],
     "made_at": "RAkerman Foundation",
@@ -14,11 +17,31 @@
     "is_archived": false
   },
   {
+    "title": "Steven Olikara Website",
+    "sub": "A foundational website supporting Steven Olikara’s run for the U.S. Senate in Wisconsin",
+    "desc": "",
+    "links": {
+      "ext": "https://www.stevenolikara.com",
+      "images": [
+        "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/0d4891b4-8ce4-4474-e2b1-c4efe09a1500/xl"
+      ]
+    },
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Tailwinds"],
+    "made_at": "Pulqra",
+    "start": "2022-05",
+    "end": "inf",
+    "is_featured": true,
+    "is_archived": false
+  },
+  {
     "title": "Informr",
     "sub": "A web form submission intermediary leveraging edge cloud compute",
     "desc": "",
     "links": {
-      "ext": "https://informr.rakerman.com"
+      "ext": "https://informr.rakerman.com",
+      "images": [
+        "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/d867629b-a1c2-41f2-6946-8830dea52a00/xl"
+      ]
     },
     "tools": ["Nuxt v3", "Cloudflare Workers/KV/R2", "Auth0", "Typescript", "Tailwinds", "Mailgun"],
     "made_at": "RAkerman Foundation",
@@ -37,20 +60,6 @@
     "start": "2022-04",
     "end": "2022-06",
     "is_featured": false,
-    "is_archived": false
-  },
-  {
-    "title": "Steven Olikara Website",
-    "sub": "A foundational website supporting Steven Olikara’s run for the U.S. Senate in Wisconsin",
-    "desc": "",
-    "links": {
-      "ext": "https://www.stevenolikara.com"
-    },
-    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Tailwinds"],
-    "made_at": "Pulqra",
-    "start": "2022-05",
-    "end": "inf",
-    "is_featured": true,
     "is_archived": false
   },
   {

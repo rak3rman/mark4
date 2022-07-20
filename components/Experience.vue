@@ -46,6 +46,7 @@
       </div>
     </div>
 
+    <!--  Testimonials  -->
     <ul role="list" class="mt-10 grid grid-cols-1 -m-3 lg:grid-cols-3">
       <li v-for="(group, index) in testimonials" class="space-y-8">
         <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">
