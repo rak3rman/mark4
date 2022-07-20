@@ -86,7 +86,7 @@ const projects = [
   },
   {
     title: 'Steven Olikara Website',
-    sub: 'A foundational website supporting Steven Olikara’s 2022 run for the U.S. Senate in Wisconsin',
+    sub: 'A foundational website supporting Steven Olikara’s run for the U.S. Senate in Wisconsin',
     desc: '',
     links: {
       ext: 'https://www.stevenolikara.com',
@@ -100,7 +100,7 @@ const projects = [
   },
   {
     title: 'Pulqra Website',
-    sub: '',
+    sub: 'A minimalist website showcasing Pulqra\'s vision, product, and collaborations worldwide',
     desc: '',
     links: {
       ext: 'https://www.pulqra.com',
@@ -114,7 +114,7 @@ const projects = [
   },
   {
     title: 'STB Entertainment Website',
-    sub: '',
+    sub: 'A complex yet modernist website kickstarting a nationwide entertainment business',
     desc: '',
     links: {
       ext: 'https://www.stbentertainment.com',
@@ -128,7 +128,7 @@ const projects = [
   },
   {
     title: 'Rock River Anything That Floats Race Manager',
-    sub: '',
+    sub: 'An effort to streamline the organizational efforts of the Rock River Anything That Floats Race',
     desc: 'An effort to streamline the organizational efforts of the Rock River Anything That Floats Race. Running on Node.js, this project displays a powerful web interface where administrators can manage raft information, conduct raft timing, and display results to the public. A smart timing plugin and a custom web voting limiter for the People\'s Choice Award were both built from scratch.',
     links: {
       ext: 'https://rratfr.rakerman.com',
@@ -143,7 +143,7 @@ const projects = [
   },
   {
     title: 'RAkerman Status',
-    sub: '',
+    sub: 'A global fallback web server and status monitor designed to deployed at scale',
     desc: 'A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all "subscribers" via RAkerman Notify. Pretty cool right?',
     links: {
       ext: 'https://status.rakerman.com',
@@ -158,7 +158,7 @@ const projects = [
   },
   {
     title: 'ImpackAI',
-    sub: '',
+    sub: 'An inventory management and purchase order platform built for small packaging warehouses',
     desc: 'An inventory management platform unlike any other. ImpackAI puts analytics at the center of your workflow all while keeping a simple and intuitive interface. Keep track of inventory with varying amounts of stock at different stages in the production process. Help employees work more efficiently with an advanced metrics system. Predict purchase orders in the future. All in just a couple clicks.',
     links: {},
     tools: ['Node.js', 'Express', 'MongoDB', 'Auth0', 'HTML/CSS'],
@@ -170,7 +170,7 @@ const projects = [
   },
   {
     title: 'Homebase',
-    sub: '',
+    sub: 'A localized, custom-built home automation platform leveraging IoT devices',
     desc: 'A personal take on home automation. Homebase is a set of home controllers designed to monitor and manage literally anything. Homebase SPKR is a fully-inclusive smart sprinkler system controller. Just specify what zones you want watered and when, and SPKR will do the rest. Homebase GARA watches over the garage with a few neat tricks. GARA can automatically close all open garage doors and turn the lights on and off whenever you open a door. Homebase MNTR receives the wired input of any door sensors in your home and notifies you if it detects a breach. All built from scratch, by myself.',
     links: {
       github: 'https://github.com/rak3rman/homebase',
@@ -184,7 +184,7 @@ const projects = [
   },
   {
     title: 'Passport UIC Shibboleth',
-    sub: '',
+    sub: 'A npm package that integrates Shibboleth\'s SAML SSO with Node.js Express web apps',
     desc: 'A Nodejs-Express-Passport authentication strategy that works with the University of Illinois Chicago\'s Shibboleth single-sign on service. Extends the passport-saml npm module, but sets all the default options so that it works with the UIC Shibboleth Identity Provider (IdP). Built out an entire sample project using Vite, Vue 3, and Tailwinds along with a "Shibalike" emulator for local testing. Wrote extensive documentation and recorded a walkthrough video for others to understand how to use passport-uicshib.',
     links: {
       github: 'https://github.com/rak3rman/passport-uicshib',
@@ -198,7 +198,7 @@ const projects = [
   },
   {
     title: 'RAkerman Linker',
-    sub: '',
+    sub: 'A simple url shortener that can be deployed in a pinch on Cloudflare Workers + KV',
     desc: 'A simple url shortener that can be deployed over multiple domains simultaneously. RAkerman Linker leverages the power of Nuxt 3 and Cloudflare Workers KV to handle a unified list of custom redirects on a global scale. Specify a shortened url along with a target url in the Cloudflare Workers KV interface, and this service will handle the rest.',
     links: {
       ext: 'https://link.rakerman.com',
@@ -213,7 +213,7 @@ const projects = [
   },
   {
     title: 'Particlecord',
-    sub: '',
+    sub: 'A Particle.io events recognition filter (specifically for Tracker One) that pushes select updates to the Discord API',
     desc: 'Particlecord listens to the data stream from Particle.io devices and notifies the user when a particular event occurs. Think of Particlecord as an "API middleman" that filters a real-time data stream from Particle.io and sends smart push notifications through Discord. Devices can also be managed using the Discord bot by setting friendly names, changing alert frequencies, and outputting the status of any device.',
     links: {
       github: 'https://github.com/rak3rman/particlecord',
@@ -227,7 +227,7 @@ const projects = [
   },
   {
     title: 'Remindcord',
-    sub: '',
+    sub: 'A dead-simple, custom Discord bot that sends messages on a defined interval',
     desc: '',
     links: {
       github: 'https://github.com/rak3rman/remindcord',
@@ -241,7 +241,7 @@ const projects = [
   },
   {
     title: 'PaperMC Manager',
-    sub: '',
+    sub: 'A bash script that can manage multiple active papermc instances on Linux using screen and pm2',
     desc: '',
     links: {
       github: 'https://github.com/rak3rman/papermc-manager',
@@ -255,7 +255,7 @@ const projects = [
   },
   {
     title: 'RAkerman Pace Clock',
-    sub: '',
+    sub: 'A pair of meshed swim pace clocks built using a neopixel segments and 2 Particle.io devices',
     desc: 'Have you ever had to deal with 2 overpriced and outdated pace clocks breaking for seemingly no reason during swim practice in high school? Well, I did. (drumroll sounds) Introducing the RAkerman Pace Clock (RAPC), a state-of-the-art, multi-color, over-engineered digital clock system designed for pacing swim practices. The RAPC is essentially a strip of RGB leds (Neopixels) connected to a microcontroller (Particle Argon) that displays the time from 0:00 to 59:59 (mm:ss) over and over (in any color you\'d like). It probably doesn\'t sound that cool, but trust me, it is a far cry from what it used to be.',
     links: {},
     tools: ['Particle.io', 'C++', 'Small Electronics', 'Mesh Networking'],
@@ -267,7 +267,7 @@ const projects = [
   },
   {
     title: 'MTOP',
-    sub: '',
+    sub: 'A cloud security unification solution leveraging multiple next-gen technologies in one place',
     desc: '',
     links: {},
     tools: ['Node.js', 'Express', 'MongoDB', 'HTML/CSS'],
@@ -279,7 +279,7 @@ const projects = [
   },
   {
     title: 'Mark 4',
-    sub: '',
+    sub: 'A fourth attempt at Radison Akerman\'s personal website. Notes of programming, cleanliness, and unification.',
     desc: '',
     links: {
       ext: 'https://www.rakerman.com',
@@ -294,7 +294,7 @@ const projects = [
   },
   {
     title: 'Mark 3',
-    sub: '',
+    sub: 'A third attempt at Radison Akerman\'s personal website. Notes of blog, professionalism, and classic web design.',
     desc: '',
     links: {
       github: 'https://github.com/rak3rman/mark3',
@@ -308,7 +308,7 @@ const projects = [
   },
   {
     title: 'Mark 2',
-    sub: '',
+    sub: 'A second attempt at Radison Akerman\'s personal website. Notes of photography, one-pagers, and info-dumpage.',
     desc: '',
     links: {
       github: 'https://github.com/rak3rman/mark2',
@@ -322,7 +322,7 @@ const projects = [
   },
   {
     title: 'Mark 1',
-    sub: '',
+    sub: 'The first attempt at Radison Akerman\'s personal website. Notes of \'lil Rad, programming, and paid website templates.',
     desc: '',
     links: {
       github: 'https://github.com/rak3rman/mark1',
