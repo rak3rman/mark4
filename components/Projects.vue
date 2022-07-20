@@ -1,0 +1,353 @@
+<template>
+  <div>
+    <Header num="03." title="Projects" id="projects" />
+    <ul role="list" class="mt-4 grid grid-cols-1 lg:grid-cols-3 -m-3">
+      <li v-for="(project, index) in projects" class="col-span-1 flex flex-col space-y-8">
+        <div class="flex-1 flex flex-col rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" :class="index > 5 ? 'hidden lg:flex' : ''">
+          <div class="flex items-center mb-4 flow-root">
+            <FolderIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true" />
+            <div class="float-right flex">
+              <a class="transition ease-in-out duration-300 hover:text-secondary" :href="project.links.github" v-if="project.links.github">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 mt-3 mr-2.5">
+                  <title>GitHub</title>
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a class="transition ease-in-out duration-300 hover:text-secondary" :href="project.links.ext" v-if="project.links.ext">
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 mt-2">
+                  <title>External Link</title>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p class="text-lg font-medium tracking-tight leading-6 text-neutral">
+            {{ project.title }}
+          </p>
+          <p class="mt-1.5 text-sm text-accent">
+            {{ project.sub }}
+          </p>
+          <div class="flex flex-grow items-end mt-1.5">
+            <div class="flex flex-wrap text-sm text-accent font-light">
+              <p v-for="tool in project.tools" class="pr-2.5">{{ tool }}</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script setup>
+import { FolderIcon } from '@heroicons/vue/outline'
+
+const projects = [
+  {
+    title: 'Exploding Chickens',
+    sub: 'A beautiful, online alternative to the popular Exploding Kittens card game',
+    desc: '',
+    links: {
+      ext: 'https://chickens.rakerman.com',
+    },
+    tools: ['Node.js', 'MongoDB', 'Mocha', 'Handlebars', 'Vue', 'Tailwinds'],
+    made_at: 'RAkerman Foundation',
+    start: '2020-12',
+    end: 'inf',
+    is_featured: true,
+    is_archived: false,
+  },
+  {
+    title: 'Informr',
+    sub: 'A web form submission intermediary leveraging edge cloud compute',
+    desc: '',
+    links: {
+      ext: 'https://informr.rakerman.com',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers/KV/R2', 'Auth0', 'Typescript', 'Tailwinds'],
+    made_at: 'RAkerman Foundation',
+    start: '2022-06',
+    end: 'inf',
+    is_featured: true,
+    is_archived: false,
+  },
+  {
+    title: 'Vibhav Bansal Website',
+    sub: 'A razor-sharp business portfolio website for a nationwide leader in Neuroscience',
+    desc: '',
+    links: {},
+    tools: ['Nuxt v3', 'Cloudflare Workers/KV', 'Tailwinds'],
+    made_at: 'Pulqra',
+    start: '2022-04',
+    end: '2022-06',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Steven Olikara Website',
+    sub: 'A foundational website supporting Steven Olikara’s 2022 run for the U.S. Senate in Wisconsin',
+    desc: '',
+    links: {
+      ext: 'https://www.stevenolikara.com',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers/KV', 'Tailwinds'],
+    made_at: 'Pulqra',
+    start: '2022-05',
+    end: 'inf',
+    is_featured: true,
+    is_archived: false,
+  },
+  {
+    title: 'Pulqra Website',
+    sub: '',
+    desc: '',
+    links: {
+      ext: 'https://www.pulqra.com',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers/KV', 'Tailwinds'],
+    made_at: 'Pulqra',
+    start: '2022-05',
+    end: 'inf',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'STB Entertainment Website',
+    sub: '',
+    desc: '',
+    links: {
+      ext: 'https://www.stbentertainment.com',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers/KV', 'Tailwinds'],
+    made_at: 'Pulqra',
+    start: '2022-07',
+    end: 'inf',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Rock River Anything That Floats Race Manager',
+    sub: '',
+    desc: 'An effort to streamline the organizational efforts of the Rock River Anything That Floats Race. Running on Node.js, this project displays a powerful web interface where administrators can manage raft information, conduct raft timing, and display results to the public. A smart timing plugin and a custom web voting limiter for the People\'s Choice Award were both built from scratch.',
+    links: {
+      ext: 'https://rratfr.rakerman.com',
+      github: 'https://github.com/rak3rman/rratfr-manager'
+    },
+    tools: ['Node.js', 'Express', 'MongoDB', 'Auth0', 'HTML/CSS'],
+    made_at: 'Personal Project',
+    start: '2019-05',
+    end: '2020-08',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'RAkerman Status',
+    sub: '',
+    desc: 'A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all "subscribers" via RAkerman Notify. Pretty cool right?',
+    links: {
+      ext: 'https://status.rakerman.com',
+      github: 'https://github.com/rak3rman/rakerman-status',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers/KV', 'Typescript', 'Tailwinds'],
+    made_at: 'Personal Project',
+    start: '2021-06',
+    end: '2022-07',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'ImpackAI',
+    sub: '',
+    desc: 'An inventory management platform unlike any other. ImpackAI puts analytics at the center of your workflow all while keeping a simple and intuitive interface. Keep track of inventory with varying amounts of stock at different stages in the production process. Help employees work more efficiently with an advanced metrics system. Predict purchase orders in the future. All in just a couple clicks.',
+    links: {},
+    tools: ['Node.js', 'Express', 'MongoDB', 'Auth0', 'HTML/CSS'],
+    made_at: 'Rock Valley Packaging',
+    start: '2020-04',
+    end: '2020-08',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Homebase',
+    sub: '',
+    desc: 'A personal take on home automation. Homebase is a set of home controllers designed to monitor and manage literally anything. Homebase SPKR is a fully-inclusive smart sprinkler system controller. Just specify what zones you want watered and when, and SPKR will do the rest. Homebase GARA watches over the garage with a few neat tricks. GARA can automatically close all open garage doors and turn the lights on and off whenever you open a door. Homebase MNTR receives the wired input of any door sensors in your home and notifies you if it detects a breach. All built from scratch, by myself.',
+    links: {
+      github: 'https://github.com/rak3rman/homebase',
+    },
+    tools: ['Particle.io', 'C++', 'Small Electronics', 'Autodesk Fusion', 'Homebridge'],
+    made_at: 'Personal Project',
+    start: '2021-04',
+    end: '2021-06',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Passport UIC Shibboleth',
+    sub: '',
+    desc: 'A Nodejs-Express-Passport authentication strategy that works with the University of Illinois Chicago\'s Shibboleth single-sign on service. Extends the passport-saml npm module, but sets all the default options so that it works with the UIC Shibboleth Identity Provider (IdP). Built out an entire sample project using Vite, Vue 3, and Tailwinds along with a "Shibalike" emulator for local testing. Wrote extensive documentation and recorded a walkthrough video for others to understand how to use passport-uicshib.',
+    links: {
+      github: 'https://github.com/rak3rman/passport-uicshib',
+    },
+    tools: ['Node.js', 'Express', 'SAML', 'Vite', 'Tailwinds'],
+    made_at: 'University of Illinois Chicago',
+    start: '2022-02',
+    end: '2022-06',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'RAkerman Linker',
+    sub: '',
+    desc: 'A simple url shortener that can be deployed over multiple domains simultaneously. RAkerman Linker leverages the power of Nuxt 3 and Cloudflare Workers KV to handle a unified list of custom redirects on a global scale. Specify a shortened url along with a target url in the Cloudflare Workers KV interface, and this service will handle the rest.',
+    links: {
+      ext: 'https://link.rakerman.com',
+      github: 'https://github.com/rak3rman/rakerman-linker',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers/KV', 'Typescript', 'Tailwinds'],
+    made_at: 'Personal Project',
+    start: '2022-05',
+    end: '2022-06',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Particlecord',
+    sub: '',
+    desc: 'Particlecord listens to the data stream from Particle.io devices and notifies the user when a particular event occurs. Think of Particlecord as an "API middleman" that filters a real-time data stream from Particle.io and sends smart push notifications through Discord. Devices can also be managed using the Discord bot by setting friendly names, changing alert frequencies, and outputting the status of any device.',
+    links: {
+      github: 'https://github.com/rak3rman/particlecord',
+    },
+    tools: ['Node.js', 'Express', 'Particle.io', 'Discord API'],
+    made_at: 'Personal Project',
+    start: '2020-10',
+    end: '2021-01',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Remindcord',
+    sub: '',
+    desc: '',
+    links: {
+      github: 'https://github.com/rak3rman/remindcord',
+    },
+    tools: ['Node.js', 'Express', 'Discord API'],
+    made_at: 'Personal Project',
+    start: '2021-11',
+    end: '2021-12',
+    is_featured: false,
+    is_archived: true,
+  },
+  {
+    title: 'PaperMC Manager',
+    sub: '',
+    desc: '',
+    links: {
+      github: 'https://github.com/rak3rman/papermc-manager',
+    },
+    tools: ['Bash', 'PM2'],
+    made_at: 'Personal Project',
+    start: '2020-08',
+    end: '2021-03',
+    is_featured: false,
+    is_archived: true,
+  },
+  {
+    title: 'RAkerman Pace Clock',
+    sub: '',
+    desc: 'Have you ever had to deal with 2 overpriced and outdated pace clocks breaking for seemingly no reason during swim practice in high school? Well, I did. (drumroll sounds) Introducing the RAkerman Pace Clock (RAPC), a state-of-the-art, multi-color, over-engineered digital clock system designed for pacing swim practices. The RAPC is essentially a strip of RGB leds (Neopixels) connected to a microcontroller (Particle Argon) that displays the time from 0:00 to 59:59 (mm:ss) over and over (in any color you\'d like). It probably doesn\'t sound that cool, but trust me, it is a far cry from what it used to be.',
+    links: {},
+    tools: ['Particle.io', 'C++', 'Small Electronics', 'Mesh Networking'],
+    made_at: 'Personal Project',
+    start: '2019-10',
+    end: '2019-12',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'MTOP',
+    sub: '',
+    desc: '',
+    links: {},
+    tools: ['Node.js', 'Express', 'MongoDB', 'HTML/CSS'],
+    made_at: 'Montel Technologies',
+    start: '2017-11',
+    end: '2018-09',
+    is_featured: false,
+    is_archived: true,
+  },
+  {
+    title: 'Mark 4',
+    sub: '',
+    desc: '',
+    links: {
+      ext: 'https://www.rakerman.com',
+      github: 'https://github.com/rak3rman/mark4',
+    },
+    tools: ['Nuxt v3', 'Cloudflare Workers/KV', 'Tailwinds'],
+    made_at: 'Personal Project',
+    start: '2022-07',
+    end: 'inf',
+    is_featured: false,
+    is_archived: false,
+  },
+  {
+    title: 'Mark 3',
+    sub: '',
+    desc: '',
+    links: {
+      github: 'https://github.com/rak3rman/mark3',
+    },
+    tools: ['Ghost.io', 'HTML/CSS', 'Webpack'],
+    made_at: '2022-07',
+    start: '2020-05',
+    end: '',
+    is_featured: false,
+    is_archived: true,
+  },
+  {
+    title: 'Mark 2',
+    sub: '',
+    desc: '',
+    links: {
+      github: 'https://github.com/rak3rman/mark2',
+    },
+    tools: ['Node.js', 'Express', 'HTML/CSS'],
+    made_at: 'Personal Project',
+    start: '2019-10',
+    end: '2020-04',
+    is_featured: false,
+    is_archived: true,
+  },
+  {
+    title: 'Mark 1',
+    sub: '',
+    desc: '',
+    links: {
+      github: 'https://github.com/rak3rman/mark1',
+    },
+    tools: ['Node.js', 'Express', 'HTML/CSS'],
+    made_at: 'Personal Project',
+    start: '2019-04',
+    end: '2019-05',
+    is_featured: false,
+    is_archived: true,
+  },
+  // {
+  //   title: '',
+  //   sub: '',
+  //   desc: '',
+  //   links: {
+  //     ext: '',
+  //     github: '',
+  //   },
+  //   tools: [],
+  //   made_at: '',
+  //   start: '',
+  //   end: '',
+  //   is_featured: false,
+  //   is_archived: false,
+  // },
+]
+</script>

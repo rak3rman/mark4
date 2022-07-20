@@ -1,0 +1,64 @@
+<template>
+  <Popover class="fixed top-0 left-0 right-0 py-4 backdrop-blur-xl z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+        <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+          <div class="flex items-center justify-between w-full md:w-auto">
+            <a href="/">
+              <span class="sr-only">RAkerman</span>
+              <img class="h-5 w-auto sm:h-6" src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ed7598b-5520-4e18-5159-daa458739b00/sm" alt="RAkerman Logo" />
+            </a>
+            <div class="-mr-2 flex items-center md:hidden">
+              <PopoverButton class="bg-primary-focus rounded-md p-2 inline-flex items-center justify-center text-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
+                <span class="sr-only">Open main menu</span>
+                <MenuIcon class="h-6 w-6" aria-hidden="true" />
+              </PopoverButton>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+          <div class="md:space-x-8 pr-6">
+            <a v-for="(item, index) in navigation" :key="item.name" :href="item.href" class="font-mono text-sm text-accent hover:text-secondary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
+          </div>
+          <span class="inline-flex rounded-md shadow">
+            <a href="/resume.pdf" class="inline-flex items-center px-4 py-2 border border-secondary text-sm font-mono rounded-md text-secondary hover:bg-primary-focus"> Resume </a>
+          </span>
+        </div>
+      </nav>
+    </div>
+
+    <transition enter-active-class="duration-150 ease-out" enter-from-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
+      <PopoverPanel focus class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div class="rounded-lg shadow-md bg-primary-focus ring-1 ring-black ring-opacity-5 overflow-hidden">
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div>
+              <img class="h-5 w-auto" src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ed7598b-5520-4e18-5159-daa458739b00/sm" alt="RAkerman Logo" />
+            </div>
+            <div class="-mr-2">
+              <PopoverButton class="bg-primary rounded-md p-2 inline-flex items-center justify-center text-accent hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
+                <span class="sr-only">Close menu</span>
+                <XIcon class="h-6 w-6" aria-hidden="true" />
+              </PopoverButton>
+            </div>
+          </div>
+          <div class="px-2 pt-2 pb-3">
+            <a v-for="(item, index) in navigation" :key="item.name" :href="item.href" class="block px-3 py-2 rounded-md text-base font-mono text-accent hover:text-secondary hover:bg-primary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
+          </div>
+          <a href="/resume.pdf" class="block w-full px-5 py-3 text-center font-medium text-neutral bg-secondary"> Resume </a>
+        </div>
+      </PopoverPanel>
+    </transition>
+  </Popover>
+</template>
+
+<script setup>
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
+import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+
+const navigation = [
+  { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
+]
+</script>
