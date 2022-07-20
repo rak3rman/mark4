@@ -1,0 +1,304 @@
+[
+  {
+    "title": "Exploding Chickens",
+    "sub": "A beautiful, online alternative to the popular Exploding Kittens card game",
+    "desc": "",
+    "links": {
+      "ext": "https://chickens.rakerman.com"
+    },
+    "tools": ["Node.js", "MongoDB", "Mocha", "Handlebars", "Vue", "Tailwinds", "Auth0", "Stripe"],
+    "made_at": "RAkerman Foundation",
+    "start": "2020-12",
+    "end": "inf",
+    "is_featured": true,
+    "is_archived": false
+  },
+  {
+    "title": "Informr",
+    "sub": "A web form submission intermediary leveraging edge cloud compute",
+    "desc": "",
+    "links": {
+      "ext": "https://informr.rakerman.com"
+    },
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV/R2", "Auth0", "Typescript", "Tailwinds", "Mailgun"],
+    "made_at": "RAkerman Foundation",
+    "start": "2022-06",
+    "end": "inf",
+    "is_featured": true,
+    "is_archived": false
+  },
+  {
+    "title": "Vibhav Bansal Website",
+    "sub": "A razor-sharp business portfolio website for a nationwide leader in Neuroscience",
+    "desc": "",
+    "links": {},
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Tailwinds"],
+    "made_at": "Pulqra",
+    "start": "2022-04",
+    "end": "2022-06",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "Steven Olikara Website",
+    "sub": "A foundational website supporting Steven Olikara’s run for the U.S. Senate in Wisconsin",
+    "desc": "",
+    "links": {
+      "ext": "https://www.stevenolikara.com"
+    },
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Tailwinds"],
+    "made_at": "Pulqra",
+    "start": "2022-05",
+    "end": "inf",
+    "is_featured": true,
+    "is_archived": false
+  },
+  {
+    "title": "Pulqra Website",
+    "sub": "A minimalist website showcasing Pulqra's vision, product, and collaborations worldwide",
+    "desc": "",
+    "links": {
+      "ext": "https://www.pulqra.com"
+    },
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Tailwinds"],
+    "made_at": "Pulqra",
+    "start": "2022-05",
+    "end": "inf",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "STB Entertainment Website",
+    "sub": "A complex yet modernist website kickstarting a nationwide entertainment business",
+    "desc": "",
+    "links": {
+      "ext": "https://www.stbentertainment.com"
+    },
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Tailwinds"],
+    "made_at": "Pulqra",
+    "start": "2022-07",
+    "end": "inf",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "Space and Key",
+    "sub": "A full-stack web app streamlining data entry between physical accesses and spaces",
+    "desc": "",
+    "links": {},
+    "tools": ["Nuxt v3", "Auth0", "SQL", "Tailwinds"],
+    "made_at": "University of Illinois Chicago",
+    "start": "2021-06",
+    "end": "2022-08",
+    "is_featured": false,
+    "is_archived": true
+  },
+  {
+    "title": "Rock River Anything That Floats Race Manager",
+    "sub": "An effort to streamline the organizational efforts of the Rock River Anything That Floats Race",
+    "desc": "An effort to streamline the organizational efforts of the Rock River Anything That Floats Race. Running on Node.js, this project displays a powerful web interface where administrators can manage raft information, conduct raft timing, and display results to the public. A smart timing plugin and a custom web voting limiter for the People's Choice Award were both built from scratch.",
+    "links": {
+      "ext": "https://rratfr.rakerman.com",
+      "github": "https://github.com/rak3rman/rratfr-manager"
+    },
+    "tools": ["Node.js", "Express", "MongoDB", "Auth0", "HTML/CSS"],
+    "made_at": "Personal Project",
+    "start": "2019-05",
+    "end": "2020-08",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "RAkerman Status",
+    "sub": "A global fallback web server and status monitor designed to deployed at scale",
+    "desc": "A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all \"subscribers\" via RAkerman Notify. Pretty cool right?",
+    "links": {
+      "ext": "https://status.rakerman.com",
+      "github": "https://github.com/rak3rman/rakerman-status"
+    },
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "made_at": "Personal Project",
+    "start": "2021-06",
+    "end": "2022-07",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "ImpackAI",
+    "sub": "An inventory management and purchase order platform built for small packaging warehouses",
+    "desc": "An inventory management platform unlike any other. ImpackAI puts analytics at the center of your workflow all while keeping a simple and intuitive interface. Keep track of inventory with varying amounts of stock at different stages in the production process. Help employees work more efficiently with an advanced metrics system. Predict purchase orders in the future. All in just a couple clicks.",
+    "links": {},
+    "tools": ["Node.js", "Express", "MongoDB", "Auth0", "HTML/CSS"],
+    "made_at": "Rock Valley Packaging",
+    "start": "2020-04",
+    "end": "2020-08",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "Homebase",
+    "sub": "A localized, custom-built home automation platform leveraging IoT devices",
+    "desc": "A personal take on home automation. Homebase is a set of home controllers designed to monitor and manage literally anything. Homebase SPKR is a fully-inclusive smart sprinkler system controller. Just specify what zones you want watered and when, and SPKR will do the rest. Homebase GARA watches over the garage with a few neat tricks. GARA can automatically close all open garage doors and turn the lights on and off whenever you open a door. Homebase MNTR receives the wired input of any door sensors in your home and notifies you if it detects a breach. All built from scratch, by myself.",
+    "links": {
+      "github": "https://github.com/rak3rman/homebase"
+    },
+    "tools": ["Particle.io", "C++", "Small Electronics", "Autodesk Fusion", "Homebridge"],
+    "made_at": "Personal Project",
+    "start": "2021-04",
+    "end": "2021-06",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "Passport UIC Shibboleth",
+    "sub": "A npm package that integrates Shibboleth's SAML SSO with Node.js Express web apps",
+    "desc": "A Nodejs-Express-Passport authentication strategy that works with the University of Illinois Chicago's Shibboleth single-sign on service. Extends the passport-saml npm module, but sets all the default options so that it works with the UIC Shibboleth Identity Provider (IdP). Built out an entire sample project using Vite, Vue 3, and Tailwinds along with a \"Shibalike\" emulator for local testing. Wrote extensive documentation and recorded a walkthrough video for others to understand how to use passport-uicshib.",
+    "links": {
+      "github": "https://github.com/rak3rman/passport-uicshib"
+    },
+    "tools": ["Node.js", "Express", "SAML", "Vite", "Tailwinds"],
+    "made_at": "University of Illinois Chicago",
+    "start": "2022-02",
+    "end": "2022-06",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "RAkerman Linker",
+    "sub": "A simple url shortener that can be deployed in a pinch on Cloudflare Workers + KV",
+    "desc": "A simple url shortener that can be deployed over multiple domains simultaneously. RAkerman Linker leverages the power of Nuxt 3 and Cloudflare Workers KV to handle a unified list of custom redirects on a global scale. Specify a shortened url along with a target url in the Cloudflare Workers KV interface, and this service will handle the rest.",
+    "links": {
+      "ext": "https://link.rakerman.com",
+      "github": "https://github.com/rak3rman/rakerman-linker"
+    },
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "made_at": "Personal Project",
+    "start": "2022-05",
+    "end": "2022-06",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "Particlecord",
+    "sub": "A Particle.io events recognition filter (specifically for Tracker One) that pushes select updates to the Discord API",
+    "desc": "Particlecord listens to the data stream from Particle.io devices and notifies the user when a particular event occurs. Think of Particlecord as an \"API middleman\" that filters a real-time data stream from Particle.io and sends smart push notifications through Discord. Devices can also be managed using the Discord bot by setting friendly names, changing alert frequencies, and outputting the status of any device.",
+    "links": {
+      "github": "https://github.com/rak3rman/particlecord"
+    },
+    "tools": ["Node.js", "Express", "Particle.io", "Discord API"],
+    "made_at": "Personal Project",
+    "start": "2020-10",
+    "end": "2021-01",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "Remindcord",
+    "sub": "A dead-simple, custom Discord bot that sends messages on a defined interval",
+    "desc": "",
+    "links": {
+      "github": "https://github.com/rak3rman/remindcord"
+    },
+    "tools": ["Node.js", "Express", "Discord API"],
+    "made_at": "Personal Project",
+    "start": "2021-11",
+    "end": "2021-12",
+    "is_featured": false,
+    "is_archived": true
+  },
+  {
+    "title": "PaperMC Manager",
+    "sub": "A bash script that can manage multiple active papermc instances on Linux using screen and pm2",
+    "desc": "",
+    "links": {
+      "github": "https://github.com/rak3rman/papermc-manager"
+    },
+    "tools": ["Bash", "PM2"],
+    "made_at": "Personal Project",
+    "start": "2020-08",
+    "end": "2021-03",
+    "is_featured": false,
+    "is_archived": true
+  },
+  {
+    "title": "RAkerman Pace Clock",
+    "sub": "A pair of meshed swim pace clocks built using a neopixel segments and 2 Particle.io devices",
+    "desc": "Have you ever had to deal with 2 overpriced and outdated pace clocks breaking for seemingly no reason during swim practice in high school? Well, I did. (drumroll sounds) Introducing the RAkerman Pace Clock (RAPC), a state-of-the-art, multi-color, over-engineered digital clock system designed for pacing swim practices. The RAPC is essentially a strip of RGB leds (Neopixels) connected to a microcontroller (Particle Argon) that displays the time from 0:00 to 59:59 (mm:ss) over and over (in any color you'd like). It probably doesn't sound that cool, but trust me, it is a far cry from what it used to be.",
+    "links": {},
+    "tools": ["Particle.io", "C++", "Small Electronics", "Mesh Networking"],
+    "made_at": "Personal Project",
+    "start": "2019-10",
+    "end": "2019-12",
+    "is_featured": false,
+    "is_archived": true
+  },
+  {
+    "title": "MTOP",
+    "sub": "A cloud security unification solution leveraging multiple next-gen technologies in one place",
+    "desc": "",
+    "links": {},
+    "tools": ["Node.js", "Express", "MongoDB", "HTML/CSS"],
+    "made_at": "Montel Technologies",
+    "start": "2017-11",
+    "end": "2018-09",
+    "is_featured": false,
+    "is_archived": true
+  },
+  {
+    "title": "Mark 4",
+    "sub": "A fourth attempt at Radison Akerman's personal website. Notes of programming, cleanliness, and unification.",
+    "desc": "",
+    "links": {
+      "ext": "https://www.rakerman.com",
+      "github": "https://github.com/rak3rman/mark4"
+    },
+    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Tailwinds"],
+    "made_at": "Personal Project",
+    "start": "2022-07",
+    "end": "inf",
+    "is_featured": false,
+    "is_archived": false
+  },
+  {
+    "title": "Mark 3",
+    "sub": "A third attempt at Radison Akerman's personal website. Notes of blog, professionalism, and classic web design.",
+    "desc": "",
+    "links": {
+      "github": "https://github.com/rak3rman/mark3"
+    },
+    "tools": ["Ghost.io", "HTML/CSS", "Webpack"],
+    "made_at": "2022-07",
+    "start": "2020-05",
+    "end": "",
+    "is_featured": false,
+    "is_archived": true
+  },
+  {
+    "title": "Mark 2",
+    "sub": "A second attempt at Radison Akerman's personal website. Notes of photography, one-pagers, and info-dumpage.",
+    "desc": "",
+    "links": {
+      "github": "https://github.com/rak3rman/mark2"
+    },
+    "tools": ["Node.js", "Express", "HTML/CSS"],
+    "made_at": "Personal Project",
+    "start": "2019-10",
+    "end": "2020-04",
+    "is_featured": false,
+    "is_archived": true
+  },
+  {
+    "title": "Mark 1",
+    "sub": "The first attempt at Radison Akerman's personal website. Notes of 'lil Rad, programming, and paid website templates.",
+    "desc": "",
+    "links": {
+      "github": "https://github.com/rak3rman/mark1"
+    },
+    "tools": ["Node.js", "Express", "HTML/CSS"],
+    "made_at": "Personal Project",
+    "start": "2019-04",
+    "end": "2019-05",
+    "is_featured": false,
+    "is_archived": true
+  }
+]
