@@ -2,10 +2,10 @@
   <div>
     <Header num="03." title="Projects" id="projects" />
     <!--  Featured Projects  -->
-    <div class="overflow-hidden lg:bg-transparent mt-4" v-for="(project, index) in featuredProjects">
+    <div class="overflow-hidden lg:bg-transparent mt-6" v-for="(project, index) in featuredProjects">
       <div class="wrap mx-auto">
         <div class="grid grid-cols-10 ">
-          <div class="row-span-full col-span-6 self-center" :class="index % 2 === 0 ? 'col-start-1' : 'col-start-5'">
+          <div class="row-span-full col-span-6 self-center -m-2" :class="index % 2 === 0 ? 'col-start-1' : 'col-start-5'">
             <img class="object-cover rounded-lg" :src="project.links.images[0]" alt="">
           </div>
           <div class="row-span-full col-span-5 self-center" :class="index % 2 === 0 ? 'text-right col-end-11' : 'text-left col-end-6'">
@@ -20,8 +20,8 @@
                 {{ project.desc }}
               </p>
             </div>
-            <div class="flex flex-wrap text-sm text-accent font-light font-mono mb-1" :class="index % 2 === 0 ? 'flex-row-reverse' : ''">
-              <p v-for="tool in project.tools" :class="index % 2 === 0 ? 'pr-3' : 'pl-3'">{{ tool }}</p>
+            <div class="flex flex-wrap text-xs text-accent font-light font-mono mb-1" :class="index % 2 === 0 ? 'flex-row-reverse' : ''">
+              <p v-for="tool in project.tools" :class="index % 2 === 0 ? 'pr-4' : 'pl-3'">{{ tool }}</p>
             </div>
             <div class="flex mx-3" :class="index % 2 === 0 ? 'float-right' : 'float-left'">
               <a class="transition ease-in-out duration-300 hover:text-secondary" :href="project.links.github" v-if="project.links.github">
