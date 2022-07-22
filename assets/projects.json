@@ -2,9 +2,10 @@
   {
     "title": "Exploding Chickens",
     "sub": "A beautiful, online alternative to the popular Exploding Kittens card game",
-    "desc": "",
+    "desc": "A beautiful, online alternative to the popular Exploding Kittens card game. Built on Node.js with 600+ games played by 500+ players, led development and a team of 5.",
     "links": {
       "ext": "https://chickens.rakerman.com",
+      "youtube": "https://youtu.be/cD53M7NHQoM",
       "images": [
         "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/f432fa0c-b42c-446c-0d09-2916c5aa3100/xl"
       ]
@@ -19,7 +20,7 @@
   {
     "title": "Steven Olikara Website",
     "sub": "A foundational website supporting Steven Olikara’s run for the U.S. Senate in Wisconsin",
-    "desc": "",
+    "desc": "A foundational website supporting Steven Olikara’s 2022 run for the U.S. Senate in Wisconsin. Completely rebuilt from the ground up with unified colors, textures, and mobile optimizations.",
     "links": {
       "ext": "https://www.stevenolikara.com",
       "images": [
@@ -36,7 +37,7 @@
   {
     "title": "Informr",
     "sub": "A web form submission intermediary leveraging edge cloud compute",
-    "desc": "",
+    "desc": "(In Private Beta) A no-nonsense web form endpoint that enables web developers to handle form submissions faster. Leverages edge compute to offer high request volume and low cost.",
     "links": {
       "ext": "https://informr.rakerman.com",
       "images": [
