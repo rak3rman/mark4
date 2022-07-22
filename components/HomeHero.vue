@@ -5,7 +5,7 @@
         <Portrait1 class="max-w-full"/>
       </div>
       <div class="lg:col-span-3 flex items-center">
-        <Portrait1 class="absolute top-0 right-0 -mr-14 lg:hidden opacity-10" style="transform: rotateY(180deg)"/>
+        <Portrait1 class="absolute left-[18%] w-[130%] pb-48 lg:hidden opacity-10" style="transform: rotateY(180deg)"/>
         <div class="flex flex-col w-full justify-center overflow-y-hidden">
           <p class="py-2 leading-normal text-secondary font-mono text-lg md:text-xl text-left">
             Hi there, my name is

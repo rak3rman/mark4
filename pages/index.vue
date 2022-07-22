@@ -4,7 +4,7 @@
     <RAFBanner />
     <div class="pb-16">
       <Navbar />
-      <main class="max-w-7xl mx-auto px-4 sm:px-6">
+      <main class="relative container overflow-hidden max-w-7xl mx-auto px-4 sm:px-6">
         <HomeHero />
         <div class="container mx-auto items-center">
 

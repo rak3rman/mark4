@@ -30,6 +30,14 @@
     </div>
 
     <!--  Entries  -->
+    <div class="pt-4 pb-2">
+      <h1 class="text-3xl text-neutral font-bold leading-tight text-left">
+        Where I've Worked
+      </h1>
+      <p class="pt-1 text-md text-secondary font-mono text-left">
+        A <strike>picture</strike> work experience is worth a thousand words.
+      </p>
+    </div>
     <div v-for="entry in expEntries">
       <div v-if="entry.tags.includes(selectedExpTab)" class="pt-2">
         <h3 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
@@ -47,7 +55,15 @@
     </div>
 
     <!--  Testimonials  -->
-    <ul role="list" class="mt-10 grid grid-cols-1 -m-3 lg:grid-cols-3">
+    <div class="pt-12 pb-8">
+      <h1 class="text-3xl text-neutral font-bold leading-tight text-left">
+        What Others Say
+      </h1>
+      <p class="pt-1 text-md text-secondary font-mono text-left">
+        These are some top-notch human beings.
+      </p>
+    </div>
+    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-3">
       <li v-for="(group, index) in testimonials" class="space-y-8">
         <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">
           <blockquote>
