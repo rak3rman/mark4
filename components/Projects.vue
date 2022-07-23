@@ -52,7 +52,7 @@
     <!--  Noteworthy Projects  -->
     <div class="pt-12 pb-4">
       <h1 class="text-3xl text-neutral font-bold leading-tight text-left">
-        Other Neat Stuff
+        Other neat stuff
       </h1>
       <p class="pt-1 text-md text-secondary font-mono text-left">
         Mighty projects. Huge breadth. <br> May blow your socks off.

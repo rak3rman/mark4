@@ -240,7 +240,7 @@
     "start": "2019-10",
     "end": "2019-12",
     "is_featured": false,
-    "is_archived": true
+    "is_archived": false
   },
   {
     "title": "MTOP",
