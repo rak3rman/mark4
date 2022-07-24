@@ -156,7 +156,7 @@ const exp_entries = [
     bullets: [
       'Completely rebuilt campaign website from the ground up using Nuxt v3, Tailwinds, visited by 1,000’s of Wisconsinites daily',
       'Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN, Informr',
-      'Coordinated a team of web developers and content creators to rapidly push media; took photographs in the field',
+      'Worked with a team of web developers and content creators to rapidly push media; took photographs in the field',
     ]
   },
   {

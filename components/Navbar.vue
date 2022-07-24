@@ -42,7 +42,9 @@
             </div>
           </div>
           <div class="px-2 pt-2 pb-3">
-            <a v-for="(item, index) in navigation" :key="item.name" :href="item.href" class="block px-3 py-2 rounded-md text-base font-mono text-accent hover:text-secondary hover:bg-primary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
+            <PopoverButton v-for="(item, index) in navigation" class="block w-full text-left">
+              <a :key="item.name" :href="item.href" class="block px-3 py-2 rounded-md text-base font-mono text-accent hover:text-secondary hover:bg-primary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
+            </PopoverButton>
           </div>
           <a href="/resume.pdf" class="block w-full px-5 py-3 text-center font-medium text-neutral bg-secondary"> Resume </a>
         </div>
