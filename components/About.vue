@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header num="01." title="About Me" id="about" />
-    <div class="mt-4 lg:grid lg:grid-cols-2 lg:gap-8">
-      <div class="relative lg:row-start-1 lg:col-start-2">
-        <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+    <div class="mt-4">
+      <div class="relative lg:float-right lg:pl-5 lg:pb-5 lg:pt-1">
+        <div class="relative text-base mx-auto max-w-prose lg:max-w-md">
           <figure>
             <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
               <img class="rounded-lg shadow-lg object-cover object-top" src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/60165710-ba66-465f-f366-ba1c3b73cd00/xl" alt="Portrait of Radison" />
