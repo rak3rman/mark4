@@ -15,4 +15,9 @@ export default defineNuxtConfig({
             gitMasterTag: gitDescribeSync().hash
         }
     },
+    build: {
+        transpile: [
+            '@headlessui/vue'
+        ]
+    }
 })
