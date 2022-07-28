@@ -15,7 +15,7 @@
             <div class="w-9 rounded-lg transition ease-in-out duration-300" :class="[tab.id === selectedExpTab ? 'bg-secondary' : 'bg-primary-focus']">
               <svg aria-hidden="true" class="h-9 w-9 p-2" fill="#fff" :viewBox="tab.viewbox" v-html="tab.icon"></svg>
             </div>
-            <h6 class="mt-6 text-lg font-medium transition ease-in-out duration-300" :class="[tab.id === selectedExpTab ? 'text-secondary' : 'text-neutral']">
+            <h6 class="mt-6 text-md font-medium font-mono transition ease-in-out duration-300" :class="[tab.id === selectedExpTab ? 'text-secondary' : 'text-neutral']">
               <button>
                 <span class="absolute inset-0"></span>
                 {{ tab.name }}
@@ -47,7 +47,7 @@
           {{ entry.period }} // {{ entry.location }}
         </h6>
         <ul class="text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pb-0">
-          <li v-for="bullet in entry.bullets">
+          <li v-for="bullet in entry.bullets" class="pb-0">
             {{ bullet }}
           </li>
         </ul>
@@ -63,8 +63,8 @@
         These people are really, really cool.
       </h6>
     </div>
-    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-3 list-none">
-      <li v-for="(group, index) in testimonials" class="space-y-8">
+    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-3 list-none p-0">
+      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">
         <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">
           <blockquote>
             <h6 class="text-lg tracking-tight text-neutral">
@@ -93,16 +93,16 @@
 <script setup>
 const testimonials = [
   [
-    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Mira’s teaching style is second to none. Everything was easy to follow every step of the way.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I run an ecommerce store selling rare vintage gummy bears and could never find a good gummy bear icon. Now I can design my own in minutes.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Mira’s teaching style is second to none. Everything was easy to follow every step of the way.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I run an ecommerce store selling rare vintage gummy bears and could never find a good gummy bear icon. Now I can design my own in minutes.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
   [
-    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I couldn’t believe how fast Mira moved in Figma compared to my own workflow. I’m designing icons more accurately in half the time with the shortcuts I learned from her videos.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Even though I was excited to learn, I was pessimistic that I wouldn’t actually ever get good enough to design my own icons. I was wrong — this book is all I needed.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I couldn’t believe how fast Mira moved in Figma compared to my own workflow. I’m designing icons more accurately in half the time with the shortcuts I learned from her videos.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Even though I was excited to learn, I was pessimistic that I wouldn’t actually ever get good enough to design my own icons. I was wrong — this book is all I needed.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
   [
-    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "The complete package is worth it for the weekly teardown videos alone. I’ve learned so much watching Mira take apart other icons and recreate them from scratch.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I never thought I would enjoy designing icons but using the ideas in this book, it’s become a great way for me to relax while still being creative.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "The complete package is worth it for the weekly teardown videos alone. I’ve learned so much watching Mira take apart other icons and recreate them from scratch.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I never thought I would enjoy designing icons but using the ideas in this book, it’s become a great way for me to relax while still being creative.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
 ]
 </script>

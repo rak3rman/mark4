@@ -6,9 +6,9 @@
         <div class="w-full border-t border-accent" />
       </div>
       <div class="relative flex justify-start">
-        <h1 class="flex items-center pr-6 bg-primary text-3xl md:text-4xl text-neutral font-bold leading-tight text-left">
+        <h6 class="flex items-center pr-6 bg-primary text-3xl md:text-4xl text-neutral font-bold leading-tight text-left">
           <span class="font-mono pr-2 text-2xl md:text-3xl text-secondary">{{ props.num }}</span> {{ props.title }}
-        </h1>
+        </h6>
       </div>
     </div>
   </div>

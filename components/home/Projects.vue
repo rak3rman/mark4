@@ -58,8 +58,8 @@
         Mighty projects. Huge breadth. <br> May blow your socks off.
       </h6>
     </div>
-    <ul role="list" class="mt-4 grid grid-cols-1 lg:grid-cols-3 -m-3">
-      <li v-for="(project, index) in noteworthyProjects" class="col-span-1 flex flex-col space-y-8">
+    <ul role="list" class="mt-4 grid grid-cols-1 lg:grid-cols-3 -m-3 list-none p-0">
+      <li v-for="(project, index) in noteworthyProjects" class="col-span-1 flex flex-col space-y-8 pb-0">
         <div class="flex-1 flex flex-col rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" :class="index > 5 ? 'hidden lg:flex' : ''">
           <div class="flex items-center mb-4 flow-root">
             <FolderIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true" />

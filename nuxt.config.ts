@@ -20,5 +20,10 @@ export default defineNuxtConfig({
             '@headlessui/vue',
             '@heroicons/vue'
         ]
+    },
+    nitro: {
+        prerender: {
+            routes: ['/sitemap.xml']
+        }
     }
 })
