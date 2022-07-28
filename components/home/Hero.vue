@@ -2,7 +2,7 @@
   <div class="container mx-auto flex items-center min-h-screen">
     <div class="mt-8 lg:grid lg:grid-cols-5 lg:gap-8 w-full">
       <div class="hidden lg:flex items-center justify-center lg:row-start-1 lg:col-start-4 lg:col-span-2">
-        <SvgPortrait1 class="max-w-full"/>
+        <SvgPortrait1 class="max-w-full opacity-80"/>
       </div>
       <div class="lg:col-span-3 flex items-center">
         <SvgPortrait1 class="absolute left-[18%] w-[130%] pb-48 lg:hidden opacity-10" style="transform: rotateY(180deg)"/>
