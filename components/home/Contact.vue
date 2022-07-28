@@ -4,17 +4,17 @@
     <div class="container mx-auto flex items-center">
       <div class="mt-8 lg:grid lg:grid-cols-5 lg:gap-8 w-full">
         <div class="flex justify-center lg:row-start-1 lg:col-start-1 lg:col-span-2">
-          <p class="text-[0.9rem] text-accent font-mono text-left mb-10 mt-0 lg:mt-4">
+          <h6 class="text-[0.9rem] text-accent font-mono text-left mb-10 mt-0 lg:mt-4">
             <strong>What's next? Well, that is up to you.</strong> Here's a few options based on what your looking for:
             <br><br>
             >> <strong>A. "I need a group of highly-driven creatives that can do anything"</strong> <br> <i>Check out <a class="text-secondary underline underline-offset-2" href="https://pulqra.com">Pulqra</a>, we'd be thrilled to collab with you over our <a class="text-secondary underline underline-offset-2" href="https://pulqra.com/dir/product">catalogue of services</a>.</i>
             <br><br>
             >> <strong>B. "HELP! I'm searching far and wide for a leader in computer wizardry"</strong> <br> <i>Take a gander at <a class="text-secondary underline underline-offset-2" href="/resume.pdf">my resume</a>, if you think we'd be a match (yay!) fill out the good ole' contact form.</i>
             <br><br>
-            >> <strong>C. "Whoa. I don't even know where to start but let's chat"</strong> <br> <i>My inbox is always open. I'm constantly <strike>running</strike> cycling around, so when I come to a stop I'll give you a shout.</i>
+            >> <strong>C. "Whoa. I don't even know where to start but let's chat"</strong> <br> <i>My inbox is always open. I'm constantly <s>running</s> cycling around, so when I come to a stop I'll give you a shout.</i>
             <br><br>
             <i>Please don't solicit with products + services, I make all of those myself ;-)</i>
-          </p>
+          </h6>
         </div>
         <div class="lg:col-span-3 flex items-center">
           <form action="https://informr.rakerman.com/in/q5y6j3N2" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 w-full">

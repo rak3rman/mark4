@@ -15,15 +15,15 @@
             <div class="w-9 rounded-lg transition ease-in-out duration-300" :class="[tab.id === selectedExpTab ? 'bg-secondary' : 'bg-primary-focus']">
               <svg aria-hidden="true" class="h-9 w-9 p-2" fill="#fff" :viewBox="tab.viewbox" v-html="tab.icon"></svg>
             </div>
-            <h3 class="mt-6 text-md font-medium transition ease-in-out duration-300" :class="[tab.id === selectedExpTab ? 'text-secondary' : 'text-neutral']">
+            <h6 class="mt-6 text-lg font-medium transition ease-in-out duration-300" :class="[tab.id === selectedExpTab ? 'text-secondary' : 'text-neutral']">
               <button>
                 <span class="absolute inset-0"></span>
                 {{ tab.name }}
               </button>
-            </h3>
-            <p class="mt-2 font-display text-md text-accent">
+            </h6>
+            <h6 class="mt-2 font-display text-md text-accent">
               {{ tab.desc }}
-            </p>
+            </h6>
           </div>
         </div>
       </div>
@@ -31,22 +31,22 @@
 
     <!--  Entries  -->
     <div class="pt-4 pb-2">
-      <h1 class="text-3xl text-neutral font-bold leading-tight text-left">
+      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
         Where I've left an impact
-      </h1>
-      <p class="pt-1 text-md text-secondary font-mono text-left">
+      </h6>
+      <h6 class="pt-1 text-md text-secondary font-mono text-left">
         Constantly pushing things further.
-      </p>
+      </h6>
     </div>
     <div v-for="entry in expEntries">
       <div v-if="entry.tags.includes(selectedExpTab)" class="pt-2">
-        <h3 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
+        <h6 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
           {{ entry.title }} <span class="text-accent">@ {{ entry.company }}</span>
-        </h3>
-        <h4 class="leading-normal text-neutral text-sm font-mono text-left">
+        </h6>
+        <h6 class="leading-normal text-neutral text-sm font-mono text-left">
           {{ entry.period }} // {{ entry.location }}
-        </h4>
-        <ul class="list-disc text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pl-5">
+        </h6>
+        <ul class="text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pb-0">
           <li v-for="bullet in entry.bullets">
             {{ bullet }}
           </li>
@@ -56,20 +56,20 @@
 
     <!--  Testimonials  -->
     <div class="pt-12 pb-8">
-      <h1 class="text-3xl text-neutral font-bold leading-tight text-left">
+      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
         What others say
-      </h1>
-      <p class="pt-1 text-md text-secondary font-mono text-left">
+      </h6>
+      <h6 class="pt-1 text-md text-secondary font-mono text-left">
         These people are really, really cool.
-      </p>
+      </h6>
     </div>
-    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-3">
+    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-3 list-none">
       <li v-for="(group, index) in testimonials" class="space-y-8">
         <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">
           <blockquote>
-            <p class="text-lg tracking-tight text-neutral">
+            <h6 class="text-lg tracking-tight text-neutral">
               "{{ testimonial.quote }}"
-            </p>
+            </h6>
           </blockquote>
           <figcaption class="mt-6 flex items-center">
             <div class="overflow-hidden rounded-full bg-secondary">

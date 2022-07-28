@@ -18,7 +18,7 @@
         </div>
         <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
           <div class="md:space-x-8 pr-6">
-            <a v-for="(item, index) in navigation" :key="item.name" :href="item.href" class="font-mono text-sm text-accent hover:text-secondary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
+            <a v-for="(item, index) in props.nav" :key="item.name" :href="item.href" class="font-mono text-sm text-accent hover:text-secondary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
           </div>
           <span class="inline-flex rounded-md shadow">
             <a href="/resume.pdf" class="inline-flex items-center px-4 py-2 border border-secondary text-sm font-mono rounded-md text-secondary hover:bg-primary-focus"> Resume </a>
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="px-2 pt-2 pb-3">
-            <PopoverButton v-for="(item, index) in navigation" class="block w-full text-left">
+            <PopoverButton v-for="(item, index) in props.nav" class="block w-full text-left">
               <a :key="item.name" :href="item.href" class="block px-3 py-2 rounded-md text-base font-mono text-accent hover:text-secondary hover:bg-primary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</a>
             </PopoverButton>
           </div>
@@ -57,10 +57,7 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
-const navigation = [
-  { name: 'About', href: '#about' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-]
+const props = defineProps({
+  nav: Array
+})
 </script>

@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fit to page on Nuxt.js using Tailwinds CSS */
+#__nuxt {
+  height: 100%
+}
+
+#__layout {
+  height: 100%
+}
+
+/* Base text sizes for default tags, useful with markdown */
+@layer base {
+  h1 {
+    @apply font-semibold;
+    @apply text-3xl;
+    @apply pt-8;
+    @apply pb-4;
+  }
+  h2 {
+    @apply font-medium;
+    @apply text-2xl;
+    @apply pb-4;
+  }
+  h3 {
+    @apply font-medium;
+    @apply text-xl;
+    @apply pb-4;
+  }
+  p {
+    @apply leading-7;
+    @apply pb-4;
+  }
+  ul {
+    @apply list-disc;
+    @apply leading-7;
+    @apply pl-5;
+    @apply pt-1;
+    @apply pb-5;
+  }
+  hr {
+    @apply my-8;
+  }
+}

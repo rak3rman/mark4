@@ -9,19 +9,19 @@
             <img class="object-cover rounded-lg" :src="project.links.images[0]" alt="">
           </div>
           <div class="row-span-full col-span-9 md:col-span-5 self-center" :class="index % 2 === 0 ? 'text-right col-end-11 md:col-end-11' : 'text-left col-end-9 md:col-end-6'">
-            <p class="text-secondary font-mono text-md mb-1 mx-3">
+            <h6 class="text-secondary font-mono text-md mb-1 mx-3">
               {{ project.made_at }}
-            </p>
-            <h1 class="text-neutral text-3xl mb-5 mx-3">
+            </h6>
+            <h6 class="text-neutral text-3xl mb-5 mx-3">
               {{ project.title }}
-            </h1>
+            </h6>
             <div class="p-4 bg-transparent md:bg-primary-focus backdrop-brightness-[0.4] backdrop-blur-[1.5px] shadow-xl rounded-lg mb-3">
-              <p class="text-accent text-md">
+              <h6 class="text-accent text-md">
                 {{ project.desc }}
-              </p>
+              </h6>
             </div>
             <div class="flex flex-wrap text-xs text-accent font-light font-mono mb-1" :class="index % 2 === 0 ? 'flex-row-reverse' : ''">
-              <p v-for="tool in project.tools" :class="index % 2 === 0 ? 'pr-4' : 'pl-3'">{{ tool }}</p>
+              <h6 v-for="tool in project.tools" :class="index % 2 === 0 ? 'pr-4' : 'pl-3'">{{ tool }}</h6>
             </div>
             <div class="flex mx-3" :class="index % 2 === 0 ? 'float-right' : 'float-left'">
               <a class="transition ease-in-out duration-300 hover:text-secondary" :href="project.links.youtube" v-if="project.links.youtube">
@@ -51,12 +51,12 @@
     </div>
     <!--  Noteworthy Projects  -->
     <div class="pt-12 pb-4">
-      <h1 class="text-3xl text-neutral font-bold leading-tight text-left">
+      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
         Other neat stuff
-      </h1>
-      <p class="pt-1 text-md text-secondary font-mono text-left">
+      </h6>
+      <h6 class="pt-1 text-md text-secondary font-mono text-left">
         Mighty projects. Huge breadth. <br> May blow your socks off.
-      </p>
+      </h6>
     </div>
     <ul role="list" class="mt-4 grid grid-cols-1 lg:grid-cols-3 -m-3">
       <li v-for="(project, index) in noteworthyProjects" class="col-span-1 flex flex-col space-y-8">
@@ -86,15 +86,15 @@
               </a>
             </div>
           </div>
-          <p class="text-lg font-medium tracking-tight leading-6 text-neutral">
+          <h6 class="text-lg font-medium tracking-tight leading-6 text-neutral">
             {{ project.title }}
-          </p>
-          <p class="mt-1.5 text-sm text-accent">
+          </h6>
+          <h6 class="mt-1.5 text-sm text-accent">
             {{ project.sub }}
-          </p>
+          </h6>
           <div class="flex flex-grow items-end mt-1.5">
             <div class="flex flex-wrap text-xs text-accent font-light font-mono">
-              <p v-for="tool in project.tools" class="pr-2.5">{{ tool }}</p>
+              <h6 v-for="tool in project.tools" class="pr-2.5">{{ tool }}</h6>
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@ import { FolderIcon } from '@heroicons/vue/outline'
 </script>
 
 <script>
-import projects from '../assets/projects.json'
+import projects from '../../assets/projects.json'
 
 export default {
   computed: {
