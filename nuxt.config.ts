@@ -10,9 +10,6 @@ export default defineNuxtConfig({
     content: {
         // https://content.nuxtjs.org/api/configuration
     },
-    css: [
-        '@/assets/css/main.css',
-    ],
     runtimeConfig: {
         public: {
             gitMasterTag: gitDescribeSync().hash
