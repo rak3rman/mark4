@@ -5,7 +5,6 @@
     </div>
 
     <Body class="bg-primary" />
-    <RAFBanner />
     <div class="pb-16">
       <Navbar />
       <main class="relative container overflow-hidden max-w-7xl mx-auto px-4 sm:px-6">
@@ -20,3 +19,13 @@
     </div>
   </div>
 </template>
+
+<script setup>
+const nuxtApp = useNuxtApp()
+
+nuxtApp.hook("page:finish", () => {
+  setTimeout(() => {
+    window.scrollTo(0, 0)
+  }, 300)
+})
+</script>

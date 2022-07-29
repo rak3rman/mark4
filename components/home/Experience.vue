@@ -54,39 +54,39 @@
       </div>
     </div>
 
-    <!--  Testimonials  -->
-    <div class="pt-12 pb-8">
-      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
-        What others say
-      </h6>
-      <h6 class="pt-1 text-md text-secondary font-mono text-left">
-        These people are really, really cool.
-      </h6>
-    </div>
-    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-3 list-none p-0">
-      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">
-        <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">
-          <blockquote>
-            <h6 class="text-lg tracking-tight text-neutral">
-              "{{ testimonial.quote }}"
-            </h6>
-          </blockquote>
-          <figcaption class="mt-6 flex items-center">
-            <div class="overflow-hidden rounded-full bg-secondary">
-              <img class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />
-            </div>
-            <div class="ml-4">
-              <div class="text-base font-medium leading-6 tracking-tight text-neutral">
-                {{ testimonial.name }}
-              </div>
-              <div class="mt-1 text-sm text-accent">
-                {{ testimonial.title }}
-              </div>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-    </ul>
+<!--    &lt;!&ndash;  Testimonials  &ndash;&gt;-->
+<!--    <div class="pt-12 pb-8">-->
+<!--      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">-->
+<!--        What others say-->
+<!--      </h6>-->
+<!--      <h6 class="pt-1 text-md text-secondary font-mono text-left">-->
+<!--        These people are really, really cool.-->
+<!--      </h6>-->
+<!--    </div>-->
+<!--    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-3 list-none p-0">-->
+<!--      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">-->
+<!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
+<!--          <blockquote>-->
+<!--            <h6 class="text-lg tracking-tight text-neutral">-->
+<!--              "{{ testimonial.quote }}"-->
+<!--            </h6>-->
+<!--          </blockquote>-->
+<!--          <figcaption class="mt-6 flex items-center">-->
+<!--            <div class="overflow-hidden rounded-full bg-secondary">-->
+<!--              <img class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />-->
+<!--            </div>-->
+<!--            <div class="ml-4">-->
+<!--              <div class="text-base font-medium leading-6 tracking-tight text-neutral">-->
+<!--                {{ testimonial.name }}-->
+<!--              </div>-->
+<!--              <div class="mt-1 text-sm text-accent">-->
+<!--                {{ testimonial.title }}-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </figcaption>-->
+<!--        </figure>-->
+<!--      </li>-->
+<!--    </ul>-->
   </div>
 </template>
 

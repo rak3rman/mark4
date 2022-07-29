@@ -28,19 +28,9 @@
   <Script src="https://status.rakerman.com/api/alert" />
 </template>
 
-<script>
+<script setup>
 const title = "Radison Akerman"
 const desc = "I am highly skilled in internet. You might find me solving niche problems with programming, over yonder with my camera, or working on something radical."
 const url = "https://www.rakerman.com"
-
-export default {
-  data () {
-    return {
-      title,
-      desc,
-      url,
-    }
-  },
-}
 </script>
 

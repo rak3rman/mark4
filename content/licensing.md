@@ -1,6 +1,6 @@
 ::Hero
 #head
-Digital Image Licensing
+Licensing
 
 #desc
 Legal stuff detailing how digital assets can and cannot be used.

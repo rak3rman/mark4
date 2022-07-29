@@ -1,6 +1,7 @@
 <template>
-  <div class="fixed top-0 left-0 right-0 py-4 backdrop-blur-xl z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+  <div class="fixed top-0 left-0 right-0 backdrop-blur-xl z-10">
+    <RAFBanner />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
       <nav class="relative flex items-center h-10 justify-center" aria-label="Global">
         <div class="flex items-center flex-1 absolute inset-y-0 left-0">
           <div class="flex items-center justify-between w-auto">

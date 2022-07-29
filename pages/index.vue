@@ -1,7 +1,6 @@
 <template>
   <div class="h-full">
     <Body class="bg-primary" />
-    <RAFBanner />
     <div class="pb-16">
       <HomeNavbar :nav="navigation"/>
       <main class="relative container overflow-hidden max-w-7xl mx-auto px-4 sm:px-6">
