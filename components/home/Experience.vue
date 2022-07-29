@@ -30,7 +30,7 @@
     </div>
 
     <!--  Entries  -->
-    <div class="pt-4 pb-2">
+    <div class="pt-6 pb-2">
       <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
         Where I've left an impact
       </h6>
