@@ -4,6 +4,8 @@ account_id = "287572e2291030d8c5e360fcc593a16b"
 workers_dev = true
 compatibility_date = "2022-05-04"
 
+kv_namespaces = [{ binding = "LINKAGES", id = "29990306356c4c5f8d49d2999424d9ea", preview_id = "df6d561f85114db1aeed50260a595f5a" }]
+
 [build]
 command = "true"
 
