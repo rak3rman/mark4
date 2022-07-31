@@ -36,9 +36,9 @@ export default {
   mounted() {
     // Add event listeners for scroll events
     document.addEventListener('scroll', handleScroll)
-    setTimeout(handleScroll, 600)
+    setTimeout(handleScroll, 400)
     // Now that we are mounted, trigger onload fadein elements
-    setTimeout(showOnloads, 600)
+    setTimeout(showOnloads, 400)
   },
   unmounted() {
     document.removeEventListener('scroll', handleScroll)
