@@ -3,7 +3,7 @@
     <!--  Tabs  -->
     <Header num="02." title="Experience" id="experience" />
     <div class="mt-4 w-full pb-1">
-      <div class="sm:hidden">
+      <div class="sm:hidden fade-in">
         <label for="tabs" class="sr-only">Select a tab</label>
         <select id="tabs" v-model="selectedExpTab" name="tabs" class="block w-full bg-primary focus:ring-secondary focus:border-secondary border-neutral text-neutral rounded-md">
           <option v-for="tab in expTabs" :value="tab.id" :selected="tab.id === selectedExpTab">{{ tab.name }}</option>
@@ -11,7 +11,7 @@
       </div>
       <div class="hidden sm:block sm:mt-4 sm:mb-3">
         <div class="grid grid-cols-3 gap-x-8" role="tablist" aria-orientation="horizontal">
-          <div class="relative transition ease-in-out duration-300" v-for="tab in expTabs" href="#experience" :key="tab.id" @click="updateExpTab(tab.id)" :class="[tab.id === selectedExpTab ? '' : 'opacity-75 hover:opacity-100']">
+          <div class="relative transition ease-in-out duration-300 fade-in" v-for="tab in expTabs" href="#experience" :key="tab.id" @click="updateExpTab(tab.id)" :class="[tab.id === selectedExpTab ? '' : 'opacity-75 hover:opacity-100']">
             <div class="w-9 rounded-lg transition ease-in-out duration-300" :class="[tab.id === selectedExpTab ? 'bg-secondary' : 'bg-primary-focus']">
               <svg aria-hidden="true" class="h-9 w-9 p-2" fill="#fff" :viewBox="tab.viewbox" v-html="tab.icon"></svg>
             </div>
@@ -30,7 +30,7 @@
     </div>
 
     <!--  Entries  -->
-    <div class="pt-6 pb-2">
+    <div class="pt-6 pb-2 fade-in">
       <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
         Where I've left an impact
       </h6>
@@ -38,7 +38,7 @@
         Constantly pushing things further.
       </h6>
     </div>
-    <div v-for="entry in expEntries">
+    <div v-for="entry in expEntries" class="fade-in">
       <div v-if="entry.tags.includes(selectedExpTab)" class="pt-2">
         <h6 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
           {{ entry.title }} <span class="text-accent">@ {{ entry.company }}</span>

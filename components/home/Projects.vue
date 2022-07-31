@@ -2,7 +2,7 @@
   <div>
     <Header num="03." title="Projects" id="projects" />
     <!--  Featured Projects  -->
-    <div class="overflow-hidden lg:bg-transparent mt-6" v-for="(project, index) in featuredProjects">
+    <div class="overflow-hidden lg:bg-transparent mt-6 fade-in" v-for="(project, index) in featuredProjects">
       <div class="wrap mx-auto">
         <div class="grid grid-cols-10 ">
           <div class="row-span-full col-span-8 md:col-span-6 self-center -m-2" :class="index % 2 === 0 ? 'col-start-1 md:col-start-1' : 'col-start-3 md:col-start-5'">
@@ -50,7 +50,7 @@
       </div>
     </div>
     <!--  Noteworthy Projects  -->
-    <div class="pt-12 pb-4">
+    <div class="pt-12 pb-4 fade-in">
       <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
         Other neat stuff
       </h6>
@@ -59,7 +59,7 @@
       </h6>
     </div>
     <ul role="list" class="mt-4 grid grid-cols-1 lg:grid-cols-3 -m-3 list-none p-0">
-      <li v-for="(project, index) in noteworthyProjects" class="col-span-1 flex flex-col space-y-8 pb-0">
+      <li v-for="(project, index) in noteworthyProjects" class="col-span-1 flex flex-col space-y-8 pb-0 fade-in">
         <div class="flex-1 flex flex-col rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" :class="index > 5 ? 'hidden lg:flex' : ''">
           <div class="flex items-center mb-4 flow-root">
             <FolderIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true" />

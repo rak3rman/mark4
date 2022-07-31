@@ -11,6 +11,25 @@
   height: 100%
 }
 
+/* animate fade in blocks */
+.fade-in {
+  transition: 0.3s all ease-out;
+  transform: scale(0.8)translate(0, 20%);
+  opacity: 0;
+}
+
+.fade-in-nav {
+  transition: 0.3s all ease-out;
+  transform: scale(0.9)translate(-20%, 0);
+  opacity: 0;
+}
+
+.fade-in-hero {
+  transition: 0.3s all ease-out;
+  transform: scale(0.8)translate(0, -10%);
+  opacity: 0.02;
+}
+
 /* Base text sizes for default tags, useful with markdown */
 @layer base {
   h1 {

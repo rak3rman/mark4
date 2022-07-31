@@ -34,3 +34,52 @@ const desc = "I am highly skilled in internet. You might find me solving niche p
 const url = "https://www.rakerman.com"
 </script>
 
+<script>
+let fadeInElements = []
+let fadeInOnloadElements = []
+
+const isElemVisible = (el) => {
+  let rect = el.getBoundingClientRect()
+  let elemTop = rect.top + 140 // 200 = buffer
+  let elemBottom = rect.bottom
+  return elemTop < window.innerHeight && elemBottom >= 0
+}
+
+const handleScroll = (evt) => {
+  for (let i = 0; i < fadeInElements.length; i++) {
+    let elem = fadeInElements[i]
+    if (isElemVisible(elem)) {
+      elem.style.opacity = '1'
+      elem.style.transform = 'scale(1)'
+      fadeInElements.splice(i, 1) // only allow it to run once
+    }
+  }
+}
+
+const showOnloads = (evt) => {
+  for (let i = 0; i < fadeInOnloadElements.length; i++) {
+    let elem = fadeInOnloadElements[i]
+    elem.style.opacity = '1'
+    elem.style.transform = 'scale(1)'
+  }
+}
+
+export default {
+  mounted() {
+    // Get all elements that can be a part of scrollable fade in
+    fadeInElements = Array.from(document.getElementsByClassName('fade-in'))
+    // Add event listeners for scroll events
+    document.addEventListener('scroll', handleScroll)
+    handleScroll()
+    // Now that we are mounted, trigger onload fadein elements
+    fadeInOnloadElements = Array
+            .from(document.getElementsByClassName('fade-in-nav'))
+            .concat(Array.from(document.getElementsByClassName('fade-in-hero')))
+    showOnloads()
+  },
+  unmounted() {
+    document.removeEventListener('scroll', handleScroll)
+  }
+}
+</script>
+

@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24 pb-4">
+  <div class="pt-24 pb-4 fade-in">
     <div class="relative w-full md:w-5/12"></div>
     <div class="relative w-full md:w-7/12">
       <div class="absolute inset-0 flex items-center" aria-hidden="true">
