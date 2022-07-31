@@ -1,23 +1,5 @@
 <template>
-  <div class="h-full">
-    <Body class="bg-primary" />
-    <div class="pb-16">
-      <HomeNavbar />
-      <main class="relative container overflow-hidden max-w-7xl mx-auto px-4 sm:px-6">
-        <HomeHero />
-        <div class="container mx-auto items-center">
-
-          <HomeAbout />
-          <HomeExperience />
-          <HomeProjects />
-          <HomeContact />
-
-          <Footer />
-
-        </div>
-      </main>
-    </div>
-  </div>
+  <slot />
 </template>
 
 <script>
@@ -43,7 +25,6 @@ const showOnloads = (evt) => {
   let elements = Array
       .from(document.getElementsByClassName('fade-in-nav'))
       .concat(Array.from(document.getElementsByClassName('fade-in-hero')))
-  console.log(elements)
   for (let i = 0; i < elements.length; i++) {
     let elem = elements[i]
     elem.style.opacity = '1'

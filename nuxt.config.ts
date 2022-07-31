@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         '@nuxt/content'
     ],
     content: {
-        // https://content.nuxtjs.org/api/configuration
+        documentDriven: true
     },
     runtimeConfig: {
         public: {

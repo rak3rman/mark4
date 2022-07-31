@@ -32,7 +32,7 @@
             </NuxtLink>
           </div>
           <span class="inline-flex rounded-md shadow fade-in-nav" :style="{ 'transition-delay': navigation.length*100+300 + 'ms' }">
-            <NuxtLink to="/resume.pdf" class="inline-flex items-center px-4 py-2 border border-secondary text-sm font-mono rounded-md text-secondary hover:bg-primary-focus"> Resume </NuxtLink>
+            <NuxtLink to="/resume.pdf" target="_blank" class="inline-flex items-center px-4 py-2 border border-secondary text-sm font-mono rounded-md text-secondary hover:bg-primary-focus"> Resume </NuxtLink>
           </span>
         </div>
       </nav>
@@ -57,7 +57,7 @@
               <NuxtLink :key="item.name" :to="item.href" :class="'delay-[' + index*100 + ']'" class="block px-3 py-2 rounded-md text-base font-mono text-accent hover:text-secondary hover:bg-primary"><span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}</NuxtLink>
             </PopoverButton>
           </div>
-          <NuxtLink to="/resume.pdf" class="block w-full px-5 py-3 text-center font-medium text-neutral bg-secondary"> Resume </NuxtLink>
+          <NuxtLink to="/resume.pdf" target="_blank" class="block w-full px-5 py-3 text-center font-medium text-neutral bg-secondary"> Resume </NuxtLink>
         </div>
       </PopoverPanel>
     </transition>

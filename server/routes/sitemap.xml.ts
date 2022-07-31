@@ -7,11 +7,6 @@ export default defineEventHandler(async (event) => {
     const sitemap = new SitemapStream({
         hostname: 'https://www.rakerman.com'
     })
-    // Insert home page into sitemap
-    sitemap.write({
-        url: '/',
-        changefreq: 'monthly'
-    })
     // Insert all content-rendered documents into sitemap
     for (const doc of docs) {
         sitemap.write({

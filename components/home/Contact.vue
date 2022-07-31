@@ -9,7 +9,7 @@
             <br><br>
             >> <strong>A. "I need a group of highly-driven creatives that can do anything"</strong> <br> <i>Check out <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com">Pulqra</NuxtLink>, we'd be thrilled to collab with you over our <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com/dir/product">catalogue of services</NuxtLink>.</i>
             <br><br>
-            >> <strong>B. "HELP! I'm searching far and wide for a leader in computer wizardry"</strong> <br> <i>Take a gander at <NuxtLink class="text-secondary underline underline-offset-2" to="/resume.pdf">my resume</NuxtLink>, if you think we'd be a match (yay!) fill out the good ole' contact form.</i>
+            >> <strong>B. "HELP! I'm searching far and wide for a leader in computer wizardry"</strong> <br> <i>Take a gander at <NuxtLink class="text-secondary underline underline-offset-2" to="/resume.pdf" target="_blank">my resume</NuxtLink>, if you think we'd be a match (yay!) fill out the good ole' contact form.</i>
             <br><br>
             >> <strong>C. "Whoa. I don't even know where to start but let's chat"</strong> <br> <i>My inbox is always open. I'm constantly <s>running</s> cycling around, so when I come to a stop I'll give you a shout.</i>
             <br><br>
