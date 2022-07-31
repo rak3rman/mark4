@@ -7,9 +7,9 @@
           <h6 class="text-[0.9rem] text-accent font-mono text-left mb-10 mt-0 lg:mt-4 fade-in">
             <strong>What's next? Well, that is up to you.</strong> Here's a few options based on what your looking for:
             <br><br>
-            >> <strong>A. "I need a group of highly-driven creatives that can do anything"</strong> <br> <i>Check out <a class="text-secondary underline underline-offset-2" href="https://pulqra.com">Pulqra</a>, we'd be thrilled to collab with you over our <a class="text-secondary underline underline-offset-2" href="https://pulqra.com/dir/product">catalogue of services</a>.</i>
+            >> <strong>A. "I need a group of highly-driven creatives that can do anything"</strong> <br> <i>Check out <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com">Pulqra</NuxtLink>, we'd be thrilled to collab with you over our <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com/dir/product">catalogue of services</NuxtLink>.</i>
             <br><br>
-            >> <strong>B. "HELP! I'm searching far and wide for a leader in computer wizardry"</strong> <br> <i>Take a gander at <a class="text-secondary underline underline-offset-2" href="/resume.pdf">my resume</a>, if you think we'd be a match (yay!) fill out the good ole' contact form.</i>
+            >> <strong>B. "HELP! I'm searching far and wide for a leader in computer wizardry"</strong> <br> <i>Take a gander at <NuxtLink class="text-secondary underline underline-offset-2" to="/resume.pdf">my resume</NuxtLink>, if you think we'd be a match (yay!) fill out the good ole' contact form.</i>
             <br><br>
             >> <strong>C. "Whoa. I don't even know where to start but let's chat"</strong> <br> <i>My inbox is always open. I'm constantly <s>running</s> cycling around, so when I come to a stop I'll give you a shout.</i>
             <br><br>
@@ -58,10 +58,10 @@
             </div>
             <div class="sm:col-span-2 fade-in">
               <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-md font-medium text-accent bg-primary-focus hover:bg-secondary hover:text-neutral focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition ease-in-out duration-300">Let's talk</button>
-              <a href="https://informr.rakerman.com" class="flex text-xs text-accent hover:text-secondary transition ease-in-out duration-300 items-center p-2 float-right">
+              <NuxtLink to="https://informr.rakerman.com" class="flex text-xs text-accent hover:text-secondary transition ease-in-out duration-300 items-center p-2 float-right">
                 <SparklesIcon class="h-4 w-4 pr-1" />
                 Powered by Informr
-              </a>
+              </NuxtLink>
             </div>
           </form>
         </div>

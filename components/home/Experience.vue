@@ -11,7 +11,7 @@
       </div>
       <div class="hidden sm:block sm:mt-4 sm:mb-3">
         <div class="grid grid-cols-3 gap-x-8" role="tablist" aria-orientation="horizontal">
-          <div class="relative transition ease-in-out duration-300 fade-in" v-for="tab in expTabs" href="#experience" :key="tab.id" @click="updateExpTab(tab.id)" :class="[tab.id === selectedExpTab ? '' : 'opacity-75 hover:opacity-100']">
+          <NuxtLink class="relative transition ease-in-out duration-300 fade-in" v-for="tab in expTabs" :key="tab.id" @click="updateExpTab(tab.id)" :class="[tab.id === selectedExpTab ? '' : 'opacity-75 hover:opacity-100']" to="#experience">
             <div class="w-9 rounded-lg transition ease-in-out duration-300" :class="[tab.id === selectedExpTab ? 'bg-secondary' : 'bg-primary-focus']">
               <svg aria-hidden="true" class="h-9 w-9 p-2" fill="#fff" :viewBox="tab.viewbox" v-html="tab.icon"></svg>
             </div>
@@ -24,7 +24,7 @@
             <h6 class="mt-2 font-display text-md text-accent">
               {{ tab.desc }}
             </h6>
-          </div>
+          </NuxtLink>
         </div>
       </div>
     </div>
