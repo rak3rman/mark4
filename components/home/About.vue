@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header num="01." title="About Me" id="about" />
+    <Header num="01." title="About Me" id="about" fade=true />
     <div class="mt-4">
       <div class="relative lg:float-right lg:pl-5 lg:pb-5 lg:pt-1 fade-in">
         <div class="relative text-base mx-auto max-w-prose lg:max-w-md">

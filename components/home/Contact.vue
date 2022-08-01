@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header num="04." title="Get In Touch" id="contact" />
+    <Header num="04." title="Get In Touch" id="contact" fade=true />
     <div class="container mx-auto flex items-center">
       <div class="mt-8 lg:grid lg:grid-cols-5 lg:gap-8 w-full">
         <div class="flex justify-center lg:row-start-1 lg:col-start-1 lg:col-span-2">

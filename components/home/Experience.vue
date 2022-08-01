@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--  Tabs  -->
-    <Header num="02." title="Experience" id="experience" />
+    <Header num="02." title="Experience" id="experience" fade=true />
     <div class="mt-4 w-full pb-1">
       <div class="sm:hidden fade-in">
         <label for="tabs" class="sr-only">Select a tab</label>

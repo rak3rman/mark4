@@ -78,20 +78,6 @@
     "is_archived": false
   },
   {
-    "title": "STB Entertainment Website",
-    "sub": "A complex yet modernist website kickstarting a nationwide entertainment business",
-    "desc": "",
-    "links": {
-      "ext": "https://www.stbentertainment.com"
-    },
-    "tools": ["Nuxt v3", "Cloudflare Workers/KV", "Tailwinds"],
-    "made_at": "Pulqra",
-    "start": "2022-07",
-    "end": "inf",
-    "is_featured": false,
-    "is_archived": false
-  },
-  {
     "title": "Space and Key",
     "sub": "A full-stack web app streamlining data entry between physical accesses and spaces",
     "desc": "",
@@ -101,7 +87,7 @@
     "start": "2021-06",
     "end": "2022-08",
     "is_featured": false,
-    "is_archived": true
+    "is_archived": false
   },
   {
     "title": "Rock River Anything That Floats Race Manager",
@@ -277,7 +263,7 @@
       "github": "https://github.com/rak3rman/mark3"
     },
     "tools": ["Ghost.io", "HTML/CSS", "Webpack"],
-    "made_at": "2022-07",
+    "made_at": "Personal Project",
     "start": "2020-05",
     "end": "",
     "is_featured": false,
