@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="overflow-hidden lg:bg-transparent mt-6" :class="fade ? 'fade-in' : ''" v-for="(project, index) in featuredProjects">
+    <div class="overflow-hidden lg:bg-transparent mt-6" :class="fade === 'true' ? 'fade-in' : ''" v-for="(project, index) in filtered">
       <div class="wrap mx-auto">
         <div class="grid grid-cols-10 ">
           <div class="row-span-full col-span-8 md:col-span-6 self-center -m-2" :class="index % 2 === 0 ? 'col-start-1 md:col-start-1' : 'col-start-3 md:col-start-5'">
@@ -33,23 +33,21 @@
 
 <script setup>
 const props = defineProps({
-  fade: Boolean
+  fade: String
 })
 </script>
 
 <script>
-import projects from '../../assets/projects.json'
+import raw from '../../assets/projects.json'
 
 export default {
   computed: {
-    allProjects() {
-      return projects
-    },
-    featuredProjects() {
-      return projects.filter((ele) => ele.is_featured)
-    },
-    noteworthyProjects() {
-      return projects.filter((ele) => !ele.is_featured && !ele.is_archived)
+    filtered() {
+      return raw
+          .filter((ele) => ele.is_featured)
+          .sort((a,b) => {
+            return Date.parse(b.start) - Date.parse(a.start)
+          })
     },
   },
 }

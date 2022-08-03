@@ -32,10 +32,11 @@ import raw from '../../assets/projects.json'
 
 export default {
   computed: {
-    projects() {
-      return raw.sort((a,b) => {
-        return Date.parse(b.start) - Date.parse(a.start)
-      })
+    filtered() {
+      return raw
+          .sort((a,b) => {
+            return Date.parse(b.start) - Date.parse(a.start)
+          })
     },
   },
 }

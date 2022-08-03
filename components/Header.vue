@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24 pb-4" :class="fade ? 'fade-in' : ''">
+  <div class="pt-24 pb-4" :class="fade === 'true' ? 'fade-in' : ''">
     <div class="relative w-full md:w-5/12"></div>
     <div class="relative w-full md:w-7/12">
       <div class="absolute inset-0 flex items-center" aria-hidden="true">
@@ -18,6 +18,6 @@
 const props = defineProps({
   num: String,
   title: String,
-  fade: Boolean
+  fade: String
 })
 </script>
