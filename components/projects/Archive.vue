@@ -14,7 +14,7 @@
           </thead>
           <tbody class="divide-y divide-accent/20">
           <tr v-for="project in filtered" :key="project.title" class="">
-            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-secondary sm:pl-6 md:pl-0">{{ project.start }}</td>
+            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-secondary sm:pl-6 md:pl-0">{{ DateTime.fromMillis(Date.parse(project.start)).toFormat('LLL yyyy') }}</td>
             <td class="whitespace-nowrap py-4 px-3 text-sm text-neutral">{{ project.title }}</td>
             <td class="whitespace-nowrap py-4 px-3 text-sm text-accent">{{ project.made_at }}</td>
             <td class="whitespace-nowrap py-4 px-3 text-xs text-accent font-mono text-accent font-light"><div class="flex flex-wrap"><h6 v-for="tool in project.tools" :class="'pr-4'">{{ tool }}</h6></div></td>
@@ -28,9 +28,15 @@
 </template>
 
 <script>
+import { DateTime } from 'luxon'
 import raw from '../../assets/projects.json'
 
 export default {
+  data () {
+    return {
+      DateTime: DateTime
+    }
+  },
   computed: {
     filtered() {
       return raw
