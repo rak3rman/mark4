@@ -13,7 +13,7 @@
           </tr>
           </thead>
           <tbody class="divide-y divide-accent/20">
-          <tr v-for="project in projects" :key="project.title" class="">
+          <tr v-for="project in filtered" :key="project.title" class="">
             <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-secondary sm:pl-6 md:pl-0">{{ project.start }}</td>
             <td class="whitespace-nowrap py-4 px-3 text-sm text-neutral">{{ project.title }}</td>
             <td class="whitespace-nowrap py-4 px-3 text-sm text-accent">{{ project.made_at }}</td>

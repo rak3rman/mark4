@@ -45,9 +45,6 @@ export default {
     filtered() {
       return raw
           .filter((ele) => ele.is_featured)
-          .sort((a,b) => {
-            return Date.parse(b.start) - Date.parse(a.start)
-          })
     },
   },
 }
