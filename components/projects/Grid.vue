@@ -23,7 +23,7 @@
         </div>
       </li>
     </ul>
-    <div class="pt-12 pb-4">
+    <div class="pt-12 pb-4 fade-in">
       <NuxtLink to="/projects" class="flex justify-center pt-1 text-md text-secondary font-mono text-center">
         (But wait, there is more) <br> View all {{ projects.length }} projects&nbsp&rarr;
       </NuxtLink>

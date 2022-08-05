@@ -1,0 +1,138 @@
+[
+  {
+    "title": "Project Manager & Info Sec Analyst",
+    "company": "University of Illinois Chicago",
+    "start": "2022-02",
+    "end": "inf",
+    "location": "Chicago, IL",
+    "tags": [
+      "cs", "lead"
+    ],
+    "bullets": [
+      "Managed a team of 7 web and database developers working on over 10 large-scale, full-stack web applications",
+      "Integrated new project management software (Paymo) and maintained framework templates/documentation in Github",
+      "Single-handedly developed and published a Shibboleth (SAML SSO) to Express (Node.js) authentication package on npm",
+      "Drafted and enforced university IT policies by working with UI system auditors and department leadership",
+      "Aggregated sensitive data usages/locations and identified exposure risks across all 500+ faculty and staff"
+    ]
+  },
+  {
+    "title": "Digital Lead",
+    "company": "Steven Olikara for U.S. Senate",
+    "start": "2022-04",
+    "end": "inf",
+    "location": "Milwaukee, WI",
+    "tags": [
+      "cs", "lead", "photo"
+    ],
+    "bullets": [
+      "Completely rebuilt campaign website from the ground up using Nuxt v3, Tailwinds, visited by 1,000’s of Wisconsinites daily",
+      "Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN, Informr",
+      "Worked with a team of web developers and content creators to rapidly push media; took photographs in the field"
+    ]
+  },
+  {
+    "title": "Web Security Intern",
+    "company": "U.S. Department of Veterans Affairs",
+    "start": "2021-09",
+    "end": "2022-05",
+    "location": "Remote",
+    "tags": [
+      "cs"
+    ],
+    "bullets": [
+      "Examined and improved the operational protection strategies of dmeinterns.org through phishing campaigns, pen testing, web scanning tools, WordPress plugin security evaluations, and creation of strict security standards for interns",
+      "Educated other VA departments on password protocol and breach prevention through Slack"
+    ]
+  },
+  {
+    "title": "Web & Database Developer",
+    "company": "University of Illinois Chicago",
+    "start": "2021-06",
+    "end": "2022-02",
+    "location": "Chicago, IL",
+    "tags": [
+      "cs"
+    ],
+    "bullets": [
+      "Developed and maintained custom full-stack web applications using Laravel, Vue, and SQL, used by 3,000+ active users",
+      "Created new documentation and issue reporting standards with Atlassian Jira, Bitbucket, increasing readability by 3-fold",
+      "Presented projects to university admin and trained faculty/staff on application usage regularly (via MS Teams, Calendly)"
+    ]
+  },
+  {
+    "title": "Dev-Ops Intern",
+    "company": "Montel Technologies",
+    "start": "2017-11",
+    "end": "2018-09",
+    "location": "Loves Park, IL",
+    "tags": [
+      "cs"
+    ],
+    "bullets": [
+      "Lead front-end web developer on an enterprise-grade security unification solution (MTOP) utilizing Node.js, MongoDB",
+      "Configured mission-critical SLA networks and infrastructure in the field by installing switches, IP cameras, access control",
+      "Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge units"
+    ]
+  },
+  {
+    "title": "Executive Operations Director",
+    "company": "Pulqra",
+    "start": "2020-02",
+    "end": "inf",
+    "location": "United States",
+    "tags": [
+      "cs", "lead", "photo"
+    ],
+    "bullets": [
+      "Co-built and operationally led Pulqra, a mission-capitalist creative marketing collective",
+      "Reimagined businesses and artists by designing over 5 commercial websites from scratch",
+      "Rendered services to over 200 clients worldwide — from photography to social media management"
+    ]
+  },
+  {
+    "title": "Executive Director",
+    "company": "RAkerman Foundation",
+    "start": "2022-04",
+    "end": "inf",
+    "location": "Remote",
+    "tags": [
+      "cs", "lead"
+    ],
+    "bullets": [
+      "Created a foundation to support bleeding-edge web projects that focus on creativity, not monetary profits",
+      "Designed, built, and deployed over 12 web services (full-stack to static), along with 2 web products generating self-sustained revenue",
+      "Recruited, organized, and taught a team of 5 web developers to reduce development time"
+    ]
+  },
+  {
+    "title": "Section Leader",
+    "company": "Stanford University",
+    "start": "2021-04",
+    "end": "2021-05",
+    "location": "Remote",
+    "tags": [
+      "cs", "lead"
+    ],
+    "bullets": [
+      "Section led Code in Place 2021 — a free, human-centric, intro-to-coding course in the time of COVID-19",
+      "Helped instruct over 10,000 students on the fundamentals of Python and computer science principles",
+      "Worked one-on-one with all age groups, built office-hours-esque curriculum tailored to the 4 week course"
+    ]
+  },
+  {
+    "title": "Event Captain",
+    "company": "Life Time",
+    "start": "2021-08",
+    "end": "2022-05",
+    "location": "Chicago, IL",
+    "tags": [
+      "lead"
+    ],
+    "bullets": [
+      "Volunteered as a permanent event captain for all Life Time events hosted in Chicago",
+      "Helped organize and lead around 750 volunteers who aided nearly 8,000 athletes per event",
+      "Assisted in event operations at scale — deployed and tore down aid stations, start, finish lines"
+    ]
+  }
+]

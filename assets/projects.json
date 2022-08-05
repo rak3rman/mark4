@@ -106,7 +106,7 @@
   },
   {
     "title": "RAkerman Status",
-    "sub": "A global fallback web server and status monitor designed to deployed at scale",
+    "sub": "A global fallback web server and status monitor designed to be deployed at scale",
     "desc": "A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all \"subscribers\" via RAkerman Notify. Pretty cool right?",
     "links": {
       "ext": "https://status.rakerman.com",

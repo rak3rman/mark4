@@ -38,19 +38,29 @@
         Constantly pushing things further.
       </h6>
     </div>
-    <div v-for="entry in expEntries" class="fade-in">
-      <div v-if="entry.tags.includes(selectedExpTab)" class="pt-2">
+    <div v-for="(entry, index) in expEntries" class="fade-in">
+      <div v-if="index < 5 || !limitExp" class="pt-2">
         <h6 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
           {{ entry.title }} <span class="text-accent">@ {{ entry.company }}</span>
         </h6>
         <h6 class="leading-normal text-neutral text-sm font-mono text-left">
-          {{ entry.period }} // {{ entry.location }}
+          {{ DateTime.fromMillis(Date.parse(entry.start)).toFormat('LLL yyyy') }} - {{ entry.end === 'inf' ? 'Present' : DateTime.fromMillis(Date.parse(entry.end)).toFormat('LLL yyyy') }} // {{ entry.location }}
         </h6>
         <ul class="text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pb-0">
           <li v-for="bullet in entry.bullets" class="pb-0">
             {{ bullet }}
           </li>
         </ul>
+      </div>
+    </div>
+    <div class="pt-10 pb-4 fade-in" v-if="expEntries.length > 5">
+      <div class="flex justify-center">
+        <a @click="updateExpLimit(false)" v-if="limitExp === true" class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus">
+          Show {{ expEntries.length - 5 }} more experience{{ expEntries.length > 6 ? 's' : '' }}
+        </a>
+        <a @click="updateExpLimit(true)" v-else class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus">
+          Hide {{ expEntries.length - 5 }} experience{{ expEntries.length > 6 ? 's' : '' }}
+        </a>
       </div>
     </div>
 
@@ -108,6 +118,10 @@ const testimonials = [
 </script>
 
 <script>
+import { DateTime } from 'luxon'
+import raw from '../../assets/experiences.json'
+
+let limit_exp = true;
 const selected_exp_tab = 'cs'
 const exp_tabs = [
   {
@@ -132,113 +146,12 @@ const exp_tabs = [
     viewbox: '0 0 512 512',
   },
 ]
-const exp_entries = [
-  {
-    title: 'Project Manager & Info Sec Analyst',
-    company: 'University of Illinois Chicago',
-    period: 'Feb 2022 - Present',
-    location: 'Chicago, IL',
-    tags: ['cs', 'lead'],
-    bullets: [
-      'Managed a team of 7 web and database developers working on over 10 large-scale, full-stack web applications',
-      'Integrated new project management software (Paymo) and maintained framework templates/documentation in Github',
-      'Single-handedly developed and published a Shibboleth (SAML SSO) to Express (Node.js) authentication package on npm',
-      'Drafted and enforced university IT policies by working with UI system auditors and department leadership',
-      'Aggregated sensitive data usages/locations and identified exposure risks across all 500+ faculty and staff',
-    ]
-  },
-  {
-    title: 'Digital Lead',
-    company: 'Steven Olikara for U.S. Senate',
-    period: 'Apr 2022 - Present',
-    location: 'Milwaukee, WI',
-    tags: ['cs', 'lead', 'photo'],
-    bullets: [
-      'Completely rebuilt campaign website from the ground up using Nuxt v3, Tailwinds, visited by 1,000’s of Wisconsinites daily',
-      'Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN, Informr',
-      'Worked with a team of web developers and content creators to rapidly push media; took photographs in the field',
-    ]
-  },
-  {
-    title: 'Web Security Intern',
-    company: 'U.S. Department of Veterans Affairs',
-    period: 'Sept 2021 - May 2022',
-    location: 'Remote',
-    tags: ['cs'],
-    bullets: [
-      'Examined and improved the operational protection strategies of dmeinterns.org through phishing campaigns, pen testing, web scanning tools, WordPress plugin security evaluations, and creation of strict security standards for interns',
-      'Educated other VA departments on password protocol and breach prevention through Slack',
-    ]
-  },
-  {
-    title: 'Web & Database Developer',
-    company: 'University of Illinois Chicago',
-    period: 'June 2021 - Feb 2022',
-    location: 'Chicago, IL',
-    tags: ['cs'],
-    bullets: [
-      'Developed and maintained custom full-stack web applications using Laravel, Vue, and SQL, used by 3,000+ active users',
-      'Created new documentation and issue reporting standards with Atlassian Jira, Bitbucket, increasing readability by 3-fold',
-      'Presented projects to university admin and trained faculty/staff on application usage regularly (via MS Teams, Calendly)',
-    ]
-  },
-  {
-    title: 'Dev-Ops Intern',
-    company: 'Montel Technologies',
-    period: 'Nov 2017 - Sept 2018',
-    location: 'Loves Park, IL',
-    tags: ['cs'],
-    bullets: [
-      'Lead front-end web developer on an enterprise-grade security unification solution (MTOP) utilizing Node.js, MongoDB',
-      'Configured mission-critical SLA networks and infrastructure in the field by installing switches, IP cameras, access control',
-      'Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge units',
-    ]
-  },
-  // {
-  //   title: 'Executive Operations Director',
-  //   company: 'Pulqra',
-  //   period: 'Feb 2020 - Present',
-  //   location: 'United States',
-  //   tags: ['cs', 'lead', 'photo'],
-  //   bullets: [
-  //     'Lorem ipsum.',
-  //   ]
-  // },
-  // {
-  //   title: 'Executive Director',
-  //   company: 'RAkerman Foundation',
-  //   period: 'Apr 2022 - Present',
-  //   location: 'Remote',
-  //   tags: ['cs', 'lead'],
-  //   bullets: [
-  //     'Lorem ipsum.',
-  //   ]
-  // },
-  // {
-  //   title: 'Section Leader',
-  //   company: 'Stanford University',
-  //   period: 'Apr 2021 - May 2021',
-  //   location: 'Remote',
-  //   tags: ['cs', 'lead'],
-  //   bullets: [
-  //     'Lorem ipsum.',
-  //   ]
-  // },
-  // {
-  //   title: 'Event Captain',
-  //   company: 'Life Time',
-  //   period: 'Aug 2021 - Present',
-  //   location: 'Chicago, IL',
-  //   tags: ['lead'],
-  //   bullets: [
-  //     'Lorem ipsum.',
-  //   ]
-  // },
-]
 
 export default {
   data() {
     return {
+      DateTime: DateTime,
+      limitExp: limit_exp,
       selectedExpTab: selected_exp_tab,
     }
   },
@@ -249,13 +162,22 @@ export default {
     },
     expEntries() {
       this.selectedExpTab
-      return exp_entries
-    }
+      return raw
+          .filter(entry => entry.tags.includes(this.selectedExpTab))
+          .sort((a,b) => {
+            let aa = Date.parse(a.end)
+            let bb = Date.parse(b.end)
+            return (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa)
+          })
+    },
   },
   methods: {
     updateExpTab: function (val) {
       this.selectedExpTab = val
-    }
+    },
+    updateExpLimit: function (val) {
+      this.limitExp = val
+    },
   }
 }
 </script>
