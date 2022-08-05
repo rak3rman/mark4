@@ -6,7 +6,7 @@
       <div class="sm:hidden fade-in">
         <label for="tabs" class="sr-only">Select a tab</label>
         <select id="tabs" v-model="selectedExpTab" name="tabs" class="block w-full bg-primary focus:ring-secondary focus:border-secondary border-neutral text-neutral rounded-md">
-          <option v-for="tab in expTabs" :value="tab.id" :selected="tab.id === selectedExpTab">{{ tab.name }}</option>
+          <option v-for="tab in expTabs" :value="tab.id" :selected="tab.id === selectedExpTab" @select="updateExpTab(tab.id)">{{ tab.name }}</option>
         </select>
       </div>
       <div class="hidden sm:block sm:mt-4 sm:mb-3">
@@ -32,10 +32,10 @@
     <!--  Entries  -->
     <div class="pt-6 pb-2 fade-in">
       <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
-        Where I've left an impact
+        Where I've Worked
       </h6>
       <h6 class="pt-1 text-md text-secondary font-mono text-left">
-        Constantly pushing things further.
+        Lasting impacts. Pushing things further.
       </h6>
     </div>
     <div v-for="(entry, index) in expEntries" class="fade-in">
