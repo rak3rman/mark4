@@ -90,7 +90,7 @@
     "is_archived": false
   },
   {
-    "title": "Rock River Anything That Floats Race Manager",
+    "title": "RRATFR Manager",
     "sub": "An effort to streamline the organizational efforts of the Rock River Anything That Floats Race",
     "desc": "An effort to streamline the organizational efforts of the Rock River Anything That Floats Race. Running on Node.js, this project displays a powerful web interface where administrators can manage raft information, conduct raft timing, and display results to the public. A smart timing plugin and a custom web voting limiter for the People's Choice Award were both built from scratch.",
     "links": {
@@ -242,7 +242,7 @@
   },
   {
     "title": "Mark 4",
-    "sub": "A fourth attempt at Radison Akerman's personal website. Notes of programming, cleanliness, and unification.",
+    "sub": "A fourth attempt at Radison Akerman's personal website. Notes of programming, cleanliness, and unification",
     "desc": "",
     "links": {
       "ext": "https://www.rakerman.com",
@@ -257,7 +257,7 @@
   },
   {
     "title": "Mark 3",
-    "sub": "A third attempt at Radison Akerman's personal website. Notes of blog, professionalism, and classic web design.",
+    "sub": "A third attempt at Radison Akerman's personal website. Notes of blog, professionalism, and classic web design",
     "desc": "",
     "links": {
       "github": "https://github.com/rak3rman/mark3"
@@ -271,7 +271,7 @@
   },
   {
     "title": "Mark 2",
-    "sub": "A second attempt at Radison Akerman's personal website. Notes of photography, one-pagers, and info-dumpage.",
+    "sub": "A second attempt at Radison Akerman's personal website. Notes of photography, one-pagers, and info-dumpage",
     "desc": "",
     "links": {
       "github": "https://github.com/rak3rman/mark2"
@@ -285,7 +285,7 @@
   },
   {
     "title": "Mark 1",
-    "sub": "The first attempt at Radison Akerman's personal website. Notes of 'lil Rad, programming, and paid website templates.",
+    "sub": "The first attempt at Radison Akerman's personal website. Notes of 'lil Rad, programming, and paid website templates",
     "desc": "",
     "links": {
       "github": "https://github.com/rak3rman/mark1"
