@@ -25,8 +25,11 @@
             <h6 class="text-center text-sm text-neutral opacity-70 mr-1">
               <Linker href="/privacy">Privacy Policy.</Linker>
             </h6>
-            <h6 class="text-center text-sm text-neutral opacity-70">
+            <h6 class="text-center text-sm text-neutral opacity-70 mr-1">
               <Linker href="/licensing">Licensing.</Linker>
+            </h6>
+            <h6 class="text-center text-sm text-neutral opacity-70">
+              <Linker href="https://status.rakerman.com">Status.</Linker>
             </h6>
           </div>
           <div class="md:float-left md:mr-1 flex justify-center">
