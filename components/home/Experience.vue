@@ -64,16 +64,16 @@
       </div>
     </div>
 
-<!--    &lt;!&ndash;  Testimonials  &ndash;&gt;-->
+    <!--  Testimonials  -->
 <!--    <div class="pt-12 pb-8">-->
 <!--      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">-->
-<!--        What others say-->
+<!--        What Others Say-->
 <!--      </h6>-->
 <!--      <h6 class="pt-1 text-md text-secondary font-mono text-left">-->
-<!--        These people are really, really cool.-->
+<!--        Don't take my word for it.-->
 <!--      </h6>-->
 <!--    </div>-->
-<!--    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-3 list-none p-0">-->
+<!--    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-2 list-none p-0">-->
 <!--      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">-->
 <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
 <!--          <blockquote>-->
@@ -89,7 +89,7 @@
 <!--              <div class="text-base font-medium leading-6 tracking-tight text-neutral">-->
 <!--                {{ testimonial.name }}-->
 <!--              </div>-->
-<!--              <div class="mt-1 text-sm text-accent">-->
+<!--              <div class="mt-0.5 text-sm text-accent">-->
 <!--                {{ testimonial.title }}-->
 <!--              </div>-->
 <!--            </div>-->
@@ -103,16 +103,16 @@
 <script setup>
 const testimonials = [
   [
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Mira’s teaching style is second to none. Everything was easy to follow every step of the way.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I run an ecommerce store selling rare vintage gummy bears and could never find a good gummy bear icon. Now I can design my own in minutes.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    { name: 'Garrett Moore', title: 'Political & Nonprofit Leadership', quote: "Radison is not your typical web developer. He is experienced and knowledgeable enough to take your website ideas and turn them into a fast, attractive, and extremely functional online site, all at an affordable price.", img: "7036ad5d-b460-4bcb-3a30-c863ecf00c00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I run an ecommerce store selling rare vintage gummy bears and could never find a good gummy bear icon. Now I can design my own in minutes.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
   [
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I couldn’t believe how fast Mira moved in Figma compared to my own workflow. I’m designing icons more accurately in half the time with the shortcuts I learned from her videos.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Even though I was excited to learn, I was pessimistic that I wouldn’t actually ever get good enough to design my own icons. I was wrong — this book is all I needed.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I couldn’t believe how fast Mira moved in Figma compared to my own workflow. I’m designing icons more accurately in half the time with the shortcuts I learned from her videos.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "Even though I was excited to learn, I was pessimistic that I wouldn’t actually ever get good enough to design my own icons. I was wrong — this book is all I needed.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
   [
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "The complete package is worth it for the weekly teardown videos alone. I’ve learned so much watching Mira take apart other icons and recreate them from scratch.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
-    { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I never thought I would enjoy designing icons but using the ideas in this book, it’s become a great way for me to relax while still being creative.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "The complete package is worth it for the weekly teardown videos alone. I’ve learned so much watching Mira take apart other icons and recreate them from scratch.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
+    // { name: 'Radison Akerman', title: 'Front-end Developer', quote: "I never thought I would enjoy designing icons but using the ideas in this book, it’s become a great way for me to relax while still being creative.", img: "60165710-ba66-465f-f366-ba1c3b73cd00" },
   ],
 ]
 </script>
