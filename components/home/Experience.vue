@@ -38,19 +38,21 @@
         Lasting impacts. Pushing things further.
       </h6>
     </div>
-    <div v-for="(entry, index) in expEntries" class="fade-in">
-      <div v-if="index < 5 || !limitExp" class="pt-2">
-        <h6 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
-          {{ entry.title }} <span class="text-accent">@ {{ entry.company }}</span>
-        </h6>
-        <h6 class="leading-normal text-neutral text-sm font-mono text-left">
-          {{ DateTime.fromMillis(Date.parse(entry.start)).toFormat('LLL yyyy') }} - {{ entry.end === 'inf' ? 'Present' : DateTime.fromMillis(Date.parse(entry.end)).toFormat('LLL yyyy') }} // {{ entry.location }}
-        </h6>
-        <ul class="text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pb-0">
-          <li v-for="bullet in entry.bullets" class="pb-0">
-            {{ bullet }}
-          </li>
-        </ul>
+    <div ref="expDOM">
+      <div v-for="(entry, index) in expEntries" class="fade-in">
+        <div v-if="index < 5 || !limitExp" class="pt-2">
+          <h6 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
+            {{ entry.title }} <span class="text-accent">@ {{ entry.company }}</span>
+          </h6>
+          <h6 class="leading-normal text-neutral text-sm font-mono text-left">
+            {{ DateTime.fromMillis(Date.parse(entry.start)).toFormat('LLL yyyy') }} - {{ entry.end === 'inf' ? 'Present' : DateTime.fromMillis(Date.parse(entry.end)).toFormat('LLL yyyy') }} // {{ entry.location }}
+          </h6>
+          <ul class="text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pb-0">
+            <li v-for="bullet in entry.bullets" class="pb-0">
+              {{ bullet }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="pt-10 pb-4 fade-in" v-if="expEntries.length > 5">
@@ -118,8 +120,12 @@ const testimonials = [
 </script>
 
 <script>
+import { ref } from "vue"
+import autoAnimate from "@formkit/auto-animate"
 import { DateTime } from 'luxon'
 import raw from '../../assets/experiences.json'
+
+const expDOM = ref()
 
 let limit_exp = true;
 const selected_exp_tab = 'cs'
@@ -178,6 +184,9 @@ export default {
     updateExpLimit: function (val) {
       this.limitExp = val
     },
+  },
+  mounted() {
+    autoAnimate(expDOM.value)
   }
 }
 </script>
