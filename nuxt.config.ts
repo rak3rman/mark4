@@ -1,4 +1,3 @@
-import { defineNuxtConfig } from 'nuxt'
 const { gitDescribe, gitDescribeSync } = require('git-describe')
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
@@ -14,12 +13,6 @@ export default defineNuxtConfig({
         public: {
             gitMasterTag: gitDescribeSync().hash
         }
-    },
-    build: {
-        transpile: [
-            '@headlessui/vue',
-            '@heroicons/vue'
-        ]
     },
     nitro: {
         prerender: {

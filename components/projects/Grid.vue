@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import { FolderIcon } from '@heroicons/vue/outline'
+import { FolderIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <script>

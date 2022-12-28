@@ -12,6 +12,5 @@
   <div class="h-full bg-primary">
     <NuxtPage />
   </div>
-  <Script src="https://status.rakerman.com/api/alert" />
 </template>
 

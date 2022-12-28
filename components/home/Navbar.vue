@@ -1,6 +1,5 @@
 <template>
   <Popover class="fixed top-0 left-0 right-0 backdrop-blur-xl z-10">
-    <RAFBanner />
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
       <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
         <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
@@ -12,7 +11,7 @@
             <div class="-mr-2 flex items-center md:hidden fade-in-nav" :style="{ 'transition-delay': 100 + 'ms' }">
               <PopoverButton class="bg-primary-focus rounded-md p-2 inline-flex items-center justify-center text-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
                 <span class="sr-only">Open main menu</span>
-                <MenuIcon class="h-6 w-6" aria-hidden="true" />
+                <Bars3Icon class="h-6 w-6" aria-hidden="true" />
               </PopoverButton>
             </div>
           </div>
@@ -48,7 +47,7 @@
             <div class="-mr-2">
               <PopoverButton class="bg-primary rounded-md p-2 inline-flex items-center justify-center text-accent hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
                 <span class="sr-only">Close menu</span>
-                <XIcon class="h-6 w-6" aria-hidden="true" />
+                <XMarkIcon class="h-6 w-6" aria-hidden="true" />
               </PopoverButton>
             </div>
           </div>
@@ -66,7 +65,7 @@
 
 <script setup>
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
-import { MenuIcon, XIcon } from '@heroicons/vue/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
 const navigation = [
   { name: 'About', href: '#about' },

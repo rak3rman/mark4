@@ -1,5 +1,6 @@
 ---
 title: 'Projects'
+layout: 'default'
 head.description: 'Prepare to be impressed. A directory of my projects, applications, and tools as it relates to digital technology.'
 ---
 
