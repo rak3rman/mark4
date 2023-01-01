@@ -21,16 +21,16 @@
                     </div>
                 </div>
                 <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                    <div class="md:space-x-8 pr-6">
+                    <div class="md:space-x-6 lg:space-x-8 pr-6">
                         <NuxtLink
                                 v-for="(item, index) in navigation"
                                 :key="item.name"
                                 :to="item.href"
                                 :style="{ 'transition-delay': index*100+300 + 'ms' }"
                                 class="font-mono text-sm text-accent hover:text-secondary fade-in-nav">
-              <span class="text-secondary">
-                {{ '0' + (index + 1) + '. ' }}
-              </span>
+				              <span class="text-secondary hidden lg:inline">
+				                {{ '0' + (index + 1) + '. ' }}
+				              </span>
                             {{ item.name }}
                         </NuxtLink>
                     </div>

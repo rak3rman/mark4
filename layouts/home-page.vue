@@ -4,7 +4,7 @@
             <div class="pb-16">
                 <HomeNavbar/>
                 <main>
-                    <HomeHero/>
+                    <HomeHero class="relative container overflow-hidden max-w-7xl mx-auto px-4 sm:px-6 "/>
                     <div class="container mx-auto items-center max-w-7xl mx-auto px-4 sm:px-6 snap-none">
 
                         <HomeAbout/>
