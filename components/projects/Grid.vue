@@ -12,7 +12,7 @@
                         <PuzzlePieceIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
                                          v-else-if="project.type === 'microservice'"/>
                         <TagIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
-                                    v-else-if="project.type === 'package'"/>
+                                 v-else-if="project.type === 'package'"/>
                         <CpuChipIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
                                      v-else-if="project.type === 'electronics'"/>
                         <WrenchIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
