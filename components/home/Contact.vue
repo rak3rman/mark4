@@ -12,22 +12,17 @@
                         <h6 class="fade-in pb-4">
                             >> <strong>A. "I need a group of highly-driven creatives that can do anything"</strong> <br>
                             <i>Check out
-                                <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com">
-                                    Pulqra
-                                </NuxtLink>
-                                , we'd be thrilled to collab with you over our
+                                <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com">Pulqra</NuxtLink>,
+								we'd be thrilled to collab with you over our
                                 <NuxtLink class="text-secondary underline underline-offset-2"
-                                          to="https://pulqra.com/dir/product">catalogue of services
-                                </NuxtLink>
-                                .</i>
+                                          to="https://pulqra.com/dir/product">catalogue of services</NuxtLink>.</i>
                         </h6>
                         <h6 class="fade-in pb-4">
                             >> <strong>B. "HELP! I'm searching far and wide for a leader in computer wizardry"</strong>
                             <br> <i>Take a gander at
                             <NuxtLink class="text-secondary underline underline-offset-2" to="/resume.pdf"
-                                      target="_blank">my resume
-                            </NuxtLink>
-                            , if you think we'd be a match (yay!) fill out the good ole' contact form.</i>
+                                      target="_blank">my resume</NuxtLink>,
+									  if you think we'd be a match (yay!) fill out the good ole' contact form.</i>
                         </h6>
                         <h6 class="fade-in pb-4">
                             >> <strong>C. "Whoa. I don't even know where to start but let's chat"</strong> <br> <i>My
@@ -77,7 +72,7 @@
                                 </div>
                                 <input type="text" name="phone-number" id="phone-number" autocomplete="tel" required
                                        class="py-3 px-4 block w-full pl-20 shadow-md bg-primary text-neutral focus:ring-secondary focus:border-secondary border-accent rounded-md"
-                                       placeholder="+1 (815) 123-4567"/>
+                                       placeholder="(815) 123-4567"/>
                             </div>
                         </div>
                         <div class="sm:col-span-2 fade-in">

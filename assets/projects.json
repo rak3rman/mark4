@@ -2,7 +2,7 @@
 	{
 		"title": "Exploding Chickens",
 		"sub": "A beautiful, online alternative to the popular Exploding Kittens card game",
-		"desc": "A beautiful, online alternative to the popular Exploding Kittens card game. Built on Node.js with 600+ games played by 500+ players, led development and a team of 5.",
+		"desc": "A beautiful, online alternative to the popular Exploding Kittens card game. Built on Node.js with nearly 1000 games played by 600+ players, led development and a team of 5.",
 		"links": {
 			"ext": "https://chickens.rakerman.com",
 			"youtube": "https://youtu.be/cD53M7NHQoM",
