@@ -21,7 +21,7 @@
                                 {{ project.desc }}
                             </h6>
                         </div>
-                        <div class="flex flex-wrap text-xs text-accent font-light font-mono mb-1"
+                        <div class="flex flex-wrap text-xs text-accent font-light font-mono mix-blend-difference mb-1"
                              :class="index % 2 === 0 ? 'flex-row-reverse' : ''">
                             <h6 v-for="tool in project.tools" :class="index % 2 === 0 ? 'pr-4' : 'pl-3'">{{ tool }}</h6>
                         </div>

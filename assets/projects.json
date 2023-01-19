@@ -38,7 +38,7 @@
 			]
 		},
 		"tools": [
-			"Nuxt v3",
+			"Nuxt",
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],
@@ -60,7 +60,7 @@
 			]
 		},
 		"tools": [
-			"Nuxt v3",
+			"Nuxt",
 			"Cloudflare Workers/KV/R2",
 			"Auth0",
 			"Typescript",
@@ -71,7 +71,7 @@
 		"made_at": "RAkerman Foundation",
 		"start": "2022-06",
 		"end": "inf",
-		"is_featured": true,
+		"is_featured": false,
 		"is_archived": false
 	},
 	{
@@ -80,7 +80,7 @@
 		"desc": "",
 		"links": {},
 		"tools": [
-			"Nuxt v3",
+			"Nuxt",
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],
@@ -89,7 +89,7 @@
 		"start": "2022-04",
 		"end": "2022-06",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": true
 	},
 	{
 		"title": "Pulqra Website",
@@ -99,7 +99,7 @@
 			"ext": "https://www.pulqra.com"
 		},
 		"tools": [
-			"Nuxt v3",
+			"Nuxt",
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],
@@ -116,7 +116,7 @@
 		"desc": "",
 		"links": {},
 		"tools": [
-			"Nuxt v3",
+			"Nuxt",
 			"Auth0",
 			"SQL",
 			"Tailwinds"
@@ -159,7 +159,7 @@
 			"github": "https://github.com/rak3rman/rakerman-status"
 		},
 		"tools": [
-			"Nuxt v3",
+			"Nuxt",
 			"Cloudflare Workers/KV",
 			"Typescript",
 			"Tailwinds"
@@ -241,7 +241,7 @@
 			"github": "https://github.com/rak3rman/rakerman-linker"
 		},
 		"tools": [
-			"Nuxt v3",
+			"Nuxt",
 			"Cloudflare Workers/KV",
 			"Typescript",
 			"Tailwinds"
@@ -355,7 +355,7 @@
 			"github": "https://github.com/rak3rman/mark4"
 		},
 		"tools": [
-			"Nuxt v3",
+			"Nuxt",
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],

@@ -54,8 +54,8 @@
                         {{ entry.title }} <span class="text-accent">@ {{ entry.company }}</span>
                     </h6>
                     <h6 class="leading-normal text-neutral text-sm font-mono text-left">
-                        {{ DateTime.fromMillis(Date.parse(entry.start)).toFormat('LLL yyyy') }} - {{
-							entry.end === 'inf' ? 'Present' : DateTime.fromMillis(Date.parse(entry.end)).toFormat('LLL yyyy')
+                        {{ DateTime.fromMillis(Date.parse(entry.start)).plus({ months: 1 }).toFormat('LLL yyyy') }} - {{
+							entry.end === 'inf' ? 'Present' : DateTime.fromMillis(Date.parse(entry.end)).plus({ months: 1 }).toFormat('LLL yyyy')
                         }} // {{ entry.location }}
                     </h6>
                     <ul class="text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pb-0">
@@ -138,7 +138,6 @@ const testimonials = [
 </script>
 
 <script>
-import {ref} from "vue"
 import autoAnimate from "@formkit/auto-animate"
 import {DateTime} from 'luxon'
 import raw from '../../assets/experiences.json'

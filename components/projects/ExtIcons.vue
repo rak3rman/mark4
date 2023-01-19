@@ -1,6 +1,6 @@
 <template>
     <div class="flex pb-1.5">
-        <NuxtLink class="transition ease-in-out duration-300 hover:text-secondary" :to="project.links.youtube"
+        <NuxtLink class="transition ease-in-out duration-300 hover:text-secondary -mb-1 -mt-[1px]" :to="project.links.youtube"
                   v-if="project.links.youtube">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor"
                  class="h-7 w-7 -mb-2 mr-2.5">

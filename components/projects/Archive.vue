@@ -23,19 +23,19 @@
                         </td>
                         <td class="whitespace-nowrap py-4 px-3 text-sm text-neutral">
                             {{ project.title }}
-                            <RectangleGroupIcon class="h-4 w-4 text-secondary inline -mt-0.5" aria-hidden="true"
+                            <RectangleGroupIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
                                                 v-if="project.type === 'website'"/>
-                            <ComputerDesktopIcon class="h-4 w-4 text-secondary inline -mt-0.5" aria-hidden="true"
+                            <ComputerDesktopIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
                                                  v-else-if="project.type === 'application'"/>
-                            <PuzzlePieceIcon class="h-4 w-4 text-secondary inline -mt-0.5" aria-hidden="true"
+                            <PuzzlePieceIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
                                              v-else-if="project.type === 'microservice'"/>
-                            <TagIcon class="h-4 w-4 text-secondary inline -mt-0.5" aria-hidden="true"
+                            <TagIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
                                      v-else-if="project.type === 'package'"/>
-                            <CpuChipIcon class="h-4 w-4 text-secondary inline -mt-0.5" aria-hidden="true"
+                            <CpuChipIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
                                          v-else-if="project.type === 'electronics'"/>
-                            <WrenchIcon class="h-4 w-4 text-secondary inline -mt-0.5" aria-hidden="true"
+                            <WrenchIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
                                         v-else-if="project.type === 'utility'"/>
-                            <FolderIcon class="h-4 w-4 text-secondary inline -mt-0.5" aria-hidden="true" v-else/>
+                            <FolderIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true" v-else/>
                             <span class="table-cell md:hidden text-accent font-light">
 								{{ project.made_at }}
 							</span>

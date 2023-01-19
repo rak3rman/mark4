@@ -1,4 +1,4 @@
-# Nuxt 3 Frontend Starter
+# Mark 4
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
