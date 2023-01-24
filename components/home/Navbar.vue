@@ -4,12 +4,12 @@
             <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
                 <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                     <div class="flex items-center justify-between w-full md:w-auto">
-                        <a href="/" class="fade-in-nav">
+                        <NuxtLink to="/" class="fade-in-nav">
                             <span class="sr-only">RAkerman</span>
                             <img class="h-5 w-auto sm:h-6"
                                  src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ed7598b-5520-4e18-5159-daa458739b00/sm"
                                  alt="RAkerman Logo"/>
-                        </a>
+                        </NuxtLink>
                         <div class="-mr-2 flex items-center md:hidden fade-in-nav"
                              :style="{ 'transition-delay': 100 + 'ms' }">
                             <PopoverButton

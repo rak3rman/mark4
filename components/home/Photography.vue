@@ -27,7 +27,7 @@
                 <!-- No Albums -->
                 <div v-if="albums.length === 0">
                     <h6 class="pt-1 text-md text-secondary font-mono text-left fade-in max-w-2xl">
-                        Oops. It appears there aren't any featured photos available at the moment. Please try again
+                        Oops. It appears there aren't any featured photos available at the moment. Please check again
                         later.
                     </h6>
                 </div>
