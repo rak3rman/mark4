@@ -40,15 +40,13 @@
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.stevenolikara.com">a U.S. Senate campaign</NuxtLink>,
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.monteltech.com">a start-up</NuxtLink>, and
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://my.lifetime.life/athletic-events.html">an event management group</NuxtLink>.
-						Nowadays, you’ll find me relentlessly building and operationally leading
-                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com">Pulqra</NuxtLink>,
-						a creative marketing collective with over 200 collaborations worldwide.
+						Nowadays, you’ll find me fine-tuning my skills in cloud computing, dev-ops, cyber, and full-stack web dev.
                     </p>
                     <p class="fade-in">I’m also juggling quite a few responsibilities at the
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://uic.edu">University of Illinois Chicago</NuxtLink>.
 						For starters, I am studying computer science and business full-time (with a 4.0 GPA, whoop!).
                        	I also project manage and work directly with 6+ software developers under the College of Engineering.
-						Together we've developed over 10 full-stack web applications used by 1000's on campus.
+						Together we've developed and shipped over 10 full-stack web applications used by 1000's on campus.
                     </p>
                     <p class="fade-in">
 						Making an impact is part of my DNA, especially when it comes to personal projects. I recently gave
