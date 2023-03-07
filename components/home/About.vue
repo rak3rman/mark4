@@ -61,7 +61,7 @@
 						2 web products generating revenue, and 5 organizational members who help make these ideas a reality.
                     </p>
 					<p class="fade-in">
-						In my spare time, I love to building things with my hands (woodworking, small electronics), volunteering in the community, and competing in endurance triathlons.
+						In my spare time, I love to build things with my hands (woodworking, small electronics), volunteer in the community, and compete in endurance triathlons.
 						Just this past summer, I finished <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.athlinks.com/event/30585/results/Event/1019369/Course/2251422/Bib/3435">214th</NuxtLink> out of 2,456 in the Chicago Triathlon, Olympic distance &mdash; my first ever multisport race.
                     </p>
                 </div>
