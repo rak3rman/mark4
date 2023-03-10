@@ -19,16 +19,17 @@
                     </h6>
                     <h6 class="py-2 leading-normal text-accent text-lg md:text-lg max-w-2xl text-left fade-in-hero"
                         :style="{ 'transition-delay': 500 + 'ms' }">
-                        I lead teams who deliver exceptional digital experiences.
+                        Incoming Software Engineering Intern, Starship Software @ SpaceX!
+<!--                        I lead teams who deliver exceptional digital experiences.-->
                         Currently, I'm studying CS + Business @
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://uic.edu">UIC</NuxtLink>, project managing a team of 7, and co-building
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com">Pulqra</NuxtLink> – a mission capitalist creative marketing collective.
                     </h6>
                     <span class="py-3 inline-flex rounded-md shadow fade-in-hero"
                           :style="{ 'transition-delay': 600 + 'ms' }">
-            <NuxtLink to="https://youtu.be/cD53M7NHQoM"
-                      class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"> Check out my lecture at UIC! </NuxtLink>
-          </span>
+                        <NuxtLink to="/publications"
+                            class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"> Check out my lectures at UIC! </NuxtLink>
+                    </span>
                 </div>
             </div>
         </div>

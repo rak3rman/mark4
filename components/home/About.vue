@@ -34,15 +34,15 @@
                         student, and professional photographer. My interest in digital technology started back in middle
                         school when I tinkered with microcontrollers and competed in FIRST LEGO League competitions — it
                         turns out you can learn a lot from bits of plastic and expensive servos.</p>
-                    <p class="fade-in">Fast-forward to today, where I’ve had the privilege of working at a
+                    <p class="fade-in">Fast-forward to today, where I’ve had the privilege of working at an
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://uic.edu">R1 research university</NuxtLink>,
-                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.va.gov">a department of the U.S. government</NuxtLink>,
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.stevenolikara.com">a U.S. Senate campaign</NuxtLink>,
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.monteltech.com">a start-up</NuxtLink>, and
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://my.lifetime.life/athletic-events.html">an event management group</NuxtLink>.
-						Nowadays, you’ll find me fine-tuning my skills in cloud computing, dev-ops, cyber, and full-stack web dev.
+                        This summer, I'll be a Software Engineering Intern on the Starship Software team at SpaceX!
+                        I'm absolutely stoked and can't wait to get started.
                     </p>
-                    <p class="fade-in">I’m also juggling quite a few responsibilities at the
+                    <p class="fade-in">I’m juggling quite a few responsibilities at the
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://uic.edu">University of Illinois Chicago</NuxtLink>.
 						For starters, I am studying computer science and business full-time (with a 4.0 GPA, whoop!).
                        	I also project manage and work directly with 6+ software developers under the College of Engineering.
@@ -50,7 +50,7 @@
                     </p>
                     <p class="fade-in">
 						Making an impact is part of my DNA, especially when it comes to personal projects. I recently gave
-                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://youtu.be/cD53M7NHQoM">two distinct 300-level guest lectures</NuxtLink> at UIC about
+                        <NuxtLink class="text-secondary underline underline-offset-2" to="/publications">two distinct 300-level guest lectures</NuxtLink> at UIC about
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://chickens.rakerman.com">Exploding Chickens</NuxtLink> —
 						a popular web-based card game I built with my friends.
 						We dove deep into project management, design patterns, code review, and test coverage.

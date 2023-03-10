@@ -28,12 +28,12 @@ Data not linked to you: identifiers, usage data, and diagnostics (only collected
 We've included a description of both internal (used directly by the application) and external (an outside service) data collection methods used by each service on rakerman.com.
 Here we explain what we are collecting, why we need to collect it, and how we are managing the data in a safe and secure manner.
 
-- https://www.rakerman.com/: Google Analytics.
-- https://chickens.rakerman.com/: Lobby data is stored for up to 1 year to allow for users to play Exploding Chickens across the Internet, provide the "game analysis" feature, trace and fix possible issues that may arise in a lobby/game, and improve user experience on the platform. User data is stored indefintely to allow users to save profile defaults, games played, and purchased expansion packs. Lobby and some user data is stored on a secure, sand-boxed database, not sold or distributed to external parties, nor linked to you or your browser. Auth0 may store additional user data if you opt to use an SSO authentication method.
+- https://www.rakerman.com/: N/A
+- https://chickens.rakerman.com/: Lobby data is stored for up to 24 hours to allow for users to play Exploding Chickens across the Internet, provide the "game analysis" feature, trace and fix possible issues that may arise in a lobby/game, and improve user experience on the platform. User data is stored indefintely to allow users to save profile defaults, games played, and purchased expansion packs. Lobby and some user data is stored on a secure, sand-boxed database, not sold or distributed to external parties, nor linked to you or your browser. Auth0 may store additional user data if you opt to use an SSO authentication method.
 - https://rratfr.rakerman.com/: Your IP (localized address on the Internet) is logged when you choose to participate in the People's Choice contest. This data is used to help enforce People's Choice voting mechanisms. All data related to the People's Choice contest (except total vote counts) is deleted immediately after race day. IP data is stored on a secure, sand-boxed database, not sold or distributed to external parties, nor linked to you or your browser.
-- https://nextcloud.rakerman.com/: N/A
-- https://notify.rakerman.com/: N/A
-- https://particlecord.rakerman.com/: N/A
+- https://informr.rakerman.com/: N/A, in development
+- https://media.rakerman.com/: N/A, in development
+- https://link.rakerman.com/: N/A
 - https://status.rakerman.com/: N/A
 
 # Miscellaneous Trackers

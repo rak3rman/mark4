@@ -1,4 +1,28 @@
 [
+    {
+        "title": "Mentor",
+        "company": "The Cities Project",
+        "start": "2023-08",
+        "end": "inf",
+        "location": "Chicago, IL",
+        "commit": "volunteer",
+        "tags": [
+            "lead"
+        ],
+        "bullets": []
+    },
+    {
+        "title": "Software Engineering Intern, Starship Software",
+        "company": "SpaceX",
+        "start": "2023-05",
+        "end": "inf",
+        "location": "Starbase, TX",
+        "commit": "intern",
+        "tags": [
+            "cs"
+        ],
+        "bullets": []
+    },
 	{
 		"title": "Event Operations Assistant",
 		"company": "Freelance, Event Management",
@@ -34,22 +58,6 @@
 		]
 	},
 	{
-		"title": "Web Security Intern",
-		"company": "U.S. Department of Veterans Affairs",
-		"start": "2021-09",
-		"end": "2022-05",
-		"location": "Remote",
-		"commit": "volunteer",
-		"tags": [
-			"cs"
-		],
-		"bullets": [
-			"Penetration tested dmeinterns.org using Wireshark, SQLmap, and other web scanning tools, evaluated WordPress plugins",
-			"Created strict security standards for 250+ interns, conducted phishing campaigns on all website users",
-			"Educated other VA departments on password protocol and breach prevention through Slack"
-		]
-	},
-	{
 		"title": "Project Manager & Software Engineer",
 		"company": "University of Illinois Chicago",
 		"start": "2021-08",
@@ -61,7 +69,7 @@
 			"lead"
 		],
 		"bullets": [
-			"Managed a team of 7 web developers working on over 10 large-scale, full-stack web applications",
+			"Organized a team of 7 web developers working on over 10 large-scale, full-stack web applications",
 			"Developed and maintained custom full-stack web applications on Nuxt, Laravel, Vue/React, SQL, used by 3,000+ users",
 			"Integrated new project management software (Paymo) and maintained framework templates/documentation in Github",
 			"Single-handedly developed and published a Shibboleth (SAML SSO) to Express (Node.js) authentication package on npm",
@@ -74,7 +82,7 @@
 		"start": "2021-05",
 		"end": "2021-08",
 		"location": "Chicago, IL",
-		"commit": "part",
+		"commit": "intern",
 		"tags": [
 			"cs"
 		],
@@ -90,14 +98,14 @@
 		"start": "2017-11",
 		"end": "2018-09",
 		"location": "Loves Park, IL",
-		"commit": "full",
+		"commit": "intern",
 		"tags": [
 			"cs"
 		],
 		"bullets": [
 			"Lead front-end web developer on an enterprise-grade security unification solution (MTOP) utilizing Node.js, MongoDB",
 			"Configured mission-critical SLA networks and infrastructure in the field by installing switches, IP cameras, access control",
-			"Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge units"
+			"Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge policing units"
 		]
 	},
 	{
