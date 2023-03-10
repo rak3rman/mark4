@@ -49,7 +49,7 @@
         </div>
         <div ref="expDOM">
             <div v-for="(entry, index) in expEntries" class="fade-in">
-                <div v-if="index < 5 || !limitExp" class="pt-2">
+                <div v-if="index < 4 || !limitExp" class="pt-2">
                     <h6 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
                         {{ entry.title }} <span class="text-accent">@ {{ entry.company }}</span>
                     </h6>
@@ -71,11 +71,11 @@
             <div class="flex justify-center">
                 <a @click="updateExpLimit(false)" v-if="limitExp === true"
                    class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus">
-                    Show {{ expEntries.length - 5 }} more experience{{ expEntries.length > 6 ? 's' : '' }}
+                    Show {{ expEntries.length - 4 }} more experience{{ expEntries.length > 6 ? 's' : '' }}
                 </a>
                 <a @click="updateExpLimit(true)" v-else
                    class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus">
-                    Hide {{ expEntries.length - 5 }} experience{{ expEntries.length > 6 ? 's' : '' }}
+                    Hide {{ expEntries.length - 4 }} experience{{ expEntries.length > 6 ? 's' : '' }}
                 </a>
             </div>
         </div>

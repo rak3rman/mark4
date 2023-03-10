@@ -19,16 +19,27 @@
                     </h6>
                     <h6 class="py-2 leading-normal text-accent text-lg md:text-lg max-w-2xl text-left fade-in-hero"
                         :style="{ 'transition-delay': 500 + 'ms' }">
-                        Incoming Software Engineering Intern, Starship Software @ SpaceX!
 <!--                        I lead teams who deliver exceptional digital experiences.-->
-                        Currently, I'm studying CS + Business @
-                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://uic.edu">UIC</NuxtLink>, project managing a team of 7, and co-building
-                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com">Pulqra</NuxtLink> – a mission capitalist creative marketing collective.
+                        I rapidly develop high-quality web utilities that perform at scale.
+                        Currently, I'm an Incoming Software Engineering Intern @
+                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://spacex.com">SpaceX</NuxtLink>, studying Computer Science + Business @
+                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://uic.edu">UIC</NuxtLink>, and co-building
+                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://pulqra.com">Pulqra</NuxtLink> – a creative marketing collective.
                     </h6>
                     <span class="py-3 inline-flex rounded-md shadow fade-in-hero"
                           :style="{ 'transition-delay': 600 + 'ms' }">
-                        <NuxtLink to="/publications"
-                            class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"> Check out my lectures at UIC! </NuxtLink>
+
+                        <NuxtLink to="https://chickens.rakerman.com"
+                            class="inline-flex items-center">
+                            <div class="p-[1px] bg-gradient-to-r from-red-600 via-red-500 to-yellow-500 rounded-md">
+                                <div class="bg-primary hover:bg-primary-focus px-4 py-2 rounded-md">
+                                    <div class="text-base font-mono leading-normal text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-yellow-500">
+                                        Exploding Chickens: Celebrating 1,000 games played!
+                                    </div>
+                                </div>
+                            </div>
+                        </NuxtLink>
+
                     </span>
                 </div>
             </div>

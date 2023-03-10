@@ -39,7 +39,8 @@
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.stevenolikara.com">a U.S. Senate campaign</NuxtLink>,
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.monteltech.com">a start-up</NuxtLink>, and
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://my.lifetime.life/athletic-events.html">an event management group</NuxtLink>.
-                        This summer, I'll be a Software Engineering Intern on the Starship Software team at SpaceX!
+                        This summer, I'll be a Software Engineering Intern on the
+                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.spacex.com/vehicles/starship/">Starship Software</NuxtLink> team at <NuxtLink class="text-secondary underline underline-offset-2" to="https://spacex.com">SpaceX</NuxtLink>!
                         I'm absolutely stoked and can't wait to get started.
                     </p>
                     <p class="fade-in">I’m juggling quite a few responsibilities at the
@@ -57,7 +58,7 @@
                     </p>
 					<p class="fade-in">
 						Exploding Chickens fanned the flames (literally) and acted as a springboard for both my professional skills and further projects down the line.
-						I now independently host <NuxtLink class="text-secondary underline underline-offset-2" to="https://status.rakerman.com">10 web services</NuxtLink>,
+						I now independently host <NuxtLink class="text-secondary underline underline-offset-2" to="https://status.rakerman.com">over 10 web services</NuxtLink>,
 						2 web products generating revenue, and 5 organizational members who help make these ideas a reality.
                     </p>
 					<p class="fade-in">
