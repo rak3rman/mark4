@@ -46,7 +46,7 @@
         <transition enter-active-class="duration-150 ease-out" enter-from-class="opacity-0 scale-95"
                     enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in"
                     leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
-            <PopoverPanel focus
+            <PopoverPanel focus v-slot="{ close }"
                           class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
                 <div class="rounded-lg shadow-md bg-primary-focus ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div class="px-5 pt-4 flex items-center justify-between">
@@ -64,12 +64,12 @@
                         </div>
                     </div>
                     <div class="px-2 pt-2 pb-3">
-                        <PopoverButton v-for="(item, index) in navigation" class="block w-full text-left">
+                        <div v-for="(item, index) in navigation" class="block w-full text-left" @click="close()">
                             <NuxtLink :key="item.name" :to="item.href" :class="'delay-[' + index*100 + ']'"
                                       class="block px-3 py-2 rounded-md text-base font-mono text-accent hover:text-secondary hover:bg-primary">
                                 <span class="text-secondary">{{ '0' + (index + 1) + '. ' }}</span> {{ item.name }}
                             </NuxtLink>
-                        </PopoverButton>
+                        </div>
                     </div>
                     <NuxtLink to="/resume.pdf" target="_blank"
                               class="block w-full px-5 py-3 text-center font-medium text-neutral bg-secondary"> Resume
