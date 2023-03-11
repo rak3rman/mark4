@@ -17,7 +17,7 @@
                         :style="{ 'transition-delay': 400 + 'ms' }">
                         Radison Akerman.
                     </h6>
-                    <h6 class="py-2 leading-normal text-accent text-lg md:text-lg max-w-2xl text-left fade-in-hero"
+                    <h6 class="py-2 leading-normal text-accent text-[1.1rem] md:text-lg max-w-2xl text-left fade-in-hero"
                         :style="{ 'transition-delay': 500 + 'ms' }">
 <!--                        I lead teams who deliver exceptional digital experiences.-->
                         I rapidly develop high-quality web utilities that perform at scale.
@@ -37,7 +37,7 @@
                                         <div class="hidden md:block">
                                             Exploding Chickens: Celebrating 1,000 games played!
                                         </div>
-                                        <div class="block md:hidden text-sm">
+                                        <div class="block md:hidden text-[0.93rem]">
                                             Exploding Chickens: <br> Celebrating 1,000 games played!
                                         </div>
                                     </div>

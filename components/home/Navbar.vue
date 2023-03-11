@@ -50,11 +50,12 @@
                           class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
                 <div class="rounded-lg shadow-md bg-primary-focus ring-1 ring-black ring-opacity-5 overflow-hidden">
                     <div class="px-5 pt-4 flex items-center justify-between">
-                        <div>
+                        <NuxtLink to="/">
+                            <span class="sr-only">RAkerman</span>
                             <img class="h-5 w-auto"
                                  src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ed7598b-5520-4e18-5159-daa458739b00/sm"
                                  alt="RAkerman Logo"/>
-                        </div>
+                        </NuxtLink>
                         <div class="-mr-2">
                             <PopoverButton
                                     class="bg-primary rounded-md p-2 inline-flex items-center justify-center text-accent hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
