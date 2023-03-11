@@ -34,7 +34,12 @@
                             <div class="p-[1px] bg-gradient-to-r from-red-600 via-red-500 to-yellow-500 rounded-md">
                                 <div class="bg-primary hover:bg-primary-focus px-4 py-2 rounded-md">
                                     <div class="text-base font-mono leading-normal text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-yellow-500">
-                                        Exploding Chickens: Celebrating 1,000 games played!
+                                        <div class="hidden md:block">
+                                            Exploding Chickens: Celebrating 1,000 games played!
+                                        </div>
+                                        <div class="block md:hidden text-sm">
+                                            Exploding Chickens: <br> Celebrating 1,000 games played!
+                                        </div>
                                     </div>
                                 </div>
                             </div>
