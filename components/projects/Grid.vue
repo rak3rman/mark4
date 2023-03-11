@@ -22,9 +22,14 @@
                             <ProjectsExtIcons :project="project"/>
                         </div>
                     </div>
-                    <h6 class="text-lg font-medium tracking-tight leading-6 text-neutral">
+                    <div class="flex items-center text-lg font-medium tracking-tight leading-6 text-neutral">
                         {{ project.title }}
-                    </h6>
+                        <div class="ml-1.5 inline-flex" v-if="project.tag">
+                            <span class="inline-flex items-center rounded-full border border-secondary px-[7px] h-[20px] text-[0.7rem] font-medium text-secondary">
+                                {{ project.tag }}
+                            </span>
+                        </div>
+                    </div>
                     <h6 class="mt-1.5 text-sm text-accent">
                         {{ project.sub }}
                     </h6>

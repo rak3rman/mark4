@@ -12,11 +12,12 @@
 }
 
 /* animate fade in blocks */
-.fade-in {
-  transition: 0.3s all ease-out;
-  transform: scale(0.8)translate(0, 20%);
-  opacity: 0;
-}
+/* TODO: TEMP REMOVED, GLITCHES ON PAGE BACK */
+/*.fade-in {*/
+/*  transition: 0.2s all ease-out;*/
+/*  transform: scale(0.8)translate(0, 20%);*/
+/*  opacity: 0;*/
+/*}*/
 
 .fade-in-nav {
   transition: 0.3s all ease-out;

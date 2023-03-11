@@ -47,7 +47,7 @@
                 Lasting impacts. Pushing things further.
             </h6>
         </div>
-        <div ref="expDOM">
+        <div>
             <div v-for="(entry, index) in expEntries" class="fade-in">
                 <div v-if="index < 4 || !limitExp" class="pt-2">
                     <h6 class="pt-2 leading-normal text-neutral text-md font-bold text-left">
@@ -149,11 +149,8 @@ const gen_date_range = (start, end) => {
 </script>
 
 <script>
-import autoAnimate from "@formkit/auto-animate"
 import {DateTime} from 'luxon'
 import raw from '../../assets/experiences.json'
-
-const expDOM = ref()
 
 let limit_exp = true;
 const selected_exp_tab = 'cs'
@@ -213,8 +210,5 @@ export default {
             this.limitExp = val
         },
     },
-    mounted() {
-        autoAnimate(expDOM.value)
-    }
 }
 </script>

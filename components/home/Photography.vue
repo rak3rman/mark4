@@ -1,13 +1,13 @@
 <template>
-    <div class="w-full mt-24 overflow-y-auto bg-cover duration-500 delay-75"
-         :class="albums.length === 0 ? 'mt-12' : 'mt-24'"
+    <div class="w-full overflow-y-auto bg-cover duration-500 delay-75"
+         :class="albums.length === 0 ? '' : 'mt-24'"
          :style="'background-image: url(\'' + albums[selected]?.image + '\');transition-property: background-image;'"
          id="photography">
         <div :class="albums[selected]?.image === undefined ? '' : 'backdrop-brightness-[0.8]'">
             <div class="container mx-auto items-center max-w-7xl mx-auto px-4 sm:px-6 py-24">
                 <!-- Photography Title -->
                 <Header num="04." title="Photography" id="experience" fade :hide_line="albums.length !== 0"
-                        class="pt-12"/>
+                        class=""/>
                 <!-- Albums -->
                 <div v-for="(item, index) in albums" class="py-[2rem] my-[1rem] fade-in"
                      @mouseenter="selected = index;">

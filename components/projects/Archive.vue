@@ -17,43 +17,43 @@
                     </tr>
                     </thead>
                     <tbody class="divide-y divide-accent/20">
-                    <tr v-for="project in filtered" :key="project.title" class="">
-                        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-secondary sm:pl-6 md:pl-0">
-                            {{ DateTime.fromMillis(Date.parse(project.start)).toFormat('LLL yyyy') }}
-                        </td>
-                        <td class="whitespace-nowrap py-4 px-3 text-sm text-neutral">
-                            {{ project.title }}
-                            <RectangleGroupIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
-                                                v-if="project.type === 'website'"/>
-                            <ComputerDesktopIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
-                                                 v-else-if="project.type === 'application'"/>
-                            <PuzzlePieceIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
-                                             v-else-if="project.type === 'microservice'"/>
-                            <TagIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
-                                     v-else-if="project.type === 'package'"/>
-                            <CpuChipIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
-                                         v-else-if="project.type === 'electronics'"/>
-                            <WrenchIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
-                                        v-else-if="project.type === 'utility'"/>
-                            <FolderIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true" v-else/>
-                            <span class="table-cell md:hidden text-accent font-light">
-								{{ project.made_at }}
-							</span>
-                        </td>
-                        <td class="whitespace-nowrap py-4 px-3 text-sm text-accent hidden md:table-cell">
-                            {{ project.made_at }}
-                        </td>
-                        <td class="whitespace-nowrap py-4 px-3 text-xs text-accent font-mono text-accent font-light">
-                            <div class="flex flex-wrap"><h6 v-for="tool in project.tools" :class="'pr-4'">{{
-									tool
-                                }}</h6></div>
-                        </td>
-                        <td class="whitespace-nowrap py-4 px-3 text-sm text-accent">
-                            <div class="flex items-center">
-                                <ProjectsExtIcons :project="project"/>
-                            </div>
-                        </td>
-                    </tr>
+                        <tr v-for="project in filtered" :key="project.title" class="">
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium sm:pl-6 md:pl-0" :class="project.is_archived ? 'text-secondary' : 'text-success'">
+                                {{ DateTime.fromMillis(Date.parse(project.start)).toFormat('LLL yyyy') }}
+                            </td>
+                            <td class="whitespace-nowrap py-4 px-3 text-sm text-neutral">
+                                {{ project.title }}
+                                <RectangleGroupIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
+                                                    v-if="project.type === 'website'"/>
+                                <ComputerDesktopIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
+                                                     v-else-if="project.type === 'application'"/>
+                                <PuzzlePieceIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
+                                                 v-else-if="project.type === 'microservice'"/>
+                                <TagIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
+                                         v-else-if="project.type === 'package'"/>
+                                <CpuChipIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
+                                             v-else-if="project.type === 'electronics'"/>
+                                <WrenchIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true"
+                                            v-else-if="project.type === 'utility'"/>
+                                <FolderIcon class="h-4 w-4 text-secondary inline -mt-[3px]" aria-hidden="true" v-else/>
+                                <span class="table-cell md:hidden text-accent font-light">
+    								{{ project.made_at }}
+    							</span>
+                            </td>
+                            <td class="whitespace-nowrap py-4 px-3 text-sm text-accent hidden md:table-cell">
+                                {{ project.made_at }}
+                            </td>
+                            <td class="whitespace-nowrap py-4 px-3 text-xs text-accent font-mono text-accent font-light">
+                                <div class="flex flex-wrap"><h6 v-for="tool in project.tools" :class="'pr-4'">{{
+    									tool
+                                    }}</h6></div>
+                            </td>
+                            <td class="whitespace-nowrap py-4 px-3 text-sm text-accent">
+                                <div class="flex items-center">
+                                    <ProjectsExtIcons :project="project"/>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

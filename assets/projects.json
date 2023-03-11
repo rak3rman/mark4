@@ -1,4 +1,46 @@
 [
+    {
+        "title": "m8",
+        "sub": "A media upload, organization, and display tool leveraging Cloudflare Workers",
+        "desc": "",
+        "links": {
+            "ext": "https://media.rakerman.com"
+        },
+        "tools": [
+            "Nuxt",
+            "Cloudflare Workers/KV",
+            "Typescript",
+            "Tailwinds"
+        ],
+        "type": "microservice",
+        "made_at": "RAkerman Foundation",
+        "start": "2022-12",
+        "end": "inf",
+        "tag": "Alpha",
+        "is_featured": false,
+        "is_archived": false
+    },
+    {
+        "title": "Author",
+        "sub": "A centralized user management backbone for all RAkerman Foundation services",
+        "desc": "",
+        "links": {
+            "ext": "https://author.rakerman.com"
+        },
+        "tools": [
+            "Nuxt",
+            "Cloudflare Workers/KV",
+            "Typescript",
+            "Tailwinds"
+        ],
+        "type": "microservice",
+        "made_at": "RAkerman Foundation",
+        "start": "2022-12",
+        "end": "inf",
+        "tag": "Alpha",
+        "is_featured": false,
+        "is_archived": false
+    },
 	{
 		"title": "Exploding Chickens",
 		"sub": "A beautiful, online alternative to the popular Exploding Kittens card game",
@@ -71,6 +113,7 @@
 		"made_at": "RAkerman Foundation",
 		"start": "2022-06",
 		"end": "inf",
+        "tag": "Beta",
 		"is_featured": false,
 		"is_archived": false
 	},
@@ -188,7 +231,7 @@
 		"start": "2020-04",
 		"end": "2020-08",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": true
 	},
 	{
 		"title": "Homebase",
@@ -271,7 +314,7 @@
 		"start": "2020-10",
 		"end": "2021-01",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": true
 	},
 	{
 		"title": "Remindcord",
