@@ -20,27 +20,6 @@
         "is_featured": false,
         "is_archived": false
     },
-    {
-        "title": "Author",
-        "sub": "A centralized user management backbone for all RAkerman Foundation services",
-        "desc": "",
-        "links": {
-            "ext": "https://author.rakerman.com"
-        },
-        "tools": [
-            "Nuxt",
-            "Cloudflare Workers/KV",
-            "Typescript",
-            "Tailwinds"
-        ],
-        "type": "microservice",
-        "made_at": "RAkerman Foundation",
-        "start": "2022-12",
-        "end": "inf",
-        "tag": "Alpha",
-        "is_featured": false,
-        "is_archived": false
-    },
 	{
 		"title": "Exploding Chickens",
 		"sub": "A beautiful, online alternative to the popular Exploding Kittens card game",
@@ -49,7 +28,7 @@
 			"ext": "https://chickens.rakerman.com",
 			"youtube": "/publications",
 			"images": [
-				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/f432fa0c-b42c-446c-0d09-2916c5aa3100/xl"
+				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/1b4b5b9c-9ef6-47c0-76a2-1f527062b100/xl"
 			]
 		},
 		"tools": [
@@ -76,7 +55,7 @@
 		"links": {
 			"ext": "https://www.stevenolikara.com",
 			"images": [
-				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/0d4891b4-8ce4-4474-e2b1-c4efe09a1500/xl"
+				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ec8d3a0-11a6-4c6f-70bd-538647806a00/xl"
 			]
 		},
 		"tools": [
@@ -88,6 +67,30 @@
 		"made_at": "Pulqra",
 		"start": "2022-05",
 		"end": "inf",
+		"is_featured": true,
+		"is_archived": false
+	},
+	{
+		"title": "Author",
+		"sub": "A centralized user management backbone for all RAkerman Foundation services",
+		"desc": "A centralized user management backbone for all RAkerman Foundation services. Instead of manipulating user data on each RF service, Author serves as a \"one-stop-shop\" for users and RF services.",
+		"links": {
+			"ext": "https://author.rakerman.com",
+			"images": [
+				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/ef53d4f8-5609-403c-c3b5-ce20d950f600/xl"
+			]
+		},
+		"tools": [
+			"Nuxt",
+			"Cloudflare Workers/KV",
+			"Typescript",
+			"Tailwinds"
+		],
+		"type": "microservice",
+		"made_at": "RAkerman Foundation",
+		"start": "2022-12",
+		"end": "inf",
+		"tag": "Alpha",
 		"is_featured": true,
 		"is_archived": false
 	},
@@ -199,7 +202,10 @@
 		"desc": "A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all \"subscribers\" via RAkerman Notify. Pretty cool right?",
 		"links": {
 			"ext": "https://status.rakerman.com",
-			"github": "https://github.com/rak3rman/rakerman-status"
+			"github": "https://github.com/rak3rman/rakerman-status",
+			"images": [
+				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/77d26ff0-fe47-4365-44e8-be30483d8000/xl"
+			]
 		},
 		"tools": [
 			"Nuxt",
@@ -314,7 +320,7 @@
 		"start": "2020-10",
 		"end": "2021-01",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": false
 	},
 	{
 		"title": "Remindcord",
