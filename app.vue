@@ -1,9 +1,8 @@
-<!-- RF Nuxt Header, Rev. 03/31/23 -->
+<!-- RF Nuxt Header, Rev. 04/05/23 -->
 
 <template>
     <Html class="h-full bg-primary scroll-smooth" lang="en"/>
-    <Link rel="icon" type="png"
-          href="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/cbeec7ce-7b51-4cc2-81bb-e72289777900/sm"/>
+    <Link rel="icon" type="png" :href="config.meta.favicon"/>
     <Body class="h-full bg-primary"/>
     <div class="h-full bg-primary">
         <NuxtLoadingIndicator color="repeating-linear-gradient(to right,#586CB2 0%,#059669 50%,#CCCCCC 100%)" />
