@@ -35,6 +35,14 @@ Discussed how the game is played, progress/success of project, hosted a live ope
 <iframe src="https://www.youtube.com/embed/3KE848Yj0g4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ::
 
+::Bookmark{link="https://rakerman.com/ec_slidedeck_november_2022.pdf"}
+#title
+PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Fall 2022
+
+#desc
+Designed in Keynote, distributed under "Personal Use License" as defined in rakerman.com/licensing
+::
+
 ##
 ## Exploding Chickens: UIC CS 342 Lecture, Spring 2022
 
@@ -46,4 +54,12 @@ Discussed how the game is played, progress/success of project, high-level overvi
 ::Youtube
 #embed
 <iframe src="https://www.youtube.com/embed/cD53M7NHQoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+::
+
+::Bookmark{link="https://rakerman.com/ec_slidedeck_april_2022.pdf"}
+#title
+PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring 2022
+
+#desc
+Designed in Keynote, distributed under "Personal Use License" as defined in rakerman.com/licensing
 ::
