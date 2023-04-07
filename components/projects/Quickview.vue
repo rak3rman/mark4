@@ -10,73 +10,85 @@
                     <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" enter-to="opacity-100 translate-y-0 md:scale-100" leave="ease-in duration-200" leave-from="opacity-100 translate-y-0 md:scale-100" leave-to="opacity-0 translate-y-4 md:translate-y-0 md:scale-95">
                         <DialogPanel class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
                             <div class="relative flex w-full items-center overflow-hidden bg-primary-focus rounded-2xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
-                                <button type="button" class="absolute right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8" @click="emit('clear')">
+                                <button type="button" class="absolute z-20 right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8" @click="emit('clear')">
                                     <span class="sr-only">Close</span>
                                     <XMarkIcon class="h-6 w-6" aria-hidden="true" />
                                 </button>
 
-                                <div class="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8">
-                                    <div class="sm:col-span-4 lg:col-span-5">
-                                        <div class="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100">
-                                            <img :src="product.imageSrc" :alt="product.imageAlt" class="object-cover object-center" />
+                                <!-- Blur Background -->
+                                <div class="absolute inset-x-0 top-[calc(100%-13rem)] transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-33rem)]">
+                                    <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
+                                         viewBox="0 0 1155 678" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3"
+                                              d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"/>
+                                        <defs>
+                                            <linearGradient id="ecb5b0c9-546c-4772-8c71-4d3f06d544bc" x1="1155.49"
+                                                            x2="-78.208" y1=".177" y2="474.645"
+                                                            gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#9089FC"/>
+                                                <stop offset="1" stop-color="#586CB2"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+
+                                <div class="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 lg:gap-x-8 z-10"
+                                     :class="{'md:grid-cols-12': props.proj.links.images}">
+                                    <div class="md:col-span-4 lg:col-span-5" :class="{'hidden': !props.proj.links.images}">
+                                        <div v-for="(image, i) in props.proj.links.images" class="md:aspect-h-1 md:aspect-w-1 rounded-lg">
+                                            <img :src="image" :alt="'Project Image ' + (i + 1)" class="object-scale-down" />
                                         </div>
                                     </div>
-                                    <div class="sm:col-span-8 lg:col-span-7">
-                                        <h2 class="text-2xl font-bold text-gray-900 sm:pr-12">{{ props.proj.title }}</h2>
-
-                                        <section aria-labelledby="information-heading" class="mt-3">
-                                            <h3 id="information-heading" class="sr-only">Product information</h3>
-
-                                            <p class="text-2xl text-gray-900">{{ product.price }}</p>
-
-                                            <!-- Reviews -->
-                                            <div class="mt-3">
-                                                <h4 class="sr-only">Reviews</h4>
-                                                <div class="flex items-center">
-                                                    <div class="flex items-center">
-                                                        <StarIcon v-for="rating in [0, 1, 2, 3, 4]" :key="rating" :class="[product.rating > rating ? 'text-gray-400' : 'text-gray-200', 'h-5 w-5 flex-shrink-0']" aria-hidden="true" />
-                                                    </div>
-                                                    <p class="sr-only">{{ product.rating }} out of 5 stars</p>
-                                                </div>
+                                    <div class="md:col-span-8 lg:col-span-7">
+                                        <div class="flex items-center mb-4 flow-root">
+                                            <RectangleGroupIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
+                                                                v-if="props.proj.type === 'website'"/>
+                                            <ComputerDesktopIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
+                                                                 v-else-if="props.proj.type === 'application'"/>
+                                            <PuzzlePieceIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
+                                                             v-else-if="props.proj.type === 'microservice'"/>
+                                            <TagIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
+                                                     v-else-if="props.proj.type === 'package'"/>
+                                            <CpuChipIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
+                                                         v-else-if="props.proj.type === 'electronics'"/>
+                                            <WrenchIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
+                                                        v-else-if="props.proj.type === 'utility'"/>
+                                            <FolderIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true" v-else/>
+                                        </div>
+                                        <div class="flex items-center text-xl font-medium tracking-tight leading-6 text-neutral">
+                                            {{ props.proj.title }}
+                                            <div class="ml-1.5 inline-flex" v-if="props.proj.tag">
+                                              <span class="inline-flex items-center rounded-full border border-secondary px-[7px] h-[20px] text-[0.7rem] font-medium text-secondary">
+                                                  {{ props.proj.tag }}
+                                              </span>
                                             </div>
-
-                                            <div class="mt-6">
-                                                <h4 class="sr-only">Description</h4>
-
-                                                <p class="text-sm text-gray-700">{{ product.description }}</p>
+                                            <div class="ml-1.5 inline-flex" v-if="props.proj.is_archived">
+                                              <span class="inline-flex items-center rounded-full border border-accent-focus px-[7px] h-[20px] text-[0.7rem] font-medium text-accent-focus">
+                                                  Archived
+                                              </span>
                                             </div>
-                                        </section>
-
-                                        <section aria-labelledby="options-heading" class="mt-6">
-                                            <h3 id="options-heading" class="sr-only">Product options</h3>
-
-                                            <form>
-                                                <!-- Colors -->
-                                                <div>
-                                                    <h4 class="text-sm text-gray-600">Color</h4>
-
-                                                    <RadioGroup v-model="selectedColor" class="mt-2">
-                                                        <RadioGroupLabel class="sr-only"> Choose a color </RadioGroupLabel>
-                                                        <div class="flex items-center space-x-3">
-                                                            <RadioGroupOption as="template" v-for="color in product.colors" :key="color.name" :value="color" v-slot="{ active, checked }">
-                                                                <div :class="[color.selectedColor, active && checked ? 'ring ring-offset-1' : '', !active && checked ? 'ring-2' : '', 'relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none']">
-                                                                    <RadioGroupLabel as="span" class="sr-only"> {{ color.name }} </RadioGroupLabel>
-                                                                    <span aria-hidden="true" :class="[color.bgColor, 'h-8 w-8 rounded-full border border-black border-opacity-10']" />
-                                                                </div>
-                                                            </RadioGroupOption>
-                                                        </div>
-                                                    </RadioGroup>
-                                                </div>
-
-                                                <div class="mt-6">
-                                                    <button type="submit" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Add to bag</button>
-                                                </div>
-
-                                                <p class="absolute left-4 top-4 text-center sm:static sm:mt-6">
-                                                    <a :href="product.href" class="font-medium text-indigo-600 hover:text-indigo-500">View full details</a>
-                                                </p>
-                                            </form>
-                                        </section>
+                                        </div>
+                                        <div class="mt-1.5 flex items-center text-sm text-accent">
+                                            <AtSymbolIcon class="h-4 w-4 mr-1.5 text-secondary float-left"/>
+                                            {{ props.proj.made_at }}
+                                        </div>
+                                        <div class="mt-0.5 flex items-center text-sm text-accent">
+                                            <CalendarDaysIcon class="h-4 w-4 mr-1.5 text-secondary float-left"/>
+                                            {{ DateTime.fromMillis(Date.parse(props.proj.start)).toFormat('LLLL yyyy') }}
+                                            to
+                                            {{ props.proj.end !== "inf" ? DateTime.fromMillis(Date.parse(props.proj.end)).toFormat('LLLL yyyy') : "Present" }}
+                                        </div>
+                                        <div class="mt-1.5 text-sm text-accent">
+                                            {{ props.proj.desc !== "" ? props.proj.desc : props.proj.sub }}
+                                        </div>
+                                        <div class="flex flex-grow items-end mt-3">
+                                            <div class="flex flex-wrap text-xs text-accent font-light font-mono">
+                                                <h6 v-for="tool in props.proj.tools" class="pr-2.5">{{ tool }}</h6>
+                                            </div>
+                                        </div>
+                                        <div class="flex mt-3">
+                                            <ProjectsExtIcons :project="props.proj"/>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -100,6 +112,16 @@ import {
 } from '@headlessui/vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 import { StarIcon } from '@heroicons/vue/20/solid'
+import {
+    ComputerDesktopIcon,
+    CpuChipIcon,
+    FolderIcon,
+    PuzzlePieceIcon, RectangleGroupIcon,
+    TagIcon, WrenchIcon,
+    CalendarDaysIcon,
+    AtSymbolIcon,
+} from "@heroicons/vue/24/outline/index.js";
+import {DateTime} from 'luxon'
 
 const product = {
     name: 'Zip Tote Basket',

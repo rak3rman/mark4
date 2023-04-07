@@ -1,8 +1,7 @@
 <template>
     <div>
-<!--        &lt;!&ndash;    Quickview     &ndash;&gt;-->
-<!--        <ProjectsQuickview :show="show_quickview" :proj="selected" @clear="show_quickview = false"/>-->
-<!--        {{ selected }}-->
+        <!--    Quickview     -->
+        <ProjectsQuickview :show="show_quickview" :proj="selected" @clear="show_quickview = false"/>
         <!--    Grid     -->
         <ul role="list" class="mt-4 grid grid-cols-1 lg:grid-cols-3 -m-3 list-none p-0">
             <li v-for="(project, index) in filtered" class="col-span-1 flex flex-col space-y-8 pb-0 fade-in">
