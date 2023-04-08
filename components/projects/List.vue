@@ -13,11 +13,11 @@
                             at
                         </th>
                         <th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold">Built with</th>
-                        <th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold">Link</th>
+                        <th scope="col" class="py-3.5 px-3 text-left text-sm font-semibold hidden md:table-cell">Link</th>
                     </tr>
                     </thead>
                     <tbody class="divide-y divide-accent/20">
-                        <tr v-for="project in filtered" :key="project.title" class="">
+                        <tr v-for="project in filtered" :key="project.title" @click="emit('quick', project)">
                             <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium sm:pl-6 md:pl-0" :class="project.is_archived ? 'text-secondary' : 'text-success'">
                                 {{ DateTime.fromMillis(Date.parse(project.start)).toFormat('LLL yyyy') }}
                             </td>
@@ -48,7 +48,7 @@
     									tool
                                     }}</h6></div>
                             </td>
-                            <td class="whitespace-nowrap py-4 px-3 text-sm text-accent">
+                            <td class="whitespace-nowrap py-4 px-3 text-sm text-accent  hidden md:table-cell">
                                 <div class="flex items-center">
                                     <ProjectsExtIcons :project="project"/>
                                 </div>
@@ -71,6 +71,8 @@ import {
     WrenchIcon,
     TagIcon
 } from '@heroicons/vue/24/outline'
+
+const emit = defineEmits(['quick'])
 </script>
 
 <script>

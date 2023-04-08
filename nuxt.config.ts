@@ -25,5 +25,10 @@ export default defineNuxtConfig({
         prerender: {
             routes: ['/sitemap.xml']
         }
+    },
+    vue: {
+        compilerOptions: {
+            isCustomElement: tag => tag.startsWith('spline-viewer')
+        }
     }
 })

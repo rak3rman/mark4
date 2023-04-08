@@ -1,13 +1,11 @@
 <template>
     <div>
-        <!--    Quickview     -->
-        <ProjectsQuickview :show="show_quickview" :proj="selected" @clear="show_quickview = false"/>
         <!--    Grid     -->
         <ul role="list" class="mt-4 grid grid-cols-1 lg:grid-cols-3 -m-3 list-none p-0">
             <li v-for="(project, index) in filtered" class="col-span-1 flex flex-col space-y-8 pb-0 fade-in">
                 <!--    Card     -->
                 <div class="flex-1 flex flex-col rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3"
-                     :class="index > 5 ? 'hidden lg:flex' : ''" @click="selected = project;show_quickview = true;">
+                     :class="index > 5 ? 'hidden lg:flex' : ''" @click="emit('quick', project)">
                     <div class="flex items-center mb-4 flow-root">
                         <RectangleGroupIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
                                             v-if="project.type === 'website'"/>
@@ -50,11 +48,6 @@
                 </div>
             </li>
         </ul>
-        <div class="pt-12 pb-4 fade-in">
-            <NuxtLink to="/projects" class="flex justify-center pt-1 text-md text-secondary font-mono text-center">
-                (But wait, there is more) <br> View all {{ projects.length }} projects&nbsp&rarr;
-            </NuxtLink>
-        </div>
     </div>
 </template>
 
@@ -69,8 +62,7 @@ import {
     TagIcon
 } from '@heroicons/vue/24/outline'
 
-let selected = ref(null)
-let show_quickview = ref(false)
+const emit = defineEmits(['quick'])
 </script>
 
 <script>
