@@ -27,9 +27,7 @@
 		"links": {
 			"ext": "https://chickens.rakerman.com",
 			"youtube": "/publications",
-			"images": [
-				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/1b4b5b9c-9ef6-47c0-76a2-1f527062b100/xl"
-			]
+			"desktop": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/1b4b5b9c-9ef6-47c0-76a2-1f527062b100/xl"
 		},
 		"tools": [
 			"Node.js",
@@ -54,9 +52,7 @@
 		"desc": "A foundational website supporting Steven Olikara’s 2022 run for the U.S. Senate in Wisconsin. Completely rebuilt from the ground up with unified colors, textures, and mobile optimizations.",
 		"links": {
 			"ext": "https://www.stevenolikara.com",
-			"images": [
-				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ec8d3a0-11a6-4c6f-70bd-538647806a00/xl"
-			]
+			"desktop": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ec8d3a0-11a6-4c6f-70bd-538647806a00/xl"
 		},
 		"tools": [
 			"Nuxt",
@@ -76,9 +72,7 @@
 		"desc": "A centralized user management backbone for all RAkerman Foundation services. Instead of manipulating user data on each RF service, Author serves as a \"one-stop-shop\" for users and RF services.",
 		"links": {
 			"ext": "https://author.rakerman.com",
-			"images": [
-				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/ef53d4f8-5609-403c-c3b5-ce20d950f600/xl"
-			]
+			"desktop": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/ef53d4f8-5609-403c-c3b5-ce20d950f600/xl"
 		},
 		"tools": [
 			"Nuxt",
@@ -100,9 +94,7 @@
 		"desc": "(In Private Beta) A no-nonsense web form endpoint that enables web developers to handle form submissions faster. Leverages edge compute to offer high request volume and low cost.",
 		"links": {
 			"ext": "https://informr.rakerman.com",
-			"images": [
-				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/d867629b-a1c2-41f2-6946-8830dea52a00/xl"
-			]
+			"desktop": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/d867629b-a1c2-41f2-6946-8830dea52a00/xl"
 		},
 		"tools": [
 			"Nuxt",
@@ -203,9 +195,7 @@
 		"links": {
 			"ext": "https://status.rakerman.com",
 			"github": "https://github.com/rak3rman/rakerman-status",
-			"images": [
-				"https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/77d26ff0-fe47-4365-44e8-be30483d8000/xl"
-			]
+			"desktop": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/77d26ff0-fe47-4365-44e8-be30483d8000/xl"
 		},
 		"tools": [
 			"Nuxt",
@@ -401,7 +391,8 @@
 		"desc": "",
 		"links": {
 			"ext": "https://www.rakerman.com",
-			"github": "https://github.com/rak3rman/mark4"
+			"github": "https://github.com/rak3rman/mark4",
+			"spline": "https://prod.spline.design/RrgWIyeNN2iyaS58/scene.splinecode"
 		},
 		"tools": [
 			"Nuxt",

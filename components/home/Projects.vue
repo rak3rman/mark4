@@ -6,14 +6,16 @@
 
         <!--  Noteworthy Projects  -->
         <div class="pt-12 pb-4 fade-in">
-            <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
+            <div class="text-3xl text-neutral font-bold leading-tight text-left">
                 Other Neat Stuff
-            </h6>
-            <h6 class="pt-1 text-md text-secondary font-mono text-left">
+            </div>
+            <div class="pt-1 text-md text-secondary font-mono text-left">
                 Mighty projects. Huge breadth. <br> May blow your socks off.
-            </h6>
+            </div>
         </div>
         <ProjectsGrid/>
 
     </div>
 </template>
+<script setup lang="ts">
+</script>

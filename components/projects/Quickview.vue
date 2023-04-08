@@ -9,7 +9,7 @@
                 <div class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4">
                     <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0 translate-y-4 md:translate-y-0 md:scale-95" enter-to="opacity-100 translate-y-0 md:scale-100" leave="ease-in duration-200" leave-from="opacity-100 translate-y-0 md:scale-100" leave-to="opacity-0 translate-y-4 md:translate-y-0 md:scale-95">
                         <DialogPanel class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
-                            <div class="relative flex w-full items-center overflow-hidden bg-primary-focus rounded-2xl px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
+                            <div class="relative flex w-full items-center overflow-hidden bg-primary-focus rounded-2xl shadow-2xl" :class="{'px-4 pb-8 pt-14 sm:px-6 sm:pt-8 md:p-6 lg:p-8': !props.proj.links.spline }">
                                 <button type="button" class="absolute z-20 right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8" @click="emit('clear')">
                                     <span class="sr-only">Close</span>
                                     <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -33,13 +33,14 @@
                                 </div>
 
                                 <div class="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 lg:gap-x-8 z-10"
-                                     :class="{'md:grid-cols-12': props.proj.links.images}">
-                                    <div class="md:col-span-4 lg:col-span-5" :class="{'hidden': !props.proj.links.images}">
-                                        <div v-for="(image, i) in props.proj.links.images" class="md:aspect-h-1 md:aspect-w-1 rounded-lg">
-                                            <img :src="image" :alt="'Project Image ' + (i + 1)" class="object-scale-down" />
-                                        </div>
+                                     :class="{'md:grid-cols-12': props.proj.links.spline || props.proj.links.desktop || props.proj.links.mobile}">
+                                    <div class="md:col-span-5 flex flex-col justify-center md:h-full" :class="{'hidden': !(props.proj.links.spline || props.proj.links.desktop || props.proj.links.mobile), 'h-[70vh]': props.proj.links.spline}">
+                                        <!-- Spline -->
+                                        <spline-viewer loading-anim :url="props.proj.links.spline" v-if="props.proj.links.spline"></spline-viewer>
+                                        <!-- Desktop -->
+                                        <img :src="props.proj.links.desktop" alt="Desktop Screenshot" class="" v-if="props.proj.links.desktop" />
                                     </div>
-                                    <div class="md:col-span-8 lg:col-span-7">
+                                    <div class="md:col-span-7" :class="{'px-4 pb-12 md:pr-6 md:py-6 lg:pr-8 lg:py-8': props.proj.links.spline }">
                                         <div class="flex items-center mb-4 flow-root">
                                             <RectangleGroupIcon class="h-12 w-12 text-secondary float-left" aria-hidden="true"
                                                                 v-if="props.proj.type === 'website'"/>
@@ -118,6 +119,12 @@ import {
     AtSymbolIcon,
 } from '@heroicons/vue/24/outline'
 import {DateTime} from 'luxon'
+
+useHead({
+    script: [
+        { src: 'https://unpkg.com/@splinetool/viewer@0.9.290/build/spline-viewer.js', type: 'module' }
+    ]
+})
 
 const props = defineProps({
     show: Boolean,
