@@ -20,7 +20,7 @@ All academic publications authored or delivered by Radison Akerman.
 _To be delivered April 27th, 2023 at the University of Illinois Chicago under supervision of Prof. Mark Hallenbeck_
 
 Abstract: Explored the inner workings of Exploding Chickens, an ambitious personal project that expanded into a 30,000+ line code base with games played all over the world, daily.
-Discussed how the game is played, progress/success of project, hosted a live open demo of v2, overview of how web browsers work (DOM, websockets, JS), high-level overview of v1 stack/design choices, the MVC (Model-View-Controller) pattern in action on v1, v1 data schema, v1 websocket architecture (with its pitfalls), high-level overview of v2 stack/design choices, v2 test coverage, v2 data schema, v3 architecture, and v3 cloud implementation, along with a few key takeaways for better application design.
+Discussed how the game is played, progress/success of project, hosted a live open demo of v2, high-level overview of v1 stack/design choices, the MVC (Model-View-Controller) pattern in action on v1, v1 data schema, v1 websocket architecture (with its pitfalls), high-level overview of v2 stack/design choices, v2 test coverage, v2 data schema, v3 architecture, and v3 cloud implementation, along with a few key takeaways for better application design.
 
 ::Bookmark{presentation=true, link="/ec_slidedeck_april_2023.pdf"}
 #title
