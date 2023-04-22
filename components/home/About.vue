@@ -40,7 +40,7 @@
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.monteltech.com">a start-up</NuxtLink>, and
                         <NuxtLink class="text-secondary underline underline-offset-2" to="https://my.lifetime.life/athletic-events.html">an event management group</NuxtLink>.
                         This summer, I'll be a Software Engineering Intern on the
-                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.spacex.com/vehicles/starship/">Starship Software</NuxtLink> team at <NuxtLink class="text-secondary underline underline-offset-2" to="https://spacex.com">SpaceX</NuxtLink>!
+                        <NuxtLink class="text-secondary underline underline-offset-2" to="https://www.spacex.com/vehicles/starship/">Starship Software Infrastructure</NuxtLink> team at <NuxtLink class="text-secondary underline underline-offset-2" to="https://spacex.com">SpaceX</NuxtLink>!
                         I'm absolutely stoked and can't wait to get started.
                     </p>
                     <p class="fade-in">I’m juggling quite a few responsibilities at the
