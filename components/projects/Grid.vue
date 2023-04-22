@@ -87,11 +87,11 @@
       </li>
     </ul>
     <div class="pt-10 pb-4 fade-in" v-if="projects.length > starting">
-      <div class="flex justify-center">
+      <div class="flex flex-col sm:flex-row justify-center">
         <a
           @click="limit += increment"
           v-if="limit < projects.length"
-          class="inline-flex items-center px-4 py-2 mx-1 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"
+          class="text-center px-4 py-2 m-1 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"
         >
           Show
           {{ Math.min(increment, projects.length - limit) }} more project{{
@@ -101,12 +101,10 @@
         <a
           @click="limit -= increment"
           v-if="limit >= increment + starting"
-          class="inline-flex items-center px-4 py-2 mx-1 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"
+          class="text-center px-4 py-2 m-1 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"
         >
           Hide
-          {{
-            Math.min(increment, projects.length - limit + increment)
-          }}
+          {{ Math.min(increment, projects.length - limit + increment) }}
           project{{ projects.length > starting + 1 ? "s" : "" }}
         </a>
       </div>
