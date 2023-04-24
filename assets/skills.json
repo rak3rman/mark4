@@ -1,0 +1,26 @@
+[
+    {
+        "group": "Programming Languages",
+        "items": [
+            "C", "C++", "Java", "Python", "JavaScript", "TypeScript", "F#", "Go", "Rust", "SQL", "Bash", "PHP", "HTML", "CSS"
+        ]
+    },
+    {
+        "group": "Libraries & Frameworks",
+        "items": [
+            "Node.js", "Nuxt", "Express", "Mongoose", "Laravel", "Vue", "React", "jQuery", "Tailwinds", "Handlebars", "Ghost"
+        ]
+    },
+    {
+        "group": "Tools & Platforms",
+        "items": [
+            "Git", "Cloudflare", "AWS", "MongoDB", "Docker", "Kubernetes", "VMware", "pfSense", "Fauna", "Auth0", "Stripe", "Mailgun"
+        ]
+    },
+    {
+        "group": "Interests",
+        "items": [
+            "Networking", "Concurrency", "Cloud computing", "Full-stack development", "Dev-Ops", "Cybersecurity", "IoT", "CI/CD", "Automation"
+        ]
+    }
+]

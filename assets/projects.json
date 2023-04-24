@@ -12,13 +12,15 @@
             "Typescript",
             "Tailwinds"
         ],
+		"bullets": [],
         "type": "microservice",
         "made_at": "RAkerman Foundation",
         "start": "2022-12",
         "end": "inf",
         "tag": "Alpha",
         "is_featured": false,
-        "is_archived": false
+        "is_archived": false,
+		"is_resume": false
     },
 	{
 		"title": "Exploding Chickens",
@@ -39,12 +41,17 @@
 			"Auth0",
 			"Stripe"
 		],
+		"bullets": [
+			"A full-stack online card game built on Node.js with 1000+ games played by 600+ players, led development and a team of 5",
+			"Delivered 2 300-level guest lectures at University of Illinois Chicago detailing project structure, MVC pattern, viewed by 150+"
+		],
 		"type": "application",
 		"made_at": "RAkerman Foundation",
 		"start": "2020-12",
 		"end": "inf",
 		"is_featured": true,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": true
 	},
 	{
 		"title": "Steven Olikara Website",
@@ -59,12 +66,14 @@
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],
+		"bullets": [],
 		"type": "website",
 		"made_at": "Pulqra",
 		"start": "2022-05",
 		"end": "inf",
 		"is_featured": true,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "Author",
@@ -80,13 +89,18 @@
 			"Typescript",
 			"Tailwinds"
 		],
+		"bullets": [
+			"A centralized user management backbone leveraging edge cloud compute, built on Nuxt, Cloudflare Workers + KV, Auth0",
+			"Saved and analyzed 100’s of user profiles, API distributed for use across 10+ external services to keep profiles up-to-date"
+		],
 		"type": "microservice",
 		"made_at": "RAkerman Foundation",
 		"start": "2022-12",
 		"end": "inf",
 		"tag": "Alpha",
 		"is_featured": true,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": true
 	},
 	{
 		"title": "Informr",
@@ -104,13 +118,18 @@
 			"Tailwinds",
 			"Mailgun"
 		],
+		"bullets": [
+			"A web form submission backbone leveraging edge cloud compute, built on next-gen Nuxt, Cloudflare Workers, R2",
+			"Saved and analyzed 1,000’s of form submissions at the cloud edge, filters spam and sends email notifications via Mailgun"
+		],
 		"type": "microservice",
 		"made_at": "RAkerman Foundation",
 		"start": "2022-06",
 		"end": "inf",
         "tag": "Beta",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "Vibhav Bansal Website",
@@ -122,12 +141,14 @@
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],
+		"bullets": [],
 		"type": "website",
 		"made_at": "Pulqra",
 		"start": "2022-04",
 		"end": "2022-06",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": true,
+		"is_resume": false
 	},
 	{
 		"title": "Pulqra Website",
@@ -141,12 +162,14 @@
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],
+		"bullets": [],
 		"type": "website",
 		"made_at": "Pulqra",
 		"start": "2022-05",
 		"end": "inf",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "Space and Key",
@@ -159,12 +182,14 @@
 			"SQL",
 			"Tailwinds"
 		],
+		"bullets": [],
 		"type": "application",
 		"made_at": "University of Illinois Chicago",
 		"start": "2021-06",
 		"end": "2022-08",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "RRATFR Manager",
@@ -181,12 +206,14 @@
 			"Auth0",
 			"HTML/CSS"
 		],
+		"bullets": [],
 		"type": "application",
 		"made_at": "Personal Project",
 		"start": "2019-05",
 		"end": "2020-08",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "RAkerman Status",
@@ -203,12 +230,14 @@
 			"Typescript",
 			"Tailwinds"
 		],
+		"bullets": [],
 		"type": "microservice",
 		"made_at": "Personal Project",
 		"start": "2021-06",
 		"end": "inf",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "ImpackAI",
@@ -222,12 +251,14 @@
 			"Auth0",
 			"HTML/CSS"
 		],
+		"bullets": [],
 		"type": "application",
 		"made_at": "Rock Valley Packaging",
 		"start": "2020-04",
 		"end": "2020-08",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": true,
+		"is_resume": false
 	},
 	{
 		"title": "Homebase",
@@ -243,12 +274,14 @@
 			"Autodesk Fusion",
 			"Homebridge"
 		],
+		"bullets": [],
 		"type": "electronics",
 		"made_at": "Personal Project",
 		"start": "2021-04",
 		"end": "2021-06",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "Passport UIC Shibboleth",
@@ -264,12 +297,14 @@
 			"Vite",
 			"Tailwinds"
 		],
+		"bullets": [],
 		"type": "package",
 		"made_at": "University of Illinois Chicago",
 		"start": "2022-02",
 		"end": "2022-06",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "RAkerman Linker",
@@ -285,12 +320,14 @@
 			"Typescript",
 			"Tailwinds"
 		],
+		"bullets": [],
 		"type": "microservice",
 		"made_at": "Personal Project",
 		"start": "2022-05",
 		"end": "2022-06",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "Particlecord",
@@ -305,12 +342,14 @@
 			"Particle.io",
 			"Discord API"
 		],
+		"bullets": [],
 		"type": "microservice",
 		"made_at": "Personal Project",
 		"start": "2020-10",
 		"end": "2021-01",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "Remindcord",
@@ -324,12 +363,14 @@
 			"Express",
 			"Discord API"
 		],
+		"bullets": [],
 		"type": "microservice",
 		"made_at": "Personal Project",
 		"start": "2021-11",
 		"end": "2021-12",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": true,
+		"is_resume": false
 	},
 	{
 		"title": "PaperMC Manager",
@@ -342,12 +383,14 @@
 			"Bash",
 			"PM2"
 		],
+		"bullets": [],
 		"type": "utility",
 		"made_at": "Personal Project",
 		"start": "2020-08",
 		"end": "2021-03",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": true,
+		"is_resume": false
 	},
 	{
 		"title": "RAkerman Pace Clock",
@@ -360,12 +403,14 @@
 			"Small Electronics",
 			"Mesh Networking"
 		],
+		"bullets": [],
 		"type": "electronics",
 		"made_at": "Personal Project",
 		"start": "2019-10",
 		"end": "2019-12",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "MTOP",
@@ -378,12 +423,14 @@
 			"MongoDB",
 			"HTML/CSS"
 		],
+		"bullets": [],
 		"type": "application",
 		"made_at": "Montel Technologies",
 		"start": "2017-11",
 		"end": "2018-09",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": true,
+		"is_resume": false
 	},
 	{
 		"title": "Mark 4",
@@ -399,12 +446,14 @@
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],
+		"bullets": [],
 		"type": "website",
 		"made_at": "Personal Project",
 		"start": "2022-07",
 		"end": "inf",
 		"is_featured": false,
-		"is_archived": false
+		"is_archived": false,
+		"is_resume": false
 	},
 	{
 		"title": "Mark 3",
@@ -418,12 +467,14 @@
 			"HTML/CSS",
 			"Webpack"
 		],
+		"bullets": [],
 		"type": "website",
 		"made_at": "Personal Project",
 		"start": "2020-05",
 		"end": "2022-05",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": true,
+		"is_resume": false
 	},
 	{
 		"title": "Mark 2",
@@ -437,12 +488,14 @@
 			"Express",
 			"HTML/CSS"
 		],
+		"bullets": [],
 		"type": "website",
 		"made_at": "Personal Project",
 		"start": "2019-10",
 		"end": "2020-04",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": true,
+		"is_resume": false
 	},
 	{
 		"title": "Mark 1",
@@ -456,11 +509,13 @@
 			"Express",
 			"HTML/CSS"
 		],
+		"bullets": [],
 		"type": "website",
 		"made_at": "Personal Project",
 		"start": "2019-04",
 		"end": "2019-05",
 		"is_featured": false,
-		"is_archived": true
+		"is_archived": true,
+		"is_resume": false
 	}
 ]
