@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <ResumeHeader>
       {{ exp.title }}
       <span class="text-accent">@ {{ exp.company }}</span>

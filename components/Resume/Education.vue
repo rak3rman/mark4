@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <ResumeHeader>
       {{ edu.school }}
     </ResumeHeader>

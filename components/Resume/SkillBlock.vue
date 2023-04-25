@@ -1,8 +1,8 @@
 <template>
-  <div class="">
-    <ResumeHeader class="flex flex-col lg:flex-row lg:items-center">
+  <div>
+    <ResumeHeader class="flex flex-row items-center">
       {{ block.group }}
-      <ResumeText class="pt-[1.5px] lg:pl-1.5">
+      <ResumeText class="pl-1.5">
         {{ block.items.join(", ") }}
       </ResumeText>
     </ResumeHeader>
