@@ -2,8 +2,8 @@
   <div class="">
     <ResumeHeader>
       {{ proj.title }}
-      <span class="text-accent" v-if="proj.links.ext"
-        >@ {{ proj.links.ext.replace(/(^\w+:|^)\/\//, "") }}</span
+      <a class="text-accent" v-if="proj.links.ext" :href="proj.links.ext"
+        >@ {{ proj.links.ext.replace(/(^\w+:|^)\/\//, "") }}</a
       >
     </ResumeHeader>
     <ResumeBullets :bullets="proj.bullets" />

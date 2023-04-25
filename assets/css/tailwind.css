@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Tiempos Headline for Tailwinds as (font-serif) */
 @font-face {
   font-family: "Test Tiempos Headline";
   src: url('~/assets/fonts/TiemposHeadline/test-tiempos-headline-semibold.woff2') format('woff2'),

@@ -4,7 +4,7 @@
 
     <ResumeTitle> Radison Akerman </ResumeTitle>
     <ResumeSubtitle>
-      815-520-6031 radison@me.com rakerman.com linkedin.com/in/rakerman
+      rak3rman@gmail.com &#8192;www.rakerman.com &#8192;linkedin.com/in/rakerman
     </ResumeSubtitle>
 
     <ResumeHeading> Experience </ResumeHeading>
@@ -30,10 +30,14 @@
       v-for="item in projects.filter((e) => e.is_resume)"
       :proj="item"
     />
-    <div class="text-xs font-light italic mt-1.5">
+    <div class="text-xs font-light italic mt-2">
       See all 20+ projects at
-      <span class="font-medium">rakerman.com#projects</span>, publications at
-      <span class="font-medium">rakerman.com/publications</span>
+      <a class="font-medium" href="https://rakerman.com#projects"
+        >rakerman.com#projects</a
+      >, publications at
+      <a class="font-medium" href="https://rakerman.com/publications"
+        >rakerman.com/publications</a
+      >
     </div>
   </div>
 </template>
@@ -43,4 +47,32 @@ import experience from "../assets/experience.json";
 import education from "../assets/education.json";
 import skills from "../assets/skills.json";
 import projects from "../assets/projects.json";
+
+useHead({
+  script: [
+    {
+      src: "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js",
+      integrity:
+        "sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==",
+      crossOrigin: "anonymous",
+      referrerpolicy: "no-referrer",
+    },
+  ],
+});
+
+const genPDF = () => {
+  let element = document.getElementById("resume-export");
+  element.style.width = "1200px";
+  var opt = {
+    margin: 0.25,
+    filename: "radison-akerman-resume.pdf",
+    html2canvas: { width: 950, scrollX: 0, scrollY: 0 },
+    jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+  };
+  html2pdf().set(opt).from(element).save();
+};
+
+onMounted(() => {
+  genPDF();
+});
 </script>
