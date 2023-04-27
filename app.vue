@@ -2,7 +2,7 @@
 
 <template>
   <Html class="h-full bg-base-100 scroll-smooth" lang="en" />
-  <Link rel="icon" type="png" :href="config.meta.favicon" />
+  <Link rel="icon" type="png" :href="config.public.meta.favicon" />
   <Body class="h-full bg-base-100" />
   <div class="h-full">
     <NuxtLoadingIndicator
