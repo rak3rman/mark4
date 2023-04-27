@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 layout: "default"
-head.description: "All academic publications authored or delivered by Radison Akerman."
+head.description: "All academic materials authored or delivered by Radison Akerman."
 ---
 
 ::Hero
@@ -9,7 +9,7 @@ head.description: "All academic publications authored or delivered by Radison Ak
 Publications
 
 #desc
-All academic publications authored or delivered by Radison Akerman.
+All academic materials authored or delivered by Radison Akerman.
 ::
 
 # Guest Lectures
@@ -24,7 +24,7 @@ Abstract: Explored the inner workings of Exploding Chickens, an ambitious person
 line code base with games played all over the world, daily.
 Discussed how the game is played, progress/success of project, hosted a live open demo of v2, high-level overview of v1
 stack/design choices, the MVC (Model-View-Controller) pattern in action on v1, v1 data schema, v1 websocket
-architecture (with its pitfalls), high-level overview of v2 stack/design choices, v2 test coverage, v2 data schema, v3
+architecture (with its pitfalls), v1 code dive, high-level overview of v2 stack/design choices, v2 test coverage, v2 data schema, v2 code dive, v3
 architecture, and v3 cloud implementation, along with a few key takeaways for better application design.
 
 ::Bookmark{presentation=true, link="/ec_slidedeck_april_2023.pdf"}

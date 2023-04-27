@@ -14,8 +14,8 @@ Legal stuff detailing how digital assets can and cannot be used.
 
 # Personal Use License
 
-Photographer or videographer ("Content Provider") grants buyer a non-exclusive perpetual personal-use license to
-download and copy the accompanying image(s) or video(s) (collectively, "Media,") subject to the following restrictions:
+The individual ("Content Provider") grants buyer a non-exclusive perpetual personal-use license to
+download and copy the accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") subject to the following restrictions:
 
 - _This license is for personal use only. Personal use means non-commercial use of the Media for display on personal
   websites and computers, or making image prints or video copies for personal use. The Media may not be used in any way
@@ -28,7 +28,7 @@ download and copy the accompanying image(s) or video(s) (collectively, "Media,")
   arising out of this license or buyer's use of the Media._
 
 \*All Media released or shared by the Content Provider anywhere on the web domain https://rakerman.com
-or https://nextcloud.rakerman.com/ is subject by default to the Personal Use License unless specified otherwise. "The
+or https://media.rakerman.com/ is subject by default to the Personal Use License unless specified otherwise. "The
 Media" includes post thumbnails, post images, as well as any other digital media provided directly by the Content
 Provider.
 
@@ -36,8 +36,8 @@ Provider.
 
 ## What buyers can do:
 
-Photographer or videographer ("Content Provider") grants buyers a perpetual, non-exclusive, non-transferable, worldwide
-license to use the accompanying image(s) or video(s) (collectively, "Media,") for permitted commercial purposes, defined
+The individual ("Content Provider") grants buyers a perpetual, non-exclusive, non-transferable, worldwide
+license to use the accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") for permitted commercial purposes, defined
 as:
 
 - _advertising, promotion, brochures, packaging_
@@ -49,7 +49,7 @@ as:
 
 ## What buyers may not do:
 
-_Buyer may not resell, relicense, redistribute without express written permission from Content Provider. Use as a
+_Buyer may not resell, re-license, redistribute without express written permission from Content Provider. Use as a
 derivative work, and reselling or redistributing such derivative work is prohibited. Media may not be used in a
 pornographic, obscene, illegal, immoral, libelous or defamatory manner. Media may not be incorporated into trademarks,
 logos, or service marks. Media may not be made available for download._
