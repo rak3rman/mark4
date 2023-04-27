@@ -1,6 +1,6 @@
 ---
 title: "Privacy"
-layout: "default"
+layout: "docs"
 head.description: "We don't collect your data and use it to track you. Period."
 ---
 

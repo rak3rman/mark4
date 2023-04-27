@@ -1,6 +1,6 @@
 ---
 title: "Licensing"
-layout: "default"
+layout: "docs"
 head.description: "Legal stuff detailing how digital assets can and cannot be used."
 ---
 
