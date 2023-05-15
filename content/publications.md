@@ -18,7 +18,7 @@ All academic materials authored or delivered by Radison Akerman.
 
 ## Exploding Chickens: UIC CS 342 Lecture, Spring 2023
 
-_To be delivered April 27th, 2023 at the University of Illinois Chicago under supervision of Prof. Mark Hallenbeck_
+_Delivered April 27th, 2023 at the University of Illinois Chicago under supervision of Prof. Mark Hallenbeck_
 
 Abstract: Explored the inner workings of Exploding Chickens, an ambitious personal project that expanded into a 30,000+
 line code base with games played all over the world, daily.
@@ -26,14 +26,6 @@ Discussed how the game is played, progress/success of project, hosted a live ope
 stack/design choices, the MVC (Model-View-Controller) pattern in action on v1, v1 data schema, v1 websocket
 architecture (with its pitfalls), v1 code dive, high-level overview of v2 stack/design choices, v2 test coverage, v2 data schema, v2 code dive, v3
 architecture, and v3 cloud implementation, along with a few key takeaways for better application design.
-
-::Bookmark{link="https://uic.zoom.us/j/86052659421?pwd=emxBY285MGQ4ajBYTEdGQnhQOUJTZz09"}
-#title
-Live Zoom Session
-
-#desc
-Starts at 11:20am(ish) CST, April 27th, 2023. Open to the public.
-::
 
 ::Bookmark{presentation=true, link="/ec_slidedeck_april_2023.pdf"}
 #title
