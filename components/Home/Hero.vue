@@ -31,23 +31,18 @@
           >
             <!--                        I lead teams who deliver exceptional digital experiences.-->
             I rapidly develop high-quality web utilities that perform at scale.
-            Currently, I'm a Software Engineering Intern @
-            <NuxtLink
-              class="text-secondary underline underline-offset-2"
-              to="https://spacex.com"
-              >SpaceX</NuxtLink
-            >, studying Computer Science + Business @
+            Currently, I'm studying Computer Science + Business @
             <NuxtLink
               class="text-secondary underline underline-offset-2"
               to="https://uic.edu"
               >UIC</NuxtLink
-            >, and co-building
+            >, project managing a team of 7, and mentoring CPS students on
+            behalf of the
             <NuxtLink
               class="text-secondary underline underline-offset-2"
-              to="https://pulqra.com"
-              >Pulqra</NuxtLink
-            >
-            – a creative marketing collective.
+              to="https://thecitiesproject.org"
+              >UIC Cities Project</NuxtLink
+            >.
           </h6>
           <span
             class="py-3 inline-flex rounded-md shadow fade-in-hero"
@@ -67,11 +62,11 @@
                     class="text-base font-mono leading-normal text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-yellow-500"
                   >
                     <div class="hidden md:block">
-                      Exploding Chickens: Celebrating 1,000 games played!
+                      Exploding Chickens: Celebrating 1,250 games played!
                     </div>
                     <div class="block md:hidden text-[0.93rem]">
                       Exploding Chickens: <br />
-                      Celebrating 1,000 games played!
+                      Celebrating 1,250 games played!
                     </div>
                   </div>
                 </div>
@@ -83,3 +78,4 @@
     </div>
   </div>
 </template>
+<script setup lang="ts"></script>

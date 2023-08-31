@@ -47,19 +47,24 @@
           class="text-neutral mx-auto lg:max-w-full lg:row-start-1 lg:col-start-1"
         >
           <p class="fade-in">
-            Hello there! I’m Radison, a creative leader, project manager,
-            computer science student, and professional photographer. My interest
-            in digital technology started back in middle school when I tinkered
-            with microcontrollers and competed in FIRST LEGO League competitions
-            — it turns out you can learn a lot from bits of plastic and
-            expensive servos.
+            Hello there! I’m Radison, a software engineer, creative leader,
+            project manager, computer science student, and professional
+            photographer. My interest in digital technology started back in
+            middle school when I tinkered with microcontrollers and competed in
+            FIRST LEGO League competitions — it turns out you can learn a lot
+            from bits of plastic and expensive servos.
           </p>
           <p class="fade-in">
-            Fast-forward to today, where I’ve had the privilege of working at an
+            Fast-forward to today, where I’ve had the privilege of working at
+            <NuxtLink
+              class="text-secondary underline underline-offset-2"
+              to="https://spacex.com"
+              >a rocket company</NuxtLink
+            >,
             <NuxtLink
               class="text-secondary underline underline-offset-2"
               to="https://uic.edu"
-              >R1 research university</NuxtLink
+              >an R1 research university</NuxtLink
             >,
             <NuxtLink
               class="text-secondary underline underline-offset-2"
@@ -75,18 +80,18 @@
               class="text-secondary underline underline-offset-2"
               to="https://my.lifetime.life/athletic-events.html"
               >an event management group</NuxtLink
-            >. Currently, I'm a Software Engineering Intern on the
+            >. Just this past summer, I was a Software Engineering Intern on the
             <NuxtLink
               class="text-secondary underline underline-offset-2"
               to="https://www.spacex.com/vehicles/starship/"
-              >Starship Software Infrastructure</NuxtLink
+              >Starship Software</NuxtLink
             >
             team at
             <NuxtLink
               class="text-secondary underline underline-offset-2"
               to="https://spacex.com"
               >SpaceX</NuxtLink
-            >! I'm having an absolute blast helping build the largest rocket on
+            >! I had an absolute blast helping build the largest rocket on
             planet Earth.
           </p>
           <p class="fade-in">
@@ -109,7 +114,7 @@
               to="/publications"
               >three distinct 300-level guest lectures</NuxtLink
             >
-            at UIC about
+            at UIC and one lecture internally at SpaceX about
             <NuxtLink
               class="text-secondary underline underline-offset-2"
               to="https://chickens.rakerman.com"
@@ -133,7 +138,7 @@
           <p class="fade-in">
             In my spare time, I love to build things with my hands (woodworking,
             small electronics), volunteer in the community, and compete in
-            endurance triathlons. Just this past summer, I finished
+            endurance triathlons. In August 2022, I finished
             <NuxtLink
               class="text-secondary underline underline-offset-2"
               to="https://www.athlinks.com/event/30585/results/Event/1019369/Course/2251422/Bib/3435"

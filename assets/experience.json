@@ -1,7 +1,7 @@
 [
     {
         "title": "Mentor",
-        "company": "The Cities Project",
+        "company": "UIC Cities Project",
         "start": "2023-08",
         "end": "inf",
         "location": "Chicago, IL",
@@ -16,13 +16,18 @@
         "title": "Software Engineering Intern, Starship Software",
         "company": "SpaceX",
         "start": "2023-05",
-        "end": "inf",
+        "end": "2023-08",
         "location": "Starbase, TX",
         "commit": "intern",
         "tags": [
             "cs"
         ],
-        "bullets": [],
+        "bullets": [
+			"Owned Starship Config Signoff, a critical flight reliability tool used by 100+ Starship engineers to validate 1M+ vehicle config values",
+			"Spearheaded development of 10+ features into Signoff: rebuilt Flask APIs, new SQLAlchemy query structure, refreshed React UI",
+			"Integrated a vehicle software verification Python script concurrently into SpaceY, a next-gen operations platform using Rust, Bazel",
+			"Built functioning UI mockups in Lit, CSS as part of Starship software deploys rework, participated in design conversations and CDRs"
+		],
 		"is_resume":  true
     },
 	{
@@ -119,7 +124,7 @@
 		"title": "Executive Operations Director",
 		"company": "Pulqra",
 		"start": "2020-02",
-		"end": "inf",
+		"end": "2023-01",
 		"location": "United States",
 		"commit": "part",
 		"tags": [
@@ -138,7 +143,7 @@
 		"title": "Section Leader",
 		"company": "Stanford University",
 		"start": "2021-04",
-		"end": "inf",
+		"end": "2023-06",
 		"location": "Remote",
 		"commit": "volunteer",
 		"tags": [

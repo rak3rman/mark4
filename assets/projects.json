@@ -42,8 +42,8 @@
 			"Stripe"
 		],
 		"bullets": [
-			"A full-stack online card game built on Node.js with 1000+ games played by 600+ players, led development and a team of 5",
-			"Delivered 2 300-level guest lectures at University of Illinois Chicago detailing project structure, MVC pattern, viewed by 150+"
+			"A full-stack online card game built on Node.js with 1,250+ games played by 600+ players, led development and a team of 5",
+			"Delivered 3 300-level guest lectures at University of Illinois Chicago detailing project structure, MVC pattern, viewed by 300+"
 		],
 		"type": "application",
 		"made_at": "RAkerman Foundation",
@@ -210,7 +210,7 @@
 		"type": "application",
 		"made_at": "Personal Project",
 		"start": "2019-05",
-		"end": "2020-08",
+		"end": "2023-08",
 		"is_featured": false,
 		"is_archived": false,
 		"is_resume": false

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-10" id="resume-export">
+  <div class="p-10 pb-0" id="resume-export">
     <Html data-theme="resume" />
 
     <ResumeTitle> Radison Akerman </ResumeTitle>

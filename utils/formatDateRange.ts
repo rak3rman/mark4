@@ -8,7 +8,7 @@ export const formatDateRange = (start: string, end: string) => {
     return startDate.toFormat("LLL yyyy");
   }
   // Catch edge of future date (end in future)
-  let endDate = DateTime.fromMillis(Date.parse(end)).plus({ months: 1 });
+  let endDate = DateTime.fromMillis(Date.parse(end)).plus({ days: 1 });
   if (endDate > DateTime.now()) {
     return (
       startDate.toFormat("LLL yyyy") +

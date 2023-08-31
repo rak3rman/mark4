@@ -2,19 +2,19 @@
     {
         "group": "Programming Languages",
         "items": [
-            "C", "C++", "Java", "Python", "JavaScript", "TypeScript", "F#", "Go", "Rust", "SQL", "Bash", "PHP", "HTML", "CSS"
+            "C", "C++", "Python", "Java", "Rust", "JavaScript", "TypeScript", "F#", "Go", "SQL", "Bash", "PHP", "HTML", "CSS"
         ]
     },
     {
         "group": "Libraries & Frameworks",
         "items": [
-            "Node.js", "Nuxt", "Express", "Mongoose", "Laravel", "Vue", "React", "jQuery", "Tailwinds", "Handlebars", "Ghost"
+            "Node.js", "Nuxt", "Express", "Flask", "SQLAlchemy", "Laravel", "Vue", "React", "Tailwinds", "Handlebars", "Ghost"
         ]
     },
     {
         "group": "Tools & Platforms",
         "items": [
-            "Git", "Cloudflare", "AWS", "MongoDB", "Docker", "Kubernetes", "VMware", "pfSense", "Fauna", "Auth0", "Stripe", "Mailgun"
+            "Git", "Cloudflare", "AWS", "MongoDB", "Docker", "Kubernetes", "VMware", "pfSense", "Auth0", "Stripe", "Mailgun"
         ]
     },
     {
