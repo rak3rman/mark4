@@ -47,9 +47,9 @@
           class="text-neutral mx-auto lg:max-w-full lg:row-start-1 lg:col-start-1"
         >
           <p class="fade-in">
-            Hello there! I’m Radison, a software engineer, creative leader,
-            project manager, computer science student, and professional
-            photographer. My interest in digital technology started back in
+            Hello there! I’m Radison, a software engineer with a knack for
+            leadership, web technologies, concurrency, photography, and
+            multisport events. My interest in digital technology started back in
             middle school when I tinkered with microcontrollers and competed in
             FIRST LEGO League competitions — it turns out you can learn a lot
             from bits of plastic and expensive servos.
@@ -59,7 +59,7 @@
             <NuxtLink
               class="text-secondary underline underline-offset-2"
               to="https://spacex.com"
-              >a rocket company</NuxtLink
+              >a spacecraft manufacturer</NuxtLink
             >,
             <NuxtLink
               class="text-secondary underline underline-offset-2"
@@ -136,9 +136,10 @@
             who help make these ideas a reality.
           </p>
           <p class="fade-in">
-            In my spare time, I love to build things with my hands (woodworking,
-            small electronics), volunteer in the community, and compete in
-            endurance triathlons. In August 2022, I finished
+            In my spare time, I love to build things with my hands (SAE Formula
+            E, woodworking, small electronics), volunteer in the community (UIC
+            Cities Project), and compete in endurance triathlons. In August
+            2022, I finished
             <NuxtLink
               class="text-secondary underline underline-offset-2"
               to="https://www.athlinks.com/event/30585/results/Event/1019369/Course/2251422/Bib/3435"
