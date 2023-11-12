@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Exploding Chickens Guest Lecture, UIC CS 342",
+        "issuer": "University of Illinois Chicago",
+        "given": [
+            "2022-04",
+            "2022-12",
+            "2023-04"
+        ],
+        "location": "Chicago, IL",
+        "bullets": []
+    },
+    {
+        "title": "Exploding Chickens Guest Lecture, Frontend Discussion Group",
+        "issuer": "SpaceX",
+        "given": [
+            "2023-07"
+        ],
+        "location": "Starbase, TX",
+        "bullets": []
+    }
+]

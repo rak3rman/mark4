@@ -1,5 +1,19 @@
 [
-    {
+	{
+		"title": "Software Engineering Intern",
+		"company": "nvisia",
+		"start": "2023-12",
+		"end": "inf",
+		"location": "Chicago, IL",
+		"commit": "intern",
+		"tags": [
+			"cs",
+			"professional"
+		],
+		"bullets": [],
+		"is_resume": false
+	},
+	{
         "title": "Mentor",
         "company": "UIC Cities Project",
         "start": "2023-08",
@@ -7,7 +21,8 @@
         "location": "Chicago, IL",
         "commit": "volunteer",
         "tags": [
-            "lead"
+            "lead",
+			"mentor"
         ],
         "bullets": [],
 		"is_resume": false
@@ -20,7 +35,8 @@
         "location": "Starbase, TX",
         "commit": "intern",
         "tags": [
-            "cs"
+            "cs",
+			"professional"
         ],
         "bullets": [
 			"Owned Starship Config Signoff, a critical flight reliability tool used by 100+ Starship engineers to validate 1M+ vehicle config values",
@@ -32,13 +48,14 @@
     },
 	{
 		"title": "Event Operations Assistant",
-		"company": "Freelance, Event Management",
+		"company": "Chicago Special Events Management",
 		"start": "2022-08",
 		"end": "inf",
 		"location": "Chicago, IL",
 		"commit": "contract",
 		"tags": [
-			"lead"
+			"lead",
+			"events"
 		],
 		"bullets": [
 			"Played a key role in some of Chicago's biggest special sporting events hosted by Life Time (Chi Tri, Chi Half Marathon Series)",
@@ -57,7 +74,8 @@
 		"tags": [
 			"cs",
 			"lead",
-			"photo"
+			"photo",
+			"professional"
 		],
 		"bullets": [
 			"Completely rebuilt campaign website from the ground up using Nuxt, Tailwinds, visited by 1,000’s of Wisconsinites daily",
@@ -75,7 +93,8 @@
 		"commit": "part",
 		"tags": [
 			"cs",
-			"lead"
+			"lead",
+			"professional"
 		],
 		"bullets": [
 			"Organized a team of 7 web developers working on over 10 large-scale, full-stack web applications",
@@ -94,7 +113,8 @@
 		"location": "Chicago, IL",
 		"commit": "intern",
 		"tags": [
-			"cs"
+			"cs",
+			"professional"
 		],
 		"bullets": [
 			"Maintained and redesigned a custom space-and-access management system using Laravel, Vue, SQL",
@@ -111,7 +131,8 @@
 		"location": "Loves Park, IL",
 		"commit": "intern",
 		"tags": [
-			"cs"
+			"cs",
+			"professional"
 		],
 		"bullets": [
 			"Lead front-end web developer on an enterprise-grade security unification solution (MTOP) utilizing Node.js, MongoDB",
@@ -130,7 +151,8 @@
 		"tags": [
 			"cs",
 			"lead",
-			"photo"
+			"photo",
+			"professional"
 		],
 		"bullets": [
 			"Co-built and operationally led Pulqra, a mission-capitalist creative marketing collective",
@@ -148,7 +170,8 @@
 		"commit": "volunteer",
 		"tags": [
 			"cs",
-			"lead"
+			"lead",
+			"teach"
 		],
 		"bullets": [
 			"Section led Code in Place 2021, 2023 — a free, human-centric, intro-to-coding course",
@@ -165,12 +188,30 @@
 		"location": "Chicago, IL",
 		"commit": "volunteer",
 		"tags": [
-			"lead"
+			"lead",
+			"teach"
 		],
 		"bullets": [
 			"Volunteered as a permanent event captain for all Life Time athletic events hosted in Chicago",
 			"Helped organize and lead around 750 volunteers who aided nearly 8,000 athletes per event",
 			"Assisted in event operations at scale — deployed and tore down aid stations, start, finish lines"
+		],
+		"is_resume":  false
+	},
+	{
+		"title": "Instructor",
+		"company": "Montel Technologies",
+		"start": "2017-11",
+		"end": "2018-09",
+		"location": "Loves Park, IL",
+		"commit": "volunteer",
+		"tags": [
+			"cs",
+			"teach"
+		],
+		"bullets": [
+			"Co-led a weekly instructional program in Rockford that taught ~15 teenagers the fundamentals of coding and IT",
+			"Explored the bleeding edge of computer science and cyber security — from web development to IoT to machine learning"
 		],
 		"is_resume":  false
 	}

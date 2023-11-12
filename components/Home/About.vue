@@ -48,7 +48,7 @@
         >
           <p class="fade-in">
             Hello there! I’m Radison, a software engineer with a knack for
-            leadership, web technologies, concurrency, photography, and
+            leadership, web + networking technologies, photography, and
             multisport events. My interest in digital technology started back in
             middle school when I tinkered with microcontrollers and competed in
             FIRST LEGO League competitions — it turns out you can learn a lot

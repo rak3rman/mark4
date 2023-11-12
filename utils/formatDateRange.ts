@@ -1,10 +1,10 @@
 import { DateTime } from "luxon";
 
-export const formatDateRange = (start: string, end: string) => {
+export const formatDateRange = (start: string, end: string | undefined) => {
   // Create start date object
   let startDate = DateTime.fromMillis(Date.parse(start)).plus({ days: 1 });
   // Catch edge of future date (start in future)
-  if (startDate > DateTime.now()) {
+  if (startDate > DateTime.now() || end === undefined) {
     return startDate.toFormat("LLL yyyy");
   }
   // Catch edge of future date (end in future)

@@ -1,0 +1,69 @@
+[
+    {
+        "title": "Best Technology Award",
+        "issuer": "Wildhacks",
+        "given": [
+            "2023-04"
+        ],
+        "location": "Evanston, IL",
+        "desc": "Awarded to the team with the most advanced/creative use of technology at the Wildhacks hackathon, out of 45+ teams.",
+        "links": {
+            "ext": "https://dashboard.wildhacks.net/project/#VP79",
+            "youtube": "https://www.youtube.com/watch?v=STVBFFa67SI",
+            "github": "https://github.com/rakermanfoundation/office-hourly"
+        }
+    },
+    {
+        "title": "Weingartner Scholarship",
+        "issuer": "Second Congregational UCC/First Presbyterian Church",
+        "given": [
+            "2020-08",
+            "2021-08",
+            "2022-08"
+        ],
+        "location": "Rockford, IL"
+    },
+    {
+        "title": "UIC Logmaster CS Scholarship",
+        "issuer": "University of Illinois Chicago",
+        "given": [
+            "2021-08"
+        ],
+        "location": "Chicago, IL"
+    },
+    {
+        "title": "UIC Victor & Lucy Kan Scholarship",
+        "issuer": "University of Illinois Chicago",
+        "given": [
+            "2021-08",
+            "2022-08"
+        ],
+        "location": "Chicago, IL"
+    },
+    {
+        "title": "UIC P. V. Sudhindra Scholarship",
+        "issuer": "University of Illinois Chicago",
+        "given": [
+            "2023-08"
+        ],
+        "location": "Chicago, IL"
+    },
+    {
+        "title": "AP Capstone Diploma",
+        "issuer": "College Board",
+        "given": [
+            "2020-05"
+        ],
+        "location": "Rockford, IL",
+        "desc": "Given to students who earn scores of 3 or higher on AP Seminar and AP Research, and on 4 additional AP Exams of their choosing."
+    },
+    {
+        "title": "AP Scholar",
+        "issuer": "College Board",
+        "given": [
+            "2020-05"
+        ],
+        "location": "Rockford, IL",
+        "desc": "Given to students who receive scores of 3 or higher on three or more AP Exams."
+    }
+]

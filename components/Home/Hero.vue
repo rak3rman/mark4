@@ -62,7 +62,7 @@
                     class="text-base font-mono leading-normal text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-yellow-500"
                   >
                     <div class="hidden md:block">
-                      Exploding Chickens: Celebrating 1,250 games played!
+                      Exploding Chickens: Celebrating 1,250+ games played!
                     </div>
                     <div class="block md:hidden text-[0.93rem]">
                       Exploding Chickens: <br />

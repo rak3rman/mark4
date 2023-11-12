@@ -20,7 +20,16 @@
     />
 
     <ResumeHeading> Education </ResumeHeading>
-    <ResumeEducation v-for="item in education" :edu="item" />
+    <ResumeEducation
+      v-for="item in education
+        .filter((e) => e.is_resume)
+        .sort((a, b) => {
+          let aa = Date.parse(a.end);
+          let bb = Date.parse(b.end);
+          return (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa);
+        })"
+      :edu="item"
+    />
 
     <ResumeHeading> Skills </ResumeHeading>
     <ResumeSkillBlock v-for="item in skills" :block="item" />
