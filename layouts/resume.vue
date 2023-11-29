@@ -4,7 +4,8 @@
 
     <ResumeTitle> Radison Akerman </ResumeTitle>
     <ResumeSubtitle>
-      rak3rman@gmail.com &#8192;www.rakerman.com &#8192;linkedin.com/in/rakerman
+      radison@rakerman.com &#8192;www.rakerman.com
+      &#8192;linkedin.com/in/rakerman
     </ResumeSubtitle>
 
     <ResumeHeading> Experience </ResumeHeading>

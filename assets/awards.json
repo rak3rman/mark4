@@ -1,7 +1,7 @@
 [
     {
         "title": "Best Technology Award",
-        "issuer": "Wildhacks",
+        "issuer": "Wildhacks Hackathon",
         "given": [
             "2023-04"
         ],
@@ -64,6 +64,6 @@
             "2020-05"
         ],
         "location": "Rockford, IL",
-        "desc": "Given to students who receive scores of 3 or higher on three or more AP Exams."
+        "desc": "Given to students who receive scores of 3 or higher on 3 or more AP Exams."
     }
 ]
