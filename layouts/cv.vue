@@ -1,5 +1,5 @@
 <template>
-  <div class="p-10 pb-0" id="cv-export">
+  <div class="w-[58rem] p-10 pb-0" id="cv-export">
     <Html data-theme="resume" />
 
     <div style="height: 1205px">
@@ -142,6 +142,6 @@ const genPDF = () => {
 };
 
 onMounted(() => {
-  genPDF();
+  // genPDF();
 });
 </script>

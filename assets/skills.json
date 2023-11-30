@@ -2,7 +2,7 @@
     {
         "group": "Programming Languages",
         "items": [
-            "C", "C++", "Python", "Java", "Rust", "JavaScript", "TypeScript", "F#", "Go", "SQL", "Bash", "PHP", "HTML", "CSS"
+            "C", "C++", "Python", "Java", "Rust", "JavaScript", "TypeScript", "F#", "Go", "SQL", "Bash", "HTML", "CSS"
         ]
     },
     {
@@ -20,7 +20,7 @@
     {
         "group": "Interests",
         "items": [
-            "Networking", "Concurrency", "Cloud computing", "Full-stack development", "Dev-Ops", "Cybersecurity", "IoT", "CI/CD", "Automation"
+            "Networking", "Cloud computing", "Concurrency", "IoT", "CI/CD", "Automation", "Full-stack development", "Dev-ops", "Cybersecurity"
         ]
     }
 ]
