@@ -4,7 +4,7 @@
       {{ edu.school }}
     </ResumeHeader>
     <ResumeSubheader>
-      {{ formatDateRange(edu.start, edu.end) }} // {{ edu.location }}
+      {{ formatDateRange(edu.start, edu.end, true) }} // {{ edu.location }}
     </ResumeSubheader>
     <ResumeText>
       {{ edu.desc }}

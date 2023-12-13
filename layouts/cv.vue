@@ -22,7 +22,10 @@
       <ResumeHeading> Professional Experience </ResumeHeading>
       <ResumeExperience
         v-for="item in experience
-          .filter((e) => e.tags.includes('professional'))
+          .filter(
+            (e) =>
+              defaultExperienceFilters(e) && e.tags.includes('professional')
+          )
           .sort((a, b) => {
             let aa = Date.parse(a.end);
             let bb = Date.parse(b.end);
@@ -38,7 +41,11 @@
       <ResumeHeading> Teaching and Mentoring Experience </ResumeHeading>
       <ResumeExperience
         v-for="item in experience
-          .filter((e) => e.tags.includes('teach') || e.tags.includes('mentor'))
+          .filter(
+            (e) =>
+              defaultExperienceFilters(e) &&
+              (e.tags.includes('teach') || e.tags.includes('mentor'))
+          )
           .sort((a, b) => {
             let aa = Date.parse(a.end);
             let bb = Date.parse(b.end);
@@ -52,7 +59,9 @@
       <ResumeHeading> Event Operations Experience </ResumeHeading>
       <ResumeExperience
         v-for="item in experience
-          .filter((e) => e.tags.includes('events'))
+          .filter(
+            (e) => defaultExperienceFilters(e) && e.tags.includes('events')
+          )
           .sort((a, b) => {
             let aa = Date.parse(a.end);
             let bb = Date.parse(b.end);
@@ -72,6 +81,11 @@
         })"
         :award="item"
       />
+    </div>
+
+    <div>
+      <ResumeHeading> Skills </ResumeHeading>
+      <ResumeSkillBlock v-for="item in skills" :block="item" />
 
       <ResumeHeading> Presentations </ResumeHeading>
       <ResumePresentation
@@ -88,11 +102,6 @@
           >rakerman.com/publications</a
         >
       </div>
-    </div>
-
-    <div>
-      <ResumeHeading> Skills </ResumeHeading>
-      <ResumeSkillBlock v-for="item in skills" :block="item" />
 
       <ResumeHeading> Projects </ResumeHeading>
       <ResumeProject
@@ -116,6 +125,7 @@ import presentations from "../assets/presentations.json";
 import education from "../assets/education.json";
 import skills from "../assets/skills.json";
 import projects from "../assets/projects.json";
+import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters.ts";
 
 useHead({
   script: [
@@ -142,6 +152,6 @@ const genPDF = () => {
 };
 
 onMounted(() => {
-  // genPDF();
+  genPDF();
 });
 </script>

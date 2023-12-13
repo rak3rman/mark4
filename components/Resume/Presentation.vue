@@ -5,7 +5,9 @@
       <span class="text-accent">@ {{ pres.issuer }}</span>
     </ResumeHeader>
     <ResumeSubheader>
-      {{ pres.given.map((d) => formatDateRange(d, undefined)).join(", ") }}
+      {{
+        pres.given.map((d) => formatDateRange(d, undefined, false)).join(", ")
+      }}
       //
       {{ pres.location }}
     </ResumeSubheader>

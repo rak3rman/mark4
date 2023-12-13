@@ -2,7 +2,7 @@
     {
         "group": "Programming Languages",
         "items": [
-            "C", "C++", "Python", "Java", "Rust", "JavaScript", "TypeScript", "F#", "Go", "SQL", "Bash", "HTML", "CSS"
+            "C", "C++", "Python", "Java", "Rust", "JavaScript", "TypeScript", "C#", "F#", "Go", "SQL", "Bash", "HTML", "CSS"
         ]
     },
     {

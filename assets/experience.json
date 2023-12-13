@@ -3,28 +3,36 @@
 		"title": "Software Engineering Intern",
 		"company": "nvisia",
 		"start": "2023-12",
-		"end": "inf",
+		"end": "2024-01",
 		"location": "Chicago, IL",
 		"commit": "intern",
 		"tags": [
 			"cs",
 			"professional"
 		],
-		"bullets": [],
+		"bullets": [
+			"Integrated REST API endpoints into a .NET (C#) consultant profile builder web app using Entity Framework, SQL Server",
+			"Collaborated with 3 front-end/dev-ops interns, 5 back-end mentors, and 2+ business stakeholders in an agile/scrum environment",
+			"Gained unique consulting experience in a fast-paced environment, spanning multiple industries and web technologies"
+		],
 		"is_resume": false
 	},
 	{
         "title": "Mentor",
         "company": "UIC Cities Project",
         "start": "2023-08",
-        "end": "inf",
+        "end": "2024-05",
         "location": "Chicago, IL",
         "commit": "volunteer",
         "tags": [
             "lead",
 			"mentor"
         ],
-        "bullets": [],
+        "bullets": [
+			"Co-led program activities and directly mentored 10+ 6th-8th graders at Chalmers School of Excellence in Chicago",
+			"Taught evidence-based techniques for coping with stress, including mindfulness exercises and relaxation techniques",
+			"Actively forged relationships with mentees by acting as an advocate, role model, opportunity provider, and adult friend"
+		],
 		"is_resume": false
     },
     {
@@ -88,7 +96,7 @@
 		"title": "Project Manager & Software Engineer",
 		"company": "University of Illinois Chicago",
 		"start": "2021-08",
-		"end": "inf",
+		"end": "2024-05",
 		"location": "Chicago, IL",
 		"commit": "part",
 		"tags": [

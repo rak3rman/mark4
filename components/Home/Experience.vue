@@ -89,7 +89,7 @@
             <span class="text-accent">@ {{ entry.company }}</span>
           </h6>
           <h6 class="leading-normal text-neutral text-sm font-mono text-left">
-            {{ formatDateRange(entry.start, entry.end) }} //
+            {{ formatDateRange(entry.start, entry.end, false) }} //
             {{ entry.location }}
           </h6>
           <ul
@@ -192,6 +192,7 @@ const testimonials = [
 
 <script>
 import raw from "assets/experience.json";
+import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters.ts";
 
 let limit_exp = true;
 const selected_exp_tab = "cs";
@@ -234,7 +235,11 @@ export default {
     expEntries() {
       this.selectedExpTab;
       return raw
-        .filter((entry) => entry.tags.includes(this.selectedExpTab))
+        .filter(
+          (entry) =>
+            defaultExperienceFilters(entry) &&
+            entry.tags.includes(this.selectedExpTab)
+        )
         .sort((a, b) => {
           let aa = Date.parse(a.end);
           let bb = Date.parse(b.end);

@@ -5,7 +5,9 @@
       <span class="text-accent">@ {{ award.issuer }}</span>
     </ResumeHeader>
     <ResumeSubheader>
-      {{ award.given.map((d) => formatDateRange(d, undefined)).join(", ") }}
+      {{
+        award.given.map((d) => formatDateRange(d, undefined, false)).join(", ")
+      }}
       //
       {{ award.location }}
     </ResumeSubheader>

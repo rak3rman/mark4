@@ -5,7 +5,7 @@
       <span class="text-accent">@ {{ exp.company }}</span>
     </ResumeHeader>
     <ResumeSubheader>
-      {{ formatDateRange(exp.start, exp.end) }} // {{ exp.location }}
+      {{ formatDateRange(exp.start, exp.end, false) }} // {{ exp.location }}
     </ResumeSubheader>
     <ResumeBullets :bullets="exp.bullets" />
   </div>
