@@ -30,6 +30,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Generate
+        run: npm run dev & sleep 10 && npm run pdfgen
+
       - name: Build
         run: npm run build
         env:

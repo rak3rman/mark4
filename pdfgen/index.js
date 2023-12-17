@@ -28,10 +28,11 @@ async function generatePDF(url, path) {
 }
 
 generatePDF(
-  "https://rakerman.com/resume",
+  "http://localhost:3000/resume",
   "../public/radison-akerman-resume.pdf"
 ).then(() => console.log("Resume Done!"));
 
-generatePDF("https://rakerman.com/cv", "../public/radison-akerman-cv.pdf").then(
-  () => console.log("CV Done!")
-);
+generatePDF(
+  "http://localhost:3000/cv",
+  "../public/radison-akerman-cv.pdf"
+).then(() => console.log("CV Done!"));
