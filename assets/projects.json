@@ -14,7 +14,7 @@
         ],
 		"bullets": [],
         "type": "microservice",
-        "made_at": "RAkerman Foundation",
+        "made_at": "Personal Project",
         "start": "2022-12",
         "end": "inf",
         "tag": "Alpha",
@@ -46,7 +46,7 @@
 			"Delivered 3 300-level guest lectures at University of Illinois Chicago detailing project structure, MVC pattern, viewed by 300+"
 		],
 		"type": "application",
-		"made_at": "RAkerman Foundation",
+		"made_at": "Personal Project",
 		"start": "2020-12",
 		"end": "inf",
 		"is_featured": true,
@@ -94,7 +94,7 @@
 			"Saved and analyzed 100’s of user profiles, API distributed for use across 10+ external services to keep profiles up-to-date"
 		],
 		"type": "microservice",
-		"made_at": "RAkerman Foundation",
+		"made_at": "Personal Project",
 		"start": "2022-12",
 		"end": "inf",
 		"tag": "Alpha",
@@ -123,7 +123,7 @@
 			"Saved and analyzed 1,000’s of form submissions at the cloud edge, filters spam and sends email notifications via Mailgun"
 		],
 		"type": "microservice",
-		"made_at": "RAkerman Foundation",
+		"made_at": "Personal Project",
 		"start": "2022-06",
 		"end": "inf",
         "tag": "Beta",

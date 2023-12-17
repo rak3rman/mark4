@@ -125,6 +125,7 @@
       <ResumeProject
         v-for="item in projects.filter((e) => e.bullets.length > 0)"
         :proj="item"
+        show-subheader
       />
       <div class="text-xs font-light italic mt-2">
         See all project details at

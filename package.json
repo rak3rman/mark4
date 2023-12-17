@@ -6,7 +6,7 @@
 		"dev": "nuxt dev",
 		"pdfgen": "cd pdfgen && npm i && npm run generate && cd ..",
 		"wrdev": "NITRO_PRESET=cloudflare npm run build && wrangler dev",
-		"wrpub": "NITRO_PRESET=cloudflare npm run build && wrangler publish"
+		"wrpub": "NITRO_PRESET=cloudflare npm run build && wrangler deploy"
 	},
 	"dependencies": {
 		"@formkit/auto-animate": "^1.0.0-beta.6",
