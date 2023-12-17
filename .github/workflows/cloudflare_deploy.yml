@@ -1,4 +1,4 @@
-name: cloudflare
+name: cloudflare_deploy
 
 on:
   push:
@@ -7,6 +7,8 @@ on:
   pull_request:
     branches:
       - master
+  schedule: # Run every 1st of the month at 00:05 UTC, for resume/cv pdf generation
+    - cron: '5 0 1 * *'
 
 jobs:
   nuxt:

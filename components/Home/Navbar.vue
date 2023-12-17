@@ -54,7 +54,7 @@
             }"
           >
             <NuxtLink
-              to="/resume"
+              to="/radison-akerman-resume.pdf"
               target="_blank"
               class="inline-flex items-center px-4 py-2 border border-secondary text-sm font-mono rounded-md text-secondary hover:bg-primary-focus"
             >
@@ -119,7 +119,7 @@
             </div>
           </div>
           <NuxtLink
-            to="/resume"
+            to="/radison-akerman-resume.pdf"
             target="_blank"
             class="block w-full px-5 py-3 text-center font-medium text-neutral bg-secondary"
           >

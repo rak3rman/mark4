@@ -5,3 +5,6 @@ node_modules
 .cache
 .output
 .env
+pdfgen/node_modules
+public/radison-akerman-resume.pdf
+public/radison-akerman-cv.pdf

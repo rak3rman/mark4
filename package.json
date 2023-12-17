@@ -2,10 +2,9 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "nuxt build",
+		"build": "npm run pdfgen && nuxt build",
 		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
+		"pdfgen": "cd pdfgen && npm i && npm run generate && cd ..",
 		"wrdev": "NITRO_PRESET=cloudflare npm run build && wrangler dev",
 		"wrpub": "NITRO_PRESET=cloudflare npm run build && wrangler publish"
 	},

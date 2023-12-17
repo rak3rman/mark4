@@ -23,7 +23,7 @@
               >Take a gander at
               <NuxtLink
                 class="text-secondary underline underline-offset-2"
-                to="/resume"
+                to="/radison-akerman-resume.pdf"
                 target="_blank"
                 >my resume</NuxtLink
               >, if you think we'd be a match (yay!) fill out the good ole'
