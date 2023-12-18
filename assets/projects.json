@@ -413,26 +413,6 @@
 		"is_resume": false
 	},
 	{
-		"title": "MTOP",
-		"sub": "A cloud security unification solution leveraging multiple next-gen technologies in one place",
-		"desc": "",
-		"links": {},
-		"tools": [
-			"Node.js",
-			"Express",
-			"MongoDB",
-			"HTML/CSS"
-		],
-		"bullets": [],
-		"type": "application",
-		"made_at": "Montel Technologies",
-		"start": "2017-11",
-		"end": "2018-09",
-		"is_featured": false,
-		"is_archived": true,
-		"is_resume": false
-	},
-	{
 		"title": "Mark 4",
 		"sub": "A fourth attempt at Radison Akerman's personal website. Notes of programming, cleanliness, and unification",
 		"desc": "",
@@ -446,7 +426,10 @@
 			"Cloudflare Workers/KV",
 			"Tailwinds"
 		],
-		"bullets": [],
+		"bullets": [
+			"Radison Akerman's 4th personal website/portfolio, built from scratch on Nuxt, Cloudflare Workers + KV, Tailwinds",
+			"Hosts a Resume/CV export tool that converts JSON-ified experience data to styled HTML/CSS to PDF using Puppeteer, Github Actions"
+		],
 		"type": "website",
 		"made_at": "Personal Project",
 		"start": "2022-07",
