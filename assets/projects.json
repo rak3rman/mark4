@@ -42,8 +42,8 @@
 			"Stripe"
 		],
 		"bullets": [
-			"A full-stack online card game built on Node.js with 1,250+ games played by 600+ players, led development and a team of 5",
-			"Delivered 3 300-level guest lectures at University of Illinois Chicago detailing project structure, MVC pattern, viewed by 300+"
+			"A full-stack online card game built using Node.js with 1,250+ games played by 600+ players, led development and a team of 5",
+			"Delivered 3 300-level guest lectures at University of Illinois Chicago detailing project structure, MVC pattern, viewed by 200+"
 		],
 		"type": "application",
 		"made_at": "Personal Project",
@@ -90,8 +90,8 @@
 			"Tailwinds"
 		],
 		"bullets": [
-			"A centralized user management backbone leveraging edge cloud compute, built on Nuxt, Cloudflare Workers + KV, Auth0",
-			"Saved and analyzed 100’s of user profiles, API distributed for use across 10+ external services to keep profiles up-to-date"
+			"A centralized user management backbone leveraging edge cloud compute, built using Cloudflare Workers, Nuxt, Auth0",
+			"Saved and managed 100’s of user profiles, API distributed for use across 10+ external services to keep profiles up-to-date"
 		],
 		"type": "microservice",
 		"made_at": "Personal Project",
@@ -119,7 +119,7 @@
 			"Mailgun"
 		],
 		"bullets": [
-			"A web form submission backbone leveraging edge cloud compute, built on next-gen Nuxt, Cloudflare Workers, R2",
+			"A web form submission backbone leveraging edge cloud compute, built using Cloudflare Workers, Nuxt",
 			"Saved and analyzed 1,000’s of form submissions at the cloud edge, filters spam and sends email notifications via Mailgun"
 		],
 		"type": "microservice",
@@ -427,7 +427,7 @@
 			"Tailwinds"
 		],
 		"bullets": [
-			"Radison Akerman's 4th personal website/portfolio, built from scratch on Nuxt, Cloudflare Workers + KV, Tailwinds",
+			"Radison Akerman's 4th personal website/portfolio, built from scratch using Nuxt, Cloudflare Workers, Tailwinds",
 			"Hosts a Resume/CV export tool that converts JSON-ified experience data to styled HTML/CSS to PDF using Puppeteer, Github Actions"
 		],
 		"type": "website",

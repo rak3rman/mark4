@@ -10,14 +10,7 @@
       </ResumeSubtitle>
 
       <ResumeHeading> Education </ResumeHeading>
-      <ResumeEducation
-        v-for="item in education.sort((a, b) => {
-          let aa = Date.parse(a.end);
-          let bb = Date.parse(b.end);
-          return (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa);
-        })"
-        :edu="item"
-      />
+      <ResumeEducation v-for="item in education.sort(singleSort)" :edu="item" />
 
       <ResumeHeading> Professional Experience </ResumeHeading>
       <ResumeExperience
@@ -26,13 +19,7 @@
             (e) =>
               defaultExperienceFilters(e) && e.tags.includes('professional')
           )
-          .sort((a, b) => {
-            let aa = Date.parse(a.end);
-            let bb = Date.parse(b.end);
-            return (
-              (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa)
-            );
-          })"
+          .sort(singleSort)"
         :exp="item"
       />
     </ResumePage>
@@ -46,13 +33,7 @@
               defaultExperienceFilters(e) &&
               (e.tags.includes('teach') || e.tags.includes('mentor'))
           )
-          .sort((a, b) => {
-            let aa = Date.parse(a.end);
-            let bb = Date.parse(b.end);
-            return (
-              (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa)
-            );
-          })"
+          .sort(singleSort)"
         :exp="item"
       />
 
@@ -62,13 +43,7 @@
           .filter(
             (e) => defaultExperienceFilters(e) && e.tags.includes('events')
           )
-          .sort((a, b) => {
-            let aa = Date.parse(a.end);
-            let bb = Date.parse(b.end);
-            return (
-              (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa)
-            );
-          })"
+          .sort(singleSort)"
         :exp="item"
       />
 
@@ -77,15 +52,7 @@
 
       <ResumeHeading> Honors and Awards </ResumeHeading>
       <ResumeAward
-        v-for="item in awards
-          .sort((a, b) => {
-            let aa = Date.parse(a.given.slice(-1));
-            let bb = Date.parse(b.given.slice(-1));
-            return (
-              (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa)
-            );
-          })
-          .slice(0, 5)"
+        v-for="item in awards.sort(multipleSort).slice(0, 5)"
         :award="item"
       />
     </ResumePage>
@@ -93,25 +60,13 @@
     <ResumePage :page="3" :total="total_pages">
       <ResumeHeading> Honors and Awards (cont.) </ResumeHeading>
       <ResumeAward
-        v-for="item in awards
-          .sort((a, b) => {
-            let aa = Date.parse(a.given.slice(-1));
-            let bb = Date.parse(b.given.slice(-1));
-            return (
-              (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa)
-            );
-          })
-          .slice(5)"
+        v-for="item in awards.sort(multipleSort).slice(5)"
         :award="item"
       />
 
       <ResumeHeading> Presentations </ResumeHeading>
       <ResumePresentation
-        v-for="item in presentations.sort((a, b) => {
-          let aa = Date.parse(a.given.slice(-1));
-          let bb = Date.parse(b.given.slice(-1));
-          return (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa);
-        })"
+        v-for="item in presentations.sort(multipleSort)"
         :pres="item"
       />
       <div class="text-xs font-light italic mt-2">
@@ -148,4 +103,29 @@ import projects from "../assets/projects.json";
 import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters.ts";
 
 const total_pages = 3;
+
+const singleSort = (a, b) => {
+  let aa = Date.parse(a.end);
+  let bb = Date.parse(b.end);
+  return (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa);
+};
+
+const multipleSort = (a, b) => {
+  let a_idx = a.given.length - 1;
+  let b_idx = b.given.length - 1;
+  while (a_idx >= 0 && b_idx >= 0) {
+    let aa = Date.parse(a.given[a_idx]);
+    let bb = Date.parse(b.given[b_idx]);
+    if (aa !== bb) {
+      break;
+    }
+    a_idx--;
+    b_idx--;
+  }
+  let aa = a_idx >= 0 ? Date.parse(a.given[a_idx]) : undefined;
+  let bb = b_idx >= 0 ? Date.parse(b.given[b_idx]) : undefined;
+  return (
+    (bb === undefined ? Date.now() : bb) - (aa === undefined ? Date.now() : aa)
+  );
+};
 </script>

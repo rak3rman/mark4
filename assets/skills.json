@@ -8,19 +8,19 @@
     {
         "group": "Libraries & Frameworks",
         "items": [
-            "Node.js", "Nuxt", "Express", "Flask", "SQLAlchemy", "Laravel", "Vue", "React", "Tailwinds", "Handlebars", "Ghost"
+            "Node.js", "Nuxt", "Express", "Flask", "SQLAlchemy", "Laravel", "Vue", "React", "Tailwinds", "Handlebars", ".NET"
         ]
     },
     {
         "group": "Tools & Platforms",
         "items": [
-            "Git", "Cloudflare", "AWS", "MongoDB", "Docker", "Kubernetes", "VMware", "pfSense", "Auth0", "Stripe", "Mailgun"
+            "Git", "Cloudflare", "AWS", "MongoDB", "Docker", "VMware", "pfSense", "Auth0", "Stripe", "Mailgun"
         ]
     },
     {
         "group": "Interests",
         "items": [
-            "Networking", "Cloud computing", "Concurrency", "IoT", "CI/CD", "Automation", "Full-stack development", "Dev-ops", "Cybersecurity"
+            "Networking", "Cloud computing", "Concurrency", "IoT", "CI/CD", "Automation", "Full-stack development", "Dev-ops", "Cybersecurity", "Blockchain"
         ]
     }
 ]

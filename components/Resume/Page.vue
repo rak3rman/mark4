@@ -4,10 +4,10 @@
       <div class="grow">
         <slot />
       </div>
-      <div class="text-accent font-normal text-[0.85rem]" v-if="page && total">
+      <div class="text-accent font-normal text-xs" v-if="page && total">
         Radison Akerman, Page {{ page }} of {{ total }}
         <NuxtLink
-          class="opacity-[20%]"
+          class="opacity-50"
           to="https://github.com/rak3rman/mark4/commits/master/"
         >
           &nbsp#{{ config.public.gitMasterTag }}
