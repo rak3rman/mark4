@@ -11,9 +11,9 @@
 			"professional"
 		],
 		"bullets": [
-			"Integrated REST API endpoints into a .NET (C#) consultant profile builder web app using Entity Framework, SQL Server",
+			"Integrated REST API endpoints into a C#.NET consultant profile builder web app using Entity Framework, SQL Server",
 			"Collaborated with 3 front-end/dev-ops interns, 5 back-end mentors, and 2+ business stakeholders in an agile/scrum environment",
-			"Gained unique consulting experience in a fast-paced environment, spanning multiple industries and web technologies"
+			"Gained unique, small-scale consulting experience spanning multiple industries and full-stack disciplines"
 		],
 		"is_resume": false
 	},
@@ -49,7 +49,7 @@
         "bullets": [
 			"Owned Starship Config Signoff, a critical flight reliability tool used by 100+ Starship engineers to validate 1M+ vehicle config values",
 			"Spearheaded development of 10+ features into Signoff: rebuilt Flask APIs, new SQLAlchemy query structure, refreshed React UI",
-			"Integrated a vehicle software verification Python script concurrently into SpaceY, an operations platform built on Rust, Bazel",
+			"Integrated a software version verification Python library concurrently into a Rust operations platform, reducing deploy time by 40%",
 			"Built functioning UI mockups in Lit, CSS as part of Starship software deploys rework, participated in design conversations and CDRs"
 		],
 		"is_resume":  true
@@ -68,7 +68,7 @@
 		"bullets": [
 			"Played a key role in some of Chicago's biggest special sporting events (Chicago Triathlon, Chicago Spring + Fall Half Marathon)",
 			"Directly coordinated and delegated responsibilities to 10-100+ staff and volunteers who aided nearly 8,000 athletes per event",
-			"Assisted in event operations at scale across varying disciplines, from swim site operations to warehouse prep to expo management"
+			"Assisted in event operations at scale across varying disciplines, from course leadership to warehouse prep to expo management"
 		],
 		"is_resume": false
 	},
@@ -86,7 +86,7 @@
 			"professional"
 		],
 		"bullets": [
-			"Completely rebuilt campaign website from the ground up using Nuxt, Tailwinds, visited by 1,000’s of Wisconsinites daily",
+			"Completely rebuilt campaign website from the ground up using Nuxt, Tailwinds; visited by 1,000’s of Wisconsinites daily",
 			"Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN, Informr",
 			"Worked with a team of web developers and content creators to rapidly push media; took photographs in the field"
 		],
@@ -94,7 +94,7 @@
 	},
 	{
 		"title": "Project Manager & Software Engineer",
-		"company": "University of Illinois Chicago",
+		"company": "University of Illinois Chicago College of Engineering",
 		"start": "2021-08",
 		"end": "2024-05",
 		"location": "Chicago, IL",
@@ -105,9 +105,8 @@
 			"professional"
 		],
 		"bullets": [
-			"Organized a team of 6-10 web developers working on 10+ large-scale, full-stack web applications",
-			"Developed and maintained full-stack web applications on Nuxt, Laravel, Spring Boot, Vue, React, SQL, used by 3,000+ users",
-			"Integrated new project management software (Paymo) and maintained framework templates/documentation in Github",
+			"Organized a team of 6+ software engineers and contributed directly to 10+ full-stack web apps used by 3,000+",
+			"Led the push towards web app modernization across the College using Nuxt, Next.js, Spring Boot, Vue, React, SQL, Auth0",
 			"Single-handedly developed and published a Shibboleth (SAML SSO) to Express (Node.js) authentication package on npm",
 			"Drafted and enforced university IT policies and procedures, identified data risks across all 500+ faculty and staff"
 		],
@@ -115,7 +114,7 @@
 	},
 	{
 		"title": "Software Engineering Intern",
-		"company": "University of Illinois Chicago",
+		"company": "University of Illinois Chicago College of Engineering",
 		"start": "2021-05",
 		"end": "2021-08",
 		"location": "Chicago, IL",
@@ -126,8 +125,8 @@
 		],
 		"bullets": [
 			"Maintained and redesigned a custom space-and-physical-access management system using Laravel, Vue, SQL",
-			"Created new documentation and issue reporting standards with Atlassian Jira, Bitbucket, increasing readability by 3-fold",
-			"Presented projects to university admin and trained faculty/staff on application usage regularly via MS Teams, Calendly"
+			"Created new documentation and issue reporting standards with Atlassian Jira, Bitbucket; increasing readability by 3-fold",
+			"Presented projects to university admin and trained faculty/staff on application usage regularly via MS Teams"
 		],
 		"is_resume":  true
 	},
@@ -143,9 +142,9 @@
 			"professional"
 		],
 		"bullets": [
-			"Lead front-end web developer on an enterprise-grade security unification solution (MTOP) using Node.js, MongoDB",
-			"Configured mission-critical SLA networks and infrastructure in the field by installing switches, IP cameras, access control",
-			"Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge policing units"
+			"Lead front-end web developer on an enterprise-grade, on-prem security unification solution (MTOP) built using Node.js, MongoDB",
+			"Configured mission-critical SLA networks and infrastructure in the field; physically installed switches, IP cameras, access control",
+			"Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge policing units across Rockford, IL"
 		],
 		"is_resume":  true
 	},
@@ -163,9 +162,9 @@
 			"professional"
 		],
 		"bullets": [
-			"Co-built and operationally led Pulqra, a mission-capitalist creative marketing collective",
-			"Reimagined businesses and artists by designing 5+ commercial websites and social portfolios from scratch",
-			"Rendered services to 200+ clients worldwide — from creative design to photography to social media management to copywriting"
+			"Co-built and operationally led Pulqra, a mission-capitalist creative marketing collective based in Rockford, Madison, and Chicago",
+			"Reimagined businesses and artists by rapidly designing 5+ commercial websites and social portfolios from scratch using Nuxt, Tailwinds",
+			"Rendered services to 80+ clients worldwide — from full-on creative design to photography to copywriting"
 		],
 		"is_resume":  false
 	},
@@ -182,7 +181,7 @@
 			"teach"
 		],
 		"bullets": [
-			"Section led Code in Place 2021, 2023 — a free, human-centric, intro-to-coding course",
+			"Section led Code in Place 2021, 2023 — a free, human-centric, intro-to-coding course taught in the time of COVID-19",
 			"Helped instruct 10,000+ students on the fundamentals of Python and computer science principles",
 			"Worked one-on-one with all age groups, built office-hours-esque curriculum tailored to the 4 week course"
 		],

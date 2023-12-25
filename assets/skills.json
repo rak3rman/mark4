@@ -1,26 +1,20 @@
 [
     {
-        "group": "Programming Languages",
+        "group": "Languages",
         "items": [
-            "C", "C++", "Python", "Java", "Rust", "JavaScript", "TypeScript", "C#", "F#", "Go", "SQL", "Bash", "HTML", "CSS"
+            "Python", "C", "C++", "Java", "Rust", "JavaScript", "TypeScript", "C#", "F#", "Go", "SQL", "Bash", "HTML", "CSS"
         ]
     },
     {
-        "group": "Libraries & Frameworks",
+        "group": "Software",
         "items": [
-            "Node.js", "Nuxt", "Express", "Flask", "SQLAlchemy", "Laravel", "Vue", "React", "Tailwinds", "Handlebars", ".NET"
-        ]
-    },
-    {
-        "group": "Tools & Platforms",
-        "items": [
-            "Git", "Cloudflare", "AWS", "MongoDB", "Docker", "VMware", "pfSense", "Auth0", "Stripe", "Mailgun"
+            "Git", "Cloudflare", "AWS", "Docker", "Node.js", "Nuxt", "Express", "Flask", "SQLAlchemy", "MongoDB", "Vue", "React", "Tailwinds", ".NET", "VMware"
         ]
     },
     {
         "group": "Interests",
         "items": [
-            "Networking", "Cloud computing", "Concurrency", "IoT", "CI/CD", "Automation", "Full-stack development", "Dev-ops", "Cybersecurity", "Blockchain"
+            "Networking", "Cloud computing", "Concurrency", "IoT", "CI/CD", "Automation", "Full-stack development", "DevOps", "Cybersecurity", "Blockchain"
         ]
     }
 ]
