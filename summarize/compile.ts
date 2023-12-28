@@ -1,7 +1,7 @@
-const puppeteer = require("puppeteer");
-const fs = require("fs");
+import puppeteer = require("puppeteer");
+import fs = require("fs");
 
-async function generatePDF(url, path) {
+async function generatePDF(url: string, path: string) {
   const browser = await puppeteer.launch({
     headless: "new",
   });

@@ -1,20 +1,28 @@
 [
-    {
-        "school": "University of Illinois Chicago",
+  {
+    "organization": "University of Illinois Chicago",
+    "location": "Chicago, IL",
+    "dates": [
+      {
         "start": "2020-08",
-        "end": "2024-05",
-        "location": "Chicago, IL",
-        "desc": "Bachelor of Science in Computer Science, Minor in Business Administration; 4.0 GPA",
-        "activities": "SAE Formula E, Tennis Club, ACM",
-        "is_resume": true
-    },
-    {
-        "school": "Auburn High School",
+        "end": "2024-05"
+      }
+    ],
+    "description": "Bachelor of Science in Computer Science, Minor in Business Administration; 4.0 GPA",
+    "activities": "SAE Formula E, Tennis Club, ACM",
+    "on_resume": true
+  },
+  {
+    "organization": "Auburn High School",
+    "location": "Rockford, IL",
+    "dates": [
+      {
         "start": "2016-08",
-        "end": "2020-05",
-        "location": "Rockford, IL",
-        "desc": "High School Diploma, Gifted Program Seal; 3.8 GPA",
-        "activities": "Team Captain of Boys Swim Team, Key Club, Makers Club, Chess Club, National Honor Society, Science Olympiad",
-        "is_resume": false
-    }
+        "end": "2020-05"
+      }
+    ],
+    "description": "High School Diploma, Gifted Program Seal; 3.8 GPA",
+    "activities": "Team Captain of Boys Swim Team, Key Club, Makers Club, Chess Club, National Honor Society, Science Olympiad",
+    "on_resume": false
+  }
 ]

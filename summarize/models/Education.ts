@@ -4,5 +4,5 @@ import { Event } from "./Event";
 export const Education = Event.extend({
   description: z.string().optional(),
   activities: z.string().optional(),
-  on_resume: z.boolean().default(false),
-});
+  on_resume: z.boolean(),
+}).omit({ title: true });

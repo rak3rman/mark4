@@ -4,8 +4,12 @@ export const Event = z.object({
   title: z.string(),
   organization: z.string(),
   location: z.string(),
-  dates: z.object({
-    start: z.string(),
-    end: z.string().optional(),
-  }),
+  dates: z
+    .array(
+      z.object({
+        start: z.string(),
+        end: z.string().optional(),
+      })
+    )
+    .min(1),
 });
