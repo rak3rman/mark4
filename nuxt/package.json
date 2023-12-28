@@ -4,7 +4,7 @@
 	"scripts": {
 		"build": "nuxt build",
 		"dev": "nuxt dev",
-		"pdfgen": "cd pdfgen && npm i && npm run generate && cd ..",
+		"pdfgen": "cd summarize && npm i && npm run generate && cd ..",
 		"wrdev": "NITRO_PRESET=cloudflare npm run build && wrangler dev",
 		"wrpub": "NITRO_PRESET=cloudflare npm run build && wrangler deploy"
 	},

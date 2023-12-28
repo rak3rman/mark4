@@ -93,12 +93,12 @@
 </template>
 
 <script setup>
-import awards from "../assets/awards.json";
-import experience from "../assets/experience.json";
-import presentations from "../assets/presentations.json";
-import education from "../assets/education.json";
-import skills from "../assets/skills.json";
-import projects from "../assets/projects.json";
+import awards from "../summarize/data/awards.json";
+import experience from "../summarize/data/experience.json";
+import presentations from "../summarize/data/presentations.json";
+import education from "../summarize/data/education.json";
+import skills from "../summarize/data/skills.json";
+import projects from "../summarize/data/projects.json";
 
 import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters.ts";
 

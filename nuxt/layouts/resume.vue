@@ -58,8 +58,8 @@
 </template>
 
 <script setup>
-import experience from "../assets/experience.json";
-import education from "../assets/education.json";
-import skills from "../assets/skills.json";
-import projects from "../assets/projects.json";
+import experience from "../summarize/data/experience.json";
+import education from "../summarize/data/education.json";
+import skills from "../summarize/data/skills.json";
+import projects from "../summarize/data/projects.json";
 </script>
