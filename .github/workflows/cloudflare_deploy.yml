@@ -19,6 +19,10 @@ jobs:
         os: [ ubuntu-latest ]
         node: [ 16 ]
 
+    env:
+      NUXT_DIR: ./nuxt
+      SUMMARIZE_DIR: ./summarize
+
     steps:
       - uses: actions/setup-node@v1
         with:
@@ -27,18 +31,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install Summarize Dependencies
+        run: npm i
+        working-directory: ${{ env.SUMMARIZE_DIR }}
 
-      - name: Generate PDFs
-        run: npm run dev & sleep 15 && npm run pdfgen
+      - name: Validate Summarize Data
+        run: npm run validate
+        working-directory: ${{ env.SUMMARIZE_DIR }}
 
-      - name: Build
+      - name: Install Nuxt Dependencies
+        run: npm i
+        working-directory: ${{ env.NUXT_DIR }}
+
+      - name: Generate Summarize PDFs
+        run: npm run dev & sleep 15 && cd ../summarize && npm run generate
+        working-directory: ${{ env.NUXT_DIR }}
+
+      - name: Build Nuxt
         run: npm run build
+        working-directory: ${{ env.NUXT_DIR }}
         env:
           NITRO_PRESET: cloudflare
 
-      - name: Publish to Cloudflare
+      - name: Publish Nuxt to Cloudflare Workers
         uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
