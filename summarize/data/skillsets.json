@@ -1,20 +1,56 @@
 [
-    {
-        "group": "Languages",
-        "items": [
-            "Python", "C", "C++", "Java", "Rust", "JavaScript", "TypeScript", "C#", "F#", "Go", "SQL", "Bash", "HTML", "CSS"
-        ]
-    },
-    {
-        "group": "Software",
-        "items": [
-            "Git", "Cloudflare", "AWS", "Docker", "Node.js", "Nuxt", "Express", "Flask", "SQLAlchemy", "MongoDB", "Vue", "React", "Tailwinds", ".NET", "VMware"
-        ]
-    },
-    {
-        "group": "Interests",
-        "items": [
-            "Networking", "Cloud computing", "Concurrency", "IoT", "CI/CD", "Automation", "Full-stack development", "DevOps", "Cybersecurity", "Blockchain"
-        ]
-    }
+  {
+    "set": "Languages",
+    "skills": [
+      "Python",
+      "C",
+      "C++",
+      "Java",
+      "Rust",
+      "JavaScript",
+      "TypeScript",
+      "C#",
+      "F#",
+      "Go",
+      "SQL",
+      "Bash",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "set": "Software",
+    "skills": [
+      "Git",
+      "Cloudflare",
+      "AWS",
+      "Docker",
+      "Node.js",
+      "Nuxt",
+      "Express",
+      "Flask",
+      "SQLAlchemy",
+      "MongoDB",
+      "Vue",
+      "React",
+      "Tailwinds",
+      ".NET",
+      "VMware"
+    ]
+  },
+  {
+    "set": "Interests",
+    "skills": [
+      "Networking",
+      "Cloud computing",
+      "Concurrency",
+      "IoT",
+      "CI/CD",
+      "Automation",
+      "Full-stack development",
+      "DevOps",
+      "Cybersecurity",
+      "Blockchain"
+    ]
+  }
 ]

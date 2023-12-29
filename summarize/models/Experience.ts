@@ -7,4 +7,4 @@ export const Experience = Event.extend({
   discipline: z.enum(["professional", "teaching", "operations"]),
   bullets: Bullet.array().optional(),
   on_resume: z.boolean(),
-});
+}).strict();

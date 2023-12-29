@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { Event } from "./Event";
-import { Links } from "./Links";
+import { Media } from "./Media";
 
 export const Award = Event.extend({
   description: z.string().optional(),
-  links: Links.optional(),
-});
+  media: Media.optional(),
+}).strict();
