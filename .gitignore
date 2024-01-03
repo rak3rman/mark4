@@ -8,4 +8,4 @@ nuxt/.env
 nuxt/public/radison-akerman-resume.pdf
 nuxt/public/radison-akerman-cv.pdf
 
-summarize/node_modules
+nuxt/summarize/node_modules

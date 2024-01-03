@@ -10,7 +10,7 @@
 
       <ResumeHeading> Experience </ResumeHeading>
       <ResumeExperience
-        v-for="item in experience
+        v-for="item in experiences
           .filter((e) => e.is_resume)
           .sort((a, b) => {
             let aa = Date.parse(a.end);
@@ -37,7 +37,7 @@
       />
 
       <ResumeHeading> Skills </ResumeHeading>
-      <ResumeSkillBlock v-for="item in skills" :block="item" />
+      <ResumeSkillBlock v-for="item in skillsets" :block="item" />
 
       <ResumeHeading> Projects </ResumeHeading>
       <ResumeProject
@@ -58,8 +58,8 @@
 </template>
 
 <script setup>
-import experience from "../summarize/data/experience.json";
-import education from "../summarize/data/education.json";
-import skills from "../summarize/data/skills.json";
-import projects from "../summarize/data/projects.json";
+import experiences from "~/summarize/data/experiences.json";
+import education from "~/summarize/data/education.json";
+import skillsets from "~/summarize/data/skillsets.json";
+import projects from "~/summarize/data/projects.json";
 </script>

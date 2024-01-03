@@ -1,24 +1,31 @@
 <template>
   <div>
     <ResumeHeader>
-      {{ pres.title }}
-      <span class="text-accent">@ {{ pres.issuer }}</span>
+      {{ presentation.title }}
+      <span class="text-accent">@ {{ presentation.organization }}</span>
     </ResumeHeader>
     <ResumeSubheader>
-      {{
-        pres.given.map((d) => formatDateRange(d, undefined, false)).join(", ")
-      }}
+      {{ formatEventDates(presentation.dates, false) }}
       //
-      {{ pres.location }}
+      {{ presentation.location }}
     </ResumeSubheader>
-    <ResumeBullets v-if="pres.bullets.length > 0" :bullets="pres.bullets" />
+    <ResumeText v-if="presentation.description">
+      {{ presentation.description }}
+    </ResumeText>
+    <ResumeBullets :bullets="presentation.bullets" />
   </div>
 </template>
 
-<script setup>
-let props = defineProps({
-  pres: {
-    type: Object,
+<script setup lang="ts">
+import { z } from "zod";
+import { formatEventDates } from "~/utils/formatEventDates";
+import { Presentation } from "~/summarize/models/Presentation";
+type Presentation = z.infer<typeof Presentation>;
+
+defineProps({
+  presentation: {
+    type: Object as PropType<Presentation>,
+    required: true,
   },
 });
 </script>

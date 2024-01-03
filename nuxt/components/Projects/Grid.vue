@@ -122,7 +122,7 @@ import {
   WrenchIcon,
   TagIcon,
 } from "@heroicons/vue/24/outline";
-import raw from "../../assets/projects.json";
+import raw from "~/summarize/data/projects.json";
 
 const emit = defineEmits(["quick"]);
 

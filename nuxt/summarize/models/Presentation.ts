@@ -1,8 +1,8 @@
 import { z } from "zod";
 import { Event } from "./Event";
-import { Bullet } from "./Bullet";
+import { Bullets } from "./Bullets";
 
 export const Presentation = Event.extend({
   description: z.string().optional(),
-  bullets: Bullet.array().optional(),
+  bullets: Bullets,
 }).strict();

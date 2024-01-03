@@ -1,3 +1,4 @@
+import * as path from "path";
 const { gitDescribe, gitDescribeSync } = require("git-describe");
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config

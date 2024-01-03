@@ -191,7 +191,7 @@ const testimonials = [
 </script>
 
 <script>
-import raw from "assets/experience.json";
+import raw from "~/summarize/data/experiences.json";
 import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters.ts";
 
 let limit_exp = true;

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { Event } from "./Event";
-import { Bullet } from "./Bullet";
+import { Bullets } from "./Bullets";
 import { Media } from "./Media";
 import { Label } from "./Label";
 
@@ -18,7 +18,7 @@ export const Project = Event.extend({
   tag: z.string().optional(),
   labels: Label.array().optional(),
   tools: z.array(z.string()).optional(),
-  bullets: Bullet.array().optional(),
+  bullets: Bullets,
   media: Media.optional(),
   is_featured: z.boolean().default(false),
   on_resume: z.boolean().default(false),

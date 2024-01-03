@@ -1,20 +1,27 @@
 <template>
   <div>
     <ResumeHeader>
-      {{ exp.title }}
-      <span class="text-accent">@ {{ exp.company }}</span>
+      {{ experience.title }}
+      <span class="text-accent">@ {{ experience.organization }}</span>
     </ResumeHeader>
     <ResumeSubheader>
-      {{ formatDateRange(exp.start, exp.end, false) }} // {{ exp.location }}
+      {{ formatEventDates(experience.dates, false) }} //
+      {{ experience.location }}
     </ResumeSubheader>
-    <ResumeBullets :bullets="exp.bullets" />
+    <ResumeBullets :bullets="experience.bullets" />
   </div>
 </template>
 
-<script setup>
-let props = defineProps({
-  exp: {
-    type: Object,
+<script setup lang="ts">
+import { z } from "zod";
+import { formatEventDates } from "~/utils/formatEventDates";
+import { Experience } from "~/summarize/models/Experience";
+type Experience = z.infer<typeof Experience>;
+
+defineProps({
+  experience: {
+    type: Object as PropType<Experience>,
+    required: true,
   },
 });
 </script>
