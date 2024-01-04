@@ -3,7 +3,7 @@
     <Html data-theme="resume" />
 
     <ResumePage :page="1" :total="total_pages">
-      <ResumeTitle class="-pt-4"> {{ ConfigParsed.name }} </ResumeTitle>
+      <ResumeTitle> {{ ConfigParsed.name }} </ResumeTitle>
       <ResumeSubtitle>
         {{ ConfigParsed.email + (ConfigParsed.email ? "&ensp;" : "") }}
         {{ ConfigParsed.website + (ConfigParsed.website ? "&ensp;" : "") }}
@@ -81,6 +81,7 @@
 
 <script setup lang="ts">
 import { z } from "zod";
+import { sortEventDates } from "~/utils/sortEventDates";
 import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters";
 
 import { Award } from "~/summarize/models/Award";
@@ -107,44 +108,25 @@ import ProjectsJSON from "~/summarize/data/projects.json";
 import SkillSetsJSON from "~/summarize/data/skillsets.json";
 import ConfigJSON from "~/summarize/data/config.json";
 
-const AwardsParsed: Award[] = AwardsJSON.map((e: any) =>
-  Award.readonly().parse(e)
+const AwardsParsed: Award[] = AwardsJSON.map((obj: any) =>
+  Award.readonly().parse(obj)
+).sort(sortEventDates);
+const EducationParsed: Education[] = EducationJSON.map((obj: any) =>
+  Education.readonly().parse(obj)
+).sort(sortEventDates);
+const ExperiencesParsed: Experience[] = ExperiencesJSON.map((obj: any) =>
+  Experience.readonly().parse(obj)
+).sort(sortEventDates);
+const PresentationsParsed: Presentation[] = PresentationsJSON.map((obj: any) =>
+  Presentation.readonly().parse(obj)
+).sort(sortEventDates);
+const ProjectsParsed: Project[] = ProjectsJSON.map((obj: any) =>
+  Project.readonly().parse(obj)
+).sort(sortEventDates);
+const SkillSetsParsed: SkillSet[] = SkillSetsJSON.map((obj: any) =>
+  SkillSet.readonly().parse(obj)
 );
-const EducationParsed = EducationJSON.map((e: any) =>
-  Education.readonly().parse(e)
-);
-const ExperiencesParsed = ExperiencesJSON.map((e: any) =>
-  Experience.readonly().parse(e)
-);
-const PresentationsParsed = PresentationsJSON.map((e: any) =>
-  Presentation.readonly().parse(e)
-);
-const ProjectsParsed = ProjectsJSON.map((e: any) =>
-  Project.readonly().parse(e)
-);
-const SkillSetsParsed = SkillSetsJSON.map((e: any) =>
-  SkillSet.readonly().parse(e)
-);
-const ConfigParsed = Config.readonly().parse(ConfigJSON);
+const ConfigParsed: Config = Config.readonly().parse(ConfigJSON);
 
 const total_pages = 3;
-
-const multipleSort = (a, b) => {
-  let a_idx = a.given.length - 1;
-  let b_idx = b.given.length - 1;
-  while (a_idx >= 0 && b_idx >= 0) {
-    let aa = Date.parse(a.given[a_idx]);
-    let bb = Date.parse(b.given[b_idx]);
-    if (aa !== bb) {
-      break;
-    }
-    a_idx--;
-    b_idx--;
-  }
-  let aa = a_idx >= 0 ? Date.parse(a.given[a_idx]) : undefined;
-  let bb = b_idx >= 0 ? Date.parse(b.given[b_idx]) : undefined;
-  return (
-    (bb === undefined ? Date.now() : bb) - (aa === undefined ? Date.now() : aa)
-  );
-};
 </script>

@@ -4,7 +4,8 @@
     "organization": "Personal Project",
     "dates": [
       {
-        "start": "2022-12"
+        "start": "2022-12",
+        "end": "inf"
       }
     ],
     "short_description": "A media upload, organization, and display tool leveraging Cloudflare Workers",
@@ -20,7 +21,8 @@
     "organization": "Personal Project",
     "dates": [
       {
-        "start": "2020-12"
+        "start": "2020-12",
+        "end": "inf"
       }
     ],
     "short_description": "A beautiful, online alternative to the popular Exploding Kittens card game",
@@ -58,7 +60,8 @@
     "organization": "Pulqra",
     "dates": [
       {
-        "start": "2022-05"
+        "start": "2022-05",
+        "end": "inf"
       }
     ],
     "short_description": "A foundational website supporting Steven Olikara’s run for the U.S. Senate in Wisconsin",
@@ -76,7 +79,8 @@
     "organization": "Personal Project",
     "dates": [
       {
-        "start": "2022-12"
+        "start": "2022-12",
+        "end": "inf"
       }
     ],
     "short_description": "A centralized user management backbone for all RAkerman Foundation services",
@@ -105,7 +109,8 @@
     "organization": "Personal Project",
     "dates": [
       {
-        "start": "2022-06"
+        "start": "2022-06",
+        "end": "inf"
       }
     ],
     "short_description": "A web form submission intermediary leveraging edge cloud compute",
@@ -152,7 +157,8 @@
     "organization": "Pulqra",
     "dates": [
       {
-        "start": "2022-05"
+        "start": "2022-05",
+        "end": "inf"
       }
     ],
     "short_description": "A minimalist website showcasing Pulqra's vision, product, and collaborations worldwide",
@@ -185,7 +191,8 @@
     "organization": "Personal Project",
     "dates": [
       {
-        "start": "2021-06"
+        "start": "2021-06",
+        "end": "inf"
       }
     ],
     "short_description": "A global fallback web server and status monitor designed to be deployed at scale",
@@ -338,7 +345,8 @@
     "organization": "Personal Project",
     "dates": [
       {
-        "start": "2022-07"
+        "start": "2022-07",
+        "end": "inf"
       }
     ],
     "short_description": "A fourth attempt at Radison Akerman's personal website. Notes of programming, cleanliness, and unification",

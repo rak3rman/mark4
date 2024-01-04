@@ -2,47 +2,34 @@
   <div>
     <Html data-theme="resume" />
     <ResumePage>
-      <ResumeTitle> Radison Akerman </ResumeTitle>
+      <ResumeTitle> {{ ConfigParsed.name }} </ResumeTitle>
       <ResumeSubtitle>
-        radison@rakerman.com &#8192;www.rakerman.com
-        &#8192;linkedin.com/in/rakerman
+        {{ ConfigParsed.email + (ConfigParsed.email ? "&ensp;" : "") }}
+        {{ ConfigParsed.website + (ConfigParsed.website ? "&ensp;" : "") }}
+        {{ ConfigParsed.linkedin + (ConfigParsed.linkedin ? "&ensp;" : "") }}
       </ResumeSubtitle>
 
       <ResumeHeading> Experience </ResumeHeading>
       <ResumeExperience
-        v-for="item in experiences
-          .filter((e) => e.is_resume)
-          .sort((a, b) => {
-            let aa = Date.parse(a.end);
-            let bb = Date.parse(b.end);
-            return (
-              (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa)
-            );
-          })"
-        :exp="item"
+        v-for="obj in ExperiencesParsed.filter(
+                (e: Experience) => defaultExperienceFilters(e) && e.on_resume
+              )"
+        :experience="obj"
       />
 
       <ResumeHeading> Education </ResumeHeading>
       <ResumeEducation
-        v-for="item in education
-          .filter((e) => e.is_resume)
-          .sort((a, b) => {
-            let aa = Date.parse(a.end);
-            let bb = Date.parse(b.end);
-            return (
-              (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa)
-            );
-          })"
-        :edu="item"
+        v-for="obj in EducationParsed.filter((e) => e.on_resume)"
+        :education="obj"
       />
 
       <ResumeHeading> Skills </ResumeHeading>
-      <ResumeSkillBlock v-for="item in skillsets" :block="item" />
+      <ResumeSkillSet v-for="obj in SkillSetsParsed" :skillset="obj" />
 
       <ResumeHeading> Projects </ResumeHeading>
       <ResumeProject
-        v-for="item in projects.filter((e) => e.is_resume)"
-        :proj="item"
+        v-for="obj in ProjectsParsed.filter((e: Project) => e.on_resume && e.bullets && e.bullets.length > 0)"
+        :project="obj"
       />
       <div class="text-xs font-light italic mt-2">
         See all 20+ projects at
@@ -57,9 +44,40 @@
   </div>
 </template>
 
-<script setup>
-import experiences from "~/summarize/data/experiences.json";
-import education from "~/summarize/data/education.json";
-import skillsets from "~/summarize/data/skillsets.json";
-import projects from "~/summarize/data/projects.json";
+<script setup lang="ts">
+import { z } from "zod";
+import { sortEventDates } from "~/utils/sortEventDates";
+import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters";
+
+import { Education } from "~/summarize/models/Education";
+import { Experience } from "~/summarize/models/Experience";
+import { Project } from "~/summarize/models/Project";
+import { SkillSet } from "~/summarize/models/SkillSet";
+import { Config } from "~/summarize/models/Config";
+
+type Education = z.infer<typeof Education>;
+type Experience = z.infer<typeof Experience>;
+type Project = z.infer<typeof Project>;
+type SkillSet = z.infer<typeof SkillSet>;
+type Config = z.infer<typeof Config>;
+
+import EducationJSON from "~/summarize/data/education.json";
+import ExperiencesJSON from "~/summarize/data/experiences.json";
+import ProjectsJSON from "~/summarize/data/projects.json";
+import SkillSetsJSON from "~/summarize/data/skillsets.json";
+import ConfigJSON from "~/summarize/data/config.json";
+
+const EducationParsed: Education[] = EducationJSON.map((obj: any) =>
+  Education.readonly().parse(obj)
+).sort(sortEventDates);
+const ExperiencesParsed: Experience[] = ExperiencesJSON.map((obj: any) =>
+  Experience.readonly().parse(obj)
+).sort(sortEventDates);
+const ProjectsParsed: Project[] = ProjectsJSON.map((obj: any) =>
+  Project.readonly().parse(obj)
+);
+const SkillSetsParsed: SkillSet[] = SkillSetsJSON.map((obj: any) =>
+  SkillSet.readonly().parse(obj)
+);
+const ConfigParsed: Config = Config.readonly().parse(ConfigJSON);
 </script>
