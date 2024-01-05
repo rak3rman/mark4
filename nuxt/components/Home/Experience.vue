@@ -79,57 +79,6 @@
         Lasting impacts. Pushing things further.
       </h6>
     </div>
-    <div>
-      <div v-for="(entry, index) in expEntries" class="fade-in">
-        <div v-if="index < 4 || !limitExp" class="pt-2">
-          <h6
-            class="pt-2 leading-normal text-neutral text-md font-bold text-left"
-          >
-            {{ entry.title }}
-            <span class="text-accent">@ {{ entry.company }}</span>
-          </h6>
-          <h6 class="leading-normal text-neutral text-sm font-mono text-left">
-            {{ formatDateRange(entry.start, entry.end, false) }} //
-            {{ entry.location }}
-          </h6>
-          <ul
-            class="text-neutral font-light text-sm text-left space-y-0.5 pt-1.5 pb-0"
-          >
-            <li v-for="bullet in entry.bullets" class="pb-0">
-              {{ bullet }}
-            </li>
-          </ul>
-          <p
-            class="text-neutral font-light text-sm text-left pb-0"
-            v-if="entry.bullets.length === 0"
-          >
-            <i>Experience specifics are not available yet, stay tuned!</i>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="pt-10 pb-4 fade-in" v-if="expEntries.length > 5">
-      <div class="flex justify-center">
-        <a
-          @click="updateExpLimit(false)"
-          v-if="limitExp === true"
-          class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"
-        >
-          Show {{ expEntries.length - 4 }} more experience{{
-            expEntries.length > 6 ? "s" : ""
-          }}
-        </a>
-        <a
-          @click="updateExpLimit(true)"
-          v-else
-          class="inline-flex items-center px-4 py-2 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"
-        >
-          Hide {{ expEntries.length - 4 }} experience{{
-            expEntries.length > 6 ? "s" : ""
-          }}
-        </a>
-      </div>
-    </div>
 
     <!--  Testimonials  -->
     <!--    <div class="pt-12 pb-8">-->
@@ -191,8 +140,8 @@ const testimonials = [
 </script>
 
 <script>
-import raw from "~/summarize/data/experiences.json";
-import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters.ts";
+import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters";
+import ExperiencesJSON from "~/summarize/data/experiences.json";
 
 let limit_exp = true;
 const selected_exp_tab = "cs";
@@ -231,20 +180,6 @@ export default {
     expTabs() {
       this.selectedExpTab;
       return exp_tabs;
-    },
-    expEntries() {
-      this.selectedExpTab;
-      return raw
-        .filter(
-          (entry) =>
-            defaultExperienceFilters(entry) &&
-            entry.tags.includes(this.selectedExpTab)
-        )
-        .sort((a, b) => {
-          let aa = Date.parse(a.end);
-          let bb = Date.parse(b.end);
-          return (isNaN(bb) ? Date.now() : bb) - (isNaN(aa) ? Date.now() : aa);
-        });
     },
   },
   methods: {

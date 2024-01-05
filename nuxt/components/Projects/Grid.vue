@@ -74,7 +74,7 @@
             </div>
           </div>
           <h6 class="mt-1.5 text-sm text-accent">
-            {{ project.sub }}
+            {{ project.short_description }}
           </h6>
           <div class="flex flex-grow items-end mt-1.5">
             <div

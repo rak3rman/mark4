@@ -91,13 +91,13 @@
                   v-else
                 />
                 <span class="table-cell md:hidden text-accent font-light">
-                  {{ project.made_at }}
+                  {{ project.organization }}
                 </span>
               </td>
               <td
                 class="whitespace-nowrap py-4 px-3 text-sm text-accent hidden md:table-cell"
               >
-                {{ project.made_at }}
+                {{ project.organization }}
               </td>
               <td
                 class="whitespace-nowrap py-4 px-3 text-xs text-accent font-mono text-accent font-light"

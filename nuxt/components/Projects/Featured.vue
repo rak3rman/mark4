@@ -17,7 +17,7 @@
           >
             <img
               class="object-cover brightness-50 md:brightness-100 z-0 rounded-lg"
-              :src="project.links.desktop"
+              :src="project.media.desktop_screenshot"
               alt=""
             />
           </div>
@@ -30,7 +30,7 @@
             "
           >
             <h6 class="text-secondary font-mono text-md mb-1 mx-3">
-              {{ project.made_at }}
+              {{ project.organization }}
             </h6>
             <h6 class="text-neutral text-3xl mb-5 mx-3">
               {{ project.title }}
@@ -39,7 +39,7 @@
               class="p-4 bg-transparent md:bg-primary-focus backdrop-brightness-[0.4] backdrop-blur-[1.5px] shadow-xl rounded-lg mb-3"
             >
               <h6 class="text-accent text-md">
-                {{ project.desc }}
+                {{ project.description }}
               </h6>
             </div>
             <div
