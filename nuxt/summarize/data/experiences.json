@@ -83,8 +83,7 @@
     "location": "Chicago, IL",
     "dates": [
       {
-        "start": "2022-08",
-        "end": "inf"
+        "start": "2022-08"
       }
     ],
     "commitment": "contract",

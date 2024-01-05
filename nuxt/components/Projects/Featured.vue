@@ -2,8 +2,8 @@
   <div>
     <div
       class="overflow-hidden lg:bg-transparent mt-6"
-      :class="props.fade ? 'fade-in' : ''"
-      v-for="(project, index) in filtered"
+      :class="fade ? 'fade-in' : ''"
+      v-for="(project, index) in ProjectsFiltered"
     >
       <div class="wrap mx-auto">
         <div class="grid grid-cols-10">
@@ -17,7 +17,8 @@
           >
             <img
               class="object-cover brightness-50 md:brightness-100 z-0 rounded-lg"
-              :src="project.media.desktop_screenshot"
+              :src="project?.media?.desktop_screenshot"
+              v-if="project?.media?.desktop_screenshot"
               alt=""
             />
           </div>
@@ -39,7 +40,7 @@
               class="p-4 bg-transparent md:bg-primary-focus backdrop-brightness-[0.4] backdrop-blur-[1.5px] shadow-xl rounded-lg mb-3"
             >
               <h6 class="text-accent text-md">
-                {{ project.description }}
+                {{ project.long_description }}
               </h6>
             </div>
             <div
@@ -67,20 +68,23 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
+<script setup lang="ts">
+import { z } from "zod";
+import { sortEventDates } from "~/utils/sortEventDates";
+import { Project } from "~/summarize/models/Project";
+import ProjectsJSON from "~/summarize/data/projects.json";
+
+type Project = z.infer<typeof Project>;
+
+const ProjectsParsed: Project[] = ProjectsJSON.map((obj: any) =>
+  Project.readonly().parse(obj)
+).sort(sortEventDates);
+
+const ProjectsFiltered: Project[] = ProjectsParsed.filter(
+  (e: Project) => e.is_featured
+);
+
+defineProps({
   fade: Boolean,
 });
-</script>
-
-<script>
-import raw from "~/summarize/data/projects.json";
-
-export default {
-  computed: {
-    filtered() {
-      return raw.filter((ele) => ele.is_featured);
-    },
-  },
-};
 </script>

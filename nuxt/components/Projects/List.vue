@@ -39,18 +39,22 @@
           </thead>
           <tbody class="divide-y divide-accent/20">
             <tr
-              v-for="project in filtered"
+              v-for="project in ProjectsParsed"
               :key="project.title"
               @click="emit('quick', project)"
             >
               <td
                 class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium sm:pl-6 md:pl-0"
-                :class="project.is_archived ? 'text-secondary' : 'text-success'"
+                :class="
+                  project.dates[project.dates.length - 1].end === undefined
+                    ? 'text-secondary'
+                    : 'text-success'
+                "
               >
                 {{
-                  DateTime.fromMillis(Date.parse(project.start)).toFormat(
-                    "LLL yyyy"
-                  )
+                  DateTime.fromMillis(
+                    Date.parse(project.dates[project.dates.length - 1].start)
+                  ).toFormat("LLL yyyy")
                 }}
               </td>
               <td class="whitespace-nowrap py-4 px-3 text-sm text-neutral">
@@ -123,7 +127,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {
   FolderIcon,
   CpuChipIcon,
@@ -133,26 +137,17 @@ import {
   WrenchIcon,
   TagIcon,
 } from "@heroicons/vue/24/outline";
+import { DateTime } from "luxon";
+import { z } from "zod";
+import { sortEventDates } from "~/utils/sortEventDates";
+import { Project } from "~/summarize/models/Project";
+import ProjectsJSON from "~/summarize/data/projects.json";
+
+type Project = z.infer<typeof Project>;
+
+const ProjectsParsed: Project[] = ProjectsJSON.map((obj: any) =>
+  Project.readonly().parse(obj)
+).sort(sortEventDates);
 
 const emit = defineEmits(["quick"]);
-</script>
-
-<script>
-import { DateTime } from "luxon";
-import raw from "~/summarize/data/projects.json";
-
-export default {
-  data() {
-    return {
-      DateTime: DateTime,
-    };
-  },
-  computed: {
-    filtered() {
-      return raw.sort((a, b) => {
-        return Date.parse(b.start) - Date.parse(a.start);
-      });
-    },
-  },
-};
 </script>

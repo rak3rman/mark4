@@ -9,22 +9,25 @@ export const formatDateRange = (
   let startDate = DateTime.fromMillis(Date.parse(start)).plus({ days: 1 });
 
   // Catch edge of future date (start in future)
-  if (startDate > DateTime.now() || end === undefined) {
+  if (startDate > DateTime.now() || start === end) {
     return startDate.toFormat("LLL yyyy");
   }
 
+  // No end date = present role
+  if (end === undefined) {
+    return startDate.toFormat("LLL yyyy") + " - Present";
+  }
+
   // Catch edge of future date (end in future)
-  if (end !== "inf") {
-    let endDate = DateTime.fromMillis(Date.parse(end)).plus({ days: 1 });
-    if (endDate > DateTime.now()) {
-      return (
-        startDate.toFormat("LLL yyyy") +
-        " - " +
-        (!show_anticipated
-          ? "Present"
-          : endDate.toFormat("LLL yyyy") + " (Anticipated)")
-      );
-    }
+  let endDate = DateTime.fromMillis(Date.parse(end)).plus({ days: 1 });
+  if (endDate > DateTime.now()) {
+    return (
+      startDate.toFormat("LLL yyyy") +
+      " - " +
+      (!show_anticipated
+        ? "Present"
+        : endDate.toFormat("LLL yyyy") + " (Anticipated)")
+    );
   }
 
   // Else, return formatted date range

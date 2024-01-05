@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot as="template" :show="props.show">
+  <TransitionRoot as="template" :show="show" v-if="project">
     <Dialog as="div" class="relative z-10" @close="emit('clear')">
       <TransitionChild
         as="template"
@@ -35,7 +35,7 @@
                 class="relative flex w-full items-center overflow-hidden bg-primary-focus rounded-2xl shadow-2xl"
                 :class="{
                   'px-4 pb-8 pt-14 sm:px-6 sm:pt-8 md:p-6 lg:p-8':
-                    !props.proj.media.spline,
+                    !project?.media?.spline,
                 }"
               >
                 <button
@@ -82,92 +82,90 @@
                   class="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 lg:gap-x-8 z-10"
                   :class="{
                     'md:grid-cols-12':
-                      props.proj.media.spline ||
-                      props.proj.media.desktop_screenshot,
+                      project?.media?.spline ||
+                      project?.media?.desktop_screenshot,
                   }"
                 >
                   <div
                     class="md:col-span-5 flex flex-col justify-center md:h-full"
                     :class="{
                       hidden: !(
-                        props.proj.media.spline ||
-                        props.proj.media.desktop_screenshot
+                        project?.media?.spline ||
+                        project?.media?.desktop_screenshot
                       ),
-                      'h-[70vh]': props.proj.media.spline,
+                      'h-[70vh]': project?.media?.spline,
                     }"
                   >
                     <!-- Spline -->
                     <spline-viewer
                       loading-anim
-                      :url="props.proj.media.spline"
-                      v-if="props.proj.media.spline"
+                      :url="project?.media?.spline"
+                      v-if="project?.media?.spline"
                     ></spline-viewer>
                     <!-- Desktop -->
                     <img
-                      :src="props.proj.media.desktop_screenshot"
+                      :src="project?.media?.desktop_screenshot"
                       alt="Desktop Screenshot"
                       class=""
-                      v-if="props.proj.media.desktop_screenshot"
+                      v-if="project?.media?.desktop_screenshot"
                     />
                   </div>
                   <div
                     class="md:col-span-7"
                     :class="{
                       'px-4 pb-12 md:pr-6 md:py-6 lg:pr-8 lg:py-8':
-                        props.proj.media.spline,
+                        project?.media?.spline,
                     }"
                   >
-                    <div class="flex items-center mb-4 flow-root">
-                      <RectangleGroupIcon
-                        class="h-12 w-12 text-secondary float-left"
-                        aria-hidden="true"
-                        v-if="props.proj.type === 'website'"
-                      />
+                    <div class="flow-root items-center mb-4">
                       <ComputerDesktopIcon
                         class="h-12 w-12 text-secondary float-left"
                         aria-hidden="true"
-                        v-else-if="props.proj.type === 'application'"
+                        v-if="project.type === 'application'"
                       />
                       <PuzzlePieceIcon
                         class="h-12 w-12 text-secondary float-left"
                         aria-hidden="true"
-                        v-else-if="props.proj.type === 'microservice'"
-                      />
-                      <TagIcon
-                        class="h-12 w-12 text-secondary float-left"
-                        aria-hidden="true"
-                        v-else-if="props.proj.type === 'package'"
+                        v-else-if="project.type === 'microservice'"
                       />
                       <CpuChipIcon
                         class="h-12 w-12 text-secondary float-left"
                         aria-hidden="true"
-                        v-else-if="props.proj.type === 'electronics'"
+                        v-else-if="project.type === 'electronics'"
+                      />
+                      <TagIcon
+                        class="h-12 w-12 text-secondary float-left"
+                        aria-hidden="true"
+                        v-else-if="project.type === 'package'"
                       />
                       <WrenchIcon
                         class="h-12 w-12 text-secondary float-left"
                         aria-hidden="true"
-                        v-else-if="props.proj.type === 'utility'"
+                        v-else-if="project.type === 'utility'"
                       />
-                      <FolderIcon
+                      <RectangleGroupIcon
                         class="h-12 w-12 text-secondary float-left"
                         aria-hidden="true"
-                        v-else
+                        v-else-if="project.type === 'website'"
                       />
                     </div>
                     <div
                       class="flex items-center text-xl font-medium tracking-tight leading-6 text-neutral"
                     >
-                      {{ props.proj.title }}
-                      <div class="ml-1.5 inline-flex" v-if="props.proj.tag">
+                      {{ project.title }}
+                      <div class="ml-1.5 inline-flex" v-if="project.tag">
                         <span
                           class="inline-flex items-center rounded-full border border-secondary px-[7px] h-[20px] text-[0.7rem] font-medium text-secondary"
                         >
-                          {{ props.proj.tag }}
+                          {{ project.tag }}
                         </span>
                       </div>
                       <div
                         class="ml-1.5 inline-flex"
-                        v-if="props.proj.is_archived"
+                        v-if="
+                          project.dates[project.dates.length - 1].end ===
+                          undefined
+                        "
                       >
                         <span
                           class="inline-flex items-center rounded-full border border-accent-focus px-[7px] h-[20px] text-[0.7rem] font-medium text-accent-focus"
@@ -180,44 +178,32 @@
                       <AtSymbolIcon
                         class="h-4 w-4 mr-1.5 text-secondary float-left"
                       />
-                      {{ props.proj.organization }}
+                      {{ project.organization }}
                     </div>
                     <div class="mt-0.5 flex items-center text-sm text-accent">
                       <CalendarDaysIcon
                         class="h-4 w-4 mr-1.5 text-secondary float-left"
                       />
-                      {{
-                        DateTime.fromMillis(
-                          Date.parse(props.proj.start)
-                        ).toFormat("LLLL yyyy")
-                      }}
-                      to
-                      {{
-                        props.proj.end !== "inf"
-                          ? DateTime.fromMillis(
-                              Date.parse(props.proj.end)
-                            ).toFormat("LLLL yyyy")
-                          : "Present"
-                      }}
+                      {{ formatEventDates(project.dates, false) }}
                     </div>
                     <div class="mt-1.5 text-sm text-accent">
                       {{
-                        props.proj.desc !== ""
-                          ? props.proj.long_description
-                          : props.proj.short_description
+                        project.long_description
+                          ? project.long_description
+                          : project.short_description
                       }}
                     </div>
                     <div class="flex flex-grow items-end mt-3">
                       <div
                         class="flex flex-wrap text-xs text-accent font-light font-mono"
                       >
-                        <h6 v-for="tool in props.proj.tools" class="pr-2.5">
+                        <h6 v-for="tool in project.tools" class="pr-2.5">
                           {{ tool }}
                         </h6>
                       </div>
                     </div>
                     <div class="flex mt-3">
-                      <ProjectsExtIcons :project="props.proj" />
+                      <ProjectsExtIcons :project="project" />
                     </div>
                   </div>
                 </div>
@@ -230,7 +216,7 @@
   </TransitionRoot>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {
   Dialog,
   DialogPanel,
@@ -241,7 +227,6 @@ import { XMarkIcon } from "@heroicons/vue/24/outline";
 import {
   ComputerDesktopIcon,
   CpuChipIcon,
-  FolderIcon,
   PuzzlePieceIcon,
   RectangleGroupIcon,
   TagIcon,
@@ -249,7 +234,10 @@ import {
   CalendarDaysIcon,
   AtSymbolIcon,
 } from "@heroicons/vue/24/outline";
-import { DateTime } from "luxon";
+import { z } from "zod";
+import { formatEventDates } from "~/utils/formatEventDates";
+import { Project } from "~/summarize/models/Project";
+type Project = z.infer<typeof Project>;
 
 useHead({
   script: [
@@ -260,9 +248,12 @@ useHead({
   ],
 });
 
-const props = defineProps({
+defineProps({
   show: Boolean,
-  proj: Object,
+  project: {
+    type: Object as PropType<Project>,
+    required: false,
+  },
 });
 
 const emit = defineEmits(["clear"]);

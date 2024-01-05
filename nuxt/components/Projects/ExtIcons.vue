@@ -2,8 +2,8 @@
   <div class="flex pb-1.5">
     <NuxtLink
       class="transition ease-in-out duration-300 hover:text-secondary -mb-1 -mt-[1px]"
-      :to="project.media.youtube"
-      v-if="project.media.youtube"
+      :to="project?.media?.youtube"
+      v-if="project?.media?.youtube"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,8 +19,8 @@
     </NuxtLink>
     <NuxtLink
       class="transition ease-in-out duration-300 hover:text-secondary"
-      :to="project.media.github"
-      v-if="project.media.github"
+      :to="project?.media?.github"
+      v-if="project?.media?.github"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +41,8 @@
     </NuxtLink>
     <NuxtLink
       class="transition ease-in-out duration-300 hover:text-secondary"
-      :to="project.media.external"
-      v-if="project.media.external"
+      :to="project?.media?.external"
+      v-if="project?.media?.external"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -66,8 +66,15 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  project: Object,
+<script setup lang="ts">
+import { z } from "zod";
+import { Project } from "~/summarize/models/Project";
+type Project = z.infer<typeof Project>;
+
+defineProps({
+  project: {
+    type: Object as PropType<Project>,
+    required: true,
+  },
 });
 </script>

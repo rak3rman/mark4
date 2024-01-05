@@ -3,7 +3,7 @@
     <!--    Quickview     -->
     <ProjectsQuickview
       :show="quick_show"
-      :proj="quick_proj"
+      :project="quick_project"
       @clear="quick_show = false"
     />
 
@@ -44,8 +44,8 @@
     <ProjectsGrid
       v-if="grid"
       @quick="
-        (proj) => {
-          quick_proj = proj;
+        (project) => {
+          quick_project = project;
           quick_show = true;
         }
       "
@@ -53,8 +53,8 @@
     <ProjectsList
       v-else
       @quick="
-        (proj) => {
-          quick_proj = proj;
+        (project) => {
+          quick_project = project;
           quick_show = true;
         }
       "
@@ -67,6 +67,6 @@ import { Squares2X2Icon, Bars4Icon } from "@heroicons/vue/20/solid";
 
 const grid = ref(true);
 
-const quick_proj = ref(null);
+const quick_project = ref(null);
 const quick_show = ref(false);
 </script>

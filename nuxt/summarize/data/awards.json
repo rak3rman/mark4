@@ -5,7 +5,8 @@
     "location": "Evanston, IL",
     "dates": [
       {
-        "start": "2023-04"
+        "start": "2023-04",
+        "end": "2023-04"
       }
     ],
     "description": "Awarded to the team with the most advanced/creative use of technology at the Wildhacks hackathon, 45+ teams at large",
@@ -21,13 +22,16 @@
     "location": "Rockford, IL",
     "dates": [
       {
-        "start": "2020-08"
+        "start": "2020-08",
+        "end": "2020-08"
       },
       {
-        "start": "2021-08"
+        "start": "2021-08",
+        "end": "2021-08"
       },
       {
-        "start": "2022-08"
+        "start": "2022-08",
+        "end": "2022-08"
       }
     ],
     "description": "Awarded to exceptional members of the Church who volunteer and support the Rockford community regularly"
@@ -38,7 +42,8 @@
     "location": "Chicago, IL",
     "dates": [
       {
-        "start": "2021-08"
+        "start": "2021-08",
+        "end": "2021-08"
       }
     ],
     "description": "Awarded to students who have demonstrated computer science academic excellence at the University of Illinois Chicago"
@@ -49,10 +54,12 @@
     "location": "Chicago, IL",
     "dates": [
       {
-        "start": "2021-08"
+        "start": "2021-08",
+        "end": "2021-08"
       },
       {
-        "start": "2022-08"
+        "start": "2022-08",
+        "end": "2022-08"
       }
     ],
     "description": "Awarded to students who have demonstrated multi-disciplinary academic excellence at the University of Illinois Chicago"
@@ -63,7 +70,8 @@
     "location": "Chicago, IL",
     "dates": [
       {
-        "start": "2023-08"
+        "start": "2023-08",
+        "end": "2023-08"
       }
     ],
     "description": "Awarded to students who have demonstrated multi-disciplinary academic excellence at the University of Illinois Chicago"
@@ -74,7 +82,8 @@
     "location": "Rockford, IL",
     "dates": [
       {
-        "start": "2020-05"
+        "start": "2020-05",
+        "end": "2020-05"
       }
     ],
     "description": "Awarded to students who earn scores of 3 or higher on AP Seminar, AP Research, and 4 additional AP Exams of their choosing"
@@ -85,7 +94,8 @@
     "location": "Rockford, IL",
     "dates": [
       {
-        "start": "2020-05"
+        "start": "2020-05",
+        "end": "2020-05"
       }
     ],
     "description": "Awarded to students who receive scores of 3 or higher on 3 or more AP Exams"
@@ -96,7 +106,8 @@
     "location": "Peoria, IL",
     "dates": [
       {
-        "start": "2016-05"
+        "start": "2016-05",
+        "end": "2016-05"
       }
     ],
     "description": "A member of the 2016 state-winning chess team as board 6 of 8, 45+ teams at large"

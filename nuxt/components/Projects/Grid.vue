@@ -6,7 +6,7 @@
       class="mt-4 grid grid-cols-1 lg:grid-cols-3 -m-3 list-none p-0"
     >
       <li
-        v-for="(project, index) in projects.slice(0, limit)"
+        v-for="project in ProjectsFiltered.slice(0, limit)"
         class="col-span-1 flex flex-col space-y-8 pb-0 fade-in"
       >
         <!--    Card     -->
@@ -14,41 +14,36 @@
           class="flex-1 flex flex-col rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3"
           @click="emit('quick', project)"
         >
-          <div class="flex items-center mb-4 flow-root">
-            <RectangleGroupIcon
-              class="h-12 w-12 text-secondary float-left"
-              aria-hidden="true"
-              v-if="project.type === 'website'"
-            />
+          <div class="flow-root items-center mb-4">
             <ComputerDesktopIcon
               class="h-12 w-12 text-secondary float-left"
               aria-hidden="true"
-              v-else-if="project.type === 'application'"
+              v-if="project.type === 'application'"
             />
             <PuzzlePieceIcon
               class="h-12 w-12 text-secondary float-left"
               aria-hidden="true"
               v-else-if="project.type === 'microservice'"
             />
-            <TagIcon
-              class="h-12 w-12 text-secondary float-left"
-              aria-hidden="true"
-              v-else-if="project.type === 'package'"
-            />
             <CpuChipIcon
               class="h-12 w-12 text-secondary float-left"
               aria-hidden="true"
               v-else-if="project.type === 'electronics'"
+            />
+            <TagIcon
+              class="h-12 w-12 text-secondary float-left"
+              aria-hidden="true"
+              v-else-if="project.type === 'package'"
             />
             <WrenchIcon
               class="h-12 w-12 text-secondary float-left"
               aria-hidden="true"
               v-else-if="project.type === 'utility'"
             />
-            <FolderIcon
+            <RectangleGroupIcon
               class="h-12 w-12 text-secondary float-left"
               aria-hidden="true"
-              v-else
+              v-else-if="project.type === 'website'"
             />
             <div class="float-right flex">
               <ProjectsExtIcons :project="project" />
@@ -65,7 +60,10 @@
                 {{ project.tag }}
               </span>
             </div>
-            <div class="ml-1.5 inline-flex" v-if="project.is_archived">
+            <div
+              class="ml-1.5 inline-flex"
+              v-if="project.dates[project.dates.length - 1].end === undefined"
+            >
               <span
                 class="inline-flex items-center rounded-full border border-accent-focus px-[7px] h-[20px] text-[0.7rem] font-medium text-accent-focus"
               >
@@ -86,17 +84,16 @@
         </div>
       </li>
     </ul>
-    <div class="pt-10 pb-4 fade-in" v-if="projects.length > starting">
+    <div class="pt-10 pb-4 fade-in" v-if="ProjectsFiltered.length > starting">
       <div class="flex flex-col sm:flex-row justify-center">
         <a
           @click="limit += increment"
-          v-if="limit < projects.length"
+          v-if="limit < ProjectsFiltered.length"
           class="text-center px-4 py-2 m-1 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"
         >
           Show
-          {{ Math.min(increment, projects.length - limit) }} more project{{
-            projects.length > starting + 1 ? "s" : ""
-          }}
+          {{ Math.min(increment, ProjectsFiltered.length - limit) }} more
+          project{{ ProjectsFiltered.length > starting + 1 ? "s" : "" }}
         </a>
         <a
           @click="limit -= increment"
@@ -104,17 +101,16 @@
           class="text-center px-4 py-2 m-1 border border-secondary text-base leading-normal font-mono rounded-md text-secondary hover:bg-primary-focus"
         >
           Hide
-          {{ Math.min(increment, projects.length - limit + increment) }}
-          project{{ projects.length > starting + 1 ? "s" : "" }}
+          {{ Math.min(increment, ProjectsFiltered.length - limit + increment) }}
+          project{{ ProjectsFiltered.length > starting + 1 ? "s" : "" }}
         </a>
       </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {
-  FolderIcon,
   CpuChipIcon,
   ComputerDesktopIcon,
   RectangleGroupIcon,
@@ -122,19 +118,24 @@ import {
   WrenchIcon,
   TagIcon,
 } from "@heroicons/vue/24/outline";
-import raw from "~/summarize/data/projects.json";
+import { z } from "zod";
+import { sortEventDates } from "~/utils/sortEventDates";
+import { Project } from "~/summarize/models/Project";
+import ProjectsJSON from "~/summarize/data/projects.json";
+
+type Project = z.infer<typeof Project>;
+
+const ProjectsParsed: Project[] = ProjectsJSON.map((obj: any) =>
+  Project.readonly().parse(obj)
+).sort(sortEventDates);
+
+const ProjectsFiltered: Project[] = ProjectsParsed.filter(
+  (e: Project) => !e.is_featured
+);
 
 const emit = defineEmits(["quick"]);
 
 const starting = 9;
 const increment = 6;
 const limit = ref(starting);
-
-const projects = computed(() => {
-  return raw
-    .filter((ele) => !ele.is_featured)
-    .sort((a, b) => {
-      return Date.parse(b.start) - Date.parse(a.start);
-    });
-});
 </script>
