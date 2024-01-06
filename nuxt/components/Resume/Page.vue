@@ -12,7 +12,13 @@
           class="opacity-50"
           to="https://github.com/rak3rman/mark4/commits/master/"
         >
-          {{ formatDateRange(DateTime.now().toISODate(), undefined, false) }}
+          {{
+            formatDateRange(
+              DateTime.now().toISODate(),
+              DateTime.now().toISODate(),
+              false
+            )
+          }}
           &nbsp#{{ config.public.gitMasterTag }}
         </NuxtLink>
       </div>
@@ -25,7 +31,7 @@ import { DateTime } from "luxon";
 
 const config = useRuntimeConfig();
 
-let props = defineProps({
+defineProps({
   page: Number,
   total: Number,
 });

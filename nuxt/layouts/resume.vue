@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Html data-theme="resume" />
+    <Html data-theme="summarize" />
     <ResumePage>
       <ResumeTitle> {{ ConfigParsed.name }} </ResumeTitle>
       <ResumeSubtitle>
@@ -80,4 +80,6 @@ const SkillSetsParsed: SkillSet[] = SkillSetsJSON.map((obj: any) =>
   SkillSet.readonly().parse(obj)
 );
 const ConfigParsed: Config = Config.readonly().parse(ConfigJSON);
+
+const route = useRoute();
 </script>

@@ -30,7 +30,7 @@ module.exports = {
           success: "#059669",
           "base-100": "#28292A",
         },
-        resume: {
+        summarize: {
           primary: "#212121", // Primary theme color (logo, buttons)
           secondary: "#586CB2", // Secondary theme color (alt icons)
           accent: "#5E5E5E",

@@ -7,18 +7,16 @@
           <HomeHero
             class="relative container overflow-hidden max-w-7xl mx-auto px-4 sm:px-6"
           />
-          <div
-            class="container mx-auto items-center max-w-7xl mx-auto px-4 sm:px-6 snap-none"
-          >
-            <HomeAbout />
-            <!--            <HomeExperience />-->
-            <HomeProjects />
-          </div>
-
+          <HomeAbout
+            class="container mx-auto items-center max-w-7xl px-4 sm:px-6 snap-none"
+          />
+          <HomeExperience />
+          <HomeProjects
+            class="container mx-auto items-center max-w-7xl px-4 sm:px-6 snap-none"
+          />
           <HomePhotography />
-
           <div
-            class="container mx-auto items-center max-w-7xl mx-auto px-4 sm:px-6 snap-none"
+            class="container mx-auto items-center max-w-7xl px-4 sm:px-6 snap-none"
           >
             <HomeContact />
             <Footer />
@@ -28,3 +26,4 @@
     </div>
   </FadeInWrapper>
 </template>
+<script setup lang="ts"></script>

@@ -1,83 +1,143 @@
 <template>
-  <div>
+  <div class="container mx-auto items-center max-w-7xl px-4 sm:px-6 snap-none">
     <!--  Tabs  -->
     <Header num="02." title="Experience" id="experience" fade />
-    <div class="mt-4 w-full pb-1">
-      <div class="sm:hidden fade-in">
-        <label for="tabs" class="sr-only">Select a tab</label>
-        <select
-          id="tabs"
-          v-model="selectedExpTab"
-          name="tabs"
-          class="block w-full bg-primary focus:ring-secondary focus:border-secondary border-neutral text-neutral rounded-md"
-        >
-          <option
-            v-for="tab in expTabs"
-            :value="tab.id"
-            :selected="tab.id === selectedExpTab"
-            @select="updateExpTab(tab.id)"
-          >
-            {{ tab.name }}
-          </option>
-        </select>
-      </div>
-      <div class="hidden sm:block sm:mt-4 sm:mb-3">
-        <div
-          class="grid grid-cols-3 gap-x-8"
-          role="tablist"
-          aria-orientation="horizontal"
-        >
-          <NuxtLink
-            class="relative transition ease-in-out duration-300 fade-in"
-            v-for="tab in expTabs"
-            :key="tab.id"
-            @click="updateExpTab(tab.id)"
-            :class="[
-              tab.id === selectedExpTab ? '' : 'opacity-75 hover:opacity-100',
-            ]"
-            to="#experience"
-          >
+    <div class="mt-4">
+      <div class="relative lg:float-right lg:pl-5 lg:pb-5 lg:pt-1">
+        <div class="relative text-base mx-auto max-w-prose lg:max-w-md">
+          <figure class="lg:w-[28rem] lg:h-[40rem]">
             <div
-              class="w-9 rounded-lg transition ease-in-out duration-300"
-              :class="[
-                tab.id === selectedExpTab ? 'bg-secondary' : 'bg-primary-focus',
-              ]"
+              class="-m-2 rounded-xl bg-neutral/5 p-2 ring-1 ring-inset ring-neutral/10 lg:-m-4 lg:rounded-2xl lg:p-4"
             >
-              <svg
-                aria-hidden="true"
-                class="h-9 w-9 p-2"
-                fill="#fff"
-                :viewBox="tab.viewbox"
-                v-html="tab.icon"
-              ></svg>
+              <img
+                src="/radison-akerman-resume.pdf"
+                alt="App screenshot"
+                class="rounded-md bg-white shadow-2xl ring-1 ring-accent/10"
+              />
             </div>
-            <h6
-              class="mt-6 text-md font-medium font-mono transition ease-in-out duration-300"
-              :class="[
-                tab.id === selectedExpTab ? 'text-secondary' : 'text-neutral',
-              ]"
-            >
-              <button>
-                <span class="absolute inset-0"></span>
-                {{ tab.name }}
-              </button>
-            </h6>
-            <h6 class="mt-2 font-display text-md text-accent">
-              {{ tab.desc }}
-            </h6>
-          </NuxtLink>
+          </figure>
         </div>
       </div>
-    </div>
+      <div class="mt-8 lg:mt-0">
+        <div
+          class="text-neutral mx-auto lg:max-w-full lg:row-start-1 lg:col-start-1"
+        >
+          <!--  Entries  -->
+          <div class="pt-6 pb-2 fade-in">
+            <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
+              Where I've Worked
+            </h6>
+            <h6 class="pt-1 text-md text-secondary font-mono text-left">
+              Lasting impacts. Pushing things further.
+            </h6>
+          </div>
 
-    <!--  Entries  -->
-    <div class="pt-6 pb-2 fade-in">
-      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">
-        Where I've Worked
-      </h6>
-      <h6 class="pt-1 text-md text-secondary font-mono text-left">
-        Lasting impacts. Pushing things further.
-      </h6>
+          <div class="mt-4 w-full pb-1">
+            <div class="mt-4 mb-3">
+              <div class="">
+                <NuxtLink
+                  class="relative transition ease-in-out duration-300 fade-in"
+                  v-for="tab in expTabs"
+                  :key="tab.id"
+                  @click="updateExpTab(tab.id)"
+                  :class="[
+                    tab.id === selectedExpTab
+                      ? ''
+                      : 'opacity-75 hover:opacity-100',
+                  ]"
+                >
+                  <dt
+                    class="w-9 rounded-lg transition ease-in-out duration-300"
+                    :class="[
+                      tab.id === selectedExpTab
+                        ? 'bg-secondary'
+                        : 'bg-primary-focus',
+                    ]"
+                  >
+                    <div class="absolute left-0 top-0 flex">
+                      <svg
+                        aria-hidden="true"
+                        class="rounded-lg transition ease-in-out duration-300 h-9 w-9 p-2"
+                        fill="#fff"
+                        :viewBox="tab.viewbox"
+                        v-html="tab.icon"
+                        :class="[
+                          tab.id === selectedExpTab
+                            ? 'bg-secondary'
+                            : 'bg-primary-focus',
+                        ]"
+                      ></svg>
+                    </div>
+                  </dt>
+                  <dd
+                    class="pl-16 mt-5 text-md font-medium font-mono transition ease-in-out duration-300"
+                    :class="[
+                      tab.id === selectedExpTab
+                        ? 'text-secondary'
+                        : 'text-neutral',
+                    ]"
+                  >
+                    <button>
+                      <span class="absolute inset-0"></span>
+                      {{ tab.name }}
+                    </button>
+                  </dd>
+                  <dd class="pl-16 mt-0.5 font-display text-md text-accent">
+                    {{ tab.desc }}
+                  </dd>
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+
+          <NuxtLink
+            to="/radison-akerman-resume.pdf"
+            target="_blank"
+            class="inline-flex items-center mt-4"
+          >
+            <div class="p-[1px] bg-secondary rounded-md">
+              <div
+                class="bg-primary hover:bg-primary-focus px-4 py-2 rounded-md"
+              >
+                <div
+                  class="text-base font-mono leading-normal text-transparent bg-clip-text bg-secondary"
+                >
+                  Resume
+                </div>
+              </div>
+            </div>
+          </NuxtLink>
+          <NuxtLink
+            to="/radison-akerman-cv.pdf"
+            target="_blank"
+            class="inline-flex items-center pl-4"
+          >
+            <div class="p-[1px] bg-secondary rounded-md">
+              <div
+                class="bg-primary hover:bg-primary-focus px-4 py-2 rounded-md"
+              >
+                <div
+                  class="text-base font-mono leading-normal text-transparent bg-clip-text bg-secondary"
+                >
+                  Cirriculum Vitae
+                </div>
+              </div>
+            </div>
+          </NuxtLink>
+
+          <!--  Logo Cloud  -->
+          <div
+            class="mt-10 grid grid-cols-2 items-center gap-y-12 sm:gap-y-8 lg:mx-0 lg:max-w-none"
+          >
+            <img
+              v-for="url in ExperienceLogoWhiteSet"
+              class="max-h-12 w-full object-contain object-left"
+              :src="url"
+              alt="Experience Logo White"
+            />
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--  Testimonials  -->
@@ -116,7 +176,28 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { z } from "zod";
+import { sortEventDates } from "~/utils/sortEventDates";
+import { Experience } from "~/summarize/models/Experience";
+import ExperiencesJSON from "~/summarize/data/experiences.json";
+import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters";
+
+type Experience = z.infer<typeof Experience>;
+
+const ExperiencesParsed: Experience[] = ExperiencesJSON.map((obj: any) =>
+  Experience.readonly().parse(obj)
+).sort(sortEventDates);
+
+const ExperienceLogoWhiteSet: Set<string | undefined> = new Set(
+  ExperiencesParsed.filter(
+    (e: Experience) =>
+      defaultExperienceFilters(e) &&
+      e.discipline === "professional" &&
+      e?.media?.logo_white !== undefined
+  ).map((e: Experience) => e?.media?.logo_white)
+);
+
 const testimonials = [
   [
     {
@@ -139,10 +220,7 @@ const testimonials = [
 ];
 </script>
 
-<script>
-import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters";
-import ExperiencesJSON from "~/summarize/data/experiences.json";
-
+<script lang="ts">
 let limit_exp = true;
 const selected_exp_tab = "cs";
 const exp_tabs = [
@@ -183,10 +261,10 @@ export default {
     },
   },
   methods: {
-    updateExpTab: function (val) {
+    updateExpTab: function (val: any) {
       this.selectedExpTab = val;
     },
-    updateExpLimit: function (val) {
+    updateExpLimit: function (val: any) {
       this.limitExp = val;
     },
   },

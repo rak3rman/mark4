@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Html data-theme="resume" />
+    <Html data-theme="summarize" />
 
     <ResumePage :page="1" :total="total_pages">
       <ResumeTitle> {{ ConfigParsed.name }} </ResumeTitle>
@@ -127,6 +127,8 @@ const SkillSetsParsed: SkillSet[] = SkillSetsJSON.map((obj: any) =>
   SkillSet.readonly().parse(obj)
 );
 const ConfigParsed: Config = Config.readonly().parse(ConfigJSON);
+
+const route = useRoute();
 
 const total_pages = 3;
 </script>
