@@ -1,3 +1,3 @@
-import { z } from "zod";
+import {z} from "zod";
 
-export const Label = z.enum(["networking", "fullstack"]);
+export const Label = z.enum(["networking", "fullstack", "teaching"]);

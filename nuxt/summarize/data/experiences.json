@@ -25,7 +25,7 @@
     "media": {
       "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/c9056405-978b-4c97-1ed1-90c13f966700/sm"
     },
-    "on_resume": false
+    "on_resume": true
   },
   {
     "title": "Mentor",
@@ -189,7 +189,7 @@
     "media": {
       "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/8335dd31-40d0-4178-8a47-4be36065f400/sm"
     },
-    "on_resume": true
+    "on_resume": false
   },
   {
     "title": "Software Engineering Intern",
