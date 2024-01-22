@@ -4,9 +4,9 @@
 	"scripts": {
 		"build": "nuxt build",
 		"dev": "nuxt dev",
-		"pdfgen": "cd summarize && npm i && npm run generate && cd ..",
 		"wrdev": "NITRO_PRESET=cloudflare npm run build && wrangler dev",
-		"wrpub": "NITRO_PRESET=cloudflare npm run build && wrangler deploy"
+		"wrstage": "NITRO_PRESET=cloudflare npm run build && wrangler deploy --env staging",
+		"wrprod": "NITRO_PRESET=cloudflare npm run build && wrangler deploy --env production"
 	},
 	"dependencies": {
 		"@formkit/auto-animate": "^1.0.0-beta.6",

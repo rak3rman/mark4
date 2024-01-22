@@ -127,7 +127,7 @@
 
                     <!--  Logo Cloud  -->
                     <div
-                        class="mt-10 grid grid-cols-2 items-center gap-y-12 sm:gap-y-7 lg:mx-0 lg:max-w-none"
+                        class="mt-10 grid grid-cols-2 items-center gap-y-12 gap-x-3 sm:gap-y-7 lg:max-w-none"
                     >
                         <img
                             v-for="url in ExperienceLogoWhiteSet"
