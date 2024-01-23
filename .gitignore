@@ -9,3 +9,5 @@ nuxt/public/radison-akerman-resume.pdf
 nuxt/public/radison-akerman-cv.pdf
 
 nuxt/summarize/node_modules
+
+.DS_Store

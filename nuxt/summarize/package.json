@@ -5,6 +5,7 @@
     "validate": "ts-node validate.ts"
   },
   "dependencies": {
+    "pdf2pic": "^3.1.1",
     "puppeteer": "^21.6.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",

@@ -1,37 +1,39 @@
 <template>
   <div>
-    <Html data-theme="summarize" />
-    <ResumePage>
-      <ResumeTitle> {{ ConfigParsed.name }} </ResumeTitle>
+    <!--<Html data-theme="summarize" />-->
+    <ResumePage data-theme="summarize">
+      <ResumeTitle> {{ ConfigParsed.name }}</ResumeTitle>
       <ResumeSubtitle>
         {{ ConfigParsed.email + (ConfigParsed.email ? "&ensp;" : "") }}
         {{ ConfigParsed.website + (ConfigParsed.website ? "&ensp;" : "") }}
         {{ ConfigParsed.linkedin + (ConfigParsed.linkedin ? "&ensp;" : "") }}
       </ResumeSubtitle>
 
-      <ResumeHeading> Experience </ResumeHeading>
+      <ResumeHeading> Experience</ResumeHeading>
       <ResumeExperience
         v-for="obj in ExperiencesParsed.filter(
-                (e: Experience) => defaultExperienceFilters(e) && e.on_resume
-              )"
+          (e: Experience) => defaultExperienceFilters(e) && e.on_resume,
+        )"
         :experience="obj"
       />
 
-      <ResumeHeading> Education </ResumeHeading>
+      <ResumeHeading> Education</ResumeHeading>
       <ResumeEducation
         v-for="obj in EducationParsed.filter((e) => e.on_resume)"
         :education="obj"
       />
 
-      <ResumeHeading> Skills </ResumeHeading>
+      <ResumeHeading> Skills</ResumeHeading>
       <ResumeSkillSet v-for="obj in SkillSetsParsed" :skillset="obj" />
 
-      <ResumeHeading> Projects </ResumeHeading>
+      <ResumeHeading> Projects</ResumeHeading>
       <ResumeProject
-        v-for="obj in ProjectsParsed.filter((e: Project) => e.on_resume && e.bullets && e.bullets.length > 0)"
+        v-for="obj in ProjectsParsed.filter(
+          (e: Project) => e.on_resume && e.bullets && e.bullets.length > 0,
+        )"
         :project="obj"
       />
-      <div class="text-xs font-light italic mt-2">
+      <div class="mt-2 text-xs font-light italic">
         See all 20+ projects at
         <a class="font-medium" href="https://rakerman.com#projects"
           >rakerman.com#projects</a
@@ -68,16 +70,16 @@ import SkillSetsJSON from "~/summarize/data/skillsets.json";
 import ConfigJSON from "~/summarize/data/config.json";
 
 const EducationParsed: Education[] = EducationJSON.map((obj: any) =>
-  Education.readonly().parse(obj)
+  Education.readonly().parse(obj),
 ).sort(sortEventDates);
 const ExperiencesParsed: Experience[] = ExperiencesJSON.map((obj: any) =>
-  Experience.readonly().parse(obj)
+  Experience.readonly().parse(obj),
 ).sort(sortEventDates);
 const ProjectsParsed: Project[] = ProjectsJSON.map((obj: any) =>
-  Project.readonly().parse(obj)
+  Project.readonly().parse(obj),
 );
 const SkillSetsParsed: SkillSet[] = SkillSetsJSON.map((obj: any) =>
-  SkillSet.readonly().parse(obj)
+  SkillSet.readonly().parse(obj),
 );
 const ConfigParsed: Config = Config.readonly().parse(ConfigJSON);
 

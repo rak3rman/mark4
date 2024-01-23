@@ -12,12 +12,12 @@
     <ProjectsFeatured fade />
 
     <!--  Noteworthy Projects  -->
-    <div class="flex items-center justify-between pt-12 pb-4 fade-in">
+    <div class="fade-in flex items-center justify-between pb-4 pt-12">
       <div>
-        <div class="text-3xl text-neutral font-bold leading-tight text-left">
+        <div class="text-left text-3xl leading-tight text-neutral">
           Other Neat Stuff
         </div>
-        <div class="pt-1 text-md text-secondary font-mono text-left">
+        <div class="text-md pt-1 text-left font-mono text-secondary">
           Mighty projects. Huge breadth. <br />
           May blow your socks off.
         </div>
@@ -25,14 +25,14 @@
       <div class="flex space-x-3 pr-2">
         <a>
           <Squares2X2Icon
-            class="h-6 w-6 transition ease-in-out duration-300 hover:text-secondary"
+            class="h-6 w-6 transition duration-300 ease-in-out hover:text-secondary"
             :class="{ 'text-secondary': grid }"
             @click="grid = true"
           />
         </a>
         <a>
           <Bars4Icon
-            class="h-6 w-6 transition ease-in-out duration-300 hover:text-secondary"
+            class="h-6 w-6 transition duration-300 ease-in-out hover:text-secondary"
             :class="{ 'text-secondary': !grid }"
             @click="grid = false"
           />
