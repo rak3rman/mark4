@@ -9,7 +9,7 @@
       </div>
 
       <div class="pb-16">
-        <Navbar />
+        <DocsNavbar />
         <main
           class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
         >
