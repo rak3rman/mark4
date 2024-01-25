@@ -1,17 +1,17 @@
 <template>
   <div>
-    <ResumeHeader>
+    <SummarizeHeader>
       {{ award.title }}
       <span class="text-accent">@ {{ award.organization }}</span>
-    </ResumeHeader>
-    <ResumeSubheader>
+    </SummarizeHeader>
+    <SummarizeSubheader>
       {{ formatEventDates(award.dates, false) }}
       //
       {{ award.location }}
-    </ResumeSubheader>
-    <ResumeText v-if="award.description">
+    </SummarizeSubheader>
+    <SummarizeText v-if="award.description">
       {{ award.description }}
-    </ResumeText>
+    </SummarizeText>
   </div>
 </template>
 
@@ -19,6 +19,7 @@
 import { z } from "zod";
 import { formatEventDates } from "~/utils/formatEventDates";
 import { Award } from "~/summarize/models/Award";
+
 type Award = z.infer<typeof Award>;
 
 defineProps({

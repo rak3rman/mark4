@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Header num="05." title="Get In Touch" id="contact" fade />
-    <div class="mt-8 lg:grid lg:grid-cols-5 lg:gap-8 w-full">
+    <Header num="04." title="Get In Touch" id="contact" fade />
+    <div class="mt-8 w-full lg:grid lg:grid-cols-5 lg:gap-8">
       <div
-        class="flex justify-center lg:row-start-1 lg:col-start-1 lg:col-span-2"
+        class="flex justify-center lg:col-span-2 lg:col-start-1 lg:row-start-1"
       >
         <div
-          class="text-[0.9rem] text-accent font-mono text-left mb-10 mt-0 lg:mt-4 fade-in"
+          class="fade-in mb-10 mt-0 text-left font-mono text-[0.9rem] text-accent lg:mt-4"
         >
           <h6 class="pb-4">
             <strong>What's next? Well, that is up to you.</strong> Here's a few
@@ -22,11 +22,12 @@
             <i
               >Take a gander at
               <NuxtLink
-                class="text-secondary underline underline-offset-2"
+                class="inline-block text-secondary underline underline-offset-2"
                 to="/radison-akerman-resume.pdf"
                 target="_blank"
-                >my resume</NuxtLink
-              >, if you think we'd be a match (yay!) fill out the good ole'
+                >my resume
+              </NuxtLink>
+              , if you think we'd be a match (yay!) fill out the good ole'
               contact form.</i
             >
           </h6>
@@ -40,15 +41,17 @@
             <i
               >Check out
               <NuxtLink
-                class="text-secondary underline underline-offset-2"
+                class="inline-block text-secondary underline underline-offset-2"
                 to="https://pulqra.com"
-                >Pulqra</NuxtLink
-              >, we'd be thrilled to collab with you over our
+                >Pulqra
+              </NuxtLink>
+              , we'd be thrilled to collab with you over our
               <NuxtLink
-                class="text-secondary underline underline-offset-2"
+                class="inline-block text-secondary underline underline-offset-2"
                 to="https://pulqra.com/dir/product"
-                >catalogue of services</NuxtLink
-              >.</i
+                >catalogue of services
+              </NuxtLink>
+              .</i
             >
           </h6>
           <h6 class="pb-4">
@@ -71,11 +74,11 @@
           </h6>
         </div>
       </div>
-      <div class="lg:col-span-3 flex items-center">
+      <div class="flex items-center lg:col-span-3">
         <form
           action="https://informr.rakerman.com/in/q5y6j3N2"
           method="POST"
-          class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8 w-full fade-in"
+          class="fade-in grid w-full grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
         >
           <div class="">
             <label
@@ -90,7 +93,7 @@
                 id="first-name"
                 autocomplete="given-name"
                 required
-                class="py-2.5 px-3 block w-full shadow-md bg-primary text-neutral focus:ring-secondary focus:border-secondary border-accent rounded-md"
+                class="block w-full rounded-md border-accent bg-primary px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
               />
             </div>
           </div>
@@ -105,7 +108,7 @@
                 id="last-name"
                 autocomplete="family-name"
                 required
-                class="py-2.5 px-3 block w-full shadow-md bg-primary text-neutral focus:ring-secondary focus:border-secondary border-accent rounded-md"
+                class="block w-full rounded-md border-accent bg-primary px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
               />
             </div>
           </div>
@@ -120,7 +123,7 @@
                 type="email"
                 autocomplete="email"
                 required
-                class="py-2.5 px-3 block w-full shadow-md bg-primary text-neutral focus:ring-secondary focus:border-secondary border-accent rounded-md"
+                class="block w-full rounded-md border-accent bg-primary px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
               />
             </div>
           </div>
@@ -130,13 +133,13 @@
               class="block text-sm font-medium text-accent"
               >Phone Number</label
             >
-            <div class="mt-1 relative rounded-md shadow-sm">
+            <div class="relative mt-1 rounded-md shadow-sm">
               <div class="absolute inset-y-0 left-0 flex items-center">
                 <label for="country" class="sr-only">Country</label>
                 <select
                   id="country"
                   name="country"
-                  class="h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-neutral focus:ring-secondary focus:border-secondary rounded-md"
+                  class="h-full rounded-md border-transparent bg-transparent py-0 pl-4 pr-8 text-neutral focus:border-secondary focus:ring-secondary"
                 >
                   <option>US</option>
                   <option>CA</option>
@@ -149,7 +152,7 @@
                 id="phone-number"
                 autocomplete="tel"
                 required
-                class="py-3 px-4 block w-full pl-20 shadow-md bg-primary text-neutral focus:ring-secondary focus:border-secondary border-accent rounded-md"
+                class="block w-full rounded-md border-accent bg-primary px-4 py-3 pl-20 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
                 placeholder="(815) 123-4567"
               />
             </div>
@@ -164,20 +167,20 @@
                 name="message"
                 rows="4"
                 required
-                class="py-2.5 px-3 block w-full shadow-md bg-primary text-neutral focus:ring-secondary focus:border-secondary border-accent rounded-md"
+                class="block w-full rounded-md border-accent bg-primary px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
               />
             </div>
           </div>
           <div class="sm:col-span-2">
             <button
               type="submit"
-              class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-md font-medium text-accent bg-primary-focus hover:bg-secondary hover:text-neutral focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary transition ease-in-out duration-300"
+              class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary-focus px-6 py-3 font-medium text-accent shadow-md transition duration-300 ease-in-out hover:bg-secondary hover:text-neutral focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
             >
               Let's talk
             </button>
             <NuxtLink
               to="https://informr.rakerman.com"
-              class="flex text-xs text-accent hover:text-secondary transition ease-in-out duration-300 items-center p-2 float-right"
+              class="float-right flex items-center p-2 text-xs text-accent transition duration-300 ease-in-out hover:text-secondary"
             >
               <SparklesIcon class="h-4 w-4 pr-1" />
               Powered by Informr

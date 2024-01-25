@@ -1,14 +1,14 @@
 <template>
   <div>
-    <ResumeHeader>
+    <SummarizeHeader>
       {{ education.organization }}
-    </ResumeHeader>
-    <ResumeSubheader>
+    </SummarizeHeader>
+    <SummarizeSubheader>
       {{ formatEventDates(education.dates, true) }} // {{ education.location }}
-    </ResumeSubheader>
-    <ResumeText>
+    </SummarizeSubheader>
+    <SummarizeText>
       {{ education.description }}
-    </ResumeText>
+    </SummarizeText>
   </div>
 </template>
 
@@ -16,6 +16,7 @@
 import { z } from "zod";
 import { formatEventDates } from "~/utils/formatEventDates";
 import { Education } from "~/summarize/models/Education";
+
 type Education = z.infer<typeof Education>;
 
 defineProps({

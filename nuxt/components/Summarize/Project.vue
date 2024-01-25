@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <ResumeHeader>
+    <SummarizeHeader>
       {{ project.title }}
       <a
         class="text-accent"
@@ -8,8 +8,8 @@
         :href="project.media.external"
         >@ {{ project.media.external.replace(/(^\w+:|^)\/\//, "") }}</a
       >
-    </ResumeHeader>
-    <ResumeSubheader v-if="showSubheader">
+    </SummarizeHeader>
+    <SummarizeSubheader v-if="showSubheader">
       {{ formatEventDates(project.dates, false) }}
       <a
         class="text-accent"
@@ -17,8 +17,8 @@
         :href="project.media.external"
         >// {{ project.media.external.replace(/(^\w+:|^)\/\//, "") }}</a
       >
-    </ResumeSubheader>
-    <ResumeBullets :bullets="project.bullets" />
+    </SummarizeSubheader>
+    <SummarizeBullets :bullets="project.bullets" />
   </div>
 </template>
 
@@ -26,6 +26,7 @@
 import { z } from "zod";
 import { formatEventDates } from "~/utils/formatEventDates";
 import { Project } from "~/summarize/models/Project";
+
 type Project = z.infer<typeof Project>;
 
 defineProps({

@@ -1,7 +1,7 @@
 <template>
   <div class="flex pb-1.5">
     <NuxtLink
-      class="transition ease-in-out duration-300 hover:text-secondary -mb-1 -mt-[1px]"
+      class="-mb-1 -mt-[1px] transition duration-300 ease-in-out hover:text-secondary"
       :to="project?.media?.youtube"
       v-if="project?.media?.youtube"
     >
@@ -9,7 +9,7 @@
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 576 512"
         fill="currentColor"
-        class="h-7 w-7 -mb-2 mr-2.5"
+        class="-mb-2 mr-2.5 h-7 w-7"
       >
         <title>YouTube</title>
         <path
@@ -18,7 +18,7 @@
       </svg>
     </NuxtLink>
     <NuxtLink
-      class="transition ease-in-out duration-300 hover:text-secondary"
+      class="transition duration-300 ease-in-out hover:text-secondary"
       :to="project?.media?.github"
       v-if="project?.media?.github"
     >
@@ -31,7 +31,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="h-5 w-5 mt-1 -mb-2 mr-2.5"
+        class="-mb-2 mr-2.5 mt-1 h-5 w-5"
       >
         <title>GitHub</title>
         <path
@@ -40,7 +40,7 @@
       </svg>
     </NuxtLink>
     <NuxtLink
-      class="transition ease-in-out duration-300 hover:text-secondary"
+      class="transition duration-300 ease-in-out hover:text-secondary"
       :to="project?.media?.external"
       v-if="project?.media?.external"
     >
@@ -53,7 +53,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="h-6 w-6 -mb-2"
+        class="-mb-2 h-6 w-6"
       >
         <title>External Link</title>
         <path
@@ -69,6 +69,7 @@
 <script setup lang="ts">
 import { z } from "zod";
 import { Project } from "~/summarize/models/Project";
+
 type Project = z.infer<typeof Project>;
 
 defineProps({

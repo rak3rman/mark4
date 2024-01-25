@@ -1,10 +1,10 @@
 <template>
-  <div class="w-[54rem] h-[73.68rem]">
-    <div class="flex flex-col h-full overflow-hidden">
+  <div class="h-[73.68rem] w-[54rem]">
+    <div class="flex h-full flex-col overflow-hidden">
       <div class="grow">
         <slot />
       </div>
-      <div class="text-accent font-normal text-xs">
+      <div class="text-xs font-normal text-accent">
         <span v-if="page && total">
           Radison Akerman, Page {{ page }} of {{ total }}&nbsp
         </span>
@@ -16,7 +16,7 @@
             formatDateRange(
               DateTime.now().toISODate(),
               DateTime.now().toISODate(),
-              false
+              false,
             )
           }}
           &nbsp#{{ config.public.gitMasterTag }}

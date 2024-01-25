@@ -3,7 +3,7 @@ const { gitDescribe, gitDescribeSync } = require("git-describe");
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "@nuxt/image"],
   content: {
     documentDriven: true,
   },

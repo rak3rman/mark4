@@ -1,6 +1,5 @@
 import puppeteer = require("puppeteer");
 import fs = require("fs");
-import { fromBuffer } from "pdf2pic";
 
 async function generatePDF(url: string, path: string, filename: string) {
   const browser = await puppeteer.launch({
@@ -28,13 +27,6 @@ async function generatePDF(url: string, path: string, filename: string) {
   );
 
   await browser.close();
-
-  //  await fromBuffer(pdf, {
-  //    density: 800,
-  //    preserveAspectRatio: true,
-  //    saveFilename: filename,
-  //    savePath: path,
-  //  }).bulk(-1, { responseType: "image" });
 }
 
 generatePDF(

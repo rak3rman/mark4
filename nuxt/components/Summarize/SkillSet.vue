@@ -1,17 +1,18 @@
 <template>
   <div>
-    <ResumeHeader class="flex flex-row items-center -mb-0.5">
+    <SummarizeHeader class="-mb-0.5 flex flex-row items-center">
       {{ skillset.set }}
-      <ResumeText class="pl-1.5">
+      <SummarizeText class="pl-1.5">
         {{ skillset.skills.join(", ") }}
-      </ResumeText>
-    </ResumeHeader>
+      </SummarizeText>
+    </SummarizeHeader>
   </div>
 </template>
 
 <script setup lang="ts">
 import { z } from "zod";
 import { SkillSet } from "~/summarize/models/SkillSet";
+
 type SkillSet = z.infer<typeof SkillSet>;
 
 defineProps({

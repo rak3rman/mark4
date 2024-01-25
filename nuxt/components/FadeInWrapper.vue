@@ -23,7 +23,7 @@ const handleScroll = (evt) => {
 
 const showOnloads = (evt) => {
   let elements = Array.from(
-    document.getElementsByClassName("fade-in-nav")
+    document.getElementsByClassName("fade-in-nav"),
   ).concat(Array.from(document.getElementsByClassName("fade-in-hero")));
   for (let i = 0; i < elements.length; i++) {
     let elem = elements[i];

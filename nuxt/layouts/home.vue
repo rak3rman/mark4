@@ -5,18 +5,18 @@
         <HomeNavbar />
         <main>
           <HomeHero
-            class="relative container overflow-hidden max-w-7xl mx-auto px-4 sm:px-6"
+            class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
           />
           <HomeAbout
-            class="container mx-auto items-center max-w-7xl px-4 sm:px-6 snap-none"
+            class="container mx-auto max-w-7xl snap-none items-center px-4 sm:px-6"
           />
           <HomeExperience />
           <HomeProjects
-            class="container mx-auto items-center max-w-7xl px-4 sm:px-6 snap-none"
+            class="container mx-auto max-w-7xl snap-none items-center px-4 sm:px-6"
           />
-          <HomePhotography />
+          <!--<HomePhotography />-->
           <div
-            class="container mx-auto items-center max-w-7xl px-4 sm:px-6 snap-none"
+            class="container mx-auto max-w-7xl snap-none items-center px-4 sm:px-6"
           >
             <HomeContact />
             <Footer />

@@ -1,18 +1,18 @@
 <template>
   <div>
-    <ResumeHeader>
+    <SummarizeHeader>
       {{ presentation.title }}
       <span class="text-accent">@ {{ presentation.organization }}</span>
-    </ResumeHeader>
-    <ResumeSubheader>
+    </SummarizeHeader>
+    <SummarizeSubheader>
       {{ formatEventDates(presentation.dates, false) }}
       //
       {{ presentation.location }}
-    </ResumeSubheader>
-    <ResumeText v-if="presentation.description">
+    </SummarizeSubheader>
+    <SummarizeText v-if="presentation.description">
       {{ presentation.description }}
-    </ResumeText>
-    <ResumeBullets :bullets="presentation.bullets" />
+    </SummarizeText>
+    <SummarizeBullets :bullets="presentation.bullets" />
   </div>
 </template>
 
@@ -20,6 +20,7 @@
 import { z } from "zod";
 import { formatEventDates } from "~/utils/formatEventDates";
 import { Presentation } from "~/summarize/models/Presentation";
+
 type Presentation = z.infer<typeof Presentation>;
 
 defineProps({

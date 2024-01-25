@@ -1,22 +1,25 @@
 <template>
-    <FadeInWrapper>
-        <div class="relative overflow-hidden bg-primary h-full w-full">
-            <div class="absolute min-w-full min-h-[80vh]">
-                <SvgTopography1 class="opacity-[0.11]" style="transform: rotateX(180deg)"/>
-            </div>
+  <FadeInWrapper>
+    <div class="relative h-full w-full overflow-hidden bg-primary">
+      <div class="absolute min-h-[80vh] min-w-full">
+        <SvgTopography1
+          class="opacity-[0.11]"
+          style="transform: rotateX(180deg)"
+        />
+      </div>
 
-            <div class="pb-16">
-                <Navbar/>
-                <main class="relative container overflow-hidden max-w-7xl mx-auto px-4 sm:px-6">
-                    <div class="container mx-auto items-center">
+      <div class="pb-16">
+        <Navbar />
+        <main
+          class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
+        >
+          <div class="container mx-auto items-center">
+            <slot />
 
-                        <slot/>
-
-                        <Footer/>
-
-                    </div>
-                </main>
-            </div>
-        </div>
-    </FadeInWrapper>
+            <Footer />
+          </div>
+        </main>
+      </div>
+    </div>
+  </FadeInWrapper>
 </template>

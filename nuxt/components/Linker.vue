@@ -1,12 +1,17 @@
 <template>
-  <NuxtLink :to="props.href" class="inline w-min group transition duration-300 hover:text-secondary">
+  <NuxtLink
+    :to="props.href"
+    class="group inline w-min transition duration-300 hover:text-secondary"
+  >
     <slot />
-    <span class="max-w-0 block group-hover:max-w-full transition-all duration-500 delay-75 h-[1.2px] opacity-70 -mt-0.5 mb-1 bg-secondary"></span>
+    <span
+      class="-mt-0.5 mb-1 block h-[1.2px] max-w-0 bg-secondary opacity-70 transition-all delay-75 duration-500 group-hover:max-w-full"
+    ></span>
   </NuxtLink>
 </template>
 
 <script setup>
 const props = defineProps({
-  href: String
-})
+  href: String,
+});
 </script>

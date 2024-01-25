@@ -1,7 +1,7 @@
 <template>
   <footer class="pt-14">
     <!--    <div class="py-16">-->
-    <!--      <img class="mx-auto h-8 w-auto" src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ed7598b-5520-4e18-5159-daa458739b00/sm" alt="RAkerman Logo" />-->
+    <!--      <NuxtImg class="mx-auto h-8 w-auto" src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ed7598b-5520-4e18-5159-daa458739b00/sm" alt="RAkerman Logo" />-->
     <!--      <nav class="mt-10 text-sm text-neutral opacity-70" aria-label="quick links">-->
     <!--        <div class="-my-1 flex justify-center gap-x-6">-->
     <!--          <a v-for="site in sitemap" :href="site.href">{{ site.name }}</a>-->
@@ -16,42 +16,42 @@
           v-for="item in navigation"
           :key="item.name"
           :to="item.href"
-          class="text-neutral opacity-70 hover:text-secondary transition duration-300"
+          class="text-neutral opacity-70 transition duration-300 hover:text-secondary"
         >
           <span class="sr-only">{{ item.name }}</span>
           <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
         </NuxtLink>
       </div>
-      <div class="mt-8 md:mt-0 md:order-1">
+      <div class="mt-8 md:order-1 md:mt-0">
         <div>
           <h6
-            class="text-center text-sm text-neutral opacity-70 md:float-left md:mr-1 pb-1"
+            class="pb-1 text-center text-sm text-neutral opacity-70 md:float-left md:mr-1"
           >
             &copy; Radison Akerman {{ new Date().getFullYear() }}.
           </h6>
           <h6
-            class="text-center text-sm text-neutral opacity-70 md:float-left md:mr-1 pb-1"
+            class="pb-1 text-center text-sm text-neutral opacity-70 md:float-left md:mr-1"
           >
             Designed and built from scratch.
           </h6>
         </div>
         <div>
-          <div class="md:float-left md:mr-1 flex justify-center">
-            <h6 class="text-center text-sm text-neutral opacity-70 mr-1">
+          <div class="flex justify-center md:float-left md:mr-1">
+            <h6 class="mr-1 text-center text-sm text-neutral opacity-70">
               <Linker href="/privacy">Privacy Policy.</Linker>
             </h6>
-            <h6 class="text-center text-sm text-neutral opacity-70 mr-1">
+            <h6 class="mr-1 text-center text-sm text-neutral opacity-70">
               <Linker href="/licensing">Licensing.</Linker>
             </h6>
             <h6 class="text-center text-sm text-neutral opacity-70">
               <Linker href="https://status.rakerman.com">Status.</Linker>
             </h6>
           </div>
-          <div class="md:float-left md:mr-1 flex justify-center">
+          <div class="flex justify-center md:float-left md:mr-1">
             <h6 class="text-center text-sm text-neutral opacity-70">
               <Linker href="https://github.com/rak3rman/mark4"
-                >Mark 4, RF-RA #{{ config.public.gitMasterTag }}.</Linker
-              >
+                >Mark 4, RF-RA #{{ config.public.gitMasterTag }}.
+              </Linker>
             </h6>
           </div>
         </div>

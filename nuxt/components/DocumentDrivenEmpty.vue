@@ -1,14 +1,20 @@
 <template>
-  <div class="container mx-auto flex items-center min-h-screen">
+  <div class="container mx-auto flex min-h-screen items-center">
     <div class="w-full">
-      <h6 class="pt-1 pb-1 text-5xl md:text-6xl text-neutral font-bold text-left fade-in-hero" :style="{ 'transition-delay': 200 + 'ms' }">
+      <h6
+        class="fade-in-hero pb-1 pt-1 text-left text-5xl font-bold text-neutral md:text-6xl"
+        :style="{ 'transition-delay': 200 + 'ms' }"
+      >
         Whoops.
       </h6>
-      <h6 class="py-2 leading-normal text-accent text-lg md:text-xl max-w-2xl text-left fade-in-hero" :style="{ 'transition-delay': 300 + 'ms' }">
+      <h6
+        class="fade-in-hero max-w-2xl py-2 text-left text-lg leading-normal text-accent md:text-xl"
+        :style="{ 'transition-delay': 300 + 'ms' }"
+      >
         There should be something here but it appears we can't find it.
-        <br>
-        70% chance this page is under construction.
-        30% chance we created this page by accident.
+        <br />
+        70% chance this page is under construction. 30% chance we created this
+        page by accident.
       </h6>
     </div>
   </div>

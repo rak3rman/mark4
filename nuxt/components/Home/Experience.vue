@@ -4,29 +4,24 @@
     <Header num="02." title="Experience" id="experience" fade />
     <div class="mt-4">
       <div
-        class="relative z-10 hidden lg:float-right lg:block lg:pb-5 lg:pl-10 lg:pt-1"
+        class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-1 lg:block"
       >
-        <div class="relative mx-auto max-w-prose text-base lg:max-w-md">
-          <NuxtLink
-            href="/radison-akerman-resume.pdf"
-            target="_blank"
-            class="lg:h-[40rem] lg:w-[28rem]"
+        <NuxtLink href="/radison-akerman-resume.pdf" target="_blank">
+          <div
+            class="-m-2 rounded-xl bg-neutral/5 p-2 ring-1 ring-inset ring-neutral/10 lg:-m-4 lg:rounded-2xl lg:p-4"
           >
             <div
-              class="-m-2 rounded-xl bg-neutral/5 p-2 ring-1 ring-inset ring-neutral/10 lg:-m-4 lg:rounded-2xl lg:p-4"
+              data-theme="summarize"
+              class="rounded-md bg-white p-6 shadow-2xl ring-1 ring-accent/10"
             >
-              <div
-                class="h-[37rem] rounded-md bg-white p-8 shadow-2xl ring-1 ring-accent/10"
-              >
-                <NuxtLayout class="origin-top-left scale-[44%]" name="resume">
-                  <NuxtPage />
-                </NuxtLayout>
-              </div>
+              <LazySummarizeResume
+                class="h-[30.3rem] origin-top-left scale-[41%]"
+              />
             </div>
-          </NuxtLink>
-        </div>
+          </div>
+        </NuxtLink>
       </div>
-      <div class="mt-8 lg:mt-0">
+      <div class="z-0 mt-8 lg:mt-0">
         <div
           class="mx-auto text-neutral lg:col-start-1 lg:row-start-1 lg:max-w-full"
         >
@@ -128,7 +123,7 @@
         <div
           class="mt-10 grid grid-cols-2 items-center gap-x-4 gap-y-8 sm:gap-y-7 lg:max-w-none"
         >
-          <img
+          <NuxtImg
             v-for="url in ExperienceLogoWhiteSet"
             class="max-h-10 w-full object-contain object-left"
             :src="url"
@@ -158,7 +153,7 @@
   <!--          </blockquote>-->
   <!--          <figcaption class="mt-6 flex items-center">-->
   <!--            <div class="overflow-hidden rounded-full bg-secondary">-->
-  <!--              <img class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />-->
+  <!--              <NuxtImg class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />-->
   <!--            </div>-->
   <!--            <div class="ml-4">-->
   <!--              <div class="text-base font-medium leading-6 tracking-tight text-neutral">-->
