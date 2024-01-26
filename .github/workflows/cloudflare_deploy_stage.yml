@@ -12,8 +12,8 @@ jobs:
         node: [ 16 ]
 
     env:
-      NUXT_DIR: ./nuxt
-      SUMMARIZE_DIR: ./summarize
+      NUXT_DIR: ~/nuxt
+      SUMMARIZE_DIR: ~/nuxt/summarize
 
     steps:
       - uses: actions/setup-node@v1
