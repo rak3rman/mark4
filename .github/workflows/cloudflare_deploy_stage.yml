@@ -47,6 +47,7 @@ jobs:
 
       - name: Publish Nuxt to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
+        working-directory: ${{ env.NUXT_DIR }}
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           command: deploy --env staging
