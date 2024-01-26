@@ -1,0 +1,56 @@
+[
+  {
+    "set": "Languages",
+    "skills": [
+      "Python",
+      "C",
+      "C++",
+      "Java",
+      "Rust",
+      "JavaScript",
+      "TypeScript",
+      "C#",
+      "F#",
+      "Go",
+      "SQL",
+      "Bash",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "set": "Software",
+    "skills": [
+      "Git",
+      "Cloudflare",
+      "AWS",
+      "Docker",
+      "Node.js",
+      "Nuxt",
+      "Express",
+      "Flask",
+      "SQLAlchemy",
+      "MongoDB",
+      "Vue",
+      "React",
+      "Tailwinds",
+      ".NET",
+      "VMware"
+    ]
+  },
+  {
+    "set": "Interests",
+    "skills": [
+      "Networking",
+      "Cloud computing",
+      "Concurrency",
+      "IoT",
+      "CI/CD",
+      "Automation",
+      "Full-stack development",
+      "DevOps",
+      "Cybersecurity",
+      "Blockchain"
+    ]
+  }
+]

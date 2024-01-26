@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Exploding Chickens Guest Lecture, UIC CS 342",
+    "organization": "University of Illinois Chicago",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2022-04",
+        "end": "2022-04"
+      },
+      {
+        "start": "2022-12",
+        "end": "2022-12"
+      },
+      {
+        "start": "2023-04",
+        "end": "2023-04"
+      }
+    ],
+    "bullets": [
+      {
+        "text": "Explored the structure of Exploding Chickens, a full-stack web app built using Node.js, MongoDB with 1,250+ games played"
+      },
+      {
+        "text": "Discussed game play, project milestones, full-stack architecture, data schema, websockets, test coverage, and hosted a live demo"
+      },
+      {
+        "text": "Delivered as a full-length guest lecture 3 times to 20-80+ students at University of Illinois Chicago in CS 342: Software Design"
+      }
+    ]
+  },
+  {
+    "title": "Exploding Chickens Guest Lecture, Frontend Discussion Group",
+    "organization": "SpaceX",
+    "location": "Starbase, TX",
+    "dates": [
+      {
+        "start": "2023-07",
+        "end": "2023-07"
+      }
+    ],
+    "bullets": [
+      {
+        "text": "Explored the structure of Exploding Chickens, a full-stack web app built using Node.js, MongoDB with 1,250+ games played"
+      },
+      {
+        "text": "Discussed game play, project milestones, full-stack architecture, data schema, websockets, test coverage, and hosted a live demo"
+      },
+      {
+        "text": "Emphasis placed on web browser basics, websockets, managing data streams on the frontend, and its relevance to SpaceX tooling"
+      },
+      {
+        "text": "Delivered internally to 20+ participants of the company-wide 'Frontend Discussion Group' at SpaceX"
+      }
+    ]
+  }
+]

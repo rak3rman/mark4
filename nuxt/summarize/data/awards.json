@@ -1,0 +1,115 @@
+[
+  {
+    "title": "Best Technology Award",
+    "organization": "Wildhacks Hackathon",
+    "location": "Evanston, IL",
+    "dates": [
+      {
+        "start": "2023-04",
+        "end": "2023-04"
+      }
+    ],
+    "description": "Awarded to the team with the most advanced/creative use of technology at the Wildhacks hackathon, 45+ teams at large",
+    "media": {
+      "external": "https://dashboard.wildhacks.net/project/#VP79",
+      "github": "https://github.com/rakermanfoundation/office-hourly",
+      "youtube": "https://www.youtube.com/watch?v=STVBFFa67SI"
+    }
+  },
+  {
+    "title": "Weingartner Scholarship",
+    "organization": "Second Congregational UCC/First Presbyterian Church",
+    "location": "Rockford, IL",
+    "dates": [
+      {
+        "start": "2020-08",
+        "end": "2020-08"
+      },
+      {
+        "start": "2021-08",
+        "end": "2021-08"
+      },
+      {
+        "start": "2022-08",
+        "end": "2022-08"
+      }
+    ],
+    "description": "Awarded to exceptional members of the Church who volunteer and support the Rockford community regularly"
+  },
+  {
+    "title": "UIC Logmaster CS Scholarship",
+    "organization": "University of Illinois Chicago",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2021-08",
+        "end": "2021-08"
+      }
+    ],
+    "description": "Awarded to students who have demonstrated computer science academic excellence at the University of Illinois Chicago"
+  },
+  {
+    "title": "UIC Victor & Lucy Kan Scholarship",
+    "organization": "University of Illinois Chicago",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2021-08",
+        "end": "2021-08"
+      },
+      {
+        "start": "2022-08",
+        "end": "2022-08"
+      }
+    ],
+    "description": "Awarded to students who have demonstrated multi-disciplinary academic excellence at the University of Illinois Chicago"
+  },
+  {
+    "title": "UIC P. V. Sudhindra Scholarship",
+    "organization": "University of Illinois Chicago",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2023-08",
+        "end": "2023-08"
+      }
+    ],
+    "description": "Awarded to students who have demonstrated multi-disciplinary academic excellence at the University of Illinois Chicago"
+  },
+  {
+    "title": "AP Capstone Diploma",
+    "organization": "College Board",
+    "location": "Rockford, IL",
+    "dates": [
+      {
+        "start": "2020-05",
+        "end": "2020-05"
+      }
+    ],
+    "description": "Awarded to students who earn scores of 3 or higher on AP Seminar, AP Research, and 4 additional AP Exams of their choosing"
+  },
+  {
+    "title": "AP Scholar",
+    "organization": "College Board",
+    "location": "Rockford, IL",
+    "dates": [
+      {
+        "start": "2020-05",
+        "end": "2020-05"
+      }
+    ],
+    "description": "Awarded to students who receive scores of 3 or higher on 3 or more AP Exams"
+  },
+  {
+    "title": "IESA State Chess Champions",
+    "organization": "Illinois Elementary School Association",
+    "location": "Peoria, IL",
+    "dates": [
+      {
+        "start": "2016-05",
+        "end": "2016-05"
+      }
+    ],
+    "description": "A member of the 2016 state-winning chess team as board 6 of 8, 45+ teams at large"
+  }
+]

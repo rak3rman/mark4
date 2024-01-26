@@ -1,0 +1,319 @@
+[
+  {
+    "title": "Software Engineering Intern",
+    "organization": "nvisia",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2023-12",
+        "end": "2024-01"
+      }
+    ],
+    "commitment": "intern",
+    "discipline": "professional",
+    "bullets": [
+      {
+        "text": "Integrated REST API endpoints into a C#.NET consultant profile builder web app using Entity Framework, SQL Server"
+      },
+      {
+        "text": "Collaborated with 3 front-end/dev-ops interns, 5 back-end mentors, and 2+ business stakeholders in an agile/scrum environment"
+      },
+      {
+        "text": "Gained unique, small-scale consulting experience spanning multiple industries and full-stack disciplines"
+      }
+    ],
+    "media": {
+      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/c9056405-978b-4c97-1ed1-90c13f966700/sm"
+    },
+    "on_resume": true
+  },
+  {
+    "title": "Mentor",
+    "organization": "UIC Cities Project",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2023-08",
+        "end": "2024-05"
+      }
+    ],
+    "commitment": "volunteer",
+    "discipline": "teaching",
+    "bullets": [
+      {
+        "text": "Co-led program activities and directly mentored 10+ 6th-8th graders at Chalmers School of Excellence in Chicago"
+      },
+      {
+        "text": "Taught evidence-based techniques for coping with stress, including mindfulness exercises and relaxation techniques"
+      },
+      {
+        "text": "Actively forged relationships with mentees by acting as an advocate, role model, opportunity provider, and adult friend"
+      }
+    ],
+    "on_resume": false
+  },
+  {
+    "title": "Software Engineering Intern, Starship Software",
+    "organization": "SpaceX",
+    "location": "Starbase, TX",
+    "dates": [
+      {
+        "start": "2023-05",
+        "end": "2023-08"
+      }
+    ],
+    "commitment": "intern",
+    "discipline": "professional",
+    "bullets": [
+      {
+        "text": "Owned Starship Config Signoff, a critical flight reliability tool used by 100+ Starship engineers to validate 1M+ vehicle config values"
+      },
+      {
+        "text": "Spearheaded development of 10+ features into Signoff: rebuilt Flask APIs, new SQLAlchemy query structure, refreshed React UI"
+      },
+      {
+        "text": "Integrated a software version verification Python library concurrently into a Rust operations platform, reducing deploy time by 40%"
+      },
+      {
+        "text": "Built functioning UI mockups in Lit, CSS as part of Starship software deploys rework, participated in design conversations and CDRs"
+      }
+    ],
+    "media": {
+      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/f163f81d-3b7a-49cc-99a1-41b104077f00/sm"
+    },
+    "on_resume": true
+  },
+  {
+    "title": "Event Operations Assistant",
+    "organization": "Chicago Special Events Management",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2022-08"
+      }
+    ],
+    "commitment": "contract",
+    "discipline": "operations",
+    "bullets": [
+      {
+        "text": "Played a key role in some of Chicago's biggest special sporting events (Chicago Triathlon, Chicago Spring + Fall Half Marathon)"
+      },
+      {
+        "text": "Directly coordinated and delegated responsibilities to 10-100+ staff and volunteers who aided nearly 8,000 athletes per event"
+      },
+      {
+        "text": "Assisted in event operations at scale across varying disciplines, from course leadership to warehouse prep to expo management"
+      }
+    ],
+    "on_resume": false
+  },
+  {
+    "title": "Digital Lead",
+    "organization": "Steven Olikara for U.S. Senate",
+    "location": "Milwaukee, WI",
+    "dates": [
+      {
+        "start": "2022-04",
+        "end": "2022-08"
+      }
+    ],
+    "commitment": "contract",
+    "discipline": "professional",
+    "bullets": [
+      {
+        "text": "Completely rebuilt campaign website from the ground up using Nuxt, Tailwinds; visited by 1,000’s of Wisconsinites daily"
+      },
+      {
+        "text": "Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN, Informr"
+      },
+      {
+        "text": "Worked with a team of web developers and content creators to rapidly push media; took photographs in the field"
+      }
+    ],
+    "on_resume": true
+  },
+  {
+    "title": "Project Manager & Software Engineer",
+    "organization": "University of Illinois Chicago College of Engineering",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2021-08",
+        "end": "2024-05"
+      }
+    ],
+    "commitment": "part",
+    "discipline": "professional",
+    "bullets": [
+      {
+        "text": "Organized a team of 6+ software engineers and contributed directly to 10+ full-stack web apps used by 3,000+"
+      },
+      {
+        "text": "Led the push towards web app modernization across the College using Nuxt, Next.js, Spring Boot, Vue, React, SQL, Auth0"
+      },
+      {
+        "text": "Single-handedly developed and published a Shibboleth (SAML SSO) to Express (Node.js) authentication package on npm"
+      },
+      {
+        "text": "Drafted and enforced university IT policies and procedures, identified data risks across all 500+ faculty and staff"
+      }
+    ],
+    "media": {
+      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/8335dd31-40d0-4178-8a47-4be36065f400/sm"
+    },
+    "on_resume": true
+  },
+  {
+    "title": "Software Engineering Intern",
+    "organization": "University of Illinois Chicago College of Engineering",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2021-05",
+        "end": "2021-08"
+      }
+    ],
+    "commitment": "intern",
+    "discipline": "professional",
+    "bullets": [
+      {
+        "text": "Maintained and redesigned a custom space-and-physical-access management system using Laravel, Vue, SQL"
+      },
+      {
+        "text": "Created new documentation and issue reporting standards with Atlassian Jira, Bitbucket; increasing readability by 3-fold"
+      },
+      {
+        "text": "Presented projects to university admin and trained faculty/staff on application usage regularly via MS Teams"
+      }
+    ],
+    "media": {
+      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/8335dd31-40d0-4178-8a47-4be36065f400/sm"
+    },
+    "on_resume": false
+  },
+  {
+    "title": "Software Engineering Intern",
+    "organization": "Montel Technologies",
+    "location": "Loves Park, IL",
+    "dates": [
+      {
+        "start": "2017-11",
+        "end": "2018-09"
+      }
+    ],
+    "commitment": "intern",
+    "discipline": "professional",
+    "bullets": [
+      {
+        "text": "Lead front-end web developer on an enterprise-grade, on-prem security unification solution (MTOP) built using Node.js, MongoDB"
+      },
+      {
+        "text": "Configured mission-critical SLA networks and infrastructure in the field; physically installed switches, IP cameras, access control"
+      },
+      {
+        "text": "Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge policing units across Rockford, IL"
+      }
+    ],
+    "on_resume": true
+  },
+  {
+    "title": "Executive Operations Director",
+    "organization": "Pulqra",
+    "location": "United States",
+    "dates": [
+      {
+        "start": "2020-02",
+        "end": "2023-01"
+      }
+    ],
+    "commitment": "part",
+    "discipline": "professional",
+    "bullets": [
+      {
+        "text": "Co-built and operationally led Pulqra, a mission-capitalist creative marketing collective based in Rockford, Madison, and Chicago"
+      },
+      {
+        "text": "Reimagined businesses and artists by rapidly designing 5+ commercial websites and social portfolios from scratch using Nuxt, Tailwinds"
+      },
+      {
+        "text": "Rendered services to 80+ clients worldwide — from full-on creative design to photography to copywriting"
+      }
+    ],
+    "on_resume": false
+  },
+  {
+    "title": "Section Leader",
+    "organization": "Stanford University",
+    "location": "Remote",
+    "dates": [
+      {
+        "start": "2021-04",
+        "end": "2023-06"
+      }
+    ],
+    "commitment": "volunteer",
+    "discipline": "teaching",
+    "bullets": [
+      {
+        "text": "Section led Code in Place 2021, 2023 — a free, human-centric, intro-to-coding course taught in the time of COVID-19"
+      },
+      {
+        "text": "Helped instruct 10,000+ students on the fundamentals of Python and computer science principles"
+      },
+      {
+        "text": "Worked one-on-one with all age groups, built office-hours-esque curriculum tailored to the 4 week course"
+      }
+    ],
+    "on_resume": false
+  },
+  {
+    "title": "Event Captain",
+    "organization": "Life Time",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2021-08",
+        "end": "2022-05"
+      }
+    ],
+    "commitment": "volunteer",
+    "discipline": "teaching",
+    "bullets": [
+      {
+        "text": "Volunteered as a permanent event captain for all Life Time athletic events hosted in Chicago"
+      },
+      {
+        "text": "Helped organize and lead around 750 volunteers who aided nearly 8,000 athletes per event"
+      },
+      {
+        "text": "Assisted in event operations at scale — deployed and tore down aid stations, start, finish lines"
+      }
+    ],
+    "media": {
+      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/3eec9116-2545-4621-b818-ca3195061500/sm"
+    },
+    "on_resume": false
+  },
+  {
+    "title": "Instructor",
+    "organization": "Montel Technologies",
+    "location": "Loves Park, IL",
+    "dates": [
+      {
+        "start": "2017-11",
+        "end": "2018-09"
+      }
+    ],
+    "commitment": "volunteer",
+    "discipline": "teaching",
+    "bullets": [
+      {
+        "text": "Co-led a weekly instructional program in Rockford that taught 15+ teenagers the fundamentals of coding and IT"
+      },
+      {
+        "text": "Explored the bleeding edge of computer science and cyber security — from web development to IoT to machine learning"
+      }
+    ],
+    "on_resume": false
+  }
+]
