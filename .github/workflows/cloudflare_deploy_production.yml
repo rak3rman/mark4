@@ -14,19 +14,19 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        node: [ 16 ]
+        node: [ 18 ]
 
     env:
       NUXT_DIR: nuxt
       SUMMARIZE_DIR: nuxt/summarize
 
     steps:
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
 
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
       - name: Install Summarize Dependencies
         run: npm i
