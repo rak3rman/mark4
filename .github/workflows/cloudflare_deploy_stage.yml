@@ -49,4 +49,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: deploy --env staging nuxt
+          command: deploy --env staging 
+          workingDirectory: ${{ env.NUXT_DIR }}
