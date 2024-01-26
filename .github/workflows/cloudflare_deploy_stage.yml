@@ -1,6 +1,6 @@
 name: cloudflare_deploy_stage
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   nuxt:
@@ -36,7 +36,7 @@ jobs:
         working-directory: ${{ env.NUXT_DIR }}
 
       - name: Generate Summarize PDFs
-        run: npm run dev & sleep 15 && cd summarize && npm run generate
+        run: npm run dev & sleep 15 && cd summarize && npm run compile
         working-directory: ${{ env.NUXT_DIR }}
 
       - name: Build Nuxt
