@@ -1,14 +1,6 @@
-name: cloudflare_deploy
+name: cloudflare_deploy_stage
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-  schedule: # Run every 1st of the month at 00:05 UTC, for resume/cv pdf generation
-    - cron: '5 0 1 * *'
+on: [push, pull_request]
 
 jobs:
   nuxt:
@@ -54,6 +46,7 @@ jobs:
           NITRO_PRESET: cloudflare
 
       - name: Publish Nuxt to Cloudflare Workers
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: deploy --env staging

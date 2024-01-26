@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <HomeWrapper>
     <Header num="04." title="Get In Touch" id="contact" fade />
     <div class="mt-8 w-full lg:grid lg:grid-cols-5 lg:gap-8">
       <div
@@ -189,7 +189,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </HomeWrapper>
 </template>
 
 <script setup>

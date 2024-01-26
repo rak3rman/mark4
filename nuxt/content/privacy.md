@@ -1,10 +1,9 @@
 ---
 title: "Privacy"
-layout: "docs"
 head.description: "We don't collect your data and use it to track you. Period."
 ---
 
-::Hero
+::DocsHero
 #head
 Privacy
 
@@ -14,7 +13,8 @@ We don't collect your data and use it to track you. Period.
 
 # Privacy Policy
 
-Throughout all services on rakerman.com, **none of them will collect your data and use it to track you as an individual**.
+Throughout all services on rakerman.com, **none of them will collect your data and use it to track you as an individual
+**.
 Rather, a few services may collect small amounts of anonymous, non-personal data needed to provide a key feature of the
 service.
 The data we collect is never related to anything about you – meaning no cookies, no ad tracking, and no data to be

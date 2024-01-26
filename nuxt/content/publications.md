@@ -1,10 +1,9 @@
 ---
 title: "Publications"
-layout: "docs"
 head.description: "All academic materials authored or delivered by Radison Akerman."
 ---
 
-::Hero
+::DocsHero
 #head
 Publications
 
@@ -24,10 +23,11 @@ Abstract: Explored the inner workings of Exploding Chickens, an ambitious person
 line code base with games played all over the world, daily.
 Discussed how the game is played, progress/success of project, hosted a live open demo of v2, high-level overview of v1
 stack/design choices, the MVC (Model-View-Controller) pattern in action on v1, v1 data schema, v1 websocket
-architecture (with its pitfalls), v1 code dive, high-level overview of v2 stack/design choices, v2 test coverage, v2 data schema, v2 code dive, v3
+architecture (with its pitfalls), v1 code dive, high-level overview of v2 stack/design choices, v2 test coverage, v2
+data schema, v2 code dive, v3
 architecture, and v3 cloud implementation, along with a few key takeaways for better application design.
 
-::Bookmark{presentation=true, link="/ec_slidedeck_april_2023.pdf"}
+::DocsBookmark{presentation=true, link="/ec_slidedeck_april_2023.pdf"}
 #title
 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring 2023
 
@@ -35,7 +35,7 @@ PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring 2023
 Designed in Keynote, distributed under "Personal Use License" as defined in rakerman.com/licensing
 ::
 
-::Bookmark{link="https://chickens.rakerman.com"}
+::DocsBookmark{link="https://chickens.rakerman.com"}
 #title
 Website | Exploding Chickens
 
@@ -57,13 +57,13 @@ architecture (with its pitfalls), high-level overview of v2 stack/design choices
 project management in relation to release scheduling, and potential v3 architecture, along with a few key takeaways for
 better application design.
 
-::Youtube
+::DocsYoutube
 #embed
 
 <iframe src="https://www.youtube.com/embed/3KE848Yj0g4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ::
 
-::Bookmark{presentation=true, link="/ec_slidedeck_november_2022.pdf"}
+::DocsBookmark{presentation=true, link="/ec_slidedeck_november_2022.pdf"}
 #title
 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Fall 2022
 
@@ -71,7 +71,7 @@ PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Fall 2022
 Designed in Keynote, distributed under "Personal Use License" as defined in rakerman.com/licensing
 ::
 
-::Bookmark{link="https://chickens.rakerman.com"}
+::DocsBookmark{link="https://chickens.rakerman.com"}
 #title
 Website | Exploding Chickens
 
@@ -93,13 +93,13 @@ code complexity with v1 vs v2, high-level overview of v2 stack/design choices, p
 scheduling, v2 data schema, v2 test coverage, and closed live demo of v2, along with a few key takeaways for better
 application design.
 
-::Youtube
+::DocsYoutube
 #embed
 
 <iframe src="https://www.youtube.com/embed/cD53M7NHQoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ::
 
-::Bookmark{presentation=true, link="/ec_slidedeck_april_2022.pdf"}
+::DocsBookmark{presentation=true, link="/ec_slidedeck_april_2022.pdf"}
 #title
 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring 2022
 
@@ -107,7 +107,7 @@ PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring 2022
 Designed in Keynote, distributed under "Personal Use License" as defined in rakerman.com/licensing
 ::
 
-::Bookmark{link="https://chickens.rakerman.com"}
+::DocsBookmark{link="https://chickens.rakerman.com"}
 #title
 Website | Exploding Chickens
 

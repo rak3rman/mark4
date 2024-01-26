@@ -1,25 +1,21 @@
 <template>
-  <div class="container mx-auto max-w-7xl snap-none items-center px-4 sm:px-6">
+  <HomeWrapper>
     <!--  Tabs  -->
     <Header num="02." title="Experience" id="experience" fade />
     <div class="mt-4">
       <div
         class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-1 lg:block"
       >
-        <NuxtLink href="/radison-akerman-resume.pdf" target="_blank">
+        <div
+          class="-m-2 rounded-xl bg-neutral/5 p-2 ring-1 ring-inset ring-neutral/10 lg:-m-4 lg:rounded-2xl lg:p-4"
+        >
           <div
-            class="-m-2 rounded-xl bg-neutral/5 p-2 ring-1 ring-inset ring-neutral/10 lg:-m-4 lg:rounded-2xl lg:p-4"
+            data-theme="summarize"
+            class="rounded-md bg-white p-6 shadow-2xl ring-1 ring-accent/10"
           >
-            <div
-              data-theme="summarize"
-              class="rounded-md bg-white p-6 shadow-2xl ring-1 ring-accent/10"
-            >
-              <LazySummarizeResume
-                class="h-[30.3rem] origin-top-left scale-[41%]"
-              />
-            </div>
+            <SummarizeResume class="h-[30.3rem] origin-top-left scale-[41%]" />
           </div>
-        </NuxtLink>
+        </div>
       </div>
       <div class="z-0 mt-8 lg:mt-0">
         <div
@@ -121,7 +117,7 @@
 
         <!--  Logo Cloud  -->
         <div
-          class="mt-10 grid grid-cols-2 items-center gap-x-4 gap-y-8 sm:gap-y-7 lg:max-w-none"
+          class="mt-10 grid grid-cols-2 items-center gap-x-7 gap-y-8 sm:gap-x-4 sm:gap-y-7 lg:max-w-none"
         >
           <NuxtImg
             v-for="url in ExperienceLogoWhiteSet"
@@ -132,41 +128,41 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!--  Testimonials  -->
-  <!--    <div class="pt-12 pb-8">-->
-  <!--      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">-->
-  <!--        What Others Say-->
-  <!--      </h6>-->
-  <!--      <h6 class="pt-1 text-md text-secondary font-mono text-left">-->
-  <!--        Don't take my word for it.-->
-  <!--      </h6>-->
-  <!--    </div>-->
-  <!--    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-2 list-none p-0">-->
-  <!--      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">-->
-  <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
-  <!--          <blockquote>-->
-  <!--            <h6 class="text-lg tracking-tight text-neutral">-->
-  <!--              "{{ testimonial.quote }}"-->
-  <!--            </h6>-->
-  <!--          </blockquote>-->
-  <!--          <figcaption class="mt-6 flex items-center">-->
-  <!--            <div class="overflow-hidden rounded-full bg-secondary">-->
-  <!--              <NuxtImg class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />-->
-  <!--            </div>-->
-  <!--            <div class="ml-4">-->
-  <!--              <div class="text-base font-medium leading-6 tracking-tight text-neutral">-->
-  <!--                {{ testimonial.name }}-->
-  <!--              </div>-->
-  <!--              <div class="mt-0.5 text-sm text-accent">-->
-  <!--                {{ testimonial.title }}-->
-  <!--              </div>-->
-  <!--            </div>-->
-  <!--          </figcaption>-->
-  <!--        </figure>-->
-  <!--      </li>-->
-  <!--    </ul>-->
+    <!--  Testimonials  -->
+    <!--    <div class="pt-12 pb-8">-->
+    <!--      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">-->
+    <!--        What Others Say-->
+    <!--      </h6>-->
+    <!--      <h6 class="pt-1 text-md text-secondary font-mono text-left">-->
+    <!--        Don't take my word for it.-->
+    <!--      </h6>-->
+    <!--    </div>-->
+    <!--    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-2 list-none p-0">-->
+    <!--      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">-->
+    <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
+    <!--          <blockquote>-->
+    <!--            <h6 class="text-lg tracking-tight text-neutral">-->
+    <!--              "{{ testimonial.quote }}"-->
+    <!--            </h6>-->
+    <!--          </blockquote>-->
+    <!--          <figcaption class="mt-6 flex items-center">-->
+    <!--            <div class="overflow-hidden rounded-full bg-secondary">-->
+    <!--              <NuxtImg class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />-->
+    <!--            </div>-->
+    <!--            <div class="ml-4">-->
+    <!--              <div class="text-base font-medium leading-6 tracking-tight text-neutral">-->
+    <!--                {{ testimonial.name }}-->
+    <!--              </div>-->
+    <!--              <div class="mt-0.5 text-sm text-accent">-->
+    <!--                {{ testimonial.title }}-->
+    <!--              </div>-->
+    <!--            </div>-->
+    <!--          </figcaption>-->
+    <!--        </figure>-->
+    <!--      </li>-->
+    <!--    </ul>-->
+  </HomeWrapper>
 </template>
 
 <script setup lang="ts">

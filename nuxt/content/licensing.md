@@ -1,10 +1,9 @@
 ---
 title: "Licensing"
-layout: "docs"
 head.description: "Legal stuff detailing how digital assets can and cannot be used."
 ---
 
-::Hero
+::DocsHero
 #head
 Licensing
 
@@ -15,7 +14,8 @@ Legal stuff detailing how digital assets can and cannot be used.
 # Personal Use License
 
 The individual ("Content Provider") grants buyer a non-exclusive perpetual personal-use license to
-download and copy the accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") subject to the following restrictions:
+download and copy the accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") subject
+to the following restrictions:
 
 - _This license is for personal use only. Personal use means non-commercial use of the Media for display on personal
   websites and computers, or making image prints or video copies for personal use. The Media may not be used in any way
@@ -37,7 +37,8 @@ Provider.
 ## What buyers can do:
 
 The individual ("Content Provider") grants buyers a perpetual, non-exclusive, non-transferable, worldwide
-license to use the accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") for permitted commercial purposes, defined
+license to use the accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") for
+permitted commercial purposes, defined
 as:
 
 - _advertising, promotion, brochures, packaging_

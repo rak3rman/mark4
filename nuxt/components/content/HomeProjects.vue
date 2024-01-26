@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <HomeWrapper>
     <!--    Quickview     -->
     <ProjectsQuickview
       :show="quick_show"
@@ -59,7 +59,7 @@
         }
       "
     />
-  </div>
+  </HomeWrapper>
 </template>
 
 <script setup>
