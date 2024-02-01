@@ -11,13 +11,16 @@ bucket = ".output/public"
 
 [env.staging]
 routes = [
-    { pattern = "mark4.stage.rakerman.com", custom_domain = true }
+    { pattern = "mark4.stage.rakerman.com", custom_domain = true },
+    { pattern = "mark4.stage.radison.io", custom_domain = true }
 ]
 kv_namespaces = [{ binding = "LINKAGES", id = "29990306356c4c5f8d49d2999424d9ea", preview_id = "df6d561f85114db1aeed50260a595f5a" }]
 
 [env.production]
 routes = [
     { pattern = "rakerman.com", custom_domain = true },
-    { pattern = "www.rakerman.com", custom_domain = true }
+    { pattern = "www.rakerman.com", custom_domain = true },
+    { pattern = "radison.io", custom_domain = true },
+    { pattern = "www.radison.io", custom_domain = true }
 ]
 kv_namespaces = [{ binding = "LINKAGES", id = "29990306356c4c5f8d49d2999424d9ea", preview_id = "df6d561f85114db1aeed50260a595f5a" }]
