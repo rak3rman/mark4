@@ -1,17 +1,17 @@
 <template>
   <div>
     <SummarizePage :page="1" :total="total_pages">
-      <SummarizeTitle> {{ ConfigParsed.name }}</SummarizeTitle>
+      <SummarizeTitle>{{ ConfigParsed.name }}</SummarizeTitle>
       <SummarizeSubtitle>
         {{ ConfigParsed.email + (ConfigParsed.email ? "&ensp;" : "") }}
         {{ ConfigParsed.website + (ConfigParsed.website ? "&ensp;" : "") }}
         {{ ConfigParsed.linkedin + (ConfigParsed.linkedin ? "&ensp;" : "") }}
       </SummarizeSubtitle>
 
-      <SummarizeHeading> Education</SummarizeHeading>
+      <SummarizeHeading>Education</SummarizeHeading>
       <SummarizeEducation v-for="obj in EducationParsed" :education="obj" />
 
-      <SummarizeHeading> Professional Experience</SummarizeHeading>
+      <SummarizeHeading>Professional Experience</SummarizeHeading>
       <SummarizeExperience
         v-for="obj in ExperiencesParsed.filter(
           (e: Experience) =>
@@ -22,9 +22,7 @@
     </SummarizePage>
 
     <SummarizePage :page="2" :total="total_pages">
-      <SummarizeHeading>
-        Teaching and Mentoring scriptExperience
-      </SummarizeHeading>
+      <SummarizeHeading>Teaching and Mentoring</SummarizeHeading>
       <SummarizeExperience
         v-for="obj in ExperiencesParsed.filter(
           (e: Experience) =>
@@ -33,7 +31,7 @@
         :experience="obj"
       />
 
-      <SummarizeHeading> Event Operations Experience</SummarizeHeading>
+      <SummarizeHeading>Event Operations Experience</SummarizeHeading>
       <SummarizeExperience
         v-for="obj in ExperiencesParsed.filter(
           (e: Experience) =>
@@ -42,18 +40,18 @@
         :experience="obj"
       />
 
-      <SummarizeHeading> Skills</SummarizeHeading>
+      <SummarizeHeading>Skills</SummarizeHeading>
       <SummarizeSkillSet v-for="obj in SkillSetsParsed" :skillset="obj" />
 
-      <SummarizeHeading> Honors and Awards</SummarizeHeading>
+      <SummarizeHeading>Honors and Awards</SummarizeHeading>
       <SummarizeAward v-for="obj in AwardsParsed.slice(0, 5)" :award="obj" />
     </SummarizePage>
 
     <SummarizePage :page="3" :total="total_pages">
-      <SummarizeHeading> Honors and Awards (cont.)</SummarizeHeading>
+      <SummarizeHeading>Honors and Awards (cont.)</SummarizeHeading>
       <SummarizeAward v-for="obj in AwardsParsed.slice(5)" :award="obj" />
 
-      <SummarizeHeading> Presentations</SummarizeHeading>
+      <SummarizeHeading>Presentations</SummarizeHeading>
       <SummarizePresentation
         v-for="obj in PresentationsParsed"
         :presentation="obj"
@@ -65,7 +63,7 @@
         >
       </div>
 
-      <SummarizeHeading> Projects</SummarizeHeading>
+      <SummarizeHeading>Projects</SummarizeHeading>
       <SummarizeProject
         v-for="obj in ProjectsParsed.filter(
           (e: Project) => e.bullets && e.bullets.length > 0,

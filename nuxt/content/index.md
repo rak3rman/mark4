@@ -20,7 +20,7 @@ and multisport events. My interest in digital technology started back in middle 
 microcontrollers and competed in FIRST LEGO League competitions — it turns out you can learn a lot from bits of plastic
 and expensive servos.
 
-Fast-forward to today, where I’ve had the privilege of workingat [a spacecraft manufacturer](https://spacex.com),
+Fast-forward to today, where I’ve had the privilege of working at [a spacecraft manufacturer](https://spacex.com),
 [an R1 research university](https://uic.edu), a U.S. Senate campaign, [a start-up](https://www.monteltech.com),
 and [an event management group](https://my.lifetime.life/athletic-events.html). Just this past summer, I was a Software
 Engineering Intern on the [Starship Software](https://www.spacex.com/vehicles/starship/) team at
