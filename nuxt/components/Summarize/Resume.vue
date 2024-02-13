@@ -1,14 +1,14 @@
 <template>
   <div>
     <SummarizePage>
-      <SummarizeTitle> {{ ConfigParsed.name }}</SummarizeTitle>
+      <SummarizeTitle>{{ ConfigParsed.name }}</SummarizeTitle>
       <SummarizeSubtitle>
         {{ ConfigParsed.email + (ConfigParsed.email ? "&ensp;" : "") }}
         {{ ConfigParsed.website + (ConfigParsed.website ? "&ensp;" : "") }}
         {{ ConfigParsed.linkedin + (ConfigParsed.linkedin ? "&ensp;" : "") }}
       </SummarizeSubtitle>
 
-      <SummarizeHeading> Experience</SummarizeHeading>
+      <SummarizeHeading>Experience</SummarizeHeading>
       <SummarizeExperience
         v-for="obj in ExperiencesParsed.filter(
           (e: Experience) => defaultExperienceFilters(e) && e.on_resume,
@@ -16,16 +16,16 @@
         :experience="obj"
       />
 
-      <SummarizeHeading> Education</SummarizeHeading>
+      <SummarizeHeading>Education</SummarizeHeading>
       <SummarizeEducation
         v-for="obj in EducationParsed.filter((e) => e.on_resume)"
         :education="obj"
       />
 
-      <SummarizeHeading> Skills</SummarizeHeading>
+      <SummarizeHeading>Skills</SummarizeHeading>
       <SummarizeSkillSet v-for="obj in SkillSetsParsed" :skillset="obj" />
 
-      <SummarizeHeading> Projects</SummarizeHeading>
+      <SummarizeHeading>Projects</SummarizeHeading>
       <SummarizeProject
         v-for="obj in ProjectsParsed.filter(
           (e: Project) => e.on_resume && e.bullets && e.bullets.length > 0,

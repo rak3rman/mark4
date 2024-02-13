@@ -1,6 +1,22 @@
 [
   {
-    "title": "Best Technology Award",
+    "title": "Runner-up, Empowerment Track",
+    "organization": "Sparkhacks Hackathon",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2024-02",
+        "end": "2024-02"
+      }
+    ],
+    "description": "Apart of a team of 3 who placed 2nd on the empowerment track at the Sparkhacks hackathon, 180+ participants at large",
+    "media": {
+      "github": "https://github.com/radicalplatforms/gather",
+      "youtube": "https://youtu.be/BZdgUfQIyUY"
+    }
+  },
+  {
+    "title": "Winner, Best Technology Award",
     "organization": "Wildhacks Hackathon",
     "location": "Evanston, IL",
     "dates": [
@@ -9,10 +25,9 @@
         "end": "2023-04"
       }
     ],
-    "description": "Awarded to the team with the most advanced/creative use of technology at the Wildhacks hackathon, 45+ teams at large",
+    "description": "Awarded to the team with the most advanced/creative use of technology at the Wildhacks hackathon, 250+ participants at large",
     "media": {
-      "external": "https://dashboard.wildhacks.net/project/#VP79",
-      "github": "https://github.com/rakermanfoundation/office-hourly",
+      "github": "https://github.com/radicalplatforms/office-hourly",
       "youtube": "https://www.youtube.com/watch?v=STVBFFa67SI"
     }
   },
