@@ -3,7 +3,7 @@ import { DateTime } from "luxon";
 export const formatDateRange = (
   start: string,
   end: string | undefined,
-  show_anticipated: boolean = false
+  show_anticipated: boolean = false,
 ) => {
   // Create start date object
   let startDate = DateTime.fromMillis(Date.parse(start)).plus({ days: 1 });
@@ -37,7 +37,7 @@ export const formatDateRange = (
     (end === "inf"
       ? "Present"
       : DateTime.fromMillis(Date.parse(end))
-          .plus({ months: 1 })
+          .plus({ days: 1 })
           .toFormat("LLL yyyy"))
   );
 };
