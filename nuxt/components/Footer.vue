@@ -102,7 +102,7 @@ const navigation = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/rakerman/",
+    href: "https://www.linkedin.com/in/radison/",
     icon: defineComponent({
       render: () =>
         h("svg", { fill: "currentColor", viewBox: "0 0 448 512" }, [

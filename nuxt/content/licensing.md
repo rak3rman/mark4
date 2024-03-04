@@ -27,7 +27,7 @@ to the following restrictions:
 - _The Content Provider will not be liable for any third party claims or incidental, consequential or other damages
   arising out of this license or buyer's use of the Media._
 
-\*All Media released or shared by the Content Provider anywhere on the web domain https://rakerman.com
+\*All Media released or shared by the Content Provider anywhere on the web domain https://radison.io or https://rakerman.com
 or https://media.rakerman.com/ is subject by default to the Personal Use License unless specified otherwise. "The
 Media" includes post thumbnails, post images, as well as any other digital media provided directly by the Content
 Provider.

@@ -58,8 +58,8 @@
       />
       <div class="mt-2 text-xs font-light italic">
         See all presentation details at
-        <a class="font-medium" href="https://rakerman.com/publications"
-          >rakerman.com/publications</a
+        <a class="font-medium" href="https://radison.io/publications"
+          >radison.io/publications</a
         >
       </div>
 
@@ -73,8 +73,8 @@
       />
       <div class="mt-2 text-xs font-light italic">
         See all project details at
-        <a class="font-medium" href="https://rakerman.com#projects"
-          >rakerman.com#projects</a
+        <a class="font-medium" href="https://radison.io#projects"
+          >radison.io#projects</a
         >
       </div>
     </SummarizePage>

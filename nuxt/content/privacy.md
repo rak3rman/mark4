@@ -13,7 +13,7 @@ We don't collect your data and use it to track you. Period.
 
 # Privacy Policy
 
-Throughout all services on rakerman.com, **none of them will collect your data and use it to track you as an individual
+Throughout all services on radison.io or rakerman.com, **none of them will collect your data and use it to track you as an individual
 **.
 Rather, a few services may collect small amounts of anonymous, non-personal data needed to provide a key feature of the
 service.
@@ -32,11 +32,11 @@ specifics found in Data Usages by Service).
 # Data Usages by Service
 
 We've included a description of both internal (used directly by the application) and external (an outside service) data
-collection methods used by each service on rakerman.com.
+collection methods used by each service on radison.io or rakerman.com.
 Here we explain what we are collecting, why we need to collect it, and how we are managing the data in a safe and secure
 manner.
 
-- https://www.rakerman.com/: N/A
+- https://radison.io/: N/A
 - https://chickens.rakerman.com/: Lobby data is stored for up to 24 hours to allow for users to play Exploding Chickens
   across the Internet, provide the "game analysis" feature, trace and fix possible issues that may arise in a
   lobby/game, and improve user experience on the platform. User data is stored indefintely to allow users to save
@@ -54,7 +54,7 @@ manner.
 
 # Miscellaneous Trackers
 
-Because of the use of certain technologies on any rakerman.com service, a few miscellaneous trackers may appear on a
+Because of the use of certain technologies on any radison.io or rakerman.com service, a few miscellaneous trackers may appear on a
 site privacy report.
 We have no control over these trackers unless we decide to terminate the use of that technology.
 Below is a list describing each tracker that may appear in addition to the _Data Usages by Service_ section.

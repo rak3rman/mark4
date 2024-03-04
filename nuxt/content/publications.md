@@ -32,7 +32,7 @@ architecture, and v3 cloud implementation, along with a few key takeaways for be
 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring 2023
 
 #desc
-Designed in Keynote, distributed under "Personal Use License" as defined in rakerman.com/licensing
+Designed in Keynote, distributed under "Personal Use License" as defined in radison.io/licensing
 ::
 
 ::DocsBookmark{link="https://chickens.rakerman.com"}
@@ -68,7 +68,7 @@ better application design.
 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Fall 2022
 
 #desc
-Designed in Keynote, distributed under "Personal Use License" as defined in rakerman.com/licensing
+Designed in Keynote, distributed under "Personal Use License" as defined in radison.io/licensing
 ::
 
 ::DocsBookmark{link="https://chickens.rakerman.com"}
@@ -104,7 +104,7 @@ application design.
 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring 2022
 
 #desc
-Designed in Keynote, distributed under "Personal Use License" as defined in rakerman.com/licensing
+Designed in Keynote, distributed under "Personal Use License" as defined in radison.io/licensing
 ::
 
 ::DocsBookmark{link="https://chickens.rakerman.com"}

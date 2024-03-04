@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
     // Fetch all documents
     const docs = await serverQueryContent(event).find()
     const sitemap = new SitemapStream({
-        hostname: 'https://www.rakerman.com'
+        hostname: 'https://radison.io'
     })
     // Insert all content-rendered documents into sitemap
     for (const doc of docs) {
