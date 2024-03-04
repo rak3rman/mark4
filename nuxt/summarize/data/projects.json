@@ -47,7 +47,7 @@
     "media": {
       "desktop_screenshot": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/1b4b5b9c-9ef6-47c0-76a2-1f527062b100/xl",
       "external": "https://chickens.rakerman.com",
-      "youtube": "https://rakerman.com/publications"
+      "youtube": "https://radison.io/publications"
     },
     "is_featured": true,
     "on_resume": true,
@@ -353,7 +353,7 @@
       }
     ],
     "media": {
-      "external": "https://www.rakerman.com",
+      "external": "https://radison.io",
       "github": "https://github.com/rak3rman/mark4",
       "spline": "https://prod.spline.design/RrgWIyeNN2iyaS58/scene.splinecode"
     },
