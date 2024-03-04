@@ -13,9 +13,9 @@ Legal stuff detailing how digital assets can and cannot be used.
 
 # Personal Use License
 
-The individual ("Content Provider") grants buyer a non-exclusive perpetual personal-use license to
-download and copy the accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") subject
-to the following restrictions:
+The individual ("Content Provider") grants buyer a non-exclusive perpetual personal-use license to download and copy the
+accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") subject to the following
+restrictions:
 
 - _This license is for personal use only. Personal use means non-commercial use of the Media for display on personal
   websites and computers, or making image prints or video copies for personal use. The Media may not be used in any way
@@ -27,10 +27,10 @@ to the following restrictions:
 - _The Content Provider will not be liable for any third party claims or incidental, consequential or other damages
   arising out of this license or buyer's use of the Media._
 
-\*All Media released or shared by the Content Provider anywhere on the web domain https://radison.io or https://rakerman.com
-or https://media.rakerman.com/ is subject by default to the Personal Use License unless specified otherwise. "The
-Media" includes post thumbnails, post images, as well as any other digital media provided directly by the Content
-Provider.
+\*All Media released or shared by the Content Provider anywhere on the web domain https://radison.io
+or https://rakerman.com or https://media.rakerman.com/ is subject by default to the Personal Use License unless
+specified otherwise. "The Media" includes post thumbnails, post images, as well as any other digital media provided
+directly by the Content Provider.
 
 # Commercial Use License
 
@@ -38,8 +38,7 @@ Provider.
 
 The individual ("Content Provider") grants buyers a perpetual, non-exclusive, non-transferable, worldwide
 license to use the accompanying image(s) or video(s) or other physical/digital media (collectively, "Media,") for
-permitted commercial purposes, defined
-as:
+permitted commercial purposes, defined as:
 
 - _advertising, promotion, brochures, packaging_
 - _as part of a commercial website for promotional purposes_
