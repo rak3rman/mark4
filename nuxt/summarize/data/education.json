@@ -10,6 +10,84 @@
     ],
     "description": "Bachelor of Science in Computer Science, Minor in Business Administration; 3.96 GPA",
     "activities": "SAE Formula E, Tennis Club, ACM",
+    "coursework": [
+      {
+        "code": "CS 111",
+        "title": "Program Design I"
+      },
+      {
+        "code": "CS 141",
+        "title": "Program Design II"
+      },
+      {
+        "code": "CS 151",
+        "title": "Mathematical Foundations of Computing"
+      },
+      {
+        "code": "CS 211",
+        "title": "Programming Practicum"
+      },
+      {
+        "code": "CS 251",
+        "title": "Data Structures"
+      },
+      {
+        "code": "CS 261",
+        "title": "Machine Organization"
+      },
+      {
+        "code": "CS 301",
+        "title": "Languages and Automata"
+      },
+      {
+        "code": "CS 341",
+        "title": "Programming Language Design and Implementation"
+      },
+      {
+        "code": "CS 342",
+        "title": "Software Design"
+      },
+      {
+        "code": "CS 361",
+        "title": "Systems Programming"
+      },
+      {
+        "code": "CS 362",
+        "title": "Computer Design"
+      },
+      {
+        "code": "CS 377",
+        "title": "Communication and Ethical Issues in Computing"
+      },
+      {
+        "code": "CS 401",
+        "title": "Computer Algorithms I"
+      },
+      {
+        "code": "CS 411",
+        "title": "Artificial Intelligence I"
+      },
+      {
+        "code": "CS 421",
+        "title": "Natrual Language Processing"
+      },
+      {
+        "code": "CS 450",
+        "title": "Introduction to Networking"
+      },
+      {
+        "code": "CS 454",
+        "title": "Principles of Concurrent Programming"
+      },
+      {
+        "code": "CS 468",
+        "title": "Network Security"
+      },
+      {
+        "code": "CS 494",
+        "title": "Introduction to High Performance Computing"
+      }
+    ],
     "on_resume": true
   },
   {
