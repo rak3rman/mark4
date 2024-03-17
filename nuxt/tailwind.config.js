@@ -23,12 +23,14 @@ module.exports = {
     themes: [
       {
         default: {
-          primary: "#28292A", // Primary theme color (logo, buttons)
+          primary: "#586CB2", // Primary theme color (logo, buttons)
           secondary: "#586CB2", // Secondary theme color (alt icons)
           accent: "#CCCCCC",
           neutral: "#F1F3F9",
           success: "#059669",
-          "base-100": "#28292A",
+          warning: "#ff5a00",
+          "base-100": "#000000",
+          "base-200": "#121212",
         },
         summarize: {
           primary: "#212121", // Primary theme color (logo, buttons)

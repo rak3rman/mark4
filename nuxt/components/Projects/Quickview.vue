@@ -11,7 +11,7 @@
         leave-to="opacity-0"
       >
         <div
-          class="fixed inset-0 hidden bg-primary bg-opacity-75 transition-opacity md:block"
+          class="fixed inset-0 hidden bg-base-100 bg-opacity-75 transition-opacity md:block"
         />
       </TransitionChild>
 
@@ -32,7 +32,7 @@
               class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl"
             >
               <div
-                class="relative flex w-full items-center overflow-hidden rounded-2xl bg-primary-focus shadow-2xl"
+                class="relative flex w-full items-center overflow-hidden rounded-2xl bg-base-100-focus shadow-2xl"
                 :class="{
                   'px-4 pb-8 pt-14 sm:px-6 sm:pt-8 md:p-6 lg:p-8':
                     !project?.media?.spline,

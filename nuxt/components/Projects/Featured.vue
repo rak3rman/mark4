@@ -37,7 +37,7 @@
               {{ project.title }}
             </h6>
             <div
-              class="mb-3 rounded-lg bg-transparent p-4 shadow-xl backdrop-blur-[1.5px] backdrop-brightness-[0.4] md:bg-primary-focus"
+              class="mb-3 rounded-lg bg-transparent p-4 shadow-xl backdrop-blur-[1.5px] backdrop-brightness-[0.4] md:bg-base-100-focus"
             >
               <h6 class="text-md text-accent">
                 {{ project.long_description }}

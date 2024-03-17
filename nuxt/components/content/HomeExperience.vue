@@ -46,7 +46,7 @@
                 :class="[
                   tab.id === selectedExpTab
                     ? 'bg-secondary'
-                    : 'bg-primary-focus',
+                    : 'bg-base-100-focus',
                 ]"
               >
                 <div class="flex sm:absolute sm:left-0 sm:top-0">
@@ -59,7 +59,7 @@
                     :class="[
                       tab.id === selectedExpTab
                         ? 'bg-secondary'
-                        : 'bg-primary-focus',
+                        : 'bg-base-100-focus',
                     ]"
                   ></svg>
                 </div>
@@ -90,7 +90,7 @@
           class="mr-3 mt-4 inline-flex items-center"
         >
           <div class="rounded-md bg-secondary p-[1px]">
-            <div class="rounded-md bg-primary px-4 py-2 hover:bg-primary-focus">
+            <div class="rounded-md bg-base-100 px-4 py-2 hover:bg-base-100-focus">
               <div
                 class="bg-secondary bg-clip-text font-mono text-base leading-normal text-transparent"
               >
@@ -105,7 +105,7 @@
           class="mt-4 inline-flex items-center"
         >
           <div class="rounded-md bg-secondary p-[1px]">
-            <div class="rounded-md bg-primary px-4 py-2 hover:bg-primary-focus">
+            <div class="rounded-md bg-base-100 px-4 py-2 hover:bg-base-100-focus">
               <div
                 class="bg-secondary bg-clip-text font-mono text-base leading-normal text-transparent"
               >
@@ -140,7 +140,7 @@
     <!--    </div>-->
     <!--    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-2 list-none p-0">-->
     <!--      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">-->
-    <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
+    <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-base-100-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
     <!--          <blockquote>-->
     <!--            <h6 class="text-lg tracking-tight text-neutral">-->
     <!--              "{{ testimonial.quote }}"-->

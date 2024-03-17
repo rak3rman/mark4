@@ -24,7 +24,7 @@
           <span class="inline-flex rounded-md shadow">
             <NuxtLink
               to="/"
-              class="inline-flex items-center rounded-md border border-secondary px-4 py-2 font-mono text-sm text-secondary hover:bg-primary-focus"
+              class="inline-flex items-center rounded-md border border-secondary px-4 py-2 font-mono text-sm text-secondary hover:bg-base-100-focus"
             >
               Back Home
             </NuxtLink>

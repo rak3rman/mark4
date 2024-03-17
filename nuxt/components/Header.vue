@@ -8,7 +8,7 @@
       <div class="relative flex justify-start">
         <h6
           class="flex items-center pr-6 text-left text-3xl font-bold leading-tight text-neutral md:text-4xl"
-          :class="hide_line ? '' : 'bg-primary'"
+          :class="hide_line ? '' : 'bg-base-100'"
         >
           <span class="pr-2 font-mono text-2xl text-secondary md:text-3xl">{{
             props.num

@@ -22,7 +22,7 @@
               :style="{ 'transition-delay': 100 + 'ms' }"
             >
               <PopoverButton
-                class="inline-flex items-center justify-center rounded-md bg-primary-focus p-2 text-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
+                class="inline-flex items-center justify-center rounded-md bg-base-100-focus p-2 text-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
               >
                 <span class="sr-only">Open main menu</span>
                 <Bars3Icon class="h-6 w-6" aria-hidden="true" />
@@ -56,7 +56,7 @@
             <NuxtLink
               to="/radison-akerman-resume.pdf"
               target="_blank"
-              class="inline-flex items-center rounded-md border border-secondary px-4 py-2 font-mono text-sm text-secondary hover:bg-primary-focus"
+              class="inline-flex items-center rounded-md border border-secondary px-4 py-2 font-mono text-sm text-secondary hover:bg-base-100-focus"
             >
               Resume
             </NuxtLink>
@@ -79,7 +79,7 @@
         class="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden"
       >
         <div
-          class="overflow-hidden rounded-lg bg-primary-focus shadow-md ring-1 ring-black ring-opacity-5"
+          class="overflow-hidden rounded-lg bg-base-100-focus shadow-md ring-1 ring-black ring-opacity-5"
         >
           <div class="flex items-center justify-between px-5 pt-4">
             <NuxtLink to="/">
@@ -92,7 +92,7 @@
             </NuxtLink>
             <div class="-mr-2">
               <PopoverButton
-                class="inline-flex items-center justify-center rounded-md bg-primary p-2 text-accent hover:bg-primary-focus focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
+                class="inline-flex items-center justify-center rounded-md bg-base-100 p-2 text-accent hover:bg-base-100-focus focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary"
               >
                 <span class="sr-only">Close menu</span>
                 <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -109,7 +109,7 @@
                 :key="item.name"
                 :to="item.href"
                 :class="'delay-[' + index * 100 + ']'"
-                class="block rounded-md px-3 py-2 font-mono text-base text-accent hover:bg-primary hover:text-secondary"
+                class="block rounded-md px-3 py-2 font-mono text-base text-accent hover:bg-base-100 hover:text-secondary"
               >
                 <span class="text-secondary">{{
                   "0" + (index + 1) + ". "

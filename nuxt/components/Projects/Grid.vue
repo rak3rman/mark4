@@ -11,7 +11,7 @@
       >
         <!--    Card     -->
         <div
-          class="m-3 flex flex-1 flex-col rounded-lg p-8 shadow-md ring-1 ring-primary-focus"
+          class="m-3 flex flex-1 flex-col rounded-lg p-8 shadow-md ring-1 ring-base-100-focus"
           @click="emit('quick', project)"
         >
           <div class="mb-4 flow-root items-center">
@@ -89,7 +89,7 @@
         <a
           @click="limit += increment"
           v-if="limit < ProjectsFiltered.length"
-          class="m-1 rounded-md border border-secondary px-4 py-2 text-center font-mono text-base leading-normal text-secondary hover:bg-primary-focus"
+          class="m-1 rounded-md border border-secondary px-4 py-2 text-center font-mono text-base leading-normal text-secondary hover:bg-base-100-focus"
         >
           Show
           {{ Math.min(increment, ProjectsFiltered.length - limit) }} more
@@ -98,7 +98,7 @@
         <a
           @click="limit -= increment"
           v-if="limit >= increment + starting"
-          class="m-1 rounded-md border border-secondary px-4 py-2 text-center font-mono text-base leading-normal text-secondary hover:bg-primary-focus"
+          class="m-1 rounded-md border border-secondary px-4 py-2 text-center font-mono text-base leading-normal text-secondary hover:bg-base-100-focus"
         >
           Hide
           {{ Math.min(increment, ProjectsFiltered.length - limit + increment) }}

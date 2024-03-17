@@ -1,6 +1,6 @@
 <template>
   <FadeInWrapper>
-    <div class="h-full bg-primary">
+    <div class="h-full bg-base-100">
       <div class="pb-16">
         <HomeNavbar />
         <main>

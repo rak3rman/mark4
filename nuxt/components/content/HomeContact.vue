@@ -93,7 +93,7 @@
                 id="first-name"
                 autocomplete="given-name"
                 required
-                class="block w-full rounded-md border-accent bg-primary px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-md border-accent bg-base-100 px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
               />
             </div>
           </div>
@@ -108,7 +108,7 @@
                 id="last-name"
                 autocomplete="family-name"
                 required
-                class="block w-full rounded-md border-accent bg-primary px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-md border-accent bg-base-100 px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
               />
             </div>
           </div>
@@ -123,7 +123,7 @@
                 type="email"
                 autocomplete="email"
                 required
-                class="block w-full rounded-md border-accent bg-primary px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-md border-accent bg-base-100 px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
               />
             </div>
           </div>
@@ -152,7 +152,7 @@
                 id="phone-number"
                 autocomplete="tel"
                 required
-                class="block w-full rounded-md border-accent bg-primary px-4 py-3 pl-20 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-md border-accent bg-base-100 px-4 py-3 pl-20 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
                 placeholder="(815) 123-4567"
               />
             </div>
@@ -167,14 +167,14 @@
                 name="message"
                 rows="4"
                 required
-                class="block w-full rounded-md border-accent bg-primary px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-md border-accent bg-base-100 px-3 py-2.5 text-neutral shadow-md focus:border-secondary focus:ring-secondary"
               />
             </div>
           </div>
           <div class="sm:col-span-2">
             <button
               type="submit"
-              class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-primary-focus px-6 py-3 font-medium text-accent shadow-md transition duration-300 ease-in-out hover:bg-secondary hover:text-neutral focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+              class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-base-100-focus px-6 py-3 font-medium text-accent shadow-md transition duration-300 ease-in-out hover:bg-secondary hover:text-neutral focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
             >
               Let's talk
             </button>

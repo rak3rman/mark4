@@ -46,7 +46,7 @@
                   class="rounded-md bg-gradient-to-r from-red-600 via-red-500 to-yellow-500 p-[1px]"
                 >
                   <div
-                    class="rounded-md bg-primary px-4 py-2 hover:bg-primary-focus"
+                    class="hover:bg-base-100-focus rounded-md bg-base-100 px-4 py-2"
                   >
                     <div
                       class="bg-gradient-to-r from-red-600 via-red-500 to-yellow-500 bg-clip-text font-mono text-base leading-normal text-transparent"

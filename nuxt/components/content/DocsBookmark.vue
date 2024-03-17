@@ -2,7 +2,7 @@
   <NuxtLink
     :to="props.link"
     target="_blank"
-    class="my-3 flex items-center rounded-lg bg-primary p-4 shadow-md ring-1 ring-primary-focus"
+    class="my-3 flex items-center rounded-lg bg-base-100 p-4 shadow-md ring-1 ring-base-100-focus"
   >
     <PresentationChartLineIcon
       class="ml-1 mr-3 h-9 w-9 flex-none text-secondary"
