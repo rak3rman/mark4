@@ -1,0 +1,57 @@
+name: Nuxt Integration
+
+on:
+  pull_request
+
+env:
+  CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+  DEPLOY_TAG: mark4-nuxt-stage-${{ github.event.number }}
+  DEPLOY_ROUTE: https://mark4-nuxt-stage-${{ github.event.number }}.radicalplatforms.workers.dev
+
+jobs:
+  cf_deploy_nuxt_prod:
+    name: Deploy Nuxt to Stage
+    runs-on: ubuntu-latest
+
+    environment:
+      name: nuxt-stage-${{ github.event.number }}
+      url: ${{ env.DEPLOY_ROUTE }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: '*/package-lock.json'
+
+      - name: Install Summarize Dependencies
+        run: npm ci
+        working-directory: nuxt/summarize
+
+      - name: Validate Summarize Data
+        run: npm run validate
+        working-directory: nuxt/summarize
+
+      - name: Install Nuxt Dependencies
+        run: npm ci
+        working-directory: nuxt
+
+      - name: Generate Summarize PDFs
+        run: npm run dev & sleep 15 && cd summarize && npm run compile
+        working-directory: nuxt
+
+      - name: Build Nuxt
+        run: npm run build
+        working-directory: nuxt
+        env:
+          NITRO_PRESET: cloudflare
+
+      - name: Publish Nuxt to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          command: deploy --env ${{ env.DEPLOY_TAG }}
+          workingDirectory: nuxt
