@@ -4,6 +4,7 @@ nuxt/.nuxt
 nuxt/.nitro
 nuxt/.cache
 nuxt/.output
+nuxt/.wrangler
 nuxt/.env
 nuxt/public/radison-akerman-resume.pdf
 nuxt/public/radison-akerman-cv.pdf

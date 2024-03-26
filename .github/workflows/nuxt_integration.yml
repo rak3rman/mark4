@@ -53,5 +53,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: deploy --env ${{ env.DEPLOY_TAG }}
+          command: deploy --name ${{ env.DEPLOY_TAG }}
           workingDirectory: nuxt
