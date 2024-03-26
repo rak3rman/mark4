@@ -3,15 +3,15 @@
     <!--    Grid     -->
     <ul
       role="list"
-      class="-m-3 mt-4 grid list-none grid-cols-1 p-0 lg:grid-cols-3"
+      class="m-0 mt-4 grid snap-x grid-flow-col grid-rows-2 overflow-x-scroll"
     >
       <li
-        v-for="project in ProjectsFiltered.slice(0, limit)"
-        class="fade-in col-span-1 flex flex-col space-y-8 pb-0"
+        v-for="project in ProjectsFiltered"
+        class="fade-in col-span-1 flex snap-center flex-col space-y-8 pb-0"
       >
         <!--    Card     -->
         <div
-          class="m-3 flex flex-1 flex-col rounded-lg p-8 shadow-md ring-1 ring-base-100-focus"
+          class="m-3 flex w-96 flex-1 flex-col rounded-lg bg-base-200 p-8"
           @click="emit('quick', project)"
         >
           <div class="mb-4 flow-root items-center">
@@ -84,28 +84,6 @@
         </div>
       </li>
     </ul>
-    <div class="fade-in pb-4 pt-10" v-if="ProjectsFiltered.length > starting">
-      <div class="flex flex-col justify-center sm:flex-row">
-        <a
-          @click="limit += increment"
-          v-if="limit < ProjectsFiltered.length"
-          class="m-1 rounded-md border border-secondary px-4 py-2 text-center font-mono text-base leading-normal text-secondary hover:bg-base-100-focus"
-        >
-          Show
-          {{ Math.min(increment, ProjectsFiltered.length - limit) }} more
-          project{{ ProjectsFiltered.length > starting + 1 ? "s" : "" }}
-        </a>
-        <a
-          @click="limit -= increment"
-          v-if="limit >= increment + starting"
-          class="m-1 rounded-md border border-secondary px-4 py-2 text-center font-mono text-base leading-normal text-secondary hover:bg-base-100-focus"
-        >
-          Hide
-          {{ Math.min(increment, ProjectsFiltered.length - limit + increment) }}
-          project{{ ProjectsFiltered.length > starting + 1 ? "s" : "" }}
-        </a>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -134,8 +112,4 @@ const ProjectsFiltered: Project[] = ProjectsParsed.filter(
 );
 
 const emit = defineEmits(["quick"]);
-
-const starting = 9;
-const increment = 6;
-const limit = ref(starting);
 </script>

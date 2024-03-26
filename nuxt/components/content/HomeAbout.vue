@@ -1,8 +1,8 @@
 <template>
-  <HomeWrapper>
-    <Header num="01." title="About Me" id="about" fade />
+  <HomeWrapper id="about">
+    <Header num="01." title="About Me" fade />
     <div class="mt-4">
-      <div class="relative lg:float-right lg:pb-5 lg:pl-5 lg:pt-1">
+      <div class="relative lg:float-right lg:pb-7 lg:pl-5 lg:pt-1">
         <div class="relative mx-auto max-w-prose text-base lg:max-w-md">
           <figure class="lg:h-[40rem] lg:w-[28rem]">
             <div

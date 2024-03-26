@@ -50,7 +50,7 @@
           <div class="flex justify-center md:float-left md:mr-1">
             <h6 class="text-center text-sm text-neutral opacity-70">
               <Linker href="https://github.com/rak3rman/mark4"
-                >Mark 4, RF-RA #{{ config.public.gitMasterTag }}.
+                >Mark 4 #{{ config.public.gitMasterTag }}
               </Linker>
             </h6>
           </div>

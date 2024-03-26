@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto flex min-h-screen items-center">
+  <div class="container mx-auto flex min-h-screen items-center" id="hero">
     <div class="w-full">
       <h6
         class="fade-in-hero pb-1 pt-1 text-left text-5xl font-bold text-neutral md:text-6xl"

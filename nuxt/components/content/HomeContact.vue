@@ -1,6 +1,6 @@
 <template>
-  <HomeWrapper>
-    <Header num="04." title="Get In Touch" id="contact" fade />
+  <HomeWrapper id="contact">
+    <Header num="04." title="Get In Touch" fade />
     <div class="mt-8 w-full lg:grid lg:grid-cols-5 lg:gap-8">
       <div
         class="flex justify-center lg:col-span-2 lg:col-start-1 lg:row-start-1"
@@ -174,7 +174,7 @@
           <div class="sm:col-span-2">
             <button
               type="submit"
-              class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-base-100-focus px-6 py-3 font-medium text-accent shadow-md transition duration-300 ease-in-out hover:bg-secondary hover:text-neutral focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+              class="bg-base-100-focus inline-flex w-full items-center justify-center rounded-md border border-transparent px-6 py-3 font-medium text-accent shadow-md transition duration-300 ease-in-out hover:bg-secondary hover:text-neutral focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
             >
               Let's talk
             </button>

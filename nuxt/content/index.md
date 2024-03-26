@@ -7,10 +7,10 @@ head.image: "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/fa35b458-67ec-4711
 
 ::HomeHero
 
-I rapidly develop high-quality web utilities that perform at scale. Currently, I'm studying Computer Science +
-Business @ [UIC](https://uic.edu), leading an open-source software team of 8+, and mentoring CPS students on behalf of
-the [UIC Cities
-Project](https://thecitiesproject.org).
+I rapidly develop high-quality web utilities that perform at scale. Currently,
+I'm studying Computer Science + Business @ [UIC](https://uic.edu), leading an
+open-source software team of 8+, and mentoring CPS students on behalf of the
+[UIC Cities Project](https://thecitiesproject.org).
 
 ::
 

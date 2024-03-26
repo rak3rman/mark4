@@ -1,7 +1,7 @@
 <template>
-  <HomeWrapper>
+  <HomeWrapper id="experience">
     <!--  Tabs  -->
-    <Header num="02." title="Experience" id="experience" fade />
+    <Header num="02." title="Experience" fade />
     <div class="mt-4">
       <div
         class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-1 lg:block"
@@ -59,7 +59,7 @@
                     :class="[
                       tab.id === selectedExpTab
                         ? 'bg-secondary'
-                        : 'bg-base-100-focus',
+                        : 'bg-base-200',
                     ]"
                   ></svg>
                 </div>
@@ -89,30 +89,20 @@
           target="_blank"
           class="mr-3 mt-4 inline-flex items-center"
         >
-          <div class="rounded-md bg-secondary p-[1px]">
-            <div class="rounded-md bg-base-100 px-4 py-2 hover:bg-base-100-focus">
-              <div
-                class="bg-secondary bg-clip-text font-mono text-base leading-normal text-transparent"
-              >
-                Resume
-              </div>
-            </div>
-          </div>
+          <ButtonPillOutlineLarge>
+            Resume
+            <DocumentTextIcon class="-mr-1 mb-0.5 ml-1.5 h-4 w-4" />
+          </ButtonPillOutlineLarge>
         </NuxtLink>
         <NuxtLink
           to="/radison-akerman-cv.pdf"
           target="_blank"
           class="mt-4 inline-flex items-center"
         >
-          <div class="rounded-md bg-secondary p-[1px]">
-            <div class="rounded-md bg-base-100 px-4 py-2 hover:bg-base-100-focus">
-              <div
-                class="bg-secondary bg-clip-text font-mono text-base leading-normal text-transparent"
-              >
-                Cirriculum Vitae
-              </div>
-            </div>
-          </div>
+          <ButtonPillOutlineLarge>
+            Cirriculum Vitae
+            <DocumentDuplicateIcon class="-mr-1 mb-0.5 ml-1.5 h-4 w-4" />
+          </ButtonPillOutlineLarge>
         </NuxtLink>
 
         <!--  Logo Cloud  -->
@@ -166,6 +156,10 @@
 </template>
 
 <script setup lang="ts">
+import {
+  DocumentTextIcon,
+  DocumentDuplicateIcon,
+} from "@heroicons/vue/24/solid";
 import { z } from "zod";
 import { sortEventDates } from "~/utils/sortEventDates";
 import { Experience } from "~/summarize/models/Experience";
