@@ -1,20 +1,16 @@
 name = "mark4"
-main = ".output/server/index.mjs"
 account_id = "287572e2291030d8c5e360fcc593a16b"
 compatibility_date = "2024-01-19"
+main = ".output/server/index.mjs"
+workers_dev = true
+
+kv_namespaces = [{ binding = "LINKAGES", id = "29990306356c4c5f8d49d2999424d9ea", preview_id = "df6d561f85114db1aeed50260a595f5a" }]
 
 [build]
 command = "true"
 
 [site]
 bucket = ".output/public"
-
-[env.staging]
-routes = [
-    { pattern = "mark4.stage.rakerman.com", custom_domain = true },
-    { pattern = "mark4.stage.radison.io", custom_domain = true }
-]
-kv_namespaces = [{ binding = "LINKAGES", id = "29990306356c4c5f8d49d2999424d9ea", preview_id = "df6d561f85114db1aeed50260a595f5a" }]
 
 [env.production]
 routes = [
