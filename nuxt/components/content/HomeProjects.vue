@@ -15,12 +15,12 @@
       <!--  Noteworthy Projects  -->
       <div class="fade-in flex items-center justify-between pb-4 pt-12">
         <div>
-          <div class="text-left text-3xl leading-tight text-neutral">
-            Other Neat Stuff
-          </div>
-          <div class="text-md pt-1 text-left font-mono text-secondary">
-            Mighty projects. Huge breadth. <br />
-            May blow your socks off.
+          <div
+            class="font- max-w-4xl text-left text-3xl leading-tight text-accent"
+          >
+            <span class="text-neutral"> Projects that have real impact. </span>
+            Every project serves as a foundational learning experience, leading
+            to high-quality code and tooling.
           </div>
         </div>
         <div class="flex space-x-3 pr-2">

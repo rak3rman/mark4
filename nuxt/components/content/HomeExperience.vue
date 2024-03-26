@@ -2,7 +2,7 @@
   <HomeWrapper id="experience">
     <!--  Tabs  -->
     <Header num="02." title="Experience" fade />
-    <div class="mt-4">
+    <div class="pb-8 pt-4">
       <div
         class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-1 lg:block"
       >
@@ -23,7 +23,9 @@
         >
           <!--  Entries  -->
           <div class="fade-in pb-2 pt-6">
-            <h6 class="text-left text-3xl leading-tight text-neutral">
+            <h6
+              class="text-left text-3xl font-medium leading-tight text-neutral"
+            >
               Professional Disciplines
             </h6>
             <h6 class="text-md pt-1 text-left font-mono text-secondary">
