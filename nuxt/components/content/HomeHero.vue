@@ -24,7 +24,7 @@
               Hi there, my name is
             </h6>
             <h6
-              class="fade-in-hero pb-1 pt-1 text-left text-4xl font-bold leading-tight text-neutral md:text-6xl"
+              class="fade-in-hero pb-1 pt-1 text-left text-4xl font-bold leading-tight text-primary md:text-6xl"
               :style="{ 'transition-delay': 400 + 'ms' }"
             >
               Radison Akerman.

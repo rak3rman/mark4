@@ -150,7 +150,7 @@
                       />
                     </div>
                     <div
-                      class="flex items-center text-xl font-medium leading-6 tracking-tight text-neutral"
+                      class="flex items-center text-xl font-medium leading-6 tracking-tight text-primary"
                     >
                       {{ project.title }}
                       <div class="ml-1.5 inline-flex" v-if="project.tag">

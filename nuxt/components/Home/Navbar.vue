@@ -43,8 +43,8 @@
               :style="{
                 'transition-delay': (navLoaded ? 50 : index * 100 + 300) + 'ms',
               }"
-              class="fade-in-nav text-accent hover:text-secondary"
-              :class="{ 'text-primary': '#' + activeSection === item.href }"
+              class="fade-in-nav text-accent hover:text-primary"
+              :class="{ 'text-secondary': '#' + activeSection === item.href }"
             >
               {{ item.name }}
             </NuxtLink>

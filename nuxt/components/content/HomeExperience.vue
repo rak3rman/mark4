@@ -7,7 +7,7 @@
         class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-1 lg:block"
       >
         <div
-          class="-m-2 rounded-xl bg-neutral/5 p-2 ring-1 ring-inset ring-neutral/10 lg:-m-4 lg:rounded-2xl lg:p-4"
+          class="-m-2 rounded-xl bg-primary/5 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-4"
         >
           <div
             data-theme="summarize"
@@ -19,12 +19,12 @@
       </div>
       <div class="z-0 mt-8 lg:mt-0">
         <div
-          class="mx-auto text-neutral lg:col-start-1 lg:row-start-1 lg:max-w-full"
+          class="mx-auto text-primary lg:col-start-1 lg:row-start-1 lg:max-w-full"
         >
           <!--  Entries  -->
           <div class="fade-in pb-2 pt-6">
             <h6
-              class="text-left text-3xl font-medium leading-tight text-neutral"
+              class="text-left text-3xl font-medium leading-tight text-primary"
             >
               Professional Disciplines
             </h6>
@@ -69,7 +69,7 @@
               <div
                 class="text-md font-mono font-medium transition duration-300 ease-in-out sm:pl-16"
                 :class="[
-                  tab.id === selectedExpTab ? 'text-secondary' : 'text-neutral',
+                  tab.id === selectedExpTab ? 'text-secondary' : 'text-primary',
                 ]"
               >
                 <div>
@@ -123,7 +123,7 @@
 
     <!--  Testimonials  -->
     <!--    <div class="pt-12 pb-8">-->
-    <!--      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">-->
+    <!--      <h6 class="text-3xl text-primary font-bold leading-tight text-left">-->
     <!--        What Others Say-->
     <!--      </h6>-->
     <!--      <h6 class="pt-1 text-md text-secondary font-mono text-left">-->
@@ -134,7 +134,7 @@
     <!--      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">-->
     <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-base-100-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
     <!--          <blockquote>-->
-    <!--            <h6 class="text-lg tracking-tight text-neutral">-->
+    <!--            <h6 class="text-lg tracking-tight text-primary">-->
     <!--              "{{ testimonial.quote }}"-->
     <!--            </h6>-->
     <!--          </blockquote>-->
@@ -143,7 +143,7 @@
     <!--              <NuxtImg class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />-->
     <!--            </div>-->
     <!--            <div class="ml-4">-->
-    <!--              <div class="text-base font-medium leading-6 tracking-tight text-neutral">-->
+    <!--              <div class="text-base font-medium leading-6 tracking-tight text-primary">-->
     <!--                {{ testimonial.name }}-->
     <!--              </div>-->
     <!--              <div class="mt-0.5 text-sm text-accent">-->

@@ -33,7 +33,7 @@
             <h6 class="text-md mx-3 mb-1 font-mono text-secondary">
               {{ project.organization }}
             </h6>
-            <h6 class="mx-3 mb-5 text-3xl text-neutral">
+            <h6 class="mx-3 mb-5 text-3xl text-primary">
               {{ project.title }}
             </h6>
             <div

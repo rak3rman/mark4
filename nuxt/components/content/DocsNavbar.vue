@@ -52,12 +52,8 @@
                 (navLoaded ? 50 : navigation.length * 100 + 300) + 'ms',
             }"
           >
-            <NuxtLink
-              href="/"
-              type="button"
-              class="h-min rounded-full bg-primary px-3.5 py-1 text-white transition hover:bg-success"
-            >
-              Home
+            <NuxtLink href="/">
+              <ButtonPillSolidSmall>Home</ButtonPillSolidSmall>
             </NuxtLink>
           </span>
         </div>

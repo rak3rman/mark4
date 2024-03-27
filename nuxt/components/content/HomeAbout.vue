@@ -44,7 +44,7 @@
       </div>
       <div class="mt-8 lg:mt-0">
         <div
-          class="mx-auto text-neutral lg:col-start-1 lg:row-start-1 lg:max-w-full"
+          class="mx-auto text-primary lg:col-start-1 lg:row-start-1 lg:max-w-full"
         >
           <slot />
         </div>
