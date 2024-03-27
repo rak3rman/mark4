@@ -35,7 +35,7 @@
           <NuxtLink
             :to="'/'"
             class="group block w-fit transition duration-300"
-            :class="selected === index ? 'text-neutral' : 'text-accent'"
+            :class="selected === index ? 'text-primary' : 'text-accent'"
           >
             <div class="font-mono text-sm">
               {{ item.date }} // {{ item.category }}
@@ -45,7 +45,7 @@
             </div>
             <span
               class="mb-1 block h-[3px] max-w-0 transition-all delay-75 duration-500 group-hover:max-w-full"
-              :class="selected === index ? 'bg-neutral' : 'bg-accent'"
+              :class="selected === index ? 'bg-primary' : 'bg-accent'"
             ></span>
           </NuxtLink>
         </div>

@@ -1,5 +1,6 @@
 <template>
   <div
+    id="hero"
     class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
   >
     <div class="container mx-auto flex min-h-screen items-center">
@@ -23,7 +24,7 @@
               Hi there, my name is
             </h6>
             <h6
-              class="fade-in-hero pb-1 pt-1 text-left text-4xl font-bold leading-tight text-neutral md:text-6xl"
+              class="fade-in-hero pb-1 pt-1 text-left text-4xl font-bold leading-tight text-primary md:text-6xl"
               :style="{ 'transition-delay': 400 + 'ms' }"
             >
               Radison Akerman.
@@ -34,38 +35,24 @@
             >
               <ContentSlot :use="$slots.default" unwrap="p" />
             </h6>
-            <span
-              class="fade-in-hero inline-flex rounded-md py-3 shadow"
+            <NuxtLink
+              to="https://chickens.rakerman.com"
+              class="fade-in-hero flex max-w-2xl items-center py-2"
               :style="{ 'transition-delay': 600 + 'ms' }"
             >
-              <NuxtLink
-                to="https://chickens.rakerman.com"
-                class="inline-flex items-center"
-              >
-                <div
-                  class="rounded-md bg-gradient-to-r from-red-600 via-red-500 to-yellow-500 p-[1px]"
-                >
-                  <div
-                    class="rounded-md bg-primary px-4 py-2 hover:bg-primary-focus"
-                  >
-                    <div
-                      class="bg-gradient-to-r from-red-600 via-red-500 to-yellow-500 bg-clip-text font-mono text-base leading-normal text-transparent"
-                    >
-                      <div class="hidden md:block">
-                        Exploding Chickens: Celebrating 1,250+ games played!
-                      </div>
-                      <div class="block text-[0.93rem] md:hidden">
-                        Exploding Chickens: <br />
-                        Celebrating 1,250 games played!
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </NuxtLink>
-            </span>
+              <ButtonPillOutlineLarge
+                class="border-warning text-warning hover:border-accent hover:text-accent"
+                >Exploding Chickens: Celebrating 1,250+ Games Played!
+                <ChevronRightIcon class="-mr-1 h-5 w-5" />
+              </ButtonPillOutlineLarge>
+            </NuxtLink>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup>
+import { ChevronRightIcon } from "@heroicons/vue/16/solid";
+</script>

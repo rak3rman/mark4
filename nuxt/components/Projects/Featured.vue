@@ -33,11 +33,11 @@
             <h6 class="text-md mx-3 mb-1 font-mono text-secondary">
               {{ project.organization }}
             </h6>
-            <h6 class="mx-3 mb-5 text-3xl text-neutral">
+            <h6 class="mx-3 mb-5 text-3xl text-primary">
               {{ project.title }}
             </h6>
             <div
-              class="mb-3 rounded-lg bg-transparent p-4 shadow-xl backdrop-blur-[1.5px] backdrop-brightness-[0.4] md:bg-primary-focus"
+              class="mb-3 rounded-lg bg-transparent p-4 shadow-xl backdrop-blur-[1.5px] backdrop-brightness-[0.4] md:bg-base-200"
             >
               <h6 class="text-md text-accent">
                 {{ project.long_description }}

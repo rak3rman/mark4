@@ -1,13 +1,13 @@
 <template>
-  <HomeWrapper>
+  <HomeWrapper id="experience">
     <!--  Tabs  -->
-    <Header num="02." title="Experience" id="experience" fade />
-    <div class="mt-4">
+    <Header num="02." title="Experience" fade />
+    <div class="pb-8 pt-4">
       <div
         class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-1 lg:block"
       >
         <div
-          class="-m-2 rounded-xl bg-neutral/5 p-2 ring-1 ring-inset ring-neutral/10 lg:-m-4 lg:rounded-2xl lg:p-4"
+          class="-m-2 rounded-xl bg-primary/5 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-4"
         >
           <div
             data-theme="summarize"
@@ -19,11 +19,13 @@
       </div>
       <div class="z-0 mt-8 lg:mt-0">
         <div
-          class="mx-auto text-neutral lg:col-start-1 lg:row-start-1 lg:max-w-full"
+          class="mx-auto text-primary lg:col-start-1 lg:row-start-1 lg:max-w-full"
         >
           <!--  Entries  -->
           <div class="fade-in pb-2 pt-6">
-            <h6 class="text-left text-3xl leading-tight text-neutral">
+            <h6
+              class="text-left text-3xl font-medium leading-tight text-primary"
+            >
               Professional Disciplines
             </h6>
             <h6 class="text-md pt-1 text-left font-mono text-secondary">
@@ -46,7 +48,7 @@
                 :class="[
                   tab.id === selectedExpTab
                     ? 'bg-secondary'
-                    : 'bg-primary-focus',
+                    : 'bg-base-100-focus',
                 ]"
               >
                 <div class="flex sm:absolute sm:left-0 sm:top-0">
@@ -59,7 +61,7 @@
                     :class="[
                       tab.id === selectedExpTab
                         ? 'bg-secondary'
-                        : 'bg-primary-focus',
+                        : 'bg-base-200',
                     ]"
                   ></svg>
                 </div>
@@ -67,7 +69,7 @@
               <div
                 class="text-md font-mono font-medium transition duration-300 ease-in-out sm:pl-16"
                 :class="[
-                  tab.id === selectedExpTab ? 'text-secondary' : 'text-neutral',
+                  tab.id === selectedExpTab ? 'text-secondary' : 'text-primary',
                 ]"
               >
                 <div>
@@ -89,30 +91,20 @@
           target="_blank"
           class="mr-3 mt-4 inline-flex items-center"
         >
-          <div class="rounded-md bg-secondary p-[1px]">
-            <div class="rounded-md bg-primary px-4 py-2 hover:bg-primary-focus">
-              <div
-                class="bg-secondary bg-clip-text font-mono text-base leading-normal text-transparent"
-              >
-                Resume
-              </div>
-            </div>
-          </div>
+          <ButtonPillOutlineLarge>
+            Resume
+            <DocumentTextIcon class="-mr-1 mb-0.5 ml-1.5 h-4 w-4" />
+          </ButtonPillOutlineLarge>
         </NuxtLink>
         <NuxtLink
           to="/radison-akerman-cv.pdf"
           target="_blank"
           class="mt-4 inline-flex items-center"
         >
-          <div class="rounded-md bg-secondary p-[1px]">
-            <div class="rounded-md bg-primary px-4 py-2 hover:bg-primary-focus">
-              <div
-                class="bg-secondary bg-clip-text font-mono text-base leading-normal text-transparent"
-              >
-                Cirriculum Vitae
-              </div>
-            </div>
-          </div>
+          <ButtonPillOutlineLarge>
+            Cirriculum Vitae
+            <DocumentDuplicateIcon class="-mr-1 mb-0.5 ml-1.5 h-4 w-4" />
+          </ButtonPillOutlineLarge>
         </NuxtLink>
 
         <!--  Logo Cloud  -->
@@ -131,7 +123,7 @@
 
     <!--  Testimonials  -->
     <!--    <div class="pt-12 pb-8">-->
-    <!--      <h6 class="text-3xl text-neutral font-bold leading-tight text-left">-->
+    <!--      <h6 class="text-3xl text-primary font-bold leading-tight text-left">-->
     <!--        What Others Say-->
     <!--      </h6>-->
     <!--      <h6 class="pt-1 text-md text-secondary font-mono text-left">-->
@@ -140,9 +132,9 @@
     <!--    </div>-->
     <!--    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-2 list-none p-0">-->
     <!--      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">-->
-    <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-primary-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
+    <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-base-100-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
     <!--          <blockquote>-->
-    <!--            <h6 class="text-lg tracking-tight text-neutral">-->
+    <!--            <h6 class="text-lg tracking-tight text-primary">-->
     <!--              "{{ testimonial.quote }}"-->
     <!--            </h6>-->
     <!--          </blockquote>-->
@@ -151,7 +143,7 @@
     <!--              <NuxtImg class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />-->
     <!--            </div>-->
     <!--            <div class="ml-4">-->
-    <!--              <div class="text-base font-medium leading-6 tracking-tight text-neutral">-->
+    <!--              <div class="text-base font-medium leading-6 tracking-tight text-primary">-->
     <!--                {{ testimonial.name }}-->
     <!--              </div>-->
     <!--              <div class="mt-0.5 text-sm text-accent">-->
@@ -166,6 +158,10 @@
 </template>
 
 <script setup lang="ts">
+import {
+  DocumentTextIcon,
+  DocumentDuplicateIcon,
+} from "@heroicons/vue/24/solid";
 import { z } from "zod";
 import { sortEventDates } from "~/utils/sortEventDates";
 import { Experience } from "~/summarize/models/Experience";

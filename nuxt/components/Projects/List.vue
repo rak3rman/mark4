@@ -53,7 +53,7 @@
               >
                 {{ formatEventDates(project.dates) }}
               </td>
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-neutral">
+              <td class="whitespace-nowrap px-3 py-4 text-sm text-primary">
                 {{ project.title }}
                 <RectangleGroupIcon
                   class="-mt-[3px] inline h-4 w-4 text-secondary"
