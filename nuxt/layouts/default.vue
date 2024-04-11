@@ -9,7 +9,16 @@
       </div>
 
       <div class="pb-16">
-        <HomeNavbar />
+        <Navbar
+          :nav_elements="[
+            {
+              name: 'Home',
+              href: '/',
+              is_cta: true
+            },
+          ]"
+          :has_hero="true"
+        />
         <main
           class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
         >

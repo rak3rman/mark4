@@ -2,19 +2,21 @@
   <FadeInWrapper>
     <div class="h-full bg-base-100">
       <div class="pb-16">
-        <HomeNavbar
-          :navigation="[
-            { name: 'Hero', href: '#hero', type: 'hidden' },
-            { name: 'About', href: '#hero', type: 'text' },
-            { name: 'Experience', href: '#hero', type: 'text' },
-            { name: 'Projects', href: '#hero', type: 'text' },
-            { name: 'Contact', href: '#hero', type: 'text' },
+        <Navbar
+          :nav_elements="[
+            { name: 'About', href: '#about' },
+            { name: 'Experience', href: '#experience' },
+            { name: 'Projects', href: '#projects' },
+            { name: 'Contact', href: '#contact' },
             {
               name: 'Resume',
               href: '/radison-akerman-resume.pdf',
-              type: 'pill',
+              is_cta: true,
+              target: '_blank'
             },
           ]"
+          :has_hero="true"
+          :nav_listen="true"
         />
         <main>
           <slot />

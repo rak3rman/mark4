@@ -1,7 +1,7 @@
 <template>
   <div
-    id="hero"
     class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
+    id="hero"
   >
     <div class="container mx-auto flex min-h-screen items-center">
       <div class="mt-8 w-full lg:grid lg:grid-cols-5 lg:gap-8">
