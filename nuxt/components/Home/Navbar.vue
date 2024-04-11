@@ -2,7 +2,7 @@
   <div
     class="fixed left-0 right-0 top-0 z-50 border-b-[1px] backdrop-blur-xl backdrop-saturate-150 transition delay-100 duration-300 ease-in"
     :class="{
-      'border-accent/[0.05] bg-base-100/[0.8]': activeSection === 'hero',
+      'border-accent/[0.02] bg-base-100/[0.8]': activeSection === 'hero',
       'border-accent/[0.15] bg-base-200/[0.8]': activeSection !== 'hero',
     }"
   >
@@ -14,13 +14,17 @@
           class="flex flex-1 items-center md:absolute md:inset-y-0 md:left-0"
         >
           <div class="flex w-full items-center justify-between md:w-auto">
-            <NuxtLink to="/" class="fade-in-nav">
-              <span class="sr-only">RAkerman</span>
+            <NuxtLink to="/" class="fade-in-nav flex items-center">
               <NuxtImg
-                class="h-5 w-auto"
-                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ed7598b-5520-4e18-5159-daa458739b00/sm"
+                class="mb-[1px] h-[1.3rem] w-auto"
+                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/874f0866-25fb-4224-cc22-205d60921800/sm"
                 alt="RAkerman Logo"
               />
+              <div
+                class="pl-3 text-[1.1rem] font-medium leading-none text-primary md:text-[1.2rem]"
+              >
+                Radison Akerman
+              </div>
             </NuxtLink>
             <div
               class="fade-in-nav my-1 -mr-1 flex items-center md:hidden"
@@ -37,27 +41,41 @@
         >
           <div class="space-x-9 pr-7">
             <NuxtLink
-              v-for="(item, index) in navigation"
-              :key="item.name"
-              :to="item.href"
+              v-for="(section, index) in props.navigation.filter(
+                (e) => e.type === 'text',
+              )"
+              :key="section.name"
+              :to="section.href"
               :style="{
                 'transition-delay': (navLoaded ? 50 : index * 100 + 300) + 'ms',
               }"
               class="fade-in-nav text-accent hover:text-primary"
-              :class="{ 'text-secondary': '#' + activeSection === item.href }"
+              :class="{
+                'text-secondary': '#' + activeSection === section.href,
+              }"
             >
-              {{ item.name }}
+              {{ section.name }}
             </NuxtLink>
           </div>
           <span
             class="fade-in-nav inline-flex"
             :style="{
               'transition-delay':
-                (navLoaded ? 50 : navigation.length * 100 + 300) + 'ms',
+                (navLoaded
+                  ? 50
+                  : props.navigation.filter((e) => e.type !== 'hidden').length *
+                      100 +
+                    300) + 'ms',
             }"
           >
-            <NuxtLink href="/radison-akerman-resume.pdf" target="_blank">
-              <ButtonPillSolidSmall>Resume</ButtonPillSolidSmall>
+            <NuxtLink
+              :href="section.href"
+              target="_blank"
+              v-for="section in props.navigation.filter(
+                (e) => e.type === 'button',
+              )"
+            >
+              <ButtonPillSolidSmall>{{ section.name }}</ButtonPillSolidSmall>
             </NuxtLink>
           </span>
         </div>
@@ -67,13 +85,9 @@
 </template>
 
 <script setup>
-const navigation = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  //  { name: "Photo", href: "#photography" },
-  { name: "Contact", href: "#contact" },
-];
+const props = defineProps({
+  navigation: Object,
+});
 
 const activeSection = ref("hero");
 const navLoaded = ref(false);
@@ -82,8 +96,6 @@ let observer = null;
 let elements = [];
 
 onMounted(() => {
-  const targets = [...navigation, { href: "#hero" }];
-
   observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -93,13 +105,13 @@ onMounted(() => {
       });
     },
     {
-      //      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-      rootMargin: "-300px",
+      threshold: [0],
+      rootMargin: "-20%",
     },
   );
 
-  elements = targets.map((target) => {
-    const el = document.querySelector(target.href);
+  elements = props.navigation.map((section) => {
+    const el = document.querySelector(section.href);
     observer.observe(el);
     return el;
   });
@@ -108,7 +120,7 @@ onMounted(() => {
     () => {
       navLoaded.value = true;
     },
-    navigation.length * 100 + 300,
+    props.navigation.filter((e) => e.type !== "hidden").length * 100 + 300,
   );
 });
 
