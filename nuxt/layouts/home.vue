@@ -9,7 +9,7 @@
             { name: 'Projects', href: '#projects' },
             { name: 'Contact', href: '#contact' },
             {
-              name: 'Resume',
+              name: 'Résumé',
               href: '/radison-akerman-resume.pdf',
               is_cta: true,
               target: '_blank'

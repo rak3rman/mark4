@@ -18,13 +18,13 @@
           />
           <div class="flex w-full flex-col justify-center overflow-y-hidden">
             <h6
-              class="fade-in-hero py-2 text-left font-mono text-lg leading-normal text-secondary md:text-xl"
+              class="fade-in-hero py-1 text-left font-mono text-[17px] leading-normal text-secondary md:py-2 md:text-xl"
               :style="{ 'transition-delay': 300 + 'ms' }"
             >
               Hi there, my name is
             </h6>
             <h6
-              class="fade-in-hero pb-1 pt-1 text-left text-4xl font-bold leading-tight text-primary md:text-6xl"
+              class="fade-in-hero py-0 text-left text-4xl font-bold leading-tight text-primary md:py-1 md:text-6xl"
               :style="{ 'transition-delay': 400 + 'ms' }"
             >
               Radison Akerman.
@@ -37,22 +37,29 @@
             </h6>
             <NuxtLink
               to="https://chickens.rakerman.com"
-              class="fade-in-hero flex max-w-2xl items-center py-2"
+              class="fade-in-hero flex max-w-2xl text-left hover:text-accent items-center py-1 sm:py-2 text-warning"
               :style="{ 'transition-delay': 600 + 'ms' }"
             >
               <ButtonPillOutlineLarge
-                class="border-warning text-warning hover:border-accent hover:text-accent"
-                >Exploding Chickens: Celebrating 1,250+ Games Played!
+                class="border-warning hover:border-accent hidden sm:flex"
+                >Exploding Chickens: Celebrating 1,400+ Games Played!
                 <ChevronRightIcon class="-mr-1 h-5 w-5" />
               </ButtonPillOutlineLarge>
+<!--              <h6 class="overflow-hidden text-[1.1rem] leading-normal sm:hidden">-->
+<!--                Exploding Chickens: Celebrating 1,400+ Games Played!-->
+<!--              </h6>-->
             </NuxtLink>
           </div>
         </div>
       </div>
+    </div>
+    <div class="absolute bottom-[7%] left-0 right-0 w-full flex justify-center">
+      <ChevronDoubleDownIcon class="text-neutral h-7 w-7 md:h-8 md:w-8" />
     </div>
   </div>
 </template>
 
 <script setup>
 import { ChevronRightIcon } from "@heroicons/vue/16/solid";
+import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 </script>

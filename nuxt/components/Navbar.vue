@@ -16,7 +16,7 @@
           <div class="flex w-full items-center justify-between md:w-auto">
             <NuxtLink to="/" class="fade-in-nav flex items-center">
               <NuxtImg
-                class="mb-[1px] h-[1.3rem] w-auto"
+                class="mb-[1.5px] h-[1.3rem] w-auto"
                 src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/874f0866-25fb-4224-cc22-205d60921800/sm"
                 alt="RAkerman Logo"
               />
