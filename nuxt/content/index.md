@@ -16,6 +16,14 @@ open-source software team of 8+, and mentoring CPS students on behalf of the
 
 ::HomeAbout
 
+#### Internet wizard with [7+ years of full-stack experience.]{.text-primary}
+
+#### Previously [Starship Software Engineering Intern @ SpaceX.]{.text-primary}
+
+#### [Director @ Radical]{.text-primary} — an open-source software development collective.
+
+##
+
 Hello there! I’m Radison, a software engineer with a knack for leadership, web + networking technologies, photography,
 and multisport events. My interest in digital technology started back in middle school when I tinkered with
 microcontrollers and competed in FIRST LEGO League competitions — it turns out you can learn a lot from bits of plastic

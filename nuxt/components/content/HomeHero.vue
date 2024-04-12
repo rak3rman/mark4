@@ -55,7 +55,10 @@
         </div>
       </div>
     </div>
-    <div class="absolute bottom-[7%] left-0 right-0 flex w-full justify-center">
+    <div
+      class="fade-in-hero absolute bottom-[7%] left-0 right-0 flex w-full justify-center"
+      :style="{ 'transition-delay': 700 + 'ms' }"
+    >
       <ChevronDoubleDownIcon class="h-7 w-7 text-neutral md:h-8 md:w-8" />
     </div>
   </div>
