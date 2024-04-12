@@ -1,9 +1,10 @@
 <template>
   <div
-    class="fixed left-0 right-0 top-0 z-50 border-b-[1px] transition delay-100 duration-300 ease-in"
+    class="fixed left-0 right-0 top-0 z-50 border-b-[1px] transition duration-300 ease-in"
     :class="{
       'border-accent/[0.02]': activeSection === 'hero',
-      'border-accent/[0.15] bg-base-200/[0.8] backdrop-blur-xl backdrop-saturate-150': activeSection !== 'hero',
+      'border-accent/[0.15] bg-base-200/[0.8] backdrop-blur-xl backdrop-saturate-150':
+        activeSection !== 'hero',
     }"
   >
     <div class="mx-auto max-w-7xl px-4 py-2 sm:px-6">
@@ -31,11 +32,9 @@
               :style="{ 'transition-delay': 100 + 'ms' }"
             >
               <NuxtLink
-                  :href="section.href"
-                  :target="section.target || '_self'"
-                  v-for="section in props.nav_elements.filter(
-                (e) => e.is_cta,
-              )"
+                :href="section.href"
+                :target="section.target || '_self'"
+                v-for="section in props.nav_elements.filter((e) => e.is_cta)"
               >
                 <ButtonPillSolidSmall>{{ section.name }}</ButtonPillSolidSmall>
               </NuxtLink>
@@ -70,17 +69,14 @@
               'transition-delay':
                 (navLoaded
                   ? 50
-                  : props.nav_elements.filter((e) => !e.is_cta).length *
-                      100 +
+                  : props.nav_elements.filter((e) => !e.is_cta).length * 100 +
                     300) + 'ms',
             }"
           >
             <NuxtLink
               :href="section.href"
               :target="section.target || '_self'"
-              v-for="section in props.nav_elements.filter(
-                (e) => e.is_cta,
-              )"
+              v-for="section in props.nav_elements.filter((e) => e.is_cta)"
             >
               <ButtonPillSolidSmall>{{ section.name }}</ButtonPillSolidSmall>
             </NuxtLink>
@@ -107,7 +103,7 @@ const props = defineProps({
   nav_listen: {
     type: Boolean,
     default: false,
-  }
+  },
 });
 
 const activeSection = ref("hero");
@@ -117,8 +113,7 @@ let hero_observer = null;
 let nav_observer = null;
 
 onMounted(() => {
-
-  if (props.has_hero){
+  if (props.has_hero) {
     hero_observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -153,10 +148,12 @@ onMounted(() => {
       },
     );
 
-    props.nav_elements.filter(e => !e.is_cta).forEach((section) => {
-      const el = document.querySelector(section.href);
-      nav_observer.observe(el);
-    });
+    props.nav_elements
+      .filter((e) => !e.is_cta)
+      .forEach((section) => {
+        const el = document.querySelector(section.href);
+        nav_observer.observe(el);
+      });
   }
 
   setTimeout(

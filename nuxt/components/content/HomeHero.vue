@@ -3,7 +3,9 @@
     class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
     id="hero"
   >
-    <div class="container mx-auto flex min-h-screen items-center">
+    <div
+      class="container mx-auto flex min-h-[90vh] items-center sm:min-h-screen"
+    >
       <div class="mt-8 w-full lg:grid lg:grid-cols-5 lg:gap-8">
         <div
           class="fade-in-hero hidden items-center justify-center lg:col-span-2 lg:col-start-4 lg:row-start-1 lg:flex"
@@ -37,24 +39,24 @@
             </h6>
             <NuxtLink
               to="https://chickens.rakerman.com"
-              class="fade-in-hero flex max-w-2xl text-left hover:text-accent items-center py-1 sm:py-2 text-warning"
+              class="fade-in-hero flex max-w-2xl items-center py-1 text-left text-warning hover:text-accent sm:py-2"
               :style="{ 'transition-delay': 600 + 'ms' }"
             >
               <ButtonPillOutlineLarge
-                class="border-warning hover:border-accent hidden sm:flex"
+                class="hidden border-warning hover:border-accent sm:flex"
                 >Exploding Chickens: Celebrating 1,400+ Games Played!
                 <ChevronRightIcon class="-mr-1 h-5 w-5" />
               </ButtonPillOutlineLarge>
-<!--              <h6 class="overflow-hidden text-[1.1rem] leading-normal sm:hidden">-->
-<!--                Exploding Chickens: Celebrating 1,400+ Games Played!-->
-<!--              </h6>-->
+              <!--              <h6 class="overflow-hidden text-[1.1rem] leading-normal sm:hidden">-->
+              <!--                Exploding Chickens: Celebrating 1,400+ Games Played!-->
+              <!--              </h6>-->
             </NuxtLink>
           </div>
         </div>
       </div>
     </div>
-    <div class="absolute bottom-[7%] left-0 right-0 w-full flex justify-center">
-      <ChevronDoubleDownIcon class="text-neutral h-7 w-7 md:h-8 md:w-8" />
+    <div class="absolute bottom-[7%] left-0 right-0 flex w-full justify-center">
+      <ChevronDoubleDownIcon class="h-7 w-7 text-neutral md:h-8 md:w-8" />
     </div>
   </div>
 </template>
