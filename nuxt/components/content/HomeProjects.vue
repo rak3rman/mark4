@@ -15,9 +15,7 @@
       <!--  Noteworthy Projects  -->
       <div class="fade-in flex items-center justify-between pb-4 pt-12">
         <div>
-          <div
-            class="font- max-w-4xl text-left text-3xl leading-tight text-neutral"
-          >
+          <div class="max-w-4xl text-left text-3xl leading-tight text-neutral">
             <span class="text-primary"> Projects that have real impact. </span>
             Every project serves as a foundational learning experience, leading
             to high-quality code and tooling.

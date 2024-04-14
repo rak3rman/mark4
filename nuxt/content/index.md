@@ -20,7 +20,7 @@ open-source software team of 8+, and mentoring CPS students on behalf of the
 
 #### Previously [Starship Software Engineering Intern @ SpaceX.]{.text-primary}
 
-#### [Director @ Radical]{.text-primary} — an open-source software development collective.
+#### [Director @ Radical]{.text-primary} — a small, talent-dense software development collective.
 
 ##
 

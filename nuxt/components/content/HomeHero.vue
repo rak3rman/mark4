@@ -40,7 +40,7 @@
             <NuxtLink
               to="https://chickens.rakerman.com"
               class="fade-in-hero flex max-w-2xl items-center py-1 text-left text-warning hover:text-accent sm:py-2"
-              :style="{ 'transition-delay': 600 + 'ms' }"
+              :style="{ 'transition-delay': (pageLoaded ? 50 : 600) + 'ms' }"
             >
               <ButtonPillOutlineLarge
                 class="hidden border-warning hover:border-accent sm:flex"
@@ -67,4 +67,12 @@
 <script setup>
 import { ChevronRightIcon } from "@heroicons/vue/16/solid";
 import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
+
+const pageLoaded = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    pageLoaded.value = true;
+  }, 600);
+});
 </script>
