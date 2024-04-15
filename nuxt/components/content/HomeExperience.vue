@@ -1,36 +1,46 @@
 <template>
   <HomeWrapper id="experience">
-    <!--  Tabs  -->
     <Header num="02." title="Experience" fade />
-    <div class="pb-8 pt-4">
+    <div class="mt-4">
+      <!-- Resume -->
       <div
         class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-1 lg:block"
       >
-        <div
-          class="-m-2 rounded-xl bg-primary/5 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-4"
-        >
+        <NuxtLink href="/radison-akerman-resume.pdf" target="_blank">
           <div
-            data-theme="summarize"
-            class="rounded-md bg-white p-6 shadow-2xl ring-1 ring-accent/10"
+            class="-m-2 rounded-xl bg-base-200/60 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-4"
           >
-            <SummarizeResume class="h-[30.3rem] origin-top-left scale-[41%]" />
+            <div
+              data-theme="default"
+              class="rounded-md bg-base-200 p-6 shadow-2xl ring-1 ring-accent/10"
+            >
+              <SummarizeResume
+                class="h-[30.3rem] origin-top-left scale-[41%]"
+              />
+            </div>
           </div>
-        </div>
+          <div class="flex justify-center pt-6 text-xs text-neutral">
+            <CursorArrowRaysIcon class="h-4 pr-0.5" />
+            <i
+              >Click to view a slick, light-mode version of this resume as a
+              PDF!</i
+            >
+          </div>
+        </NuxtLink>
       </div>
-      <div class="z-0 mt-8 lg:mt-0">
+      <!-- Professional Disciplines -->
+      <div class="z-0">
         <div
           class="mx-auto text-primary lg:col-start-1 lg:row-start-1 lg:max-w-full"
         >
-          <!--  Entries  -->
-          <div class="fade-in pb-2 pt-6">
-            <h6
-              class="text-left text-3xl font-medium leading-tight text-primary"
-            >
-              Professional Disciplines
-            </h6>
-            <h6 class="text-md pt-1 text-left font-mono text-secondary">
-              Multi-talented. Multi-disciplined.
-            </h6>
+          <div class="fade-in pb-4">
+            <Subheader>
+              <span class="text-primary">
+                A unique set of technical specialties that accelerate progress.
+              </span>
+              Over the years I've refined my skill-set into 3 distinct
+              disciplines.
+            </Subheader>
           </div>
 
           <div class="my-4 w-full">
@@ -51,7 +61,7 @@
                     : 'bg-base-100-focus',
                 ]"
               >
-                <div class="flex sm:absolute sm:left-0 sm:top-0">
+                <div class="flex sm:absolute sm:left-0 sm:top-5">
                   <svg
                     aria-hidden="true"
                     class="h-9 w-9 rounded-lg p-[7.5px] transition duration-300 ease-in-out"
@@ -121,43 +131,58 @@
       </div>
     </div>
 
-    <!--  Testimonials  -->
-    <!--    <div class="pt-12 pb-8">-->
-    <!--      <h6 class="text-3xl text-primary font-bold leading-tight text-left">-->
-    <!--        What Others Say-->
-    <!--      </h6>-->
-    <!--      <h6 class="pt-1 text-md text-secondary font-mono text-left">-->
-    <!--        Don't take my word for it.-->
-    <!--      </h6>-->
-    <!--    </div>-->
-    <!--    <ul role="list" class="grid grid-cols-1 -m-3 lg:grid-cols-2 list-none p-0">-->
-    <!--      <li v-for="(group, index) in testimonials" class="space-y-6 pb-0 mb-3">-->
-    <!--        <figure class="rounded-lg p-8 shadow-md ring-1 ring-base-100-focus m-3" v-for="testimonial in group" :class="index > 1 ? 'hidden lg:block' : ''">-->
-    <!--          <blockquote>-->
-    <!--            <h6 class="text-lg tracking-tight text-primary">-->
-    <!--              "{{ testimonial.quote }}"-->
-    <!--            </h6>-->
-    <!--          </blockquote>-->
-    <!--          <figcaption class="mt-6 flex items-center">-->
-    <!--            <div class="overflow-hidden rounded-full bg-secondary">-->
-    <!--              <NuxtImg class="h-12 w-12 object-cover" :src="'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' + testimonial.img + '/sq'" alt="Image" />-->
-    <!--            </div>-->
-    <!--            <div class="ml-4">-->
-    <!--              <div class="text-base font-medium leading-6 tracking-tight text-primary">-->
-    <!--                {{ testimonial.name }}-->
-    <!--              </div>-->
-    <!--              <div class="mt-0.5 text-sm text-accent">-->
-    <!--                {{ testimonial.title }}-->
-    <!--              </div>-->
-    <!--            </div>-->
-    <!--          </figcaption>-->
-    <!--        </figure>-->
-    <!--      </li>-->
-    <!--    </ul>-->
+    <!--Testimonials-->
+    <!--<div class="pb-8 pt-12">-->
+    <!--  <h6 class="text-left text-3xl font-bold leading-tight text-primary">-->
+    <!--    What Others Say-->
+    <!--  </h6>-->
+    <!--  <h6 class="text-md pt-1 text-left font-mono text-secondary">-->
+    <!--    Don't take my word for it.-->
+    <!--  </h6>-->
+    <!--</div>-->
+    <!--<ul role="list" class="-m-3 grid list-none grid-cols-1 p-0 lg:grid-cols-2">-->
+    <!--  <li v-for="(group, index) in testimonials" class="mb-3 space-y-6 pb-0">-->
+    <!--    <figure-->
+    <!--      class="ring-base-100-focus m-3 rounded-lg p-8 shadow-md ring-1"-->
+    <!--      v-for="testimonial in group"-->
+    <!--      :class="index > 1 ? 'hidden lg:block' : ''"-->
+    <!--    >-->
+    <!--      <blockquote>-->
+    <!--        <h6 class="text-lg tracking-tight text-primary">-->
+    <!--          "{{ testimonial.quote }}"-->
+    <!--        </h6>-->
+    <!--      </blockquote>-->
+    <!--      <figcaption class="mt-6 flex items-center">-->
+    <!--        <div class="overflow-hidden rounded-full bg-secondary">-->
+    <!--          <NuxtImg-->
+    <!--            class="h-12 w-12 object-cover"-->
+    <!--            :src="-->
+    <!--              'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' +-->
+    <!--              testimonial.img +-->
+    <!--              '/sq'-->
+    <!--            "-->
+    <!--            alt="Image"-->
+    <!--          />-->
+    <!--        </div>-->
+    <!--        <div class="ml-4">-->
+    <!--          <div-->
+    <!--            class="text-base font-medium leading-6 tracking-tight text-primary"-->
+    <!--          >-->
+    <!--            {{ testimonial.name }}-->
+    <!--          </div>-->
+    <!--          <div class="mt-0.5 text-sm text-accent">-->
+    <!--            {{ testimonial.title }}-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </figcaption>-->
+    <!--    </figure>-->
+    <!--  </li>-->
+    <!--</ul>-->
   </HomeWrapper>
 </template>
 
 <script setup lang="ts">
+import { CursorArrowRaysIcon } from "@heroicons/vue/20/solid";
 import {
   DocumentTextIcon,
   DocumentDuplicateIcon,
@@ -189,7 +214,7 @@ const testimonials = [
       name: "Garrett Moore",
       title: "Political & Nonprofit Leadership",
       quote:
-        "Radison is not your typical web developer. He is experienced and knowledgeable enough to take your website ideas and turn them into a fast, attractive, and extremely functional online site, all at an affordable price.",
+        "Radison is not your typical web developer. He is experienced and knowledgeable enough to take your website ideas and turn them into a fast, attractive, and extremely functional online site.",
       img: "7036ad5d-b460-4bcb-3a30-c863ecf00c00",
     },
   ],
@@ -211,6 +236,13 @@ const exp_tabs = [
     id: "network",
     name: "Network/IoT Software Engineering",
     desc: "Harnessing the power of the internet through specialized network protocol/security skills.",
+    icon: '<path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/>',
+    viewbox: "0 0 660 512",
+  },
+  {
+    id: "ce",
+    name: "Computer Engineering",
+    desc: "Designed and fabricated full products end-to-end, from an automated 8-zone sprinker controller to multiple 3x1 foot swimming pace clocks. I'm self-taught in most Computer Engineering (CE) topics such as PCB design, CAD, 3D printing, prototyping, firmware, and microcontroller programming.",
     icon: '<path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/>',
     viewbox: "0 0 660 512",
   },
