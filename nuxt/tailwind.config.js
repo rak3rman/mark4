@@ -22,7 +22,7 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        default: {
+        dark: {
           primary: "#F8FAFC", // Primary theme color (logo, buttons)
           secondary: "#586CB2", // Secondary theme color (alt icons)
           accent: "#D1D5DB",
@@ -31,6 +31,16 @@ module.exports = {
           warning: "#FF5A00",
           "base-100": "#000000",
           "base-200": "#121212",
+        },
+        light: {
+          primary: "#212121", // Primary theme color (logo, buttons)
+          secondary: "#586CB2", // Secondary theme color (alt icons)
+          accent: "#5E5E5E",
+          neutral: "#86868B",
+          success: "#059669",
+          warning: "#FF5A00",
+          "base-100": "#FFFFFF",
+          "base-200": "#F5F5F5",
         },
         summarize: {
           primary: "#212121", // Primary theme color (logo, buttons)

@@ -11,7 +11,7 @@
             class="-m-2 rounded-xl bg-base-200/60 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-4"
           >
             <div
-              data-theme="default"
+              data-theme="dark"
               class="rounded-md bg-base-200 p-6 shadow-2xl ring-1 ring-accent/10"
             >
               <SummarizeResume
