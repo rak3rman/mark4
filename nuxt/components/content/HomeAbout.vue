@@ -10,14 +10,14 @@
               class="fade-in aspect-h-7 aspect-w-12 lg:aspect-none lg:hidden"
             >
               <NuxtImg
-                class="rounded-lg object-cover object-top shadow-lg"
+                class="rounded-lg object-cover object-top shadow-lg bg-base-200"
                 src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/60165710-ba66-465f-f366-ba1c3b73cd00/xl"
                 alt="Portrait of Radison"
               />
             </div>
             <div class="fade-in ml-[2rem] hidden lg:block">
               <NuxtImg
-                class="w-[19rem] rounded-lg object-cover object-top shadow-lg"
+                class="w-[19rem] rounded-lg object-cover object-top shadow-lg bg-base-200"
                 src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/60165710-ba66-465f-f366-ba1c3b73cd00/xl"
                 alt="Portrait of Radison"
               />
@@ -26,7 +26,7 @@
               class="fade-in absolute left-0 top-0 ml-[0rem] mt-[26rem] hidden overflow-hidden rounded-lg shadow-xl lg:block"
             >
               <NuxtImg
-                class="h-[15rem] w-[16rem] object-cover object-top"
+                class="h-[15rem] w-[16rem] object-cover object-top bg-base-200"
                 src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/b6b21ae7-e308-443c-a354-976ae0a02300/2xl"
                 alt="Radison Lecturing at UIC"
               />
@@ -35,7 +35,7 @@
               class="fade-in absolute left-0 top-0 ml-[12rem] mt-[13rem] hidden overflow-hidden rounded-lg shadow-xl lg:block"
             >
               <NuxtImg
-                class="w-[18rem] -translate-x-2 scale-[135%] object-cover object-top"
+                class="w-[18rem] -translate-x-2 scale-[135%] object-cover object-top bg-base-200"
                 src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/b6cd4c78-5828-4edf-7ce0-603681a5cf00/2xl"
                 alt="Radison Biking"
               />

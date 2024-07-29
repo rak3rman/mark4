@@ -12,9 +12,9 @@
         <Navbar
           :nav_elements="[
             {
-              name: 'Home',
+              name: 'Return Home',
               href: '/',
-              is_cta: true
+              is_cta: true,
             },
           ]"
           :has_hero="true"

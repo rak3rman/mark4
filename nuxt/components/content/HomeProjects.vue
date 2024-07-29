@@ -17,8 +17,8 @@
         <div>
           <div class="max-w-4xl text-left text-3xl leading-tight text-neutral">
             <span class="text-primary"> Projects that have real impact. </span>
-            Every project serves as a foundational learning experience, leading
-            to high-quality code and tooling.
+            Every project serves as a foundational learning experience, yielding
+            cutting-edge applications that solve real-world problems.
           </div>
         </div>
         <div class="flex space-x-3 pr-2">

@@ -6,7 +6,7 @@ export const formatDateRange = (
   show_anticipated: boolean = false,
 ) => {
   // Create start date object
-  let startDate = DateTime.fromMillis(Date.parse(start)).plus({ days: 1 });
+  const startDate = DateTime.fromMillis(Date.parse(start)).plus({ days: 1 });
 
   // Catch edge of future date (start in future)
   if (startDate > DateTime.now() || start === end) {
@@ -19,7 +19,7 @@ export const formatDateRange = (
   }
 
   // Catch edge of future date (end in future)
-  let endDate = DateTime.fromMillis(Date.parse(end)).plus({ days: 1 });
+  const endDate = DateTime.fromMillis(Date.parse(end)).plus({ days: 1 });
   if (endDate > DateTime.now()) {
     return (
       startDate.toFormat("LLL yyyy") +

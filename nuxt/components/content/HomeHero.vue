@@ -37,20 +37,21 @@
             >
               <ContentSlot :use="$slots.default" unwrap="p" />
             </h6>
-            <NuxtLink
-              to="https://chickens.rakerman.com"
-              class="fade-in-hero flex max-w-2xl items-center py-1 text-left text-warning hover:text-accent sm:py-2"
-              :style="{ 'transition-delay': (pageLoaded ? 50 : 600) + 'ms' }"
+            <div
+              class="fade-in-hero flex max-w-2xl items-center py-1 text-left text-warning sm:py-2"
+              :style="{ 'transition-delay': (pageLoaded ? 0 : 600) + 'ms' }"
             >
-              <ButtonPillOutlineLarge
-                class="hidden border-warning hover:border-accent sm:flex"
-                >Exploding Chickens: Celebrating 1,400+ Games Played!
-                <ChevronRightIcon class="-mr-1 h-5 w-5" />
-              </ButtonPillOutlineLarge>
-              <!--              <h6 class="overflow-hidden text-[1.1rem] leading-normal sm:hidden">-->
-              <!--                Exploding Chickens: Celebrating 1,400+ Games Played!-->
-              <!--              </h6>-->
-            </NuxtLink>
+              <NuxtLink to="https://chickens.rakerman.com">
+                <ButtonPillOutlineLarge
+                  class="hidden border-warning hover:border-accent hover:text-accent sm:flex"
+                  >Exploding Chickens: Celebrating 1,400+ Games Played!
+                  <ChevronRightIcon class="-mr-1 h-5 w-5" />
+                </ButtonPillOutlineLarge>
+                <!--              <h6 class="overflow-hidden text-[1.1rem] leading-normal sm:hidden">-->
+                <!--                Exploding Chickens: Celebrating 1,400+ Games Played!-->
+                <!--              </h6>-->
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>

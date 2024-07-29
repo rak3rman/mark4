@@ -21,10 +21,7 @@
           </div>
           <div class="flex justify-center pt-6 text-xs text-neutral">
             <CursorArrowRaysIcon class="h-4 pr-0.5" />
-            <i
-              >Click to view a slick, light-mode version of this resume as a
-              PDF!</i
-            >
+            <i>Click to view a slick, light-mode version of this resume!</i>
           </div>
         </NuxtLink>
       </div>
@@ -36,10 +33,11 @@
           <div class="fade-in pb-4">
             <Subheader>
               <span class="text-primary">
-                A unique set of technical specialties that accelerate progress.
+                A diverse range of technical specialties that inspire team
+                excellence.
               </span>
-              Over the years I've refined my skill-set into 3 distinct
-              disciplines.
+              Having worn many hats in different domains, I bring a holistic
+              approach to problem-solving that fosters innovative solutions.
             </Subheader>
           </div>
 
@@ -49,9 +47,6 @@
               v-for="tab in expTabs"
               :key="tab.id"
               @click="updateExpTab(tab.id)"
-              :class="[
-                tab.id === selectedExpTab ? '' : 'opacity-75 hover:opacity-100',
-              ]"
             >
               <div
                 class="mb-2 block w-9 rounded-lg transition duration-300 ease-in-out sm:mb-0"
@@ -61,7 +56,7 @@
                     : 'bg-base-100-focus',
                 ]"
               >
-                <div class="flex sm:absolute sm:left-0 sm:top-5">
+                <div class="flex sm:absolute sm:left-0 sm:mt-1">
                   <svg
                     aria-hidden="true"
                     class="h-9 w-9 rounded-lg p-[7.5px] transition duration-300 ease-in-out"
@@ -88,7 +83,7 @@
                 </div>
               </div>
               <div
-                class="font-display text-md mb-4 mt-0.5 text-accent sm:pl-16"
+                class="font-display text-md mb-5 mt-0.5 text-accent sm:mb-4 sm:pl-16"
               >
                 {{ tab.desc }}
               </div>
@@ -103,7 +98,7 @@
         >
           <ButtonPillOutlineLarge>
             Resume
-            <DocumentTextIcon class="-mr-1 mb-0.5 ml-1.5 h-4 w-4" />
+            <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
           </ButtonPillOutlineLarge>
         </NuxtLink>
         <NuxtLink
@@ -113,7 +108,7 @@
         >
           <ButtonPillOutlineLarge>
             Cirriculum Vitae
-            <DocumentDuplicateIcon class="-mr-1 mb-0.5 ml-1.5 h-4 w-4" />
+            <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
           </ButtonPillOutlineLarge>
         </NuxtLink>
 
@@ -183,10 +178,7 @@
 
 <script setup lang="ts">
 import { CursorArrowRaysIcon } from "@heroicons/vue/20/solid";
-import {
-  DocumentTextIcon,
-  DocumentDuplicateIcon,
-} from "@heroicons/vue/24/solid";
+import { ArrowUpRightIcon } from "@heroicons/vue/16/solid";
 import { z } from "zod";
 import { sortEventDates } from "~/utils/sortEventDates";
 import { Experience } from "~/summarize/models/Experience";
@@ -228,38 +220,31 @@ const exp_tabs = [
   {
     id: "fullstack",
     name: "Full-stack Software Engineering",
-    desc: "Proven experience in building high-quality web utilities that perform at scale.",
+    desc: "Proven ability to architect and implement robust web applications that scale efficiently to meet high-demand environments.",
     icon: '<path d="M160 80C160 112.8 140.3 140.1 112 153.3V241.1C130.8 230.2 152.7 224 176 224H272C307.3 224 336 195.3 336 160V153.3C307.7 140.1 288 112.8 288 80C288 35.82 323.8 0 368 0C412.2 0 448 35.82 448 80C448 112.8 428.3 140.1 400 153.3V160C400 230.7 342.7 288 272 288H176C140.7 288 112 316.7 112 352V358.7C140.3 371 160 399.2 160 432C160 476.2 124.2 512 80 512C35.82 512 0 476.2 0 432C0 399.2 19.75 371 48 358.7V153.3C19.75 140.1 0 112.8 0 80C0 35.82 35.82 0 80 0C124.2 0 160 35.82 160 80V80zM80 104C93.25 104 104 93.25 104 80C104 66.75 93.25 56 80 56C66.75 56 56 66.75 56 80C56 93.25 66.75 104 80 104zM368 56C354.7 56 344 66.75 344 80C344 93.25 354.7 104 368 104C381.3 104 392 93.25 392 80C392 66.75 381.3 56 368 56zM80 456C93.25 456 104 445.3 104 432C104 418.7 93.25 408 80 408C66.75 408 56 418.7 56 432C56 445.3 66.75 456 80 456z"/>',
     viewbox: "0 0 448 512",
   },
   {
     id: "network",
     name: "Network/IoT Software Engineering",
-    desc: "Harnessing the power of the internet through specialized network protocol/security skills.",
+    desc: "Expertise in developing secure, optimized network protocols and IoT solutions that leverage cutting-edge internet technologies.",
     icon: '<path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/>',
     viewbox: "0 0 660 512",
   },
   {
     id: "ce",
     name: "Computer Engineering",
-    desc: "Designed and fabricated full products end-to-end, from an automated 8-zone sprinker controller to multiple 3x1 foot swimming pace clocks. I'm self-taught in most Computer Engineering (CE) topics such as PCB design, CAD, 3D printing, prototyping, firmware, and microcontroller programming.",
-    icon: '<path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/>',
-    viewbox: "0 0 660 512",
+    desc: "Experience in designing and fabricating complete products from concept to prototype, utilizing self-taught skills in PCB design, CAD, 3D printing, and microcontroller programming.",
+    icon: '<path d="M6 6v4h4V6H6Z" /><path fill-rule="evenodd" d="M5.75 1a.75.75 0 0 0-.75.75V3a2 2 0 0 0-2 2H1.75a.75.75 0 0 0 0 1.5H3v.75H1.75a.75.75 0 0 0 0 1.5H3v.75H1.75a.75.75 0 0 0 0 1.5H3a2 2 0 0 0 2 2v1.25a.75.75 0 0 0 1.5 0V13h.75v1.25a.75.75 0 0 0 1.5 0V13h.75v1.25a.75.75 0 0 0 1.5 0V13a2 2 0 0 0 2-2h1.25a.75.75 0 0 0 0-1.5H13v-.75h1.25a.75.75 0 0 0 0-1.5H13V6.5h1.25a.75.75 0 0 0 0-1.5H13a2 2 0 0 0-2-2V1.75a.75.75 0 0 0-1.5 0V3h-.75V1.75a.75.75 0 0 0-1.5 0V3H6.5V1.75A.75.75 0 0 0 5.75 1ZM11 4.5a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h6Z" clip-rule="evenodd" />',
+    viewbox: "0 0 16 16",
   },
   {
     id: "teaching",
     name: "Mentoring & Teaching",
-    desc: "Building connections, providing communal support, and fostering resilience.",
-    icon: '<path d="M224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3c-95.73 0-173.3 77.6-173.3 173.3C0 496.5 15.52 512 34.66 512H413.3C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM479.1 320h-73.85C451.2 357.7 480 414.1 480 477.3C480 490.1 476.2 501.9 470 512h138C625.7 512 640 497.6 640 479.1C640 391.6 568.4 320 479.1 320zM432 256C493.9 256 544 205.9 544 144S493.9 32 432 32c-25.11 0-48.04 8.555-66.72 22.51C376.8 76.63 384 101.4 384 128c0 35.52-11.93 68.14-31.59 94.71C372.7 243.2 400.8 256 432 256z"/>',
-    viewbox: "0 0 660 512",
+    desc: "Commitment to cultivating a supportive learning environment that empowers individuals, fosters resilience, and promotes collaborative growth within teams.",
+    icon: '<path d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10.9 12.006c.11.542-.348.994-.9.994H2c-.553 0-1.01-.452-.902-.994a5.002 5.002 0 0 1 9.803 0ZM14.002 12h-1.59a2.556 2.556 0 0 0-.04-.29 6.476 6.476 0 0 0-1.167-2.603 3.002 3.002 0 0 1 3.633 1.911c.18.522-.283.982-.836.982ZM12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />',
+    viewbox: "0 0 16 16",
   },
-  //    {
-  //        id: "eventops",
-  //        name: "Event Operations Freelancing",
-  //        desc: "Effectively ",
-  //        icon: '<path d="M224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3c-95.73 0-173.3 77.6-173.3 173.3C0 496.5 15.52 512 34.66 512H413.3C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM479.1 320h-73.85C451.2 357.7 480 414.1 480 477.3C480 490.1 476.2 501.9 470 512h138C625.7 512 640 497.6 640 479.1C640 391.6 568.4 320 479.1 320zM432 256C493.9 256 544 205.9 544 144S493.9 32 432 32c-25.11 0-48.04 8.555-66.72 22.51C376.8 76.63 384 101.4 384 128c0 35.52-11.93 68.14-31.59 94.71C372.7 243.2 400.8 256 432 256z"/>',
-  //        viewbox: "0 0 640 512",
-  //    },
 ];
 
 export default {

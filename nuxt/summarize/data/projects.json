@@ -10,7 +10,12 @@
     "short_description": "A media upload, organization, and display tool leveraging Cloudflare Workers",
     "type": "microservice",
     "tag": "Alpha",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "tools": [
+      "Nuxt",
+      "Cloudflare Workers/KV",
+      "Typescript",
+      "Tailwinds"
+    ],
     "media": {
       "external": "https://media.rakerman.com"
     }
@@ -41,7 +46,7 @@
         "text": "A full-stack online card game built using Node.js with 1,250+ games played by 600+ players; led development and a team of 5"
       },
       {
-        "text": "Delivered 3 300-level guest lectures at University of Illinois Chicago detailing project structure, schema, testing, viewed by 200+"
+        "text": "Delivered 3 guest lectures at University of Illinois Chicago detailing project structure, schema, testing, viewed by 200+"
       }
     ],
     "media": {
@@ -64,7 +69,11 @@
     "short_description": "A foundational website supporting Steven Olikara’s run for the U.S. Senate in Wisconsin",
     "long_description": "A foundational website supporting Steven Olikara’s 2022 run for the U.S. Senate in Wisconsin. Completely rebuilt from the ground up with unified colors, textures, and mobile optimizations.",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"],
+    "tools": [
+      "Nuxt",
+      "Cloudflare Workers/KV",
+      "Tailwinds"
+    ],
     "media": {
       "desktop_screenshot": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ec8d3a0-11a6-4c6f-70bd-538647806a00/xl",
       "external": "https://www.stevenolikara.com"
@@ -83,7 +92,12 @@
     "long_description": "A centralized user management backbone for all RAkerman Foundation services. Instead of manipulating user data on each RF service, Author serves as a \"one-stop-shop\" for users and RF services.",
     "type": "microservice",
     "tag": "Alpha",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "tools": [
+      "Nuxt",
+      "Cloudflare Workers/KV",
+      "Typescript",
+      "Tailwinds"
+    ],
     "bullets": [
       {
         "text": "A centralized user management backbone leveraging edge cloud compute, built using Cloudflare Workers, Nuxt, Auth0"
@@ -145,7 +159,11 @@
     ],
     "short_description": "A razor-sharp business portfolio website for a nationwide leader in Neuroscience",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"]
+    "tools": [
+      "Nuxt",
+      "Cloudflare Workers/KV",
+      "Tailwinds"
+    ]
   },
   {
     "title": "Pulqra Website",
@@ -157,7 +175,11 @@
     ],
     "short_description": "A minimalist website showcasing Pulqra's vision, product, and collaborations worldwide",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"],
+    "tools": [
+      "Nuxt",
+      "Cloudflare Workers/KV",
+      "Tailwinds"
+    ],
     "media": {
       "external": "https://www.pulqra.com"
     }
@@ -174,7 +196,13 @@
     "short_description": "An effort to streamline the organizational efforts of the Rock River Anything That Floats Race",
     "long_description": "An effort to streamline the organizational efforts of the Rock River Anything That Floats Race. Running on Node.js, this project displays a powerful web interface where administrators can manage raft information, conduct raft timing, and display results to the public. A smart timing plugin and a custom web voting limiter for the People's Choice Award were both built from scratch.",
     "type": "application",
-    "tools": ["Node.js", "Express", "MongoDB", "Auth0", "HTML/CSS"],
+    "tools": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Auth0",
+      "HTML/CSS"
+    ],
     "media": {
       "external": "https://rratfr.rakerman.com",
       "github": "https://github.com/rak3rman/rratfr-manager"
@@ -191,7 +219,12 @@
     "short_description": "A global fallback web server and status monitor designed to be deployed at scale",
     "long_description": "A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all \"subscribers\" via RAkerman Notify. Pretty cool right?",
     "type": "microservice",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "tools": [
+      "Nuxt",
+      "Cloudflare Workers/KV",
+      "Typescript",
+      "Tailwinds"
+    ],
     "media": {
       "desktop_screenshot": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/77d26ff0-fe47-4365-44e8-be30483d8000/xl",
       "external": "https://status.rakerman.com",
@@ -210,7 +243,13 @@
     "short_description": "An inventory management and purchase order platform built for small packaging warehouses",
     "long_description": "An inventory management platform unlike any other. ImpackAI puts analytics at the center of your workflow all while keeping a simple and intuitive interface. Keep track of inventory with varying amounts of stock at different stages in the production process. Help employees work more efficiently with an advanced metrics system. Predict purchase orders in the future. All in just a couple clicks.",
     "type": "application",
-    "tools": ["Node.js", "Express", "MongoDB", "Auth0", "HTML/CSS"]
+    "tools": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Auth0",
+      "HTML/CSS"
+    ]
   },
   {
     "title": "Homebase",
@@ -247,7 +286,13 @@
     "short_description": "A npm package that integrates Shibboleth's SAML SSO with Node.js Express web apps",
     "long_description": "A Nodejs-Express-Passport authentication strategy that works with the University of Illinois Chicago's Shibboleth single-sign on service. Extends the passport-saml npm module, but sets all the default options so that it works with the UIC Shibboleth Identity Provider (IdP). Built out an entire sample project using Vite, Vue 3, and Tailwinds along with a \"Shibalike\" emulator for local testing. Wrote extensive documentation and recorded a walkthrough video for others to understand how to use passport-uicshib.",
     "type": "package",
-    "tools": ["Node.js", "Express", "SAML", "Vite", "Tailwinds"],
+    "tools": [
+      "Node.js",
+      "Express",
+      "SAML",
+      "Vite",
+      "Tailwinds"
+    ],
     "media": {
       "github": "https://github.com/rak3rman/passport-uicshib"
     }
@@ -264,7 +309,12 @@
     "short_description": "A simple url shortener that can be deployed in a pinch on Cloudflare Workers + KV",
     "long_description": "A simple url shortener that can be deployed over multiple domains simultaneously. RAkerman Linker leverages the power of Nuxt 3 and Cloudflare Workers KV to handle a unified list of custom redirects on a global scale. Specify a shortened url along with a target url in the Cloudflare Workers KV interface, and this service will handle the rest.",
     "type": "microservice",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "tools": [
+      "Nuxt",
+      "Cloudflare Workers/KV",
+      "Typescript",
+      "Tailwinds"
+    ],
     "media": {
       "external": "https://link.rakerman.com",
       "github": "https://github.com/rak3rman/rakerman-linker"
@@ -282,7 +332,12 @@
     "short_description": "A Particle.io events recognition filter (specifically for Tracker One) that pushes select updates to the Discord API",
     "long_description": "Particlecord listens to the data stream from Particle.io devices and notifies the user when a particular event occurs. Think of Particlecord as an \"API middleman\" that filters a real-time data stream from Particle.io and sends smart push notifications through Discord. Devices can also be managed using the Discord bot by setting friendly names, changing alert frequencies, and outputting the status of any device.",
     "type": "microservice",
-    "tools": ["Node.js", "Express", "Particle.io", "Discord API"],
+    "tools": [
+      "Node.js",
+      "Express",
+      "Particle.io",
+      "Discord API"
+    ],
     "media": {
       "github": "https://github.com/rak3rman/particlecord"
     }
@@ -297,7 +352,11 @@
       }
     ],
     "short_description": "A dead-simple, custom Discord bot that sends messages on a defined interval",
-    "tools": ["Node.js", "Express", "Discord API"],
+    "tools": [
+      "Node.js",
+      "Express",
+      "Discord API"
+    ],
     "type": "microservice",
     "media": {
       "github": "https://github.com/rak3rman/remindcord"
@@ -314,7 +373,10 @@
     ],
     "short_description": "A bash script that can manage multiple active papermc instances on Linux using screen and pm2",
     "type": "utility",
-    "tools": ["Bash", "PM2"],
+    "tools": [
+      "Bash",
+      "PM2"
+    ],
     "media": {
       "github": "https://github.com/rak3rman/papermc-manager"
     }
@@ -331,7 +393,12 @@
     "short_description": "A pair of meshed swim pace clocks built using neopixel segments and Particle.io microcontrollers",
     "long_description": "Have you ever had to deal with 2 overpriced and outdated pace clocks breaking for seemingly no reason during swim practice in high school? Well, I did. (drumroll sounds) Introducing the RAkerman Pace Clock (RAPC), a state-of-the-art, multi-color, over-engineered digital clock system designed for pacing swim practices. The RAPC is essentially a strip of RGB leds (Neopixels) connected to a microcontroller (Particle Argon) that displays the time from 0:00 to 59:59 (mm:ss) over and over (in any color you'd like). It probably doesn't sound that cool, but trust me, it is a far cry from what it used to be.",
     "type": "electronics",
-    "tools": ["Particle.io", "C++", "Small Electronics", "Mesh Networking"]
+    "tools": [
+      "Particle.io",
+      "C++",
+      "Small Electronics",
+      "Mesh Networking"
+    ]
   },
   {
     "title": "Mark 4",
@@ -343,7 +410,11 @@
     ],
     "short_description": "A fourth attempt at Radison Akerman's personal website. Notes of programming, cleanliness, and unification",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"],
+    "tools": [
+      "Nuxt",
+      "Cloudflare Workers/KV",
+      "Tailwinds"
+    ],
     "bullets": [
       {
         "text": "Radison Akerman's 4th personal portfolio website, built as a lightweight frontend using Nuxt, Cloudflare Workers, Tailwinds"
@@ -370,7 +441,11 @@
     ],
     "short_description": "A third attempt at Radison Akerman's personal website. Notes of blog, professionalism, and classic web design",
     "type": "website",
-    "tools": ["Ghost.io", "HTML/CSS", "Webpack"],
+    "tools": [
+      "Ghost.io",
+      "HTML/CSS",
+      "Webpack"
+    ],
     "media": {
       "github": "https://github.com/rak3rman/mark3"
     }
@@ -386,7 +461,11 @@
     ],
     "short_description": "A second attempt at Radison Akerman's personal website. Notes of photography, one-pagers, and info-dumpage",
     "type": "website",
-    "tools": ["Node.js", "Express", "HTML/CSS"],
+    "tools": [
+      "Node.js",
+      "Express",
+      "HTML/CSS"
+    ],
     "media": {
       "github": "https://github.com/rak3rman/mark2"
     }
@@ -402,7 +481,11 @@
     ],
     "short_description": "The first attempt at Radison Akerman's personal website. Notes of 'lil Rad, programming, and paid website templates",
     "type": "website",
-    "tools": ["Node.js", "Express", "HTML/CSS"],
+    "tools": [
+      "Node.js",
+      "Express",
+      "HTML/CSS"
+    ],
     "media": {
       "github": "https://github.com/rak3rman/mark1"
     }

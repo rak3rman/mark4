@@ -42,7 +42,7 @@ studying computer science and business full-time (with a 3.96 GPA, whoop!). I al
 applications used by 1000's on campus.
 
 Making an impact is part of my DNA, especially when it comes to personal projects. I recently gave [three distinct
-300-level guest lectures at UIC and one lecture internally at SpaceX](/publications) about
+guest lectures at UIC and one lecture internally at SpaceX](/publications) about
 [Exploding Chickens](https://chickens.rakerman.com) — a popular web-based card game I built with my friends in the era
 of COVID-19 (with nearly 1,500 games played!). We dove deep into project management, design patterns, test coverage, web
 browser architecture, and software engineering basics.
