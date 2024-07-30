@@ -16,7 +16,7 @@ open-source software team of 8+, and mentoring CPS students on behalf of the
 
 ::HomeAbout
 
-#### [Internet wizard with]{.text-accent} [7+ years of full-stack software experience.]{.text-primary}
+#### [Internet wizard with]{.text-accent} [4+ years of full-stack software experience.]{.text-primary}
 
 #### [Previously]{.text-accent} [Starship Software Engineering Intern @ SpaceX.]{.text-primary}
 
@@ -37,7 +37,7 @@ leadership and technical excellence by owning a critical flight reliability
 tool used to validate over 1,000,000 spacecraft configuration values.
 
 I’m juggling quite a few responsibilities at the [University of Illinois Chicago](https://uic.edu). For starters, I am
-studying computer science and business full-time (with a 3.96 GPA, whoop!). I also project manage and work directly with
+studying computer science and business full-time (with a 3.97 GPA, whoop!). I also project manage and work directly with
 8+ software developers under the College of Engineering. Together we've developed and shipped over 10 full-stack web
 applications used by 1000's on campus.
 
