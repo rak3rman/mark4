@@ -16,7 +16,7 @@
             >>
             <strong
               >A. "HELP! I'm searching far and wide for a computer
-              wizard"</strong
+              wizard!"</strong
             >
             <br />
             <i
@@ -25,40 +25,30 @@
                 class="inline-block text-secondary underline underline-offset-2"
                 to="/radison-akerman-resume.pdf"
                 target="_blank"
-                >my resume
+                >my resume.
               </NuxtLink>
-              , if you think we'd be a match (yay!) fill out the good ole'
-              contact form.</i
+              If you think we'd be a match (yay!) fill out the good ole' contact
+              form. I'll be in touch.</i
             >
           </h6>
           <h6 class="pb-4">
             >>
             <strong
               >B. "I need a group of highly-driven creatives that can do
-              anything"</strong
+              anything."</strong
             >
             <br />
             <i
-              >Check out
-              <NuxtLink
-                class="inline-block text-secondary underline underline-offset-2"
-                to="https://pulqra.com"
-                >Pulqra
-              </NuxtLink>
-              , we'd be thrilled to collab with you over our
-              <NuxtLink
-                class="inline-block text-secondary underline underline-offset-2"
-                to="https://pulqra.com/dir/product"
-                >catalogue of services
-              </NuxtLink>
-              .</i
+              >A storm is brewing over at Radical, a talent-dense software
+              development collective. We're working through product ideas, so
+              feel free to drop a suggestion!</i
             >
           </h6>
           <h6 class="pb-4">
             >>
             <strong
               >C. "Whoa. I don't even know where to start but let's
-              chat"</strong
+              chat."</strong
             >
             <br />
             <i
@@ -76,7 +66,7 @@
       </div>
       <div class="flex items-center lg:col-span-3">
         <form
-          action="https://informr.rakerman.com/in/q5y6j3N2"
+          action="https://informr.rakerman.com/in/psb9kg5V"
           method="POST"
           class="fade-in grid w-full grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
         >
@@ -93,7 +83,8 @@
                 id="first-name"
                 autocomplete="given-name"
                 required
-                class="block w-full rounded-md border-accent bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-xl border-accent bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                placeholder="Radison"
               />
             </div>
           </div>
@@ -108,7 +99,8 @@
                 id="last-name"
                 autocomplete="family-name"
                 required
-                class="block w-full rounded-md border-accent bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-xl border-accent bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                placeholder="Akerman"
               />
             </div>
           </div>
@@ -123,7 +115,8 @@
                 type="email"
                 autocomplete="email"
                 required
-                class="block w-full rounded-md border-accent bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-xl border-accent bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                placeholder="joe@radison.io"
               />
             </div>
           </div>
@@ -133,26 +126,14 @@
               class="block text-sm font-medium text-accent"
               >Phone Number</label
             >
-            <div class="relative mt-1 rounded-md shadow-sm">
-              <div class="absolute inset-y-0 left-0 flex items-center">
-                <label for="country" class="sr-only">Country</label>
-                <select
-                  id="country"
-                  name="country"
-                  class="h-full rounded-md border-transparent bg-transparent py-0 pl-4 pr-8 text-primary focus:border-secondary focus:ring-secondary"
-                >
-                  <option>US</option>
-                  <option>CA</option>
-                  <option>EU</option>
-                </select>
-              </div>
+            <div class="relative mt-1 rounded-xl shadow-sm">
               <input
                 type="text"
                 name="phone-number"
                 id="phone-number"
                 autocomplete="tel"
                 required
-                class="block w-full rounded-md border-accent bg-base-100 px-4 py-3 pl-20 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-xl border-accent bg-base-100 px-4 py-3 text-primary shadow-md focus:border-secondary focus:ring-secondary"
                 placeholder="(815) 123-4567"
               />
             </div>
@@ -167,24 +148,23 @@
                 name="message"
                 rows="4"
                 required
-                class="block w-full rounded-md border-accent bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                class="block w-full rounded-xl border-accent bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary"
+                placeholder="Hey! I'd love to hear more about XYZ!"
               />
+              <div class="float-right flex items-center pr-2 pt-2">
+                <Linker href="https://informr.rakerman.com" class="text-xs">
+                  <div class="flex">
+                    <SparklesIcon class="h-4 w-4 pr-1" />
+                    Powered by Informr
+                  </div>
+                </Linker>
+              </div>
             </div>
           </div>
-          <div class="sm:col-span-2">
-            <button
-              type="submit"
-              class="bg-base-100-focus inline-flex w-full items-center justify-center rounded-md border border-transparent px-6 py-3 font-medium text-accent shadow-md transition duration-300 ease-in-out hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
-            >
-              Let's talk
+          <div class="-mt-4 sm:col-span-2">
+            <button type="submit">
+              <ButtonPillOutlineLarge>Let's Talk!</ButtonPillOutlineLarge>
             </button>
-            <NuxtLink
-              to="https://informr.rakerman.com"
-              class="float-right flex items-center p-2 text-xs text-accent transition duration-300 ease-in-out hover:text-secondary"
-            >
-              <SparklesIcon class="h-4 w-4 pr-1" />
-              Powered by Informr
-            </NuxtLink>
           </div>
         </form>
       </div>
