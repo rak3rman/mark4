@@ -1,4 +1,4 @@
-name: cloudflare_deploy_production
+name: Nuxt Deploy Production
 
 on:
   push:
@@ -7,52 +7,51 @@ on:
   schedule: # Run every 1st of the month at 06:00 UTC, for summarize resume/cv pdf generation
     - cron: '0 6 1 * *'
 
+env:
+  CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+
 jobs:
-  nuxt:
-    runs-on: ${{ matrix.os }}
+  cf_deploy_nuxt_prod:
+    name: Deploy Nuxt to Prod
+    runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        os: [ ubuntu-latest ]
-        node: [ 18 ]
-
-    env:
-      NUXT_DIR: nuxt
-      SUMMARIZE_DIR: nuxt/summarize
+    environment:
+      name: production
+      url: https://radison.io
 
     steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
-
       - name: Checkout
         uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
       - name: Install Summarize Dependencies
-        run: npm i
-        working-directory: ${{ env.SUMMARIZE_DIR }}
+        run: npm ci
+        working-directory: nuxt/summarize
 
       - name: Validate Summarize Data
         run: npm run validate
-        working-directory: ${{ env.SUMMARIZE_DIR }}
+        working-directory: nuxt/summarize
 
       - name: Install Nuxt Dependencies
-        run: npm i
-        working-directory: ${{ env.NUXT_DIR }}
+        run: npm ci
+        working-directory: nuxt
 
       - name: Generate Summarize PDFs
         run: npm run dev & sleep 15 && cd summarize && npm run compile
-        working-directory: ${{ env.NUXT_DIR }}
+        working-directory: nuxt
 
       - name: Build Nuxt
         run: npm run build
-        working-directory: ${{ env.NUXT_DIR }}
+        working-directory: nuxt
         env:
           NITRO_PRESET: cloudflare
 
       - name: Publish Nuxt to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
+          apiToken: ${{ env.CF_API_TOKEN }}
           command: deploy --env production
-          workingDirectory: ${{ env.NUXT_DIR }}
+          workingDirectory: nuxt

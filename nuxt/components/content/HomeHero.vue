@@ -1,8 +1,11 @@
 <template>
   <div
     class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
+    id="hero"
   >
-    <div class="container mx-auto flex min-h-screen items-center">
+    <div
+      class="container mx-auto flex min-h-[90vh] items-center sm:min-h-screen"
+    >
       <div class="mt-8 w-full lg:grid lg:grid-cols-5 lg:gap-8">
         <div
           class="fade-in-hero hidden items-center justify-center lg:col-span-2 lg:col-start-4 lg:row-start-1 lg:flex"
@@ -17,13 +20,13 @@
           />
           <div class="flex w-full flex-col justify-center overflow-y-hidden">
             <h6
-              class="fade-in-hero py-2 text-left font-mono text-lg leading-normal text-secondary md:text-xl"
+              class="fade-in-hero py-1 text-left font-mono text-[17px] leading-normal text-secondary md:py-2 md:text-xl"
               :style="{ 'transition-delay': 300 + 'ms' }"
             >
               Hi there, my name is
             </h6>
             <h6
-              class="fade-in-hero pb-1 pt-1 text-left text-4xl font-bold leading-tight text-neutral md:text-6xl"
+              class="fade-in-hero py-0 text-left text-4xl font-bold leading-tight text-primary md:py-1 md:text-6xl"
               :style="{ 'transition-delay': 400 + 'ms' }"
             >
               Radison Akerman.
@@ -34,38 +37,43 @@
             >
               <ContentSlot :use="$slots.default" unwrap="p" />
             </h6>
-            <span
-              class="fade-in-hero inline-flex rounded-md py-3 shadow"
-              :style="{ 'transition-delay': 600 + 'ms' }"
+            <div
+              class="fade-in-hero flex max-w-2xl items-center py-1 text-left text-warning sm:py-2"
+              :style="{ 'transition-delay': (pageLoaded ? 0 : 600) + 'ms' }"
             >
-              <NuxtLink
-                to="https://chickens.rakerman.com"
-                class="inline-flex items-center"
-              >
-                <div
-                  class="rounded-md bg-gradient-to-r from-red-600 via-red-500 to-yellow-500 p-[1px]"
-                >
-                  <div
-                    class="rounded-md bg-primary px-4 py-2 hover:bg-primary-focus"
-                  >
-                    <div
-                      class="bg-gradient-to-r from-red-600 via-red-500 to-yellow-500 bg-clip-text font-mono text-base leading-normal text-transparent"
-                    >
-                      <div class="hidden md:block">
-                        Exploding Chickens: Celebrating 1,250+ games played!
-                      </div>
-                      <div class="block text-[0.93rem] md:hidden">
-                        Exploding Chickens: <br />
-                        Celebrating 1,250 games played!
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <NuxtLink to="https://chickens.rakerman.com">
+                <ButtonPillOutlineLarge
+                  class="hidden border-warning hover:border-accent hover:text-accent sm:flex"
+                  >Exploding Chickens: Celebrating 1,400+ Games Played!
+                  <ChevronRightIcon class="-mr-1 h-5 w-5" />
+                </ButtonPillOutlineLarge>
+                <!--              <h6 class="overflow-hidden text-[1.1rem] leading-normal sm:hidden">-->
+                <!--                Exploding Chickens: Celebrating 1,400+ Games Played!-->
+                <!--              </h6>-->
               </NuxtLink>
-            </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div
+      class="fade-in-hero absolute bottom-[7%] left-0 right-0 flex w-full justify-center"
+      :style="{ 'transition-delay': 700 + 'ms' }"
+    >
+      <ChevronDoubleDownIcon class="h-7 w-7 text-neutral md:h-8 md:w-8" />
+    </div>
   </div>
 </template>
+
+<script setup>
+import { ChevronRightIcon } from "@heroicons/vue/16/solid";
+import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
+
+const pageLoaded = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    pageLoaded.value = true;
+  }, 600);
+});
+</script>

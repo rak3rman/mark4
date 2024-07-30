@@ -1,5 +1,5 @@
-import { z } from "zod";
-import { Event } from "~/summarize/models/Event";
+import type { z } from "zod";
+import type { Event } from "~/summarize/models/Event";
 type Event = z.infer<typeof Event>;
 
 export const formatEventDates = (

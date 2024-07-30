@@ -3,15 +3,15 @@
     <!--    Grid     -->
     <ul
       role="list"
-      class="-m-3 mt-4 grid list-none grid-cols-1 p-0 lg:grid-cols-3"
+      class="no-scrollbar m-0 mt-4 grid snap-x grid-flow-col grid-rows-2 overflow-x-scroll px-8 sm:px-3 xl:px-[calc((100vw-79rem)/2)]"
     >
       <li
-        v-for="project in ProjectsFiltered.slice(0, limit)"
-        class="fade-in col-span-1 flex flex-col space-y-8 pb-0"
+        v-for="project in ProjectsFiltered"
+        class="fade-in col-span-1 flex snap-center flex-col space-y-8 pb-0"
       >
         <!--    Card     -->
         <div
-          class="m-3 flex flex-1 flex-col rounded-lg p-8 shadow-md ring-1 ring-primary-focus"
+          class="m-1.5 flex w-[20.5rem] flex-1 flex-col rounded-lg bg-base-200 p-6 md:m-3 md:w-96 md:p-8"
           @click="emit('quick', project)"
         >
           <div class="mb-4 flow-root items-center">
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div
-            class="flex items-center text-lg font-medium leading-6 tracking-tight text-neutral"
+            class="flex items-center text-lg font-medium leading-6 tracking-tight text-primary"
           >
             {{ project.title }}
             <div class="ml-1.5 inline-flex" v-if="project.tag">
@@ -84,28 +84,6 @@
         </div>
       </li>
     </ul>
-    <div class="fade-in pb-4 pt-10" v-if="ProjectsFiltered.length > starting">
-      <div class="flex flex-col justify-center sm:flex-row">
-        <a
-          @click="limit += increment"
-          v-if="limit < ProjectsFiltered.length"
-          class="m-1 rounded-md border border-secondary px-4 py-2 text-center font-mono text-base leading-normal text-secondary hover:bg-primary-focus"
-        >
-          Show
-          {{ Math.min(increment, ProjectsFiltered.length - limit) }} more
-          project{{ ProjectsFiltered.length > starting + 1 ? "s" : "" }}
-        </a>
-        <a
-          @click="limit -= increment"
-          v-if="limit >= increment + starting"
-          class="m-1 rounded-md border border-secondary px-4 py-2 text-center font-mono text-base leading-normal text-secondary hover:bg-primary-focus"
-        >
-          Hide
-          {{ Math.min(increment, ProjectsFiltered.length - limit + increment) }}
-          project{{ ProjectsFiltered.length > starting + 1 ? "s" : "" }}
-        </a>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -134,8 +112,4 @@ const ProjectsFiltered: Project[] = ProjectsParsed.filter(
 );
 
 const emit = defineEmits(["quick"]);
-
-const starting = 9;
-const increment = 6;
-const limit = ref(starting);
 </script>

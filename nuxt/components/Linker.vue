@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="props.href"
-    class="group inline w-min transition duration-300 hover:text-secondary"
+    class="group inline transition duration-300 hover:text-secondary"
   >
     <slot />
     <span

@@ -4,6 +4,7 @@ nuxt/.nuxt
 nuxt/.nitro
 nuxt/.cache
 nuxt/.output
+nuxt/.wrangler
 nuxt/.env
 nuxt/public/radison-akerman-resume.pdf
 nuxt/public/radison-akerman-cv.pdf
@@ -11,3 +12,5 @@ nuxt/public/radison-akerman-cv.pdf
 nuxt/summarize/node_modules
 
 .DS_Store
+
+.idea
