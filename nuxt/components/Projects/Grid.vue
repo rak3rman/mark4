@@ -3,7 +3,7 @@
     <!--    Grid     -->
     <ul
       role="list"
-      class="m-0 mt-4 grid snap-x grid-flow-col grid-rows-2 overflow-x-scroll"
+      class="no-scrollbar m-0 mt-4 grid snap-x grid-flow-col grid-rows-2 overflow-x-scroll px-8 sm:px-[calc((100vw-79rem)/2)]"
     >
       <li
         v-for="project in ProjectsFiltered"
@@ -11,7 +11,7 @@
       >
         <!--    Card     -->
         <div
-          class="m-3 flex w-96 flex-1 flex-col rounded-lg bg-base-200 p-8"
+          class="m-3 flex w-[19rem] flex-1 flex-col rounded-lg bg-base-200 p-6 md:w-96 md:p-8"
           @click="emit('quick', project)"
         >
           <div class="mb-4 flow-root items-center">

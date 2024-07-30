@@ -17,7 +17,7 @@
 
       <div class="fixed inset-0 z-10 overflow-y-auto">
         <div
-          class="flex min-h-full items-stretch justify-center text-center md:items-center md:px-2 lg:px-4"
+          class="flex min-h-full items-stretch justify-center pt-12 text-center md:items-center md:px-2 md:pt-0 lg:px-4"
         >
           <TransitionChild
             as="template"
@@ -32,7 +32,7 @@
               class="flex w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl"
             >
               <div
-                class="relative flex w-full items-center overflow-hidden rounded-2xl bg-base-200 shadow-2xl"
+                class="relative flex w-full items-center overflow-hidden bg-base-200 shadow-2xl md:rounded-2xl"
                 :class="{
                   'px-4 pb-8 pt-14 sm:px-6 sm:pt-8 md:p-6 lg:p-8':
                     !project?.media?.spline,

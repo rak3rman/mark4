@@ -13,23 +13,29 @@
       <ProjectsFeatured fade />
 
       <!--  Noteworthy Projects  -->
-      <div class="fade-in flex items-center justify-between pb-4 pt-12">
+      <div class="fade-in items-center justify-between pb-4 pt-12 lg:flex">
         <div>
-          <div class="max-w-4xl text-left text-3xl leading-tight text-neutral">
+          <div class="max-w-5xl text-left text-3xl leading-tight text-neutral">
             <span class="text-primary"> Projects that have real impact. </span>
             Every project serves as a foundational learning experience, yielding
             cutting-edge applications that solve real-world problems.
           </div>
         </div>
-        <div class="flex space-x-3 pr-2">
-          <a>
+        <div class="mt-5 flex space-x-3 pr-2 lg:ml-5 lg:mt-0">
+          <a
+            class="tooltip tooltip-bottom tooltip-secondary"
+            data-tip="View as grid"
+          >
             <Squares2X2Icon
               class="h-6 w-6 transition duration-300 ease-in-out hover:text-secondary"
               :class="{ 'text-secondary': grid }"
               @click="grid = true"
             />
           </a>
-          <a>
+          <a
+            class="tooltip tooltip-bottom tooltip-secondary"
+            data-tip="View as table"
+          >
             <Bars4Icon
               class="h-6 w-6 transition duration-300 ease-in-out hover:text-secondary"
               :class="{ 'text-secondary': !grid }"
