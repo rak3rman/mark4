@@ -22,7 +22,7 @@
                 alt="RAkerman Logo"
               />
               <div
-                class="pl-3 text-[1.1rem] font-medium leading-none text-primary md:text-[1.2rem]"
+                class="pl-3 pt-[0.3px] text-[1.1rem] font-medium leading-none text-primary md:text-[1.2rem]"
               >
                 Radison Akerman
               </div>
