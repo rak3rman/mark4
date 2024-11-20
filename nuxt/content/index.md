@@ -32,7 +32,7 @@ and expensive servos.
 
 I’ve worked across industries including commercial clean energy, spacecraft manufacturing, consulting, university administration, political campaigns, enterprise security systems, film + television production, and athletic special events. Through each experience, I’ve proven I can adapt quickly to new challenges, be industry agnostic, and deliver exceptional software.
 
-Nowadays, I lead all software engineering efforts at [Vista Power](https://vistapower.com). We deliver clean energy as a service for commercial, industrial, and municipal facilities at low or no upfront cost, powered by safe, modular, and cost-effective solar power and battery energy storage. We're moving incredibly fast and are dangerously talent-dense (entire leadership team is ex-SpaceX).
+Nowadays, I lead all software engineering efforts at [Vista Power](https://vistapower.com). We deliver clean energy as a service for commercial, industrial, and municipal facilities at low or no upfront cost, powered by safe, modular, and cost-effective solar power and battery energy storage. We're moving incredibly fast and dangerously talent-dense (entire leadership team is ex-SpaceX).
 
 In 2024, I graduated from the [University of Illinois Chicago](https://uic.edu) with a degree in Computer Science and Business. During my time at UIC, I project-managed and worked directly with
 8+ software developers under the College of Engineering. Together we developed and shipped over 10 full-stack web
