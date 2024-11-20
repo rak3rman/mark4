@@ -10,8 +10,8 @@
               class="fade-in aspect-h-7 aspect-w-12 lg:aspect-none lg:hidden"
             >
               <NuxtImg
-                class="rounded-lg object-cover object-top shadow-lg bg-base-200"
-                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/60165710-ba66-465f-f366-ba1c3b73cd00/xl"
+                class="rounded-lg object-cover object-center shadow-lg bg-base-200 [mask-image:linear-gradient(to_bottom,black_70%,transparent_95%)]"
+                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/af63a776-af55-4f19-22a7-604a95399b00/xl"
                 alt="Portrait of Radison"
               />
             </div>

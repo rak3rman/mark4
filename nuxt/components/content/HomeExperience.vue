@@ -118,7 +118,7 @@
         >
           <NuxtImg
             v-for="url in ExperienceLogoWhiteSet"
-            class="max-h-10 w-full object-contain object-left"
+            class="max-h-10 w-[9rem] md:w-[11.5rem] object-contain object-left"
             :src="url"
             alt="Experience Logo White"
           />
