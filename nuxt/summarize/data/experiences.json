@@ -1,5 +1,22 @@
 [
   {
+    "title": "Lead Software Engineer",
+    "organization": "Vista Power",
+    "location": "San Francisco, CA",
+    "dates": [
+      {
+        "start": "2024-11"
+      }
+    ],
+    "commitment": "full",
+    "discipline": "professional",
+    "bullets": [],
+    "media": {
+      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/0fc9126a-5a1b-423e-f93d-a41f491cc200/sm"
+    },
+    "on_resume": false
+  },
+  {
     "title": "Software Engineering Intern",
     "organization": "nvisia",
     "location": "Chicago, IL",
