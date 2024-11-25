@@ -1,13 +1,43 @@
 # Mark 4
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+The 4th iteration of Radison Akerman's personal website, built on next-gen Nuxt v3 and Tailwinds
+
+[![Nuxt Production](https://github.com/rak3rman/mark4/actions/workflows/production_deploy.yml/badge.svg)](https://github.com/rak3rman/mark4/actions/workflows/production_deploy.yml)
+
+## Project Overview
+
+Mark 4 is Radison Akerman's personal website and portfolio, designed to showcase my professional experience, projects, and technical writing in a sharp, modern interface. The site is built with cutting-edge web technologies to deliver a fast, responsive experience while maintaining excellent SEO and accessibility.
+
+### Key Features
+
+- **Modern Stack**: Built with Nuxt 3 and Tailwind CSS for optimal performance and maintainability
+- **Content Management**: Uses Nuxt Content module for easy markdown-based content updates
+- **Dynamic Components**: Custom Vue components for interactive sections like project showcases
+- **Responsive Design**: Fully responsive layout that works seamlessly across all devices
+- **SEO Optimized**: Built-in SEO optimization with meta tags and structured data
+- **Fast Loading**: Leverages Nuxt's static site generation for lightning-fast page loads
+- **Cloud Deployment**: Automated deployment to Cloudflare Workers for global edge delivery
+
+### Design Philosophy
+
+Simple. Sharp. No compromises.
+
+- **Colors:** Primary colors are black and white, with accents in "radical" blue-gray
+- **Typography:** Sans-serif font with a focus on readability and minimalism
+- **Layout:** Clean, grid-based design with a focus on whitespace and content hierarchy
+
+#### Inspiration
+
+- [Apple web design](https://www.apple.com)
+- [SpaceX Starship/Dragon mission info display design (which I worked on!), not the website :/](https://www.spacex.com)
+
+Everything else is original!
 
 ## Nuxt 3
 
 ### Setup
 
 Make sure to install the dependencies:
-
 ```bash
 npm install
 ```
