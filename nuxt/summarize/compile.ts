@@ -3,7 +3,7 @@ import fs = require("fs");
 
 async function generatePDF(url: string, path: string, filename: string) {
   const browser = await puppeteer.launch({
-    headless: "new",
+    headless: true,
   });
 
   const page = await browser.newPage();

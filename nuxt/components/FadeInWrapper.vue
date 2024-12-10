@@ -21,27 +21,40 @@ const handleScroll = (evt) => {
   }
 };
 
-const showOnloads = (evt) => {
+const showOnloads = () => {
   let elements = Array.from(
     document.getElementsByClassName("fade-in-nav"),
   ).concat(Array.from(document.getElementsByClassName("fade-in-hero")));
-  for (let i = 0; i < elements.length; i++) {
-    let elem = elements[i];
+  
+  elements.forEach(elem => {
     elem.style.opacity = "1";
     elem.style.transform = "scale(1)";
+    elem.style.filter = "blur(0)";
+  });
+};
+
+const initializeAnimations = () => {
+  // If document is already loaded, run immediately
+  if (document.readyState === 'complete') {
+    showOnloads();
+    return;
   }
+
+  // If not loaded, wait for load event
+  window.addEventListener('load', showOnloads, { once: true });
+  
+  // Fallback timer in case load event doesn't fire
+  setTimeout(showOnloads, 2000);
 };
 
 export default {
   mounted() {
-    // Add event listeners for scroll events
+    initializeAnimations();
     document.addEventListener("scroll", handleScroll);
-    setTimeout(handleScroll, 100);
-    // Now that we are mounted, trigger onload fadein elements
-    setTimeout(showOnloads, 100);
   },
   unmounted() {
     document.removeEventListener("scroll", handleScroll);
+    window.removeEventListener('load', showOnloads);
   },
 };
 </script>
