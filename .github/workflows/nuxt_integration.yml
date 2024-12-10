@@ -25,7 +25,9 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-          cache-dependency-path: '*/package-lock.json'
+          cache-dependency-path: |
+            nuxt/package-lock.json
+            nuxt/summarize/package-lock.json
 
       - name: Install Summarize Dependencies
         run: npm ci
