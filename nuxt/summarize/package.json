@@ -5,9 +5,9 @@
     "validate": "ts-node validate.ts"
   },
   "dependencies": {
-    "puppeteer": "^23.10.3",
+    "puppeteer": "^24.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
-    "zod": "^3.22.4"
+    "typescript": "^5.8.2",
+    "zod": "^3.24.2"
   }
 }
