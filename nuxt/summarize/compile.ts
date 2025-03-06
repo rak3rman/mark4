@@ -4,6 +4,7 @@ import fs = require("fs");
 async function generatePDF(url: string, path: string, filename: string) {
   const browser = await puppeteer.launch({
     headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
 
   const page = await browser.newPage();
