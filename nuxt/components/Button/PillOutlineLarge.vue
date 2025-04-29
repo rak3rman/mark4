@@ -4,7 +4,7 @@
     :class="
       props.class
         ? props.class
-        : 'border-accent text-accent hover:border-primary hover:text-primary'
+        : 'border-neutral text-accent hover:border-primary hover:text-primary'
     "
   >
     <slot />

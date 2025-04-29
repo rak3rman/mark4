@@ -9,7 +9,14 @@
       />
 
       <!--  Featured Projects  -->
-      <Header num="03." title="Projects" fade />
+      <Header
+        num="03."
+        topic="Projects"
+        title="Projects make perfect."
+        punchline="From prototype to powerhouse."
+        description="Every project serves as a foundational learning experience, yielding pixel-perfect applications that solve real problems."
+        fade
+      />
       <ProjectsFeatured fade />
 
       <!--  Noteworthy Projects  -->
@@ -18,9 +25,11 @@
           <div
             class="max-w-5xl text-left text-2xl leading-tight text-neutral md:text-3xl"
           >
-            <span class="text-primary"> Projects that have real impact. </span>
-            Every project serves as a foundational learning experience, yielding
-            cutting-edge applications that solve real-world problems.
+            <span class="text-primary">
+              Experimentation drives innovation.
+            </span>
+            Growth happens at the intersection of curiosity, persistence, and
+            practical problem-solving.
           </div>
         </div>
         <div class="mt-5 flex space-x-3 pr-2 lg:ml-5 lg:mt-0">

@@ -1,6 +1,36 @@
 <template>
   <HomeWrapper id="experience">
-    <Header num="02." title="Experience" fade />
+    <Header
+      num="02."
+      topic="Experience"
+      title="Redefining <i>full-stack</i>."
+      punchline="Quality, quantified."
+      description="I'm obsessed with building true end-to-end technical infrastructure and user interfaces."
+      fade
+    >
+      <div>
+        <NuxtLink
+          to="/radison-akerman-resume.pdf"
+          target="_blank"
+          class="mr-3 mt-4 inline-flex items-center"
+        >
+          <ButtonPillOutlineLarge>
+            Resume
+            <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
+          </ButtonPillOutlineLarge>
+        </NuxtLink>
+        <NuxtLink
+          to="/radison-akerman-cv.pdf"
+          target="_blank"
+          class="mt-4 inline-flex items-center"
+        >
+          <ButtonPillOutlineLarge>
+            Cirriculum Vitae
+            <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
+          </ButtonPillOutlineLarge>
+        </NuxtLink>
+      </div>
+    </Header>
     <div class="mt-4">
       <!-- Resume -->
       <div
@@ -8,11 +38,11 @@
       >
         <NuxtLink href="/radison-akerman-resume.pdf" target="_blank">
           <div
-            class="-m-2 rounded-xl bg-base-200/60 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-4"
+            class="-m-2 rounded-xl bg-base-200/60 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-3"
           >
             <div
               data-theme="dark"
-              class="rounded-md bg-base-200 p-6 shadow-2xl ring-1 ring-accent/10"
+              class="rounded-lg bg-base-200 p-6 shadow-2xl ring-1 ring-accent/10"
             >
               <SummarizeResume
                 class="h-[30.3rem] origin-top-left scale-[41%]"
@@ -25,22 +55,13 @@
           </div>
         </NuxtLink>
       </div>
+
       <!-- Professional Disciplines -->
+      <Subheader> Professional Disciplines </Subheader>
       <div class="z-0">
         <div
           class="mx-auto text-primary lg:col-start-1 lg:row-start-1 lg:max-w-full"
         >
-          <div class="fade-in pb-4">
-            <Subheader>
-              <span class="text-primary">
-                A diverse range of technical specialties that inspire team
-                excellence.
-              </span>
-              Having worn many hats in different domains, I bring a holistic
-              approach to problem-solving that fosters innovative solutions.
-            </Subheader>
-          </div>
-
           <div class="my-4 w-full">
             <NuxtLink
               class="fade-in relative transition duration-300 ease-in-out"
@@ -91,34 +112,13 @@
           </div>
         </div>
 
-        <NuxtLink
-          to="/radison-akerman-resume.pdf"
-          target="_blank"
-          class="mr-3 mt-4 inline-flex items-center"
-        >
-          <ButtonPillOutlineLarge>
-            Resume
-            <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
-          </ButtonPillOutlineLarge>
-        </NuxtLink>
-        <NuxtLink
-          to="/radison-akerman-cv.pdf"
-          target="_blank"
-          class="mt-4 inline-flex items-center"
-        >
-          <ButtonPillOutlineLarge>
-            Cirriculum Vitae
-            <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
-          </ButtonPillOutlineLarge>
-        </NuxtLink>
-
         <!--  Logo Cloud  -->
         <div
           class="mt-10 grid grid-cols-2 items-center gap-x-7 gap-y-8 sm:gap-x-4 sm:gap-y-7 lg:max-w-none"
         >
           <NuxtImg
             v-for="url in ExperienceLogoWhiteSet"
-            class="max-h-10 w-[9rem] md:w-[11.5rem] object-contain object-left"
+            class="max-h-10 w-[9rem] object-contain object-left md:w-[11.5rem]"
             :src="url"
             alt="Experience Logo White"
           />
@@ -212,7 +212,6 @@ const testimonials = [
   ],
 ];
 </script>
-
 <script lang="ts">
 let limit_exp = true;
 const selected_exp_tab = "fullstack";

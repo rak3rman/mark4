@@ -5,10 +5,10 @@ head.description: "I am highly skilled in internet. You might find me solving ni
 head.image: "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/fa35b458-67ec-4711-0256-9f68535cbd00/md"
 ---
 
-::HomeHero
+::HomeHero{buttonText="Exploding Chickens: Celebrating 1,750+ Games Played!" buttonUrl="https://chickens.rakerman.com"}
 
-I lead highly-adaptable application and system software teams. 
-Currently, I'm driving software innovation in clean energy as a service at [Vista Power](https://vistapower.com) and event operations management at [Radical Platforms](https://radicalplatforms.org). 
+I lead and build exceptional software experiences.
+Currently, I'm responsible for all software initiatives at [Vista Power](https://vistapower.com) (YC W24) and Section Leading Stanford's [Code in Place](https://codeinplace.stanford.edu).
 Previously at [SpaceX](https://spacex.com).
 
 ::
@@ -25,12 +25,12 @@ Previously at [SpaceX](https://spacex.com).
 
 ####
 
-Hello there! I’m Radison, a software engineer with a knack for leadership, web + networking technologies, photography,
+Hello there! I'm Radison, a software engineer with a knack for leadership, web + networking technologies, photography,
 and athletic events. My interest in digital technology started back in middle school when I tinkered with
 microcontrollers and competed in FIRST LEGO League competitions — it turns out you can learn a lot from bits of plastic
 and expensive servos.
 
-I’ve worked across industries including commercial clean energy, spacecraft manufacturing, consulting, university administration, political campaigns, enterprise security systems, film + television production, and athletic special events. Through each experience, I’ve proven I can adapt quickly to new challenges, be industry agnostic, and deliver exceptional software.
+I've worked across industries including commercial clean energy, spacecraft manufacturing, consulting, university administration, political campaigns, enterprise security systems, film + television production, and athletic special events. Through each experience, I've proven I can adapt quickly to new challenges, be industry agnostic, and deliver exceptional software.
 
 Nowadays, I lead all software engineering efforts at [Vista Power](https://vistapower.com). We deliver clean energy as a service for commercial, industrial, and municipal facilities at low or no upfront cost, powered by safe, modular, and cost-effective solar power and battery energy storage. We're moving incredibly fast and dangerously talent-dense (entire leadership team is ex-SpaceX).
 

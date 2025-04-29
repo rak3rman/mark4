@@ -3,7 +3,7 @@
     <!--    Grid     -->
     <ul
       role="list"
-      class="no-scrollbar m-0 mt-4 grid snap-x grid-flow-col grid-rows-2 overflow-x-scroll px-8 sm:px-3 xl:px-[calc((100vw-79rem)/2)]"
+      class="no-scrollbar m-0 mt-4 grid snap-x grid-flow-col grid-rows-2 overflow-x-scroll px-8 sm:px-3 xl:px-[calc((100vw-63rem)/2)]"
     >
       <li
         v-for="project in ProjectsFiltered"

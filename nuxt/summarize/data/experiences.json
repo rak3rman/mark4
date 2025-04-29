@@ -10,11 +10,21 @@
     ],
     "commitment": "full",
     "discipline": "professional",
-    "bullets": [],
+    "bullets": [
+      {
+        "text": "Owned Multimeter, an energy data aggregator that durably parsed and stored usage and billing records from PDFs, CSVs"
+      },
+      {
+        "text": "Architected Quoder, a sales tool capable of generating near instant quotes for commercial battery energy storage + solar systems"
+      },
+      {
+        "text": "Developed a seamless internal data plane using Hasura DDN, Temporal, Timescale DB, and Docker"
+      }
+    ],
     "media": {
       "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/0fc9126a-5a1b-423e-f93d-a41f491cc200/sm"
     },
-    "on_resume": false
+    "on_resume": true
   },
   {
     "title": "Software Engineering Intern",
@@ -42,7 +52,7 @@
     "media": {
       "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/c9056405-978b-4c97-1ed1-90c13f966700/sm"
     },
-    "on_resume": true
+    "on_resume": false
   },
   {
     "title": "Mentor",
@@ -106,7 +116,8 @@
     "location": "Chicago, IL",
     "dates": [
       {
-        "start": "2022-08"
+        "start": "2022-08",
+        "end": "2024-10"
       }
     ],
     "commitment": "contract",

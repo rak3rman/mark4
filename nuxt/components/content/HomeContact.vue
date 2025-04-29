@@ -1,6 +1,13 @@
 <template>
   <HomeWrapper id="contact">
-    <Header num="04." title="Get In Touch" fade />
+    <Header
+      num="04."
+      topic="Get In Touch"
+      title="Let's connect."
+      punchline="Drop a line, not a packet."
+      description="I'm always excited to talk tech, share ideas, or explore potential collaborations."
+      fade
+    />
     <div class="mt-8 w-full lg:grid lg:grid-cols-5 lg:gap-8">
       <div
         class="flex justify-center lg:col-span-2 lg:col-start-1 lg:row-start-1"

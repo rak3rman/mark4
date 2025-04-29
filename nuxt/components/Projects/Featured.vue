@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="my-12 space-y-24">
     <div
-      class="mt-6 overflow-hidden lg:bg-transparent"
+      class="overflow-hidden lg:bg-transparent"
       :class="fade ? 'fade-in' : ''"
       v-for="(project, index) in ProjectsFiltered"
     >
@@ -11,8 +11,8 @@
             class="col-span-8 row-span-full -m-2 self-center md:col-span-6"
             :class="
               index % 2 === 0
-                ? 'col-start-1 md:col-start-1'
-                : 'col-start-3 md:col-start-5'
+                ? 'col-start-1 mr-4 md:col-start-1'
+                : 'col-start-3 ml-4 md:col-start-5'
             "
           >
             <NuxtImg
@@ -56,7 +56,7 @@
               </h6>
             </div>
             <div
-              class="mx-3 flex"
+              class="mx-3 mt-1 flex"
               :class="index % 2 === 0 ? 'float-right' : 'float-left'"
             >
               <ProjectsExtIcons :project="project" />

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
+    class="container relative mx-auto max-w-5xl overflow-hidden px-4 sm:px-6"
     id="hero"
   >
     <div
@@ -8,7 +8,7 @@
     >
       <div class="mt-8 w-full lg:grid lg:grid-cols-5 lg:gap-8">
         <div
-          class="fade-in-hero hidden items-center justify-center lg:col-span-2 lg:col-start-4 lg:row-start-1 lg:flex"
+          class="fade-in-hero -my-6 -ml-7 -mr-6 hidden items-center justify-center lg:col-span-2 lg:col-start-4 lg:row-start-1 lg:flex"
           :style="{ 'transition-delay': 600 + 'ms' }"
         >
           <SvgPortrait1 class="max-w-full opacity-80" />
@@ -38,18 +38,15 @@
               <ContentSlot :use="$slots.default" unwrap="p" />
             </h6>
             <div
-              class="fade-in-hero flex max-w-2xl items-center py-1 text-left text-warning sm:py-2"
+              class="fade-in-hero mb-2 flex max-w-2xl items-center py-1 text-left text-accent sm:py-2"
               :style="{ 'transition-delay': (pageLoaded ? 0 : 600) + 'ms' }"
+              v-if="buttonText"
             >
-              <NuxtLink to="https://chickens.rakerman.com">
-                <ButtonPillOutlineLarge
-                  class="hidden border-warning hover:border-accent hover:text-accent sm:flex"
-                  >Exploding Chickens: Celebrating 1,400+ Games Played!
+              <NuxtLink :to="buttonUrl">
+                <ButtonPillOutlineLarge>
+                  {{ buttonText }}
                   <ChevronRightIcon class="-mr-1 h-5 w-5" />
                 </ButtonPillOutlineLarge>
-                <!--              <h6 class="overflow-hidden text-[1.1rem] leading-normal sm:hidden">-->
-                <!--                Exploding Chickens: Celebrating 1,400+ Games Played!-->
-                <!--              </h6>-->
               </NuxtLink>
             </div>
           </div>
@@ -70,6 +67,15 @@ import { ChevronRightIcon } from "@heroicons/vue/16/solid";
 import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 
 const pageLoaded = ref(false);
+
+defineProps({
+  buttonText: {
+    type: String,
+  },
+  buttonUrl: {
+    type: String,
+  },
+});
 
 onMounted(() => {
   setTimeout(() => {
