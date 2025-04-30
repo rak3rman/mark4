@@ -34,7 +34,7 @@
     <div class="mt-4">
       <!-- Resume -->
       <div
-        class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-1 lg:block"
+        class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-[4.8px] lg:block"
       >
         <NuxtLink href="/radison-akerman-resume.pdf" target="_blank">
           <div
@@ -57,73 +57,68 @@
       </div>
 
       <!-- Professional Disciplines -->
-      <Subheader> Professional Disciplines </Subheader>
+      <!-- <Subheader> Professional Disciplines </Subheader> -->
       <div class="z-0">
         <div
           class="mx-auto text-primary lg:col-start-1 lg:row-start-1 lg:max-w-full"
         >
-          <div class="my-4 w-full">
-            <NuxtLink
-              class="fade-in relative transition duration-300 ease-in-out"
-              v-for="tab in expTabs"
-              :key="tab.id"
-              @click="updateExpTab(tab.id)"
-            >
-              <div
-                class="mb-2 block w-9 rounded-lg transition duration-300 ease-in-out sm:mb-0"
-                :class="[
-                  tab.id === selectedExpTab
-                    ? 'bg-secondary'
-                    : 'bg-base-100-focus',
-                ]"
-              >
-                <div class="flex sm:absolute sm:left-0 sm:mt-1">
-                  <svg
-                    aria-hidden="true"
-                    class="h-9 w-9 rounded-lg p-[7.5px] transition duration-300 ease-in-out"
-                    fill="#fff"
-                    :viewBox="tab.viewbox"
-                    v-html="tab.icon"
-                    :class="[
-                      tab.id === selectedExpTab
-                        ? 'bg-secondary'
-                        : 'bg-base-200',
-                    ]"
-                  ></svg>
+          <div class="w-full">
+            <div class="relative w-full" v-for="tab in expTabs" :key="tab.id">
+              <div class="items-top absolute inset-0 flex">
+                <div
+                  class="relative h-[1px] w-full overflow-hidden bg-gradient-to-r from-primary/15 via-primary/5 via-[100%] to-base-100 md:via-[70%]"
+                />
+              </div>
+              <div class="relative justify-start py-6">
+                <div
+                  class="bg-base-100-focus block w-9 rounded-lg transition duration-300 ease-in-out sm:mb-0"
+                >
+                  <div class="flex sm:absolute sm:left-0 sm:mt-1">
+                    <svg
+                      aria-hidden="true"
+                      class="h-9 w-9 rounded-lg bg-base-200 p-[7.5px] transition duration-300 ease-in-out"
+                      fill="#fff"
+                      :viewBox="tab.viewbox"
+                      v-html="tab.icon"
+                    ></svg>
+                  </div>
+                </div>
+                <div
+                  class="text-md font-medium leading-[1.125em] tracking-[0.4px] text-primary transition duration-300 ease-in-out sm:pl-16"
+                >
+                  <div>
+                    <span class="absolute inset-0"></span>
+                    {{ tab.name }}
+                  </div>
+                </div>
+                <div class="font-display text-md mt-0.5 text-neutral sm:pl-16">
+                  {{ tab.desc }}
                 </div>
               </div>
-              <div
-                class="text-md font-mono font-medium transition duration-300 ease-in-out sm:pl-16"
-                :class="[
-                  tab.id === selectedExpTab ? 'text-secondary' : 'text-primary',
-                ]"
-              >
-                <div>
-                  <span class="absolute inset-0"></span>
-                  {{ tab.name }}
-                </div>
-              </div>
-              <div
-                class="font-display text-md mb-5 mt-0.5 text-accent sm:mb-4 sm:pl-16"
-              >
-                {{ tab.desc }}
-              </div>
-            </NuxtLink>
+            </div>
           </div>
         </div>
-
-        <!--  Logo Cloud  -->
-        <div
-          class="mt-10 grid grid-cols-2 items-center gap-x-7 gap-y-8 sm:gap-x-4 sm:gap-y-7 lg:max-w-none"
-        >
-          <NuxtImg
-            v-for="url in ExperienceLogoWhiteSet"
-            class="max-h-10 w-[9rem] object-contain object-left md:w-[11.5rem]"
-            :src="url"
-            alt="Experience Logo White"
-          />
-        </div>
       </div>
+    </div>
+
+    <!--  Logo Cloud  -->
+    <div
+      class="w-full pt-20 text-left text-2xl leading-tight text-neutral md:text-2xl"
+    >
+      <span class="text-primary"> Building products is my passion. </span>
+      Growth happens at the intersection of curiosity, persistence, and
+      practical problem-solving. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur.
+    </div>
+    <div
+      class="grid w-full grid-cols-2 items-center gap-x-7 gap-y-8 pt-20 sm:grid-cols-3 sm:gap-x-4 sm:gap-y-14 lg:max-w-none"
+    >
+      <NuxtImg
+        v-for="url in ExperienceLogoWhiteSet"
+        class="max-h-10 w-[9rem] object-contain object-left md:w-[11.5rem]"
+        :src="url"
+        alt="Experience Logo White"
+      />
     </div>
 
     <!--Testimonials-->
@@ -212,6 +207,7 @@ const testimonials = [
   ],
 ];
 </script>
+
 <script lang="ts">
 let limit_exp = true;
 const selected_exp_tab = "fullstack";
@@ -269,3 +265,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.border-gradient {
+  background: linear-gradient(to right, var(--tw-gradient-stops));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+</style>

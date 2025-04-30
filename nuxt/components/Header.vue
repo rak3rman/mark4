@@ -1,7 +1,7 @@
 <template>
-  <div class="pt-[5em]" :class="fade ? 'fade-in' : ''">
-    <div class="relative w-full">
-      <div class="items-top absolute inset-0 flex">
+  <div class="pt-[5em]">
+    <div class="relative w-full" :class="fade ? 'fade-in' : ''">
+      <div class="items-top pointer-events-none absolute inset-0 flex">
         <div class="w-full border-t border-accent" />
       </div>
       <div class="relative flex justify-start pt-5">
@@ -26,7 +26,9 @@
             <span class="text-primary">{{ props.punchline }}</span>
             {{ props.description }}
           </div>
-          <slot />
+          <div class="relative z-10 pt-1">
+            <slot />
+          </div>
         </div>
       </div>
     </div>
