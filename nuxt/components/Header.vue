@@ -19,10 +19,12 @@
           class="col-span-12 flex flex-col justify-center sm:col-span-9 lg:col-span-7"
         >
           <div
-            class="text-left text-5xl font-medium leading-[1.125em] tracking-[0.4px] text-primary"
-            v-html="props.title"
+            class="whitespace-pre-line text-left text-4xl font-medium leading-[1.125em] tracking-[0.4px] text-primary sm:whitespace-normal md:text-5xl"
+            v-html="props.title.replace(/(\S+)\s+(\S+)/g, '$1\n$2')"
           ></div>
-          <div class="mt-4 text-left text-xl leading-tight text-neutral">
+          <div
+            class="mr-4 mt-4 text-left text-lg leading-6 text-neutral md:text-xl md:leading-tight"
+          >
             <span class="text-primary">{{ props.punchline }}</span>
             {{ props.description }}
           </div>

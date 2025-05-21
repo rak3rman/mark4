@@ -31,25 +31,13 @@
         :experience="obj"
       />
 
-      <SummarizeHeading>Event Operations Experience</SummarizeHeading>
-      <SummarizeExperience
-        v-for="obj in ExperiencesParsed.filter(
-          (e: Experience) =>
-            defaultExperienceFilters(e) && e.discipline === 'operations',
-        )"
-        :experience="obj"
-      />
-
-      <SummarizeHeading>Skills</SummarizeHeading>
-      <SummarizeSkillSet v-for="obj in SkillSetsParsed" :skillset="obj" />
-
       <SummarizeHeading>Honors and Awards</SummarizeHeading>
-      <SummarizeAward v-for="obj in AwardsParsed.slice(0, 5)" :award="obj" />
+      <SummarizeAward v-for="obj in AwardsParsed" :award="obj" />
     </SummarizePage>
 
     <SummarizePage :page="3" :total="total_pages">
-      <SummarizeHeading>Honors and Awards (cont.)</SummarizeHeading>
-      <SummarizeAward v-for="obj in AwardsParsed.slice(5)" :award="obj" />
+      <SummarizeHeading>Skills</SummarizeHeading>
+      <SummarizeSkillSet v-for="obj in SkillSetsParsed" :skillset="obj" />
 
       <SummarizeHeading>Presentations</SummarizeHeading>
       <SummarizePresentation

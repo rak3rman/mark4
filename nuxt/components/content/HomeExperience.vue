@@ -4,7 +4,7 @@
       num="02."
       topic="Experience"
       title="Redefining <i>full-stack</i>."
-      punchline="Quality, quantified."
+      punchline="Technical depth, and breadth."
       description="I'm obsessed with building true end-to-end technical infrastructure and user interfaces."
       fade
     >
@@ -25,7 +25,7 @@
           class="mt-4 inline-flex items-center"
         >
           <ButtonPillOutlineLarge>
-            Cirriculum Vitae
+            Curriculum Vitae
             <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
           </ButtonPillOutlineLarge>
         </NuxtLink>
@@ -69,9 +69,9 @@
                   class="relative h-[1px] w-full overflow-hidden bg-gradient-to-r from-primary/15 via-primary/5 via-[100%] to-base-100 md:via-[70%]"
                 />
               </div>
-              <div class="relative justify-start py-6">
+              <div class="relative justify-start py-8 md:py-[1.3em]">
                 <div
-                  class="bg-base-100-focus block w-9 rounded-lg transition duration-300 ease-in-out sm:mb-0"
+                  class="bg-base-100-focus mb-4 block w-9 rounded-lg transition duration-300 ease-in-out sm:mb-0"
                 >
                   <div class="flex sm:absolute sm:left-0 sm:mt-1">
                     <svg
@@ -84,14 +84,14 @@
                   </div>
                 </div>
                 <div
-                  class="text-md font-medium leading-[1.125em] tracking-[0.4px] text-primary transition duration-300 ease-in-out sm:pl-16"
+                  class="text-md font-medium leading-[1.2em] text-primary transition duration-300 ease-in-out sm:pl-16"
                 >
                   <div>
                     <span class="absolute inset-0"></span>
                     {{ tab.name }}
                   </div>
                 </div>
-                <div class="font-display text-md mt-0.5 text-neutral sm:pl-16">
+                <div class="mt-0.5 text-neutral sm:pl-16">
                   {{ tab.desc }}
                 </div>
               </div>
@@ -103,20 +103,29 @@
 
     <!--  Logo Cloud  -->
     <div
-      class="w-full pt-20 text-left text-2xl leading-tight text-neutral md:text-2xl"
+      class="w-full pt-24 text-left text-xl leading-tight text-neutral md:text-2xl"
     >
-      <span class="text-primary"> Building products is my passion. </span>
-      Growth happens at the intersection of curiosity, persistence, and
-      practical problem-solving. Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur.
+      <span class="text-primary">On a quest for quality.</span>
+      I thrive in fast-moving, early-stage teams where the pressure's real and
+      the product matters. I bring contagious energy, craft under constraint,
+      and the kind of care that shows up in the edge cases.
     </div>
     <div
-      class="grid w-full grid-cols-2 items-center gap-x-7 gap-y-8 pt-20 sm:grid-cols-3 sm:gap-x-4 sm:gap-y-14 lg:max-w-none"
+      class="grid w-full grid-cols-2 items-center justify-center gap-x-7 gap-y-10 pt-[8em] sm:grid-cols-3 sm:gap-x-4 sm:gap-y-14 lg:max-w-none lg:pt-20"
     >
       <NuxtImg
-        v-for="url in ExperienceLogoWhiteSet"
-        class="max-h-10 w-[9rem] object-contain object-left md:w-[11.5rem]"
-        :src="url"
+        class="w-[8rem] object-contain object-left md:w-[10rem]"
+        src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/0fc9126a-5a1b-423e-f93d-a41f491cc200/sm"
+        alt="Experience Logo White"
+      />
+      <NuxtImg
+        class="w-[10rem] object-contain object-left md:w-[12rem]"
+        src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/f163f81d-3b7a-49cc-99a1-41b104077f00/sm"
+        alt="Experience Logo White"
+      />
+      <NuxtImg
+        class="w-[10rem] object-contain object-left md:w-[12rem]"
+        src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/8335dd31-40d0-4178-8a47-4be36065f400/sm"
         alt="Experience Logo White"
       />
     </div>
@@ -213,32 +222,39 @@ let limit_exp = true;
 const selected_exp_tab = "fullstack";
 const exp_tabs = [
   {
+    id: "product-leadership",
+    name: "Technical Leadership",
+    desc: "Proven ability to lead software initiatives from concept to launch with strategic, technical, and product-driven clarity",
+    icon: '<path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.49 15.326a.78.78 0 0 1-.358-.442 3 3 0 0 1 4.308-3.516 6.484 6.484 0 0 0-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 0 1-2.07-.655ZM16.44 15.98a4.97 4.97 0 0 0 2.07-.654.78.78 0 0 0 .357-.442 3 3 0 0 0-4.308-3.517 6.484 6.484 0 0 1 1.907 3.96 2.32 2.32 0 0 1-.026.654ZM18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5.304 16.19a.844.844 0 0 1-.277-.71 5 5 0 0 1 9.947 0 .843.843 0 0 1-.277.71A6.975 6.975 0 0 1 10 18a6.974 6.974 0 0 1-4.696-1.81Z" />',
+    viewbox: "0 0 20 20",
+  },
+  {
+    id: "web-interfaces",
+    name: "User Interfaces & Experiences",
+    desc: 'I eat pain points for breakfast. Obsessive about design details, user flow, and "wow, they thought of everything" moments.',
+    icon: '<path d="M10 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 1ZM5.05 3.05a.75.75 0 0 1 1.06 0l1.062 1.06A.75.75 0 1 1 6.11 5.173L5.05 4.11a.75.75 0 0 1 0-1.06ZM14.95 3.05a.75.75 0 0 1 0 1.06l-1.06 1.062a.75.75 0 0 1-1.062-1.061l1.061-1.06a.75.75 0 0 1 1.06 0ZM3 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 3 8ZM14 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 14 8ZM7.172 10.828a.75.75 0 0 1 0 1.061L6.11 12.95a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0ZM10.766 7.51a.75.75 0 0 0-1.37.365l-.492 6.861a.75.75 0 0 0 1.204.65l1.043-.799.985 3.678a.75.75 0 0 0 1.45-.388l-.978-3.646 1.292.204a.75.75 0 0 0 .74-1.16l-3.874-5.764Z" />',
+    viewbox: "0 0 20 20",
+  },
+  {
     id: "fullstack",
-    name: "Full-stack Software Engineering",
-    desc: "Proven ability to architect and implement robust web applications that scale efficiently to meet high-demand environments.",
-    icon: '<path d="M160 80C160 112.8 140.3 140.1 112 153.3V241.1C130.8 230.2 152.7 224 176 224H272C307.3 224 336 195.3 336 160V153.3C307.7 140.1 288 112.8 288 80C288 35.82 323.8 0 368 0C412.2 0 448 35.82 448 80C448 112.8 428.3 140.1 400 153.3V160C400 230.7 342.7 288 272 288H176C140.7 288 112 316.7 112 352V358.7C140.3 371 160 399.2 160 432C160 476.2 124.2 512 80 512C35.82 512 0 476.2 0 432C0 399.2 19.75 371 48 358.7V153.3C19.75 140.1 0 112.8 0 80C0 35.82 35.82 0 80 0C124.2 0 160 35.82 160 80V80zM80 104C93.25 104 104 93.25 104 80C104 66.75 93.25 56 80 56C66.75 56 56 66.75 56 80C56 93.25 66.75 104 80 104zM368 56C354.7 56 344 66.75 344 80C344 93.25 354.7 104 368 104C381.3 104 392 93.25 392 80C392 66.75 381.3 56 368 56zM80 456C93.25 456 104 445.3 104 432C104 418.7 93.25 408 80 408C66.75 408 56 418.7 56 432C56 445.3 66.75 456 80 456z"/>',
-    viewbox: "0 0 448 512",
+    name: "APIs & Data Systems",
+    desc: "Experience building composable services and data ingestion pipelines that serve critical environments",
+    icon: '<path fill-rule="evenodd" d="M13.2 2.24a.75.75 0 0 0 .04 1.06l2.1 1.95H6.75a.75.75 0 0 0 0 1.5h8.59l-2.1 1.95a.75.75 0 1 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 0 0-1.06.04Zm-6.4 8a.75.75 0 0 0-1.06-.04l-3.5 3.25a.75.75 0 0 0 0 1.1l3.5 3.25a.75.75 0 1 0 1.02-1.1l-2.1-1.95h8.59a.75.75 0 0 0 0-1.5H4.66l2.1-1.95a.75.75 0 0 0 .04-1.06Z" clip-rule="evenodd" />',
+    viewbox: "0 0 20 20",
   },
   {
     id: "network",
-    name: "Network/IoT Software Engineering",
-    desc: "Expertise in developing secure, optimized network protocols and IoT solutions that leverage cutting-edge internet technologies.",
-    icon: '<path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/>',
-    viewbox: "0 0 660 512",
+    name: "Platform Infrastructure",
+    desc: "Expertise in designing scalable, cloud-native architecture that is automated, modular, and built for developer velocity",
+    icon: '<path d="m3.196 12.87-.825.483a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .758 0l7.25-4.25a.75.75 0 0 0 0-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 0 1-2.276 0L3.196 12.87Z" /><path d="m3.196 8.87-.825.483a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .758 0l7.25-4.25a.75.75 0 0 0 0-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 0 1-2.276 0L3.196 8.87Z" /><path d="M10.38 1.103a.75.75 0 0 0-.76 0l-7.25 4.25a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .76 0l7.25-4.25a.75.75 0 0 0 0-1.294l-7.25-4.25Z" />',
+    viewbox: "0 0 20 20",
   },
   {
     id: "ce",
     name: "Computer Engineering",
-    desc: "Experience in designing and fabricating complete products from concept to prototype, utilizing self-taught skills in PCB design, CAD, 3D printing, and microcontroller programming.",
-    icon: '<path d="M6 6v4h4V6H6Z" /><path fill-rule="evenodd" d="M5.75 1a.75.75 0 0 0-.75.75V3a2 2 0 0 0-2 2H1.75a.75.75 0 0 0 0 1.5H3v.75H1.75a.75.75 0 0 0 0 1.5H3v.75H1.75a.75.75 0 0 0 0 1.5H3a2 2 0 0 0 2 2v1.25a.75.75 0 0 0 1.5 0V13h.75v1.25a.75.75 0 0 0 1.5 0V13h.75v1.25a.75.75 0 0 0 1.5 0V13a2 2 0 0 0 2-2h1.25a.75.75 0 0 0 0-1.5H13v-.75h1.25a.75.75 0 0 0 0-1.5H13V6.5h1.25a.75.75 0 0 0 0-1.5H13a2 2 0 0 0-2-2V1.75a.75.75 0 0 0-1.5 0V3h-.75V1.75a.75.75 0 0 0-1.5 0V3H6.5V1.75A.75.75 0 0 0 5.75 1ZM11 4.5a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h6Z" clip-rule="evenodd" />',
-    viewbox: "0 0 16 16",
-  },
-  {
-    id: "teaching",
-    name: "Mentoring & Teaching",
-    desc: "Commitment to cultivating a supportive learning environment that empowers individuals, fosters resilience, and promotes collaborative growth within teams.",
-    icon: '<path d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10.9 12.006c.11.542-.348.994-.9.994H2c-.553 0-1.01-.452-.902-.994a5.002 5.002 0 0 1 9.803 0ZM14.002 12h-1.59a2.556 2.556 0 0 0-.04-.29 6.476 6.476 0 0 0-1.167-2.603 3.002 3.002 0 0 1 3.633 1.911c.18.522-.283.982-.836.982ZM12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />',
-    viewbox: "0 0 16 16",
+    desc: "I've designed and fabricated complete products. Self-taught in microcontrollers, CAD, 3D printing, and PCB design",
+    icon: '<path d="M14 6H6v8h8V6Z" /><path fill-rule="evenodd" d="M9.25 3V1.75a.75.75 0 0 1 1.5 0V3h1.5V1.75a.75.75 0 0 1 1.5 0V3h.5A2.75 2.75 0 0 1 17 5.75v.5h1.25a.75.75 0 0 1 0 1.5H17v1.5h1.25a.75.75 0 0 1 0 1.5H17v1.5h1.25a.75.75 0 0 1 0 1.5H17v.5A2.75 2.75 0 0 1 14.25 17h-.5v1.25a.75.75 0 0 1-1.5 0V17h-1.5v1.25a.75.75 0 0 1-1.5 0V17h-1.5v1.25a.75.75 0 0 1-1.5 0V17h-.5A2.75 2.75 0 0 1 3 14.25v-.5H1.75a.75.75 0 0 1 0-1.5H3v-1.5H1.75a.75.75 0 0 1 0-1.5H3v-1.5H1.75a.75.75 0 0 1 0-1.5H3v-.5A2.75 2.75 0 0 1 5.75 3h.5V1.75a.75.75 0 0 1 1.5 0V3h1.5ZM4.5 5.75c0-.69.56-1.25 1.25-1.25h8.5c.69 0 1.25.56 1.25 1.25v8.5c0 .69-.56 1.25-1.25 1.25h-8.5c-.69 0-1.25-.56-1.25-1.25v-8.5Z" clip-rule="evenodd" />',
+    viewbox: "0 0 20 20",
   },
 ];
 

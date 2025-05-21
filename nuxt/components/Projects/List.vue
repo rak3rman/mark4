@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="-mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
         <table class="min-w-full divide-y divide-accent/30">
           <thead>
@@ -44,12 +44,7 @@
               @click="emit('quick', project)"
             >
               <td
-                class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium sm:pl-6 md:pl-0"
-                :class="
-                  project.dates[project.dates.length - 1].end !== undefined
-                    ? 'text-secondary'
-                    : 'text-success'
-                "
+                class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-accent sm:pl-6 md:pl-0"
               >
                 {{ formatEventDates(project.dates) }}
               </td>

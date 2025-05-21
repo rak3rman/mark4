@@ -46,7 +46,7 @@ Making an impact is part of my DNA, especially with personal projects. I've give
 guest lectures at UIC and 1 lecture internally at SpaceX](/publications) about
 [Exploding Chickens](https://chickens.rakerman.com) — a popular web-based card game I built with my friends during COVID-19 (with over 1,500 games played). We dove deep into project management, design patterns, test coverage, browser architecture, and software engineering basics.
 
-Exploding Chickens fanned the flames (literally) and acted as a springboard for both my professional skills and future
+Exploding Chickens fanned the flames and acted as a springboard for both my professional skills and future
 projects. I now lead [Radical Platforms](https://radicalplatforms.org), a small group of highly motivated
 software engineers, project managers, and creatives developing incredible software products.
 

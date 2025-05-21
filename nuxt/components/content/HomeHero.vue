@@ -38,7 +38,7 @@
               <ContentSlot :use="$slots.default" unwrap="p" />
             </h6>
             <div
-              class="fade-in-hero mb-2 flex max-w-2xl items-center py-1 text-left text-accent sm:py-2"
+              class="fade-in-hero mb-2 hidden max-w-2xl items-center py-1 text-left text-accent sm:flex sm:py-2"
               :style="{ 'transition-delay': (pageLoaded ? 0 : 600) + 'ms' }"
               v-if="buttonText"
             >
