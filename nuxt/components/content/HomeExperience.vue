@@ -103,7 +103,7 @@
 
     <!--  Logo Cloud  -->
     <div
-      class="w-full pt-24 text-left text-xl leading-tight text-neutral md:text-2xl"
+      class="w-full pt-[3.6em] text-left text-xl leading-tight text-neutral md:text-2xl lg:pt-24"
     >
       <span class="text-primary">On a quest for quality.</span>
       I thrive in fast-moving, early-stage teams where the pressure's real and
