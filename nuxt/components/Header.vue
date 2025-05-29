@@ -19,7 +19,7 @@
           class="col-span-12 flex flex-col justify-center sm:col-span-9 lg:col-span-7"
         >
           <div
-            class="whitespace-pre-line text-left text-4xl font-medium leading-[1.125em] tracking-[0.4px] text-primary sm:whitespace-normal md:text-5xl"
+            class="whitespace-pre-line text-left text-4xl font-medium leading-[1.125em] tracking-[0.4px] text-primary min-[400px]:whitespace-normal md:text-5xl"
             v-html="props.title.replace(/(\S+)\s+(\S+)/g, '$1\n$2')"
           ></div>
           <div

@@ -1,6 +1,6 @@
 <template>
   <div id="projects">
-    <HomeWrapper class="mb-0">
+    <HomeWrapper :no-margin-bottom="grid">
       <!--    Quickview     -->
       <ProjectsQuickview
         :show="quick_show"

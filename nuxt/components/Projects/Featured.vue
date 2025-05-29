@@ -1,5 +1,5 @@
 <template>
-  <div class="my-12 space-y-24">
+  <div class="mb-6 mt-4 space-y-24 lg:mb-10 lg:mt-8">
     <div
       class="overflow-hidden lg:bg-transparent"
       :class="fade ? 'fade-in' : ''"

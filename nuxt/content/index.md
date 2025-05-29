@@ -23,8 +23,6 @@ Previously at [SpaceX](https://spacex.com).
 
 <!-- #### [Previously]{.text-accent} [Starship Software Engineering @ SpaceX.]{.text-primary} -->
 
-####
-
 Hey there! I'm Radison, a software engineer obsessed with building and leading quality software products. My interest in digital technology started back in middle school when I tinkered with
 microcontrollers and competed in FIRST LEGO League competitions — it turns out you can learn a lot from bits of plastic
 and expensive servos.

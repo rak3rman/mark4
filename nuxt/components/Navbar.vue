@@ -7,7 +7,7 @@
         activeSection !== 'hero',
     }"
   >
-    <div class="mx-auto max-w-5xl px-4 py-2 sm:px-6">
+    <VerticalSpacer class="py-2">
       <nav
         class="relative flex items-center justify-between text-[13px] sm:h-10 md:justify-center"
       >
@@ -83,7 +83,7 @@
           </span>
         </div>
       </nav>
-    </div>
+    </VerticalSpacer>
   </div>
 </template>
 

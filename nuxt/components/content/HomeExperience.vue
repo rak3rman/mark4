@@ -84,14 +84,14 @@
                   </div>
                 </div>
                 <div
-                  class="text-md font-medium leading-[1.2em] text-primary transition duration-300 ease-in-out sm:pl-16"
+                  class="text-md font-medium leading-[1.3em] text-primary transition duration-300 ease-in-out sm:pl-16"
                 >
                   <div>
                     <span class="absolute inset-0"></span>
                     {{ tab.name }}
                   </div>
                 </div>
-                <div class="mt-0.5 text-neutral sm:pl-16">
+                <div class="mt-0.5 leading-[1.4em] text-neutral sm:pl-16">
                   {{ tab.desc }}
                 </div>
               </div>
@@ -111,7 +111,7 @@
       and the kind of care that shows up in the edge cases.
     </div>
     <div
-      class="grid w-full grid-cols-2 items-center justify-center gap-x-7 gap-y-10 pt-[8em] sm:grid-cols-3 sm:gap-x-4 sm:gap-y-14 lg:max-w-none lg:pt-20"
+      class="grid w-full grid-cols-2 items-center justify-center gap-x-7 gap-y-10 pt-24 sm:grid-cols-3 sm:gap-x-4 sm:gap-y-14 lg:max-w-none lg:pt-20 lg:pt-[6.5em]"
     >
       <NuxtImg
         class="w-[8rem] object-contain object-left md:w-[10rem]"
@@ -224,7 +224,7 @@ const exp_tabs = [
   {
     id: "product-leadership",
     name: "Technical Leadership",
-    desc: "Proven ability to lead software initiatives from concept to launch with strategic, technical, and product-driven clarity",
+    desc: "Proven ability to lead software initiatives from concept to launch with strategic, technical, and product-driven clarity.",
     icon: '<path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.49 15.326a.78.78 0 0 1-.358-.442 3 3 0 0 1 4.308-3.516 6.484 6.484 0 0 0-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 0 1-2.07-.655ZM16.44 15.98a4.97 4.97 0 0 0 2.07-.654.78.78 0 0 0 .357-.442 3 3 0 0 0-4.308-3.517 6.484 6.484 0 0 1 1.907 3.96 2.32 2.32 0 0 1-.026.654ZM18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5.304 16.19a.844.844 0 0 1-.277-.71 5 5 0 0 1 9.947 0 .843.843 0 0 1-.277.71A6.975 6.975 0 0 1 10 18a6.974 6.974 0 0 1-4.696-1.81Z" />',
     viewbox: "0 0 20 20",
   },
@@ -238,21 +238,21 @@ const exp_tabs = [
   {
     id: "fullstack",
     name: "APIs & Data Systems",
-    desc: "Experience building composable services and data ingestion pipelines that serve critical environments",
+    desc: "Experience building composable services and data ingestion pipelines that serve critical environments.",
     icon: '<path fill-rule="evenodd" d="M13.2 2.24a.75.75 0 0 0 .04 1.06l2.1 1.95H6.75a.75.75 0 0 0 0 1.5h8.59l-2.1 1.95a.75.75 0 1 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 0 0-1.06.04Zm-6.4 8a.75.75 0 0 0-1.06-.04l-3.5 3.25a.75.75 0 0 0 0 1.1l3.5 3.25a.75.75 0 1 0 1.02-1.1l-2.1-1.95h8.59a.75.75 0 0 0 0-1.5H4.66l2.1-1.95a.75.75 0 0 0 .04-1.06Z" clip-rule="evenodd" />',
     viewbox: "0 0 20 20",
   },
   {
     id: "network",
     name: "Platform Infrastructure",
-    desc: "Expertise in designing scalable, cloud-native architecture that is automated, modular, and built for developer velocity",
+    desc: "Expertise in designing scalable, cloud-native architecture that is automated, modular, and built for developer velocity.",
     icon: '<path d="m3.196 12.87-.825.483a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .758 0l7.25-4.25a.75.75 0 0 0 0-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 0 1-2.276 0L3.196 12.87Z" /><path d="m3.196 8.87-.825.483a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .758 0l7.25-4.25a.75.75 0 0 0 0-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 0 1-2.276 0L3.196 8.87Z" /><path d="M10.38 1.103a.75.75 0 0 0-.76 0l-7.25 4.25a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .76 0l7.25-4.25a.75.75 0 0 0 0-1.294l-7.25-4.25Z" />',
     viewbox: "0 0 20 20",
   },
   {
     id: "ce",
     name: "Computer Engineering",
-    desc: "I've designed and fabricated complete products. Self-taught in microcontrollers, CAD, 3D printing, and PCB design",
+    desc: "I've designed and fabricated complete products. Self-taught in microcontrollers, CAD, 3D printing, and PCB design.",
     icon: '<path d="M14 6H6v8h8V6Z" /><path fill-rule="evenodd" d="M9.25 3V1.75a.75.75 0 0 1 1.5 0V3h1.5V1.75a.75.75 0 0 1 1.5 0V3h.5A2.75 2.75 0 0 1 17 5.75v.5h1.25a.75.75 0 0 1 0 1.5H17v1.5h1.25a.75.75 0 0 1 0 1.5H17v1.5h1.25a.75.75 0 0 1 0 1.5H17v.5A2.75 2.75 0 0 1 14.25 17h-.5v1.25a.75.75 0 0 1-1.5 0V17h-1.5v1.25a.75.75 0 0 1-1.5 0V17h-1.5v1.25a.75.75 0 0 1-1.5 0V17h-.5A2.75 2.75 0 0 1 3 14.25v-.5H1.75a.75.75 0 0 1 0-1.5H3v-1.5H1.75a.75.75 0 0 1 0-1.5H3v-1.5H1.75a.75.75 0 0 1 0-1.5H3v-.5A2.75 2.75 0 0 1 5.75 3h.5V1.75a.75.75 0 0 1 1.5 0V3h1.5ZM4.5 5.75c0-.69.56-1.25 1.25-1.25h8.5c.69 0 1.25.56 1.25 1.25v8.5c0 .69-.56 1.25-1.25 1.25h-8.5c-.69 0-1.25-.56-1.25-1.25v-8.5Z" clip-rule="evenodd" />',
     viewbox: "0 0 20 20",
   },
