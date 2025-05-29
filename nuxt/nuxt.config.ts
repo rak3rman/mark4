@@ -5,9 +5,11 @@ const { gitDescribe, gitDescribeSync } = require("git-describe");
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "@nuxt/image", "@nuxt/eslint"],
+
   content: {
     documentDriven: true,
   },
+
   runtimeConfig: {
     public: {
       meta: {
@@ -21,14 +23,18 @@ export default defineNuxtConfig({
       gitMasterTag: gitDescribeSync().hash,
     },
   },
+
   nitro: {
     prerender: {
       routes: ["/sitemap.xml"],
     },
   },
+
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => tag.startsWith("spline-viewer"),
     },
   },
+
+  compatibilityDate: "2025-03-25",
 });

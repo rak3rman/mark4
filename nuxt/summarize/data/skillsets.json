@@ -2,17 +2,17 @@
   {
     "set": "Languages",
     "skills": [
+      "TypeScript",
+      "JavaScript",
       "Python",
       "C",
       "C++",
-      "Java",
       "Rust",
-      "JavaScript",
-      "TypeScript",
-      "C#",
+      "Java",
       "F#",
       "Go",
       "SQL",
+      "GraphQL",
       "Bash",
       "HTML",
       "CSS"
@@ -22,11 +22,12 @@
     "set": "Software",
     "skills": [
       "Git",
-      "Cloudflare",
       "AWS",
+      "GCP",
       "Docker",
+      "Github Actions",
+      "Terraform",
       "Node.js",
-      "Nuxt",
       "Express",
       "Flask",
       "SQLAlchemy",
@@ -34,23 +35,23 @@
       "MongoDB",
       "Vue",
       "React",
-      ".NET",
-      "VMware"
+      ".NET"
     ]
   },
   {
     "set": "Interests",
     "skills": [
+      "Leadership",
+      "UI/UX",
+      "APIs",
+      "Data Pipelines",
+      "Platform Infrastructure",
       "Networking",
-      "Cloud computing",
+      "Automation",
       "Concurrency",
       "IoT",
       "CI/CD",
-      "Automation",
-      "Full-stack development",
-      "DevOps",
-      "Cybersecurity",
-      "Blockchain"
+      "IaC"
     ]
   }
 ]

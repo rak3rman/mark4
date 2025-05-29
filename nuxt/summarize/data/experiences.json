@@ -10,11 +10,24 @@
     ],
     "commitment": "full",
     "discipline": "professional",
-    "bullets": [],
+    "bullets": [
+      {
+        "text": "Directed software strategy company-wide and ensured seamless execution across product, infra, and data systems"
+      },
+      {
+        "text": "Owned Multimeter, an energy data aggregator that durably parsed and stored usage and billing records from PDFs, CSVs using AI"
+      },
+      {
+        "text": "Architected Quoder, a sales tool capable of generating near instant quotes for commercial battery energy storage + solar systems"
+      },
+      {
+        "text": "Developed a seamless internal data plane using Hasura DDN, Temporal, Timescale DB, Docker, and Cloudflare Zero Trust"
+      }
+    ],
     "media": {
       "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/0fc9126a-5a1b-423e-f93d-a41f491cc200/sm"
     },
-    "on_resume": false
+    "on_resume": true
   },
   {
     "title": "Software Engineering Intern",
@@ -30,19 +43,16 @@
     "discipline": "professional",
     "bullets": [
       {
-        "text": "Integrated REST API endpoints into a C#.NET consultant profile builder web app using Entity Framework, SQL Server"
+        "text": "Integrated REST API endpoints into a C# .NET consultant profile builder web app using Entity Framework, SQL Server"
       },
       {
-        "text": "Collaborated with 3 front-end/dev-ops interns, 5 back-end mentors, and 2+ business stakeholders in an agile/scrum environment"
-      },
-      {
-        "text": "Gained unique, small-scale consulting experience spanning multiple industries and full-stack disciplines"
+        "text": "Gained small-scale consulting experience spanning multiple industries and full-stack disciplines in an agile/scrum environment"
       }
     ],
     "media": {
       "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/c9056405-978b-4c97-1ed1-90c13f966700/sm"
     },
-    "on_resume": true
+    "on_resume": false
   },
   {
     "title": "Mentor",
@@ -99,30 +109,6 @@
       "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/f163f81d-3b7a-49cc-99a1-41b104077f00/sm"
     },
     "on_resume": true
-  },
-  {
-    "title": "Event Operations Assistant",
-    "organization": "Chicago Special Events Management",
-    "location": "Chicago, IL",
-    "dates": [
-      {
-        "start": "2022-08"
-      }
-    ],
-    "commitment": "contract",
-    "discipline": "operations",
-    "bullets": [
-      {
-        "text": "Played a key operations role in Chicago's biggest special sporting events (Chicago Triathlon, Chicago Spring + Fall Half Marathon)"
-      },
-      {
-        "text": "Directly coordinated and delegated responsibilities to 10-100+ staff and volunteers who aided nearly 8,000 athletes per event"
-      },
-      {
-        "text": "Assisted in event operations at scale across varying disciplines, from course leadership to warehouse prep to expo management"
-      }
-    ],
-    "on_resume": false
   },
   {
     "title": "Digital Lead",
@@ -265,20 +251,20 @@
     "dates": [
       {
         "start": "2021-04",
-        "end": "2023-06"
+        "end": "2025-06"
       }
     ],
     "commitment": "volunteer",
     "discipline": "teaching",
     "bullets": [
       {
-        "text": "Section led Code in Place 2021, 2023 — a free, human-centric, intro-to-coding course taught in the time of COVID-19"
+        "text": "Section led Code in Place: a free, human-centric, intro-to-coding course taught in the time of COVID-19"
       },
       {
         "text": "Helped instruct 10,000+ students on the fundamentals of Python and computer science principles"
       },
       {
-        "text": "Worked one-on-one with all age groups, built office-hours-esque curriculum tailored to the 4 week course"
+        "text": "Worked one-on-one with all age groups, built office-hours-esque curriculum tailored to the 6 week course"
       }
     ],
     "on_resume": false

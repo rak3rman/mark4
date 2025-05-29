@@ -15,7 +15,7 @@
       "
     >
       <div
-        class="container mx-auto mx-auto max-w-7xl items-center px-4 py-24 sm:px-6"
+        class="container mx-auto mx-auto max-w-5xl items-center px-4 py-24 sm:px-6"
       >
         <!-- Photography Title -->
         <Header

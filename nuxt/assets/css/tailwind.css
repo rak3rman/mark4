@@ -5,63 +5,71 @@
 @font-face {
   font-family: "Tiempos Headline";
   font-weight: 400;
-  src: url('~/assets/fonts/Tiempos-Headline/Tiempos-Headline-Regular.woff2') format('woff2');
+  src: url("~/assets/fonts/Tiempos-Headline/Tiempos-Headline-Regular.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "Tiempos Headline";
   font-weight: 500;
-  src: url('~/assets/fonts/Tiempos-Headline/Tiempos-Headline-Medium.woff2') format('woff2');
+  src: url("~/assets/fonts/Tiempos-Headline/Tiempos-Headline-Medium.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "Tiempos Headline";
   font-weight: 600;
-  src: url('~/assets/fonts/Tiempos-Headline/Tiempos-Headline-Semibold.woff2') format('woff2');
+  src: url("~/assets/fonts/Tiempos-Headline/Tiempos-Headline-Semibold.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "Tiempos Headline";
   font-weight: 700;
-  src: url('~/assets/fonts/Tiempos-Headline/Tiempos-Headline-Bold.woff2') format('woff2');
+  src: url("~/assets/fonts/Tiempos-Headline/Tiempos-Headline-Bold.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "SF Mono";
   font-weight: 400;
-  src: url('~/assets/fonts/SF-Mono/SF-Mono-Regular.woff2') format('woff2');
+  src: url("~/assets/fonts/SF-Mono/SF-Mono-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "SF Pro Display";
   font-weight: 300;
-  src: url('~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Light.woff2') format('woff2');
+  src: url("~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Light.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "SF Pro Display";
   font-weight: 400;
-  src: url('~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff2') format('woff2');
+  src: url("~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "SF Pro Display";
   font-weight: 500;
-  src: url('~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Medium.woff2') format('woff2');
+  src: url("~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Medium.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "SF Pro Display";
   font-weight: 600;
-  src: url('~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Semibold.woff2') format('woff2');
+  src: url("~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Semibold.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-family: "SF Pro Display";
   font-weight: 700;
-  src: url('~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Bold.woff2') format('woff2');
+  src: url("~/assets/fonts/SF-Pro-Display/SF-Pro-Display-Bold.woff2")
+    format("woff2");
 }
-
 
 .font-serif {
   font-family: "Tiempos Headline", serif;
@@ -77,11 +85,11 @@
 
 /* Fit to page on Nuxt.js using Tailwinds CSS */
 #__nuxt {
-  height: 100%
+  height: 100%;
 }
 
 #__layout {
-  height: 100%
+  height: 100%;
 }
 
 /* animate fade in blocks */
@@ -91,7 +99,7 @@
 /*  transform: scale(0.8)translate(0, 20%);*/
 /*  opacity: 0;*/
 /*}*/
- 
+
 .fade-initial {
   opacity: 0.05;
   pointer-events: none;

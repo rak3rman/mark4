@@ -1,5 +1,27 @@
 [
   {
+    "title": "Technical Project Management Guest Lecture, UIC IDS 312",
+    "organization": "University of Illinois Chicago",
+    "location": "Chicago, IL",
+    "dates": [
+      {
+        "start": "2024-04",
+        "end": "2024-04"
+      }
+    ],
+    "bullets": [
+      {
+        "text": "Explored Agile software engineering using ZenHub for sprint planning, issue tracking, and rapid full-stack deployments"
+      },
+      {
+        "text": "Showcased personal projects like a wardrobe logging app, emphasizing real-time data updates, test automation"
+      },
+      {
+        "text": "Delivered as a 30m guest lecture to 50+ students at University of Illinois Chicago in IDS 312: Business Project Management"
+      }
+    ]
+  },
+  {
     "title": "Exploding Chickens Guest Lecture, UIC CS 342",
     "organization": "University of Illinois Chicago",
     "location": "Chicago, IL",
@@ -25,7 +47,7 @@
         "text": "Discussed game play, project milestones, full-stack architecture, data schema, websockets, test coverage, and hosted a live demo"
       },
       {
-        "text": "Delivered as a full-length guest lecture 3 times to 20-80+ students at University of Illinois Chicago in CS 342: Software Design"
+        "text": "Delivered as a 30-75m guest lecture 3 times to 20-80+ students at University of Illinois Chicago in CS 342: Software Design"
       }
     ]
   }

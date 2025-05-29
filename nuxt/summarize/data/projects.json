@@ -24,7 +24,7 @@
       }
     ],
     "short_description": "A beautiful, online alternative to the popular Exploding Kittens card game",
-    "long_description": "A beautiful, online alternative to the popular Exploding Kittens card game. Built on Node.js with nearly 1000 games played by 600+ players, led development and a team of 5.",
+    "long_description": "A beautiful, online alternative to the popular Exploding Kittens card game. Built on Node.js with nearly 1750+ games played by 600+ players, led development and a team of 5.",
     "type": "application",
     "tools": [
       "Node.js",
@@ -38,10 +38,10 @@
     ],
     "bullets": [
       {
-        "text": "A full-stack online card game built using Node.js with 1,250+ games played by 600+ players; led development and a team of 5"
+        "text": "A full-stack online card game built using Node.js with 1,750+ games played by 600+ players; led development and a team of 5"
       },
       {
-        "text": "Delivered 3 guest lectures at University of Illinois Chicago detailing project structure, schema, testing, viewed by 200+"
+        "text": "Delivered 4 guest lectures at University of Illinois Chicago and SpaceX detailing project structure, schema, testing, viewed by 200+"
       }
     ],
     "media": {

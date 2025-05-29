@@ -1,56 +1,81 @@
 <template>
   <HomeWrapper id="about">
-    <Header num="01." title="About Me" fade />
-    <div class="mt-4">
-      <!-- Photos -->
-      <div class="relative lg:float-right lg:pb-7 lg:pl-5 lg:pt-1">
-        <div class="relative mx-auto max-w-prose text-base lg:max-w-md">
-          <figure class="lg:h-[40rem] lg:w-[28rem]">
-            <div
-              class="fade-in aspect-h-7 aspect-w-12 lg:aspect-none lg:hidden overflow-hidden"
-            >
-              <NuxtImg
-                class="object-cover object-center shadow-lg bg-base-200 [mask-image:linear-gradient(to_bottom,black_70%,transparent_95%)] scale-[117%] sm:scale-[100%]"
-                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/af63a776-af55-4f19-22a7-604a95399b00/xl"
-                alt="Black BackgroundPortrait of Radison"
-              />
-            </div>
-            <div class="fade-in ml-[2rem] hidden lg:block">
-              <NuxtImg
-                class="w-[19rem] rounded-lg object-cover object-top shadow-lg bg-base-200"
-                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/60165710-ba66-465f-f366-ba1c3b73cd00/xl"
-                alt="Portrait of Radison"
-              />
-            </div>
-            <div
-              class="fade-in absolute left-0 top-0 ml-[0rem] mt-[26rem] hidden overflow-hidden rounded-lg shadow-xl lg:block"
-            >
-              <NuxtImg
-                class="h-[15rem] w-[16rem] object-cover object-top bg-base-200"
-                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/b6b21ae7-e308-443c-a354-976ae0a02300/2xl"
-                alt="Radison Lecturing at UIC"
-              />
-            </div>
-            <div
-              class="fade-in absolute left-0 top-0 ml-[12rem] mt-[13rem] hidden overflow-hidden rounded-lg shadow-xl lg:block"
-            >
-              <NuxtImg
-                class="w-[18rem] -translate-x-2 scale-[135%] object-cover object-top bg-base-200"
-                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/b6cd4c78-5828-4edf-7ce0-603681a5cf00/2xl"
-                alt="Radison Biking"
-              />
-            </div>
-          </figure>
-        </div>
-      </div>
+    <Header
+      num="01."
+      topic="About"
+      title="Relentlessly radical."
+      punchline="High impact, high quality."
+      description="I'm constantly exploring new ideas, technologies, and methods to create software that genuinely moves the needle."
+      fade
+    />
+    <div>
       <!-- Content Text Slot -->
-      <div class="mt-8 lg:mt-0">
+      <div class="relative mx-auto text-accent">
+        <!-- Hidden checkbox to control expand/collapse -->
+        <input
+          id="about-expand"
+          type="checkbox"
+          class="peer hidden"
+          ref="expandCheckbox"
+        />
         <div
-          class="mx-auto text-accent lg:col-start-1 lg:row-start-1 lg:max-w-full"
+          :class="[
+            'max-h-[40rem] overflow-hidden transition-all duration-500 ease-in-out peer-checked:max-h-[5000px] md:max-h-none',
+            'fade-in-expand',
+            { expanded: $refs.expandCheckbox && $refs.expandCheckbox.checked },
+          ]"
         >
           <slot />
         </div>
+        <!-- Fade/blur at the bottom: increased throw distance, blur and black fade combined, gradual top fringe, matching border radius -->
+        <div
+          class="pointer-events-none absolute bottom-0 left-0 right-0 z-10 h-[8rem] peer-checked:hidden md:hidden"
+        >
+          <!-- Gradient fade -->
+          <div
+            class="h-full w-full bg-gradient-to-b from-transparent via-base-100/80 to-black"
+          ></div>
+          <!-- Gradual blur with mask and matching border radius -->
+          <div
+            class="absolute left-0 top-0 h-full w-full backdrop-blur-[2px]"
+            style="
+              mask-image: linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 50%,
+                black 100%
+              );
+              -webkit-mask-image: linear-gradient(
+                to bottom,
+                transparent 0%,
+                black 50%,
+                black 100%
+              );
+            "
+          ></div>
+        </div>
+        <label
+          for="about-expand"
+          class="absolute bottom-2 z-20 flex cursor-pointer items-center items-center border-none bg-transparent px-2.5 py-[14px] text-left font-medium text-white shadow-sm peer-checked:hidden md:hidden"
+        >
+          Read more
+          <ChevronDownIcon class="ml-1 mt-[1px] h-5 w-5 text-white" />
+        </label>
       </div>
     </div>
   </HomeWrapper>
 </template>
+
+<script setup>
+import { ref, onMounted } from "vue";
+import { ChevronDownIcon } from "@heroicons/vue/16/solid";
+
+const expandCheckbox = ref(null);
+
+onMounted(() => {
+  // Always reset the checkbox to unchecked on mount
+  if (expandCheckbox.value) {
+    expandCheckbox.value.checked = false;
+  }
+});
+</script>

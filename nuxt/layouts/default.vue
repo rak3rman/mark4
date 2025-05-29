@@ -20,7 +20,7 @@
           :has_hero="true"
         />
         <main
-          class="container relative mx-auto max-w-7xl overflow-hidden px-4 sm:px-6"
+          class="container relative mx-auto max-w-5xl overflow-hidden px-4 sm:px-6"
         >
           <div class="container mx-auto items-center">
             <slot />
