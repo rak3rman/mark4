@@ -4,10 +4,44 @@ const { gitDescribe, gitDescribeSync } = require("git-describe");
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "@nuxt/image", "@nuxt/eslint"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    "@nuxt/eslint",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
+    "nuxt-og-image",
+    "@nuxt/content",
+  ],
 
-  content: {
-    documentDriven: true,
+  site: {
+    url: "https://radison.io",
+    name: "Radison Akerman",
+  },
+
+  ogImage: {
+    fonts: [
+      {
+        name: "SF Pro Display",
+        weight: 400,
+        path: "/fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff",
+      },
+      {
+        name: "SF Pro Display",
+        weight: 700,
+        path: "/fonts/SF-Pro-Display/SF-Pro-Display-Bold.woff",
+      },
+      {
+        name: "SF Mono",
+        weight: 400,
+        path: "/fonts/SF-Mono/SF-Mono-Regular.woff",
+      },
+      {
+        name: "Tiempos Headline",
+        weight: 600,
+        path: "/fonts/Tiempos-Headline/Tiempos-Headline-Semibold.woff",
+      },
+    ],
   },
 
   runtimeConfig: {

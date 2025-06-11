@@ -53,7 +53,7 @@
             name="message"
             required
             textarea
-            rows="4"
+            :rows="4"
             class="sm:col-span-2"
           >
             <template #after>

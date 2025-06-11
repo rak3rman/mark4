@@ -12,9 +12,9 @@
     </div>
 
     <div class="text-lg font-medium leading-6 tracking-normal text-primary">
-      <ContentSlot :use="$slots.title" unwrap="p" />
+      <slot name="title" mdc-unwrap="p" />
       <div class="text-sm text-accent">
-        <ContentSlot :use="$slots.desc" unwrap="p" />
+        <slot name="desc" mdc-unwrap="p" />
       </div>
     </div>
   </NuxtLink>

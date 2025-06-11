@@ -1,6 +1,6 @@
 <template>
   <FadeInWrapper>
-    <div class="relative h-full w-full overflow-hidden bg-base-100">
+    <div class="relative h-full w-full bg-base-100">
       <div class="absolute min-h-[80vh] min-w-full">
         <SvgTopography1
           class="opacity-[0.15]"
@@ -19,9 +19,7 @@
           ]"
           :has_hero="true"
         />
-        <main
-          class="container relative mx-auto max-w-5xl overflow-hidden px-4 sm:px-6"
-        >
+        <main class="container relative mx-auto max-w-5xl px-4 sm:px-6">
           <div class="container mx-auto items-center">
             <slot />
 

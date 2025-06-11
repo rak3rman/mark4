@@ -32,7 +32,7 @@
               class="fade-in-hero py-2 text-left text-[1.1rem] leading-normal text-accent md:text-lg"
               :style="{ 'transition-delay': 500 + 'ms' }"
             >
-              <ContentSlot :use="$slots.default" unwrap="p" />
+              <slot mdc-unwrap="p" />
             </h6>
             <div
               class="fade-in-hero mb-2 hidden items-center py-1 text-left text-accent sm:flex sm:py-2"

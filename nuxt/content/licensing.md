@@ -1,6 +1,17 @@
 ---
-title: "Licensing"
-head.description: "Legal stuff detailing how digital assets can and cannot be used."
+title: Licensing
+head.description: Legal stuff detailing how digital assets can and cannot be used.
+ogImage:
+  component: Radical
+  props:
+    headline: Radison Akerman
+    title: Licensing
+    description: Legal stuff detailing how digital assets can and cannot be used.
+sitemap:
+  loc: /licensing
+  lastmod: 2025-06-10
+  changefreq: yearly
+  priority: 0.1
 ---
 
 ::DocsHero

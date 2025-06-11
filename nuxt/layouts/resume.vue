@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <Html data-theme="summarize" />
-    <SummarizeResume />
-  </div>
+  <Html data-theme="summarize" />
+  <SummarizeResume />
 </template>

@@ -1,6 +1,17 @@
 ---
-title: "Publications"
-head.description: "All academic materials authored or delivered by Radison Akerman."
+title: Publications
+head.description: All academic materials authored or delivered by Radison Akerman.
+ogImage:
+  component: Radical
+  props:
+    headline: Radison Akerman
+    title: Publications
+    description: All academic materials authored or delivered by Radison Akerman.
+sitemap:
+  loc: /publications
+  lastmod: 2025-06-10
+  changefreq: monthly
+  priority: 0.8
 ---
 
 ::DocsHero

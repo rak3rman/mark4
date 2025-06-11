@@ -1,6 +1,17 @@
 ---
-title: "Privacy"
-head.description: "We don't collect your data and use it to track you. Period."
+title: Privacy
+head.description: We don't collect your data and use it to track you. Period.
+ogImage:
+  component: Radical
+  props:
+    headline: Radison Akerman
+    title: Privacy
+    description: We don't collect your data and use it to track you. Period.
+sitemap:
+  loc: /privacy
+  lastmod: 2025-06-10
+  changefreq: yearly
+  priority: 0.1
 ---
 
 ::DocsHero

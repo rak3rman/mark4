@@ -1,8 +1,17 @@
 ---
-title: "Radison Akerman"
-layout: "home"
-head.description: "I am highly skilled in internet. You might find me solving niche problems with programming, over yonder with my camera, or working on something radical."
-head.image: "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/fa35b458-67ec-4711-0256-9f68535cbd00/md"
+title: Radison Akerman
+head.description: I lead and build exceptional software experiences.
+ogImage:
+  component: Radical
+  props:
+    headline: Personal Website
+    title: Radison Akerman
+    description: I lead and build exceptional software experiences.
+sitemap:
+  loc: /
+  lastmod: 2025-06-10
+  changefreq: monthly
+  priority: 1.0
 ---
 
 ::HomeHero{buttonText="Exploding Chickens: Celebrating 1,750+ Games Played!" buttonUrl="https://chickens.rakerman.com"}
