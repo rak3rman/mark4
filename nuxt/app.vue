@@ -10,7 +10,7 @@
   <Body class="h-full bg-base-100" />
   <div class="h-full">
     <NuxtLoadingIndicator
-      color="repeating-linear-gradient(to right,#586CB2 0%,#059669 50%,#CCCCCC 100%)"
+      color="repeating-linear-gradient(to right,#586CB2 0%,#86868B 50%,#5E5E5E 100%)"
     />
     <NuxtLayout>
       <NuxtPage />
