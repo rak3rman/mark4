@@ -55,10 +55,15 @@ export default defineNuxtConfig({
     },
     prerender: {
       autoSubfolderIndex: false,
+      routes: ["/", "/privacy", "/licensing", "/publications"],
+      crawlLinks: true,
     },
     routeRules: {
-      // Ensure all routes are rendered on the server
-      "/**": { ssr: true },
+      // Prerender all content pages
+      "/": { prerender: true },
+      "/privacy": { prerender: true },
+      "/licensing": { prerender: true },
+      "/publications": { prerender: true },
     },
   },
 
