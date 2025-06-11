@@ -44,17 +44,26 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      meta: {
-        title: "Radison Akerman",
-        desc: "I am highly skilled in internet. You might find me solving niche problems with programming, over yonder with my camera, or working on something radical.",
-        url: "https://radison.io",
-        favicon:
-          "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/cbeec7ce-7b51-4cc2-81bb-e72289777900/sm",
-        img: "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/9036aeb5-ffa0-49ef-f5e3-3d40ac6d3800/md",
-      },
       gitMasterTag: gitDescribeSync().hash,
     },
   },
+
+  nitro: {
+    preset: "cloudflare",
+    experimental: {
+      wasm: true,
+    },
+    prerender: {
+      autoSubfolderIndex: false,
+    },
+    routeRules: {
+      // Ensure all routes are rendered on the server
+      "/**": { ssr: true },
+    },
+  },
+
+  // Ensure SSR is enabled (not SPA mode)
+  ssr: true,
 
   vue: {
     compilerOptions: {

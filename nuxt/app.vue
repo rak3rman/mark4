@@ -6,7 +6,11 @@
     lang="en"
     data-theme="dark"
   />
-  <Link rel="icon" type="png" :href="config.public.meta.favicon" />
+  <Link
+    rel="icon"
+    type="png"
+    href="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/cbeec7ce-7b51-4cc2-81bb-e72289777900/smn"
+  />
   <Body class="h-full bg-base-100" />
   <div class="h-full">
     <NuxtLoadingIndicator
