@@ -130,7 +130,10 @@ onMounted(() => {
       },
     );
 
-    hero_observer.observe(document.querySelector("#hero"));
+    const heroElement = document.querySelector("#hero");
+    if (heroElement) {
+      hero_observer.observe(heroElement);
+    }
   }
 
   if (props.nav_listen) {
@@ -152,7 +155,9 @@ onMounted(() => {
       .filter((e) => !e.is_cta)
       .forEach((section) => {
         const el = document.querySelector(section.href);
-        nav_observer.observe(el);
+        if (el) {
+          nav_observer.observe(el);
+        }
       });
   }
 
