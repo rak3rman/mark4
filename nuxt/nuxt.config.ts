@@ -60,7 +60,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ["/sitemap.xml"],
+      routes: ["/sitemap.xml", "/", "/licensing", "/publications", "/privacy"],
     },
   },
 
@@ -70,5 +70,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: "2025-03-25",
+  compatibilityDate: "2025-06-10",
 });
