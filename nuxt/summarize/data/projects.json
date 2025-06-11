@@ -45,7 +45,7 @@
       }
     ],
     "media": {
-      "desktop_screenshot": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/1b4b5b9c-9ef6-47c0-76a2-1f527062b100/xl",
+      "desktop_screenshot_id": "1b4b5b9c-9ef6-47c0-76a2-1f527062b100",
       "external": "https://chickens.rakerman.com",
       "youtube": "https://radison.io/publications"
     },
@@ -61,12 +61,12 @@
         "start": "2022-05"
       }
     ],
-    "short_description": "A foundational website supporting Steven Olikara’s run for the U.S. Senate in Wisconsin",
-    "long_description": "A foundational website supporting Steven Olikara’s 2022 run for the U.S. Senate in Wisconsin. Completely rebuilt from the ground up with unified colors, textures, and mobile optimizations.",
+    "short_description": "A foundational website supporting Steven Olikara's run for the U.S. Senate in Wisconsin",
+    "long_description": "A foundational website supporting Steven Olikara's 2022 run for the U.S. Senate in Wisconsin. Completely rebuilt from the ground up with unified colors, textures, and mobile optimizations.",
     "type": "website",
     "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"],
     "media": {
-      "desktop_screenshot": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/7ec8d3a0-11a6-4c6f-70bd-538647806a00/xl",
+      "desktop_screenshot_id": "7ec8d3a0-11a6-4c6f-70bd-538647806a00",
       "external": "https://www.stevenolikara.com"
     },
     "is_featured": true
@@ -89,11 +89,11 @@
         "text": "A centralized user management backbone leveraging edge cloud compute, built using Cloudflare Workers, Nuxt, Auth0"
       },
       {
-        "text": "Saved and managed 100’s of user profiles; API distributed for use across 10+ external services to keep profiles up-to-date"
+        "text": "Saved and managed 100's of user profiles; API distributed for use across 10+ external services to keep profiles up-to-date"
       }
     ],
     "media": {
-      "desktop_screenshot": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/ef53d4f8-5609-403c-c3b5-ce20d950f600/xl",
+      "desktop_screenshot_id": "ef53d4f8-5609-403c-c3b5-ce20d950f600",
       "external": "https://author.rakerman.com"
     },
     "is_featured": true,
@@ -125,12 +125,12 @@
         "text": "A web form submission backbone leveraging edge cloud compute, built using Cloudflare Workers, Nuxt"
       },
       {
-        "text": "Saved and analyzed 1,000’s of form submissions at the cloud edge, filters spam and sends email notifications via Mailgun"
+        "text": "Saved and analyzed 1,000's of form submissions at the cloud edge, filters spam and sends email notifications via Mailgun"
       }
     ],
     "media": {
       "external": "https://informr.rakerman.com",
-      "desktop_screenshot": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/d867629b-a1c2-41f2-6946-8830dea52a00/xl"
+      "desktop_screenshot_id": "d867629b-a1c2-41f2-6946-8830dea52a00"
     },
     "on_cv": true
   },
@@ -193,7 +193,7 @@
     "type": "microservice",
     "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
     "media": {
-      "desktop_screenshot": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/77d26ff0-fe47-4365-44e8-be30483d8000/xl",
+      "desktop_screenshot_id": "77d26ff0-fe47-4365-44e8-be30483d8000",
       "external": "https://status.rakerman.com",
       "github": "https://github.com/rak3rman/rakerman-status"
     }

@@ -7,7 +7,7 @@
         activeSection !== 'hero',
     }"
   >
-    <VerticalSpacer class="py-2">
+    <ContentContainer class="py-2">
       <nav
         class="relative flex items-center justify-between text-[13px] sm:h-10 md:justify-center"
       >
@@ -16,10 +16,12 @@
         >
           <div class="flex w-full items-center justify-between md:w-auto">
             <NuxtLink to="/" class="fade-in-nav flex items-center">
-              <NuxtImg
+              <ImageDelivery
                 class="mb-[1.5px] h-[1.3rem] w-auto"
-                src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/874f0866-25fb-4224-cc22-205d60921800/sm"
+                id="874f0866-25fb-4224-cc22-205d60921800"
                 alt="RAkerman Logo"
+                type="logo"
+                :loading="'eager'"
               />
               <div
                 class="pl-3 pt-[0.3px] text-[1.1rem] font-medium leading-none text-primary md:text-[1.2rem]"
@@ -83,7 +85,7 @@
           </span>
         </div>
       </nav>
-    </VerticalSpacer>
+    </ContentContainer>
   </div>
 </template>
 

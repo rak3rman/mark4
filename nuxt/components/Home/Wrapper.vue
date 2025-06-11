@@ -1,7 +1,7 @@
 <template>
-  <VerticalSpacer :class="containerClass">
+  <ContentContainer :class="containerClass">
     <slot />
-  </VerticalSpacer>
+  </ContentContainer>
 </template>
 
 <script setup>

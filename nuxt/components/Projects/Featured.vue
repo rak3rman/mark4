@@ -15,11 +15,15 @@
                 : 'col-start-3 ml-4 md:col-start-5'
             "
           >
-            <NuxtImg
-              class="z-0 rounded-lg object-cover brightness-50 md:brightness-100"
-              :src="project?.media?.desktop_screenshot"
-              v-if="project?.media?.desktop_screenshot"
-              alt=""
+            <ImageDelivery
+              class="z-0 brightness-50 md:brightness-100"
+              :id="project?.media?.desktop_screenshot_id"
+              variant="xl"
+              v-if="project?.media?.desktop_screenshot_id"
+              :alt="`${project.title} screenshot`"
+              type="project"
+              :width="800"
+              :height="600"
             />
           </div>
           <div
@@ -70,7 +74,6 @@
 
 <script setup lang="ts">
 import { z } from "zod";
-import { sortEventDates } from "~/utils/sortEventDates";
 import { Project } from "~/summarize/models/Project";
 import ProjectsJSON from "~/summarize/data/projects.json";
 

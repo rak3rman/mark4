@@ -57,7 +57,6 @@
       </div>
 
       <!-- Professional Disciplines -->
-      <!-- <Subheader> Professional Disciplines </Subheader> -->
       <div class="z-0">
         <div
           class="mx-auto text-primary lg:col-start-1 lg:row-start-1 lg:max-w-full"
@@ -113,70 +112,25 @@
     <div
       class="grid w-full grid-cols-2 items-center justify-center gap-x-7 gap-y-10 pt-24 sm:grid-cols-3 sm:gap-x-4 sm:gap-y-14 lg:max-w-none lg:pt-20 lg:pt-[6.5em]"
     >
-      <NuxtImg
+      <ImageDelivery
         class="w-[8rem] object-contain object-left md:w-[10rem]"
-        src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/0fc9126a-5a1b-423e-f93d-a41f491cc200/sm"
+        id="0fc9126a-5a1b-423e-f93d-a41f491cc200"
         alt="Experience Logo White"
+        type="experienceLogo"
       />
-      <NuxtImg
+      <ImageDelivery
         class="w-[10rem] object-contain object-left md:w-[12rem]"
-        src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/f163f81d-3b7a-49cc-99a1-41b104077f00/sm"
+        id="f163f81d-3b7a-49cc-99a1-41b104077f00"
         alt="Experience Logo White"
+        type="experienceLogo"
       />
-      <NuxtImg
+      <ImageDelivery
         class="w-[10rem] object-contain object-left md:w-[12rem]"
-        src="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/8335dd31-40d0-4178-8a47-4be36065f400/sm"
+        id="8335dd31-40d0-4178-8a47-4be36065f400"
         alt="Experience Logo White"
+        type="experienceLogo"
       />
     </div>
-
-    <!--Testimonials-->
-    <!--<div class="pb-8 pt-12">-->
-    <!--  <h6 class="text-left text-3xl font-bold leading-tight text-primary">-->
-    <!--    What Others Say-->
-    <!--  </h6>-->
-    <!--  <h6 class="text-md pt-1 text-left font-mono text-secondary">-->
-    <!--    Don't take my word for it.-->
-    <!--  </h6>-->
-    <!--</div>-->
-    <!--<ul role="list" class="-m-3 grid list-none grid-cols-1 p-0 lg:grid-cols-2">-->
-    <!--  <li v-for="(group, index) in testimonials" class="mb-3 space-y-6 pb-0">-->
-    <!--    <figure-->
-    <!--      class="ring-base-100-focus m-3 rounded-lg p-8 shadow-md ring-1"-->
-    <!--      v-for="testimonial in group"-->
-    <!--      :class="index > 1 ? 'hidden lg:block' : ''"-->
-    <!--    >-->
-    <!--      <blockquote>-->
-    <!--        <h6 class="text-lg tracking-tight text-primary">-->
-    <!--          "{{ testimonial.quote }}"-->
-    <!--        </h6>-->
-    <!--      </blockquote>-->
-    <!--      <figcaption class="mt-6 flex items-center">-->
-    <!--        <div class="overflow-hidden rounded-full bg-secondary">-->
-    <!--          <NuxtImg-->
-    <!--            class="h-12 w-12 object-cover"-->
-    <!--            :src="-->
-    <!--              'https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/' +-->
-    <!--              testimonial.img +-->
-    <!--              '/sq'-->
-    <!--            "-->
-    <!--            alt="Image"-->
-    <!--          />-->
-    <!--        </div>-->
-    <!--        <div class="ml-4">-->
-    <!--          <div-->
-    <!--            class="text-base font-medium leading-6 tracking-tight text-primary"-->
-    <!--          >-->
-    <!--            {{ testimonial.name }}-->
-    <!--          </div>-->
-    <!--          <div class="mt-0.5 text-sm text-accent">-->
-    <!--            {{ testimonial.title }}-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </figcaption>-->
-    <!--    </figure>-->
-    <!--  </li>-->
-    <!--</ul>-->
   </HomeWrapper>
 </template>
 
@@ -195,26 +149,17 @@ const ExperiencesParsed: Experience[] = ExperiencesJSON.map((obj: any) =>
   Experience.readonly().parse(obj),
 ).sort(sortEventDates);
 
-const ExperienceLogoWhiteSet: Set<string | undefined> = new Set(
+const ExperienceLogoWhiteSet: Set<string> = new Set(
   ExperiencesParsed.filter(
     (e: Experience) =>
       defaultExperienceFilters(e) &&
       e.discipline === "professional" &&
-      e?.media?.logo_white !== undefined,
-  ).map((e: Experience) => e?.media?.logo_white),
+      e?.media?.logo_white_id &&
+      e.on_resume,
+  )
+    .map((e: Experience) => e?.media?.logo_white_id)
+    .filter(Boolean),
 );
-
-const testimonials = [
-  [
-    {
-      name: "Garrett Moore",
-      title: "Political & Nonprofit Leadership",
-      quote:
-        "Radison is not your typical web developer. He is experienced and knowledgeable enough to take your website ideas and turn them into a fast, attractive, and extremely functional online site.",
-      img: "7036ad5d-b460-4bcb-3a30-c863ecf00c00",
-    },
-  ],
-];
 </script>
 
 <script lang="ts">

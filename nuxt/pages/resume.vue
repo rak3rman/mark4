@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  layout: "resume",
+  layout: false,
 });
 
 // Only show this page in development mode
@@ -11,17 +11,16 @@ if (process.env.NODE_ENV !== "development") {
   });
 }
 
-const { data: page } = await useAsyncData("content-resume", () => {
-  return queryCollection("content").path("/resume").first();
-});
-
 // Set SEO meta
-useSeoMeta(page.value?.seo || {});
+useSeoMeta({
+  robots: {
+    index: false,
+    follow: false,
+  },
+});
 </script>
 
 <template>
-  <ContentRenderer v-if="page" :value="page" />
-  <div v-else>
-    <h1>Page not found</h1>
-  </div>
+  <Html data-theme="summarize" />
+  <SummarizeResume />
 </template>

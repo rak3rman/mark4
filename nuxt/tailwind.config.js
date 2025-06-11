@@ -19,6 +19,28 @@ module.exports = {
       sans: ["SF Pro Display"],
     },
   },
+  // Performance optimizations
+  corePlugins: {
+    // Disable unused plugins to reduce bundle size
+    preflight: true,
+    container: false, // Not used
+    accessibility: true,
+    appearance: false, // Not used
+    backdropOpacity: false, // Not used
+    backdropSaturate: false, // Not used
+    backdropSepia: false, // Not used
+    isolation: false, // Not used
+    mixBlendMode: false, // Not used
+    backgroundBlendMode: false, // Not used
+  },
+  // Optimize purging
+  safelist: [
+    // Keep essential animation classes
+    "fade-in-hero",
+    "fade-in-nav",
+    "fade-in-expand",
+    "fade-in",
+  ],
   daisyui: {
     themes: [
       {
@@ -50,5 +72,13 @@ module.exports = {
         },
       },
     ],
+    // Optimize DaisyUI
+    styled: true,
+    base: true,
+    utils: true,
+    logs: false, // Disable console logs in production
+    rtl: false, // Disable RTL if not needed
+    prefix: "", // No prefix needed
+    darkTheme: "dark",
   },
 };

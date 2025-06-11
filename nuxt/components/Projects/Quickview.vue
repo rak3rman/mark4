@@ -83,7 +83,7 @@
                   :class="{
                     'md:grid-cols-12':
                       project?.media?.spline ||
-                      project?.media?.desktop_screenshot,
+                      project?.media?.desktop_screenshot_id,
                   }"
                 >
                   <div
@@ -91,7 +91,7 @@
                     :class="{
                       hidden: !(
                         project?.media?.spline ||
-                        project?.media?.desktop_screenshot
+                        project?.media?.desktop_screenshot_id
                       ),
                       'h-[70vh]': project?.media?.spline,
                     }"
@@ -103,11 +103,14 @@
                       v-if="project?.media?.spline"
                     ></spline-viewer>
                     <!-- Desktop -->
-                    <NuxtImg
-                      :src="project?.media?.desktop_screenshot"
+                    <ImageDelivery
+                      :id="project?.media?.desktop_screenshot_id"
+                      variant="xl"
                       alt="Desktop Screenshot"
-                      class=""
-                      v-if="project?.media?.desktop_screenshot"
+                      v-if="project?.media?.desktop_screenshot_id"
+                      type="project"
+                      :width="800"
+                      :height="600"
                     />
                   </div>
                   <div

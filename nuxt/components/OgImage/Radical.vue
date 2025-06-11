@@ -10,7 +10,7 @@ const description = computed(() => (props.description || "").slice(0, 200));
 </script>
 
 <template>
-  <div class="relative flex h-full w-full flex-col justify-center bg-[#020420]">
+  <div class="relative flex h-full w-full flex-col justify-center bg-[#121212]">
     <div class="w-[600px] pl-[100px]">
       <p
         v-if="headline"

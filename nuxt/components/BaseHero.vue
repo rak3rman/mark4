@@ -1,25 +1,13 @@
 <template>
-  <div
-    class="container relative mx-auto flex min-h-screen items-center"
-    id="hero"
-  >
-    <div class="w-full">
-      <h6
-        class="fade-in-hero pb-1 pt-1 text-left text-5xl font-bold text-primary md:text-6xl"
-        :style="{ 'transition-delay': 200 + 'ms' }"
-      >
-        <slot name="head" mdc-unwrap="p" />
-      </h6>
-      <h6
-        class="fade-in-hero max-w-2xl py-2 text-left text-lg leading-normal text-accent md:text-xl"
-        :style="{ 'transition-delay': 300 + 'ms' }"
-      >
-        <slot name="desc" mdc-unwrap="p" />
-      </h6>
-    </div>
+  <div class="relative overflow-hidden" id="hero">
+    <ContentContainer
+      class="container flex min-h-[90vh] items-center sm:min-h-screen"
+    >
+      <slot />
+    </ContentContainer>
     <div
       class="fade-in-hero absolute bottom-[7%] left-0 right-0 flex w-full justify-center"
-      :style="{ 'transition-delay': 400 + 'ms' }"
+      :style="{ 'transition-delay': arrowDelay + 'ms' }"
     >
       <ChevronDoubleDownIcon
         :class="[
@@ -35,6 +23,13 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
+
+const props = defineProps({
+  arrowDelay: {
+    type: Number,
+    default: 400,
+  },
+});
 
 const isMuted = ref(false);
 

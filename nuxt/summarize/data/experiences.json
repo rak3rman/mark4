@@ -25,7 +25,7 @@
       }
     ],
     "media": {
-      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/0fc9126a-5a1b-423e-f93d-a41f491cc200/sm"
+      "logo_white_id": "0fc9126a-5a1b-423e-f93d-a41f491cc200"
     },
     "on_resume": true
   },
@@ -50,7 +50,7 @@
       }
     ],
     "media": {
-      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/c9056405-978b-4c97-1ed1-90c13f966700/sm"
+      "logo_white_id": "c9056405-978b-4c97-1ed1-90c13f966700"
     },
     "on_resume": false
   },
@@ -106,7 +106,7 @@
       }
     ],
     "media": {
-      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/f163f81d-3b7a-49cc-99a1-41b104077f00/sm"
+      "logo_white_id": "f163f81d-3b7a-49cc-99a1-41b104077f00"
     },
     "on_resume": true
   },
@@ -162,7 +162,7 @@
       }
     ],
     "media": {
-      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/8335dd31-40d0-4178-8a47-4be36065f400/sm"
+      "logo_white_id": "8335dd31-40d0-4178-8a47-4be36065f400"
     },
     "on_resume": true
   },
@@ -190,7 +190,7 @@
       }
     ],
     "media": {
-      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/8335dd31-40d0-4178-8a47-4be36065f400/sm"
+      "logo_white_id": "8335dd31-40d0-4178-8a47-4be36065f400"
     },
     "on_resume": false
   },
@@ -293,7 +293,7 @@
       }
     ],
     "media": {
-      "logo_white": "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/3eec9116-2545-4621-b818-ca3195061500/sm"
+      "logo_white_id": "3eec9116-2545-4621-b818-ca3195061500"
     },
     "on_resume": false
   },
