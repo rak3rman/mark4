@@ -1,6 +1,4 @@
-import * as path from "path";
-
-const { gitDescribe, gitDescribeSync } = require("git-describe");
+const { gitDescribeSync } = require("git-describe");
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -55,12 +53,6 @@ export default defineNuxtConfig({
         img: "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/9036aeb5-ffa0-49ef-f5e3-3d40ac6d3800/md",
       },
       gitMasterTag: gitDescribeSync().hash,
-    },
-  },
-
-  nitro: {
-    prerender: {
-      routes: ["/sitemap.xml", "/", "/licensing", "/publications", "/privacy"],
     },
   },
 
