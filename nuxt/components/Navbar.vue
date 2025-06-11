@@ -32,7 +32,7 @@
               :style="{ 'transition-delay': 100 + 'ms' }"
             >
               <NuxtLink
-                :href="section.href"
+                :to="section.href"
                 :target="section.target || '_self'"
                 v-for="section in props.nav_elements.filter((e) => e.is_cta)"
               >
@@ -50,7 +50,7 @@
                 (e) => !e.is_cta,
               )"
               :key="section.name"
-              :href="section.href"
+              :to="section.href"
               :target="section.target || '_self'"
               :style="{
                 'transition-delay': (navLoaded ? 50 : index * 100 + 300) + 'ms',
@@ -74,7 +74,7 @@
             }"
           >
             <NuxtLink
-              :href="section.href"
+              :to="section.href"
               :target="section.target || '_self'"
               v-for="section in props.nav_elements.filter((e) => e.is_cta)"
             >
