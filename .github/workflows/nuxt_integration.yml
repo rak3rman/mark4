@@ -1,7 +1,6 @@
 name: Nuxt Integration
 
-on:
-  pull_request
+on: pull_request
 
 env:
   CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -24,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: "npm"
           cache-dependency-path: |
             nuxt/package-lock.json
             nuxt/summarize/package-lock.json
@@ -42,7 +41,7 @@ jobs:
         working-directory: nuxt
 
       - name: Generate Summarize PDFs
-        run: npm run dev & sleep 15 && cd summarize && npm run compile
+        run: npm run dev & sleep 30 && cd summarize && npm run compile
         working-directory: nuxt
 
       - name: Build Nuxt
