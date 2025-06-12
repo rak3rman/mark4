@@ -39,7 +39,7 @@
   <Link rel="dns-prefetch" href="//radicalplatforms.org" />
 
   <!-- PWA theme colors -->
-  <Meta name="theme-color" content="#000000" />
+  <Meta name="theme-color" content="#08090a" />
   <Meta name="apple-mobile-web-app-capable" content="yes" />
   <Meta
     name="apple-mobile-web-app-status-bar-style"
@@ -58,6 +58,7 @@
   <div class="h-full">
     <NuxtLoadingIndicator
       color="repeating-linear-gradient(to right,#586CB2 0%,#86868B 50%,#5E5E5E 100%)"
+      :height="1.5"
     />
     <NuxtLayout>
       <NuxtPage />

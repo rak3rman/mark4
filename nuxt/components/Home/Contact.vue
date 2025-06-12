@@ -1,3 +1,9 @@
+<!--
+  Home Contact Component
+  
+  A contact form section with form fields and submission handling.
+  Features a responsive grid layout and integration with Informr service.
+-->
 <template>
   <HomeWrapper id="contact">
     <Header
@@ -6,15 +12,17 @@
       title="Let's connect."
       punchline="Drop a line, not a packet."
       description="I'm always excited to talk tech, share ideas, or explore potential collaborations."
-      fade
     />
+
+    <!-- Contact form section -->
     <div class="w-full lg:grid lg:grid-cols-5 lg:gap-8">
       <div class="flex items-center lg:col-span-3">
         <form
           action="https://informr.rakerman.com/in/psb9kg5V"
           method="POST"
-          class="fade-in grid w-full grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+          class="grid w-full grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
         >
+          <!-- Name fields -->
           <InputField
             label="First Name"
             id="first-name"
@@ -29,6 +37,8 @@
             required
             autocomplete="family-name"
           />
+
+          <!-- Contact fields -->
           <InputField
             label="Email"
             id="email"
@@ -47,6 +57,8 @@
             class="sm:col-span-2"
             inputWrapperClass="relative mt-1 rounded-xl shadow-sm"
           />
+
+          <!-- Message field with Informr attribution -->
           <InputField
             label="Message"
             id="message"
@@ -67,6 +79,8 @@
               </div>
             </template>
           </InputField>
+
+          <!-- Submit button -->
           <div class="-mt-4 sm:col-span-2">
             <button type="submit">
               <ButtonPillOutlineLarge>Let's Talk!</ButtonPillOutlineLarge>
@@ -78,7 +92,6 @@
   </HomeWrapper>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { SparklesIcon } from "@heroicons/vue/24/outline";
-import InputField from "../InputField.vue";
 </script>

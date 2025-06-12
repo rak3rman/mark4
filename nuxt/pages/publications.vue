@@ -65,7 +65,7 @@ defineOgImage({
           <div class="space-y-4">
             <DocsBookmark
               link="/ec_slidedeck_april_2023.pdf"
-              presentation="true"
+              :presentation="true"
             >
               <template #title>
                 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring
@@ -130,8 +130,8 @@ defineOgImage({
             </div>
 
             <DocsBookmark
-              link="/ec_slidedeck_october_2022.pdf"
-              presentation="true"
+              link="/ec_slidedeck_november_2022.pdf"
+              :presentation="true"
             >
               <template #title>
                 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Fall
@@ -197,7 +197,7 @@ defineOgImage({
 
             <DocsBookmark
               link="/ec_slidedeck_april_2022.pdf"
-              presentation="true"
+              :presentation="true"
             >
               <template #title>
                 PDF Slidedeck | Exploding Chickens: UIC CS 342 Lecture, Spring

@@ -10,7 +10,7 @@ const description = computed(() => (props.description || "").slice(0, 200));
 </script>
 
 <template>
-  <div class="relative flex h-full w-full flex-col justify-center bg-[#121212]">
+  <div class="relative flex h-full w-full flex-col justify-center bg-[#0f1011]">
     <div class="w-[600px] pl-[100px]">
       <p
         v-if="headline"
@@ -21,7 +21,7 @@ const description = computed(() => (props.description || "").slice(0, 200));
       </p>
       <h1
         v-if="title"
-        class="m-0 mb-4 w-[600px] text-[75px] leading-tight text-[#F8FAFC]"
+        class="m-0 mb-4 w-[600px] text-[75px] leading-tight text-[#f7f8f8]"
         style="
           font-family: Tiempos Headline;
           font-weight: 600;

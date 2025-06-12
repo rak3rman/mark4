@@ -1,6 +1,26 @@
+<!--
+  Projects Quickview Modal Component
+  Modal dialog for detailed project viewing with media display
+  
+  Props:
+  - show (boolean): Controls modal visibility
+  - project (Project, optional): Project data to display
+  
+  Events:
+  - clear: Emitted when modal should be closed
+  
+  Features:
+  - Responsive modal with fade transitions
+  - Spline 3D viewer integration
+  - Project type icons and status badges
+  - Media display (Spline or desktop screenshots)
+  - Animated background blur elements
+  - External link icons
+-->
 <template>
   <TransitionRoot as="template" :show="show" v-if="project">
     <Dialog as="div" class="relative z-10" @close="emit('clear')">
+      <!-- Background overlay -->
       <TransitionChild
         as="template"
         enter="ease-out duration-300"
@@ -15,10 +35,12 @@
         />
       </TransitionChild>
 
+      <!-- Modal container -->
       <div class="fixed inset-0 z-10 overflow-y-auto">
         <div
           class="flex min-h-full items-stretch justify-center pt-12 text-center md:items-center md:px-2 md:pt-0 lg:px-4"
         >
+          <!-- Modal panel -->
           <TransitionChild
             as="template"
             enter="ease-out duration-300"
@@ -38,6 +60,7 @@
                     !project?.media?.spline,
                 }"
               >
+                <!-- Close button -->
                 <button
                   type="button"
                   class="absolute right-4 top-4 z-20 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
@@ -78,6 +101,7 @@
                   </svg>
                 </div>
 
+                <!-- Content grid -->
                 <div
                   class="z-10 grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 lg:gap-x-8"
                   :class="{
@@ -86,6 +110,7 @@
                       project?.media?.desktop_screenshot_id,
                   }"
                 >
+                  <!-- Media section -->
                   <div
                     class="flex flex-col justify-center md:col-span-5 md:h-full"
                     :class="{
@@ -96,13 +121,14 @@
                       'h-[70vh]': project?.media?.spline,
                     }"
                   >
-                    <!-- Spline -->
+                    <!-- Spline 3D viewer -->
                     <spline-viewer
                       loading-anim
                       :url="project?.media?.spline"
                       v-if="project?.media?.spline"
                     ></spline-viewer>
-                    <!-- Desktop -->
+
+                    <!-- Desktop screenshot -->
                     <ImageDelivery
                       :id="project?.media?.desktop_screenshot_id"
                       variant="xl"
@@ -113,6 +139,8 @@
                       :height="600"
                     />
                   </div>
+
+                  <!-- Project details section -->
                   <div
                     class="md:col-span-7"
                     :class="{
@@ -120,6 +148,7 @@
                         project?.media?.spline,
                     }"
                   >
+                    <!-- Project type icon -->
                     <div class="mb-4 flow-root items-center">
                       <ComputerDesktopIcon
                         class="float-left h-12 w-12 text-secondary"
@@ -152,6 +181,8 @@
                         v-else-if="project.type === 'website'"
                       />
                     </div>
+
+                    <!-- Project title and badges -->
                     <div
                       class="flex items-center text-xl font-medium leading-6 tracking-tight text-primary"
                     >
@@ -177,18 +208,24 @@
                         </span>
                       </div>
                     </div>
+
+                    <!-- Organization -->
                     <div class="mt-1.5 flex items-center text-sm text-accent">
                       <AtSymbolIcon
                         class="float-left mr-1.5 h-4 w-4 text-secondary"
                       />
                       {{ project.organization }}
                     </div>
+
+                    <!-- Dates -->
                     <div class="mt-0.5 flex items-center text-sm text-accent">
                       <CalendarDaysIcon
                         class="float-left mr-1.5 h-4 w-4 text-secondary"
                       />
                       {{ formatEventDates(project.dates, false) }}
                     </div>
+
+                    <!-- Description -->
                     <div class="mt-1.5 text-sm text-accent">
                       {{
                         project.long_description
@@ -196,6 +233,8 @@
                           : project.short_description
                       }}
                     </div>
+
+                    <!-- Tools used -->
                     <div class="mt-3 flex flex-grow items-end">
                       <div
                         class="flex flex-wrap font-mono text-xs font-light text-accent"
@@ -205,6 +244,8 @@
                         </h6>
                       </div>
                     </div>
+
+                    <!-- External links -->
                     <div class="mt-3 flex">
                       <ProjectsExtIcons :project="project" />
                     </div>
@@ -243,6 +284,18 @@ import { Project } from "~/summarize/models/Project";
 
 type Project = z.infer<typeof Project>;
 
+interface Props {
+  show: boolean;
+  project?: Project;
+}
+
+defineProps<Props>();
+
+const emit = defineEmits<{
+  clear: [];
+}>();
+
+// Load Spline viewer script
 useHead({
   script: [
     {
@@ -251,14 +304,4 @@ useHead({
     },
   ],
 });
-
-defineProps({
-  show: Boolean,
-  project: {
-    type: Object as PropType<Project>,
-    required: false,
-  },
-});
-
-const emit = defineEmits(["clear"]);
 </script>

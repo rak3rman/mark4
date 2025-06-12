@@ -14,8 +14,8 @@ export default defineNuxtConfig({
       {
         registerType: "autoUpdate",
         workbox: {
-          globPatterns: ["**/*.{js,css,html,png,svg,ico,woff2}"],
-          maximumFileSizeToCacheInBytes: 5000000, // 5MB to include large fonts
+          globPatterns: ["**/*.{js,css,html,png,svg,ico,woff2,pdf}"],
+          maximumFileSizeToCacheInBytes: 10000000, // 10MB to include large fonts, PDFs
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/imagedelivery\.net\/.*/i,
@@ -46,28 +46,14 @@ export default defineNuxtConfig({
           name: "Radison Akerman",
           short_name: "Radison Akerman",
           description: "I lead and build exceptional software experiences.",
-          theme_color: "#000000",
-          background_color: "#000000",
+          theme_color: "#08090a",
+          background_color: "#08090a",
           display: "standalone",
           orientation: "portrait",
           scope: "/",
           start_url: "/",
           lang: "en",
           categories: ["business", "technology", "portfolio"],
-          screenshots: [
-            {
-              src: "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/cbeec7ce-7b51-4cc2-81bb-e72289777900/w=1080",
-              sizes: "1080x1920",
-              type: "image/png",
-              form_factor: "narrow",
-            },
-            {
-              src: "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/cbeec7ce-7b51-4cc2-81bb-e72289777900/w=1920",
-              sizes: "1920x1080",
-              type: "image/png",
-              form_factor: "wide",
-            },
-          ],
           icons: [
             {
               src: "https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/cbeec7ce-7b51-4cc2-81bb-e72289777900/w=64",
@@ -100,10 +86,6 @@ export default defineNuxtConfig({
       failOnError: false,
     },
     routeRules: {
-      "/**": {
-        prerender: true,
-        headers: { "cache-control": "s-maxage=31536000" },
-      },
       "/fonts/**": {
         headers: { "cache-control": "s-maxage=31536000, immutable" },
       },
@@ -111,8 +93,21 @@ export default defineNuxtConfig({
         headers: { "cache-control": "s-maxage=31536000, immutable" },
       },
       "/sw.js": { headers: { "cache-control": "no-cache" } },
-      "/*.pdf": {
-        headers: { "cache-control": "s-maxage=31536000, immutable" },
+      "/radison-akerman-resume.pdf": {
+        prerender: false,
+        headers: { "cache-control": "s-maxage=86400" }, // 1 day, can update frequently
+      },
+      "/radison-akerman-cv.pdf": {
+        prerender: false,
+        headers: { "cache-control": "s-maxage=86400" }, // 1 day, can update frequently
+      },
+      "/**/*.pdf": {
+        prerender: false,
+        headers: { "cache-control": "s-maxage=31536000, immutable" }, // 1 year, can update infrequently
+      },
+      "/**": {
+        prerender: true,
+        headers: { "cache-control": "s-maxage=31536000" },
       },
     },
     compressPublicAssets: true,

@@ -38,21 +38,21 @@ module.exports = {
     // Keep essential animation classes
     "fade-in-hero",
     "fade-in-nav",
-    "fade-in-expand",
-    "fade-in",
   ],
   daisyui: {
     themes: [
       {
         dark: {
-          primary: "#F8FAFC", // Primary theme color (logo, buttons)
+          primary: "#f7f8f8", // Primary theme color (logo, buttons)
           secondary: "#586CB2", // Secondary theme color (alt icons)
           accent: "#D1D5DB",
           neutral: "#86868B",
           success: "#059669",
           warning: "#FF5A00",
-          "base-100": "#000000",
-          "base-200": "#121212",
+          "base-100": "#08090a",
+          "base-200": "#0f1011",
+          "base-300": "#141516",
+          "base-400": "#191a1b",
         },
         light: {
           primary: "#212121", // Primary theme color (logo, buttons)

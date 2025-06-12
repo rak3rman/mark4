@@ -1,8 +1,15 @@
+<!--
+  Footer Component
+  
+  Application footer with social navigation links, copyright info, and legal/status links.
+  Displays company information with responsive layout and hover effects.
+-->
 <template>
   <footer class="pt-14">
     <div
       class="pt-8 md:flex md:items-center md:justify-between md:border-t md:border-accent/20"
     >
+      <!-- Social navigation links -->
       <div class="flex justify-center space-x-6 md:order-2">
         <NuxtLink
           v-for="item in navigation"
@@ -15,6 +22,7 @@
         </NuxtLink>
       </div>
       <div class="mt-8 md:order-1 md:mt-0">
+        <!-- Copyright and credits -->
         <div>
           <h6
             class="pb-1 text-center text-sm text-primary opacity-70 md:float-left md:mr-1"
@@ -28,6 +36,7 @@
           </h6>
         </div>
         <div>
+          <!-- Legal and status links -->
           <div class="flex justify-center md:float-left md:mr-1">
             <h6 class="mr-1 text-center text-sm text-primary opacity-70">
               <Linker href="/privacy">Privacy Policy.</Linker>
@@ -39,6 +48,7 @@
               <Linker href="https://status.rakerman.com">Status.</Linker>
             </h6>
           </div>
+          <!-- Version info -->
           <div class="flex justify-center md:float-left md:mr-1">
             <h6 class="text-center text-sm text-primary opacity-70">
               <Linker href="https://github.com/rak3rman/mark4"
@@ -52,16 +62,28 @@
   </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { defineComponent, h } from "vue";
 
+// Types
+interface NavigationItem {
+  name: string;
+  href: string;
+  icon: ReturnType<typeof defineComponent>;
+}
+
+// Runtime configuration
 const config = useRuntimeConfig();
 
-const navigation = [
+/**
+ * Social navigation items with their respective icons
+ */
+const navigation: NavigationItem[] = [
   {
     name: "GitHub",
     href: "https://github.com/rak3rman",
     icon: defineComponent({
+      name: "GitHubIcon",
       render: () =>
         h("svg", { fill: "currentColor", viewBox: "0 0 24 24" }, [
           h("path", {
@@ -76,6 +98,7 @@ const navigation = [
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/radison/",
     icon: defineComponent({
+      name: "LinkedInIcon",
       render: () =>
         h("svg", { fill: "currentColor", viewBox: "0 0 448 512" }, [
           h("path", {
