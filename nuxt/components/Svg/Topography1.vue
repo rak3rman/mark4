@@ -1,3 +1,22 @@
+<!--
+  Topography1 SVG Component
+  
+  Purpose:
+  - Renders a complex topographical pattern as a decorative SVG background
+  - Provides geometric mountain/terrain-like shapes for visual interest
+  - Uses responsive scaling with preserveAspectRatio for consistent display
+  
+  Features:
+  - Complex path definitions with multiple clip paths and polygons
+  - Dynamic color theming via CSS custom properties (hsl(var(--s)))
+  - Optimized 432x432 viewBox for square aspect ratio
+  - Scalable vector graphics suitable for backgrounds or decorative elements
+  
+  Usage:
+  - Import and use as a decorative background component
+  - Typically styled with CSS custom properties for theming
+  - Scales automatically to container size while maintaining aspect ratio
+-->
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"

@@ -19,18 +19,40 @@ module.exports = {
       sans: ["SF Pro Display"],
     },
   },
+  // Performance optimizations
+  corePlugins: {
+    // Disable unused plugins to reduce bundle size
+    preflight: true,
+    container: false, // Not used
+    accessibility: true,
+    appearance: false, // Not used
+    backdropOpacity: false, // Not used
+    backdropSaturate: false, // Not used
+    backdropSepia: false, // Not used
+    isolation: false, // Not used
+    mixBlendMode: false, // Not used
+    backgroundBlendMode: false, // Not used
+  },
+  // Optimize purging
+  safelist: [
+    // Keep essential animation classes
+    "fade-in-hero",
+    "fade-in-nav",
+  ],
   daisyui: {
     themes: [
       {
         dark: {
-          primary: "#F8FAFC", // Primary theme color (logo, buttons)
+          primary: "#f7f8f8", // Primary theme color (logo, buttons)
           secondary: "#586CB2", // Secondary theme color (alt icons)
           accent: "#D1D5DB",
           neutral: "#86868B",
           success: "#059669",
           warning: "#FF5A00",
-          "base-100": "#000000",
-          "base-200": "#121212",
+          "base-100": "#08090a",
+          "base-200": "#0f1011",
+          "base-300": "#141516",
+          "base-400": "#191a1b",
         },
         light: {
           primary: "#212121", // Primary theme color (logo, buttons)
@@ -50,5 +72,13 @@ module.exports = {
         },
       },
     ],
+    // Optimize DaisyUI
+    styled: true,
+    base: true,
+    utils: true,
+    logs: false, // Disable console logs in production
+    rtl: false, // Disable RTL if not needed
+    prefix: "", // No prefix needed
+    darkTheme: "dark",
   },
 };

@@ -5,7 +5,7 @@ on:
     branches:
       - master
   schedule: # Run every 1st of the month at 06:00 UTC, for summarize resume/cv pdf generation
-    - cron: '0 6 1 * *'
+    - cron: "0 6 1 * *"
 
 env:
   CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
@@ -40,7 +40,7 @@ jobs:
         working-directory: nuxt
 
       - name: Generate Summarize PDFs
-        run: npm run dev & sleep 15 && cd summarize && npm run compile
+        run: npm run dev & sleep 30 && cd summarize && npm run compile
         working-directory: nuxt
 
       - name: Build Nuxt

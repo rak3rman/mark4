@@ -1,5 +1,6 @@
 nuxt/node_modules
 nuxt/*.log*
+nuxt/.data
 nuxt/.nuxt
 nuxt/.nitro
 nuxt/.cache

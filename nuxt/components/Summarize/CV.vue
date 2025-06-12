@@ -1,6 +1,20 @@
+<!--
+  Summarize CV Component
+  Multi-page comprehensive CV layout
+  
+  Features:
+  - Multi-page CV format (3 pages)
+  - Complete professional history
+  - Separate sections for professional and teaching experience
+  - Awards, skills, presentations, and projects
+  - Links to full portfolio and publications
+  - Academic CV format with comprehensive details
+-->
 <template>
   <div>
+    <!-- Page 1: Contact, Education, Professional Experience -->
     <SummarizePage :page="1" :total="total_pages">
+      <!-- Personal header -->
       <SummarizeTitle>{{ ConfigParsed.name }}</SummarizeTitle>
       <SummarizeSubtitle>
         {{ ConfigParsed.email + (ConfigParsed.email ? "&ensp;" : "") }}
@@ -8,9 +22,11 @@
         {{ ConfigParsed.linkedin + (ConfigParsed.linkedin ? "&ensp;" : "") }}
       </SummarizeSubtitle>
 
+      <!-- Education section -->
       <SummarizeHeading>Education</SummarizeHeading>
       <SummarizeEducation v-for="obj in EducationParsed" :education="obj" />
 
+      <!-- Professional experience section -->
       <SummarizeHeading>Professional Experience</SummarizeHeading>
       <SummarizeExperience
         v-for="obj in ExperiencesParsed.filter(
@@ -21,7 +37,9 @@
       />
     </SummarizePage>
 
+    <!-- Page 2: Teaching, Awards -->
     <SummarizePage :page="2" :total="total_pages">
+      <!-- Teaching and mentoring section -->
       <SummarizeHeading>Teaching and Mentoring</SummarizeHeading>
       <SummarizeExperience
         v-for="obj in ExperiencesParsed.filter(
@@ -31,14 +49,18 @@
         :experience="obj"
       />
 
+      <!-- Awards section -->
       <SummarizeHeading>Honors and Awards</SummarizeHeading>
       <SummarizeAward v-for="obj in AwardsParsed" :award="obj" />
     </SummarizePage>
 
+    <!-- Page 3: Skills, Presentations, Projects -->
     <SummarizePage :page="3" :total="total_pages">
+      <!-- Skills section -->
       <SummarizeHeading>Skills</SummarizeHeading>
       <SummarizeSkillSet v-for="obj in SkillSetsParsed" :skillset="obj" />
 
+      <!-- Presentations section -->
       <SummarizeHeading>Presentations</SummarizeHeading>
       <SummarizePresentation
         v-for="obj in PresentationsParsed"
@@ -51,6 +73,7 @@
         >
       </div>
 
+      <!-- Projects section -->
       <SummarizeHeading>Projects</SummarizeHeading>
       <SummarizeProject
         v-for="obj in ProjectsParsed.filter(
