@@ -7,10 +7,13 @@
     data-theme="dark"
   />
 
-  <!-- Critical resource hints for performance -->
-  <Link rel="preconnect" href="https://imagedelivery.net" crossorigin />
+  <Meta charset="utf-8" />
 
-  <!-- Preload critical fonts for better performance -->
+  <!-- Critical resource hints -->
+  <Link rel="preconnect" href="https://imagedelivery.net" crossorigin />
+  <Link rel="dns-prefetch" href="//imagedelivery.net" />
+
+  <!-- Preload critical fonts-->
   <Link
     rel="preload"
     href="/fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff2"
@@ -20,7 +23,7 @@
   />
   <Link
     rel="preload"
-    href="/fonts/SF-Pro-Display/SF-Pro-Display-Bold.woff2"
+    href="/fonts/SF-Pro-Display/SF-Pro-Display-Medium.woff2"
     as="font"
     type="font/woff2"
     crossorigin="anonymous"
@@ -30,7 +33,6 @@
   <FaviconLinks id="cbeec7ce-7b51-4cc2-81bb-e72289777900" />
 
   <!-- DNS prefetch for external domains -->
-  <Link rel="dns-prefetch" href="//imagedelivery.net" />
   <Link rel="dns-prefetch" href="//chickens.rakerman.com" />
   <Link rel="dns-prefetch" href="//vistapower.com" />
   <Link rel="dns-prefetch" href="//spacex.com" />

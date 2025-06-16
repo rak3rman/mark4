@@ -146,19 +146,19 @@
       <ImageDelivery
         class="w-[8rem] object-contain object-left md:w-[10rem]"
         id="0fc9126a-5a1b-423e-f93d-a41f491cc200"
-        alt="Experience Logo White"
+        alt="Vista Power Logo"
         type="experienceLogo"
       />
       <ImageDelivery
         class="w-[10rem] object-contain object-left md:w-[12rem]"
         id="f163f81d-3b7a-49cc-99a1-41b104077f00"
-        alt="Experience Logo White"
+        alt="SpaceX Logo"
         type="experienceLogo"
       />
       <ImageDelivery
         class="w-[10rem] object-contain object-left md:w-[12rem]"
         id="8335dd31-40d0-4178-8a47-4be36065f400"
-        alt="Experience Logo White"
+        alt="University of Illinois Chicago Logo"
         type="experienceLogo"
       />
     </div>

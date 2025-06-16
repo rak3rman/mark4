@@ -87,30 +87,96 @@ export default defineNuxtConfig({
     },
     routeRules: {
       "/fonts/**": {
-        headers: { "cache-control": "s-maxage=31536000, immutable" },
+        headers: {
+          "cache-control": "s-maxage=31536000, immutable",
+          "x-content-type-options": "nosniff",
+        },
       },
       "/_nuxt/**": {
-        headers: { "cache-control": "s-maxage=31536000, immutable" },
+        headers: {
+          "cache-control": "s-maxage=31536000, immutable",
+          "x-content-type-options": "nosniff",
+        },
       },
-      "/sw.js": { headers: { "cache-control": "no-cache" } },
+      "/sw.js": {
+        headers: {
+          "cache-control": "no-cache",
+          "x-content-type-options": "nosniff",
+        },
+      },
+      "/sitemap.xml": {
+        prerender: true,
+        headers: {
+          "cache-control": "s-maxage=86400",
+          "content-type": "application/xml",
+        },
+      },
+      "/robots.txt": {
+        prerender: true,
+        headers: {
+          "cache-control": "s-maxage=86400",
+          "content-type": "text/plain",
+        },
+      },
       "/radison-akerman-resume.pdf": {
         prerender: false,
-        headers: { "cache-control": "s-maxage=86400" }, // 1 day, can update frequently
+        headers: {
+          "cache-control": "s-maxage=86400",
+          "content-type": "application/pdf",
+        },
       },
       "/radison-akerman-cv.pdf": {
         prerender: false,
-        headers: { "cache-control": "s-maxage=86400" }, // 1 day, can update frequently
+        headers: {
+          "cache-control": "s-maxage=86400",
+          "content-type": "application/pdf",
+        },
       },
       "/**/*.pdf": {
         prerender: false,
-        headers: { "cache-control": "s-maxage=31536000, immutable" }, // 1 year, can update infrequently
+        headers: {
+          "cache-control": "s-maxage=31536000, immutable",
+          "content-type": "application/pdf",
+        },
+      },
+      "/**/*.woff2": {
+        headers: {
+          "cache-control": "s-maxage=31536000, immutable",
+          "content-type": "font/woff2",
+        },
+      },
+      "/**/*.woff": {
+        headers: {
+          "cache-control": "s-maxage=31536000, immutable",
+          "content-type": "font/woff",
+        },
+      },
+      "/**/*.js": {
+        headers: {
+          "cache-control": "s-maxage=31536000, immutable",
+          "content-type": "application/javascript",
+        },
+      },
+      "/**/*.css": {
+        headers: {
+          "cache-control": "s-maxage=31536000, immutable",
+          "content-type": "text/css",
+        },
       },
       "/**": {
         prerender: true,
-        headers: { "cache-control": "s-maxage=31536000" },
+        headers: {
+          "cache-control": "s-maxage=31536000",
+          "x-frame-options": "DENY",
+          "x-content-type-options": "nosniff",
+          "referrer-policy": "strict-origin-when-cross-origin",
+        },
       },
     },
-    compressPublicAssets: true,
+    compressPublicAssets: {
+      gzip: true,
+      brotli: true,
+    },
     minify: true,
   },
 
@@ -121,9 +187,45 @@ export default defineNuxtConfig({
     build: {
       cssCodeSplit: true,
       chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Split vendor libraries
+            heroicons: ["@heroicons/vue"],
+            headlessui: ["@headlessui/vue"],
+          },
+        },
+      },
     },
     ssr: {
       noExternal: ["@heroicons/vue"],
+    },
+    // Additional performance optimizations
+    optimizeDeps: {
+      include: ["@heroicons/vue", "@headlessui/vue"],
+    },
+    // CSS optimization - remove charset declarations to reduce bundle size
+    define: {
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
+    },
+  },
+
+  // Performance and SEO optimizations
+  experimental: {
+    payloadExtraction: false, // Reduces bundle size
+    treeshakeClientOnly: true, // Remove client-only code from server bundle
+  },
+
+  // Additional performance features
+  features: {
+    inlineStyles: false, // Prevents inline styles bloat
+  },
+
+  // Router optimization for better code splitting
+  router: {
+    options: {
+      hashMode: false,
+      scrollBehaviorType: "smooth",
     },
   },
 
@@ -137,7 +239,7 @@ export default defineNuxtConfig({
   // with automatic format selection (AVIF, WebP, JPEG fallback) and responsive sizing
   image: {
     quality: 80,
-    format: ["webp", "avif", "jpg", "png"],
+    format: ["avif", "webp", "jpg", "png"],
     screens: {
       xs: 320,
       sm: 640,
@@ -147,6 +249,9 @@ export default defineNuxtConfig({
       xxl: 1536,
     },
     densities: [1, 2],
+    // Optimize loading strategy
+    loading: "lazy",
+    placeholder: "blur",
     // Enable responsive images by default
     presets: {
       // Avatar/Logo images - small, high quality
