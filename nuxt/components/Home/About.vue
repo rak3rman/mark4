@@ -33,7 +33,7 @@
 
         <!-- Expandable content container -->
         <div
-          class="max-h-[40rem] overflow-hidden transition-all duration-500 ease-in-out peer-checked:max-h-[5000px] md:max-h-none fade-in-expand"
+          class="fade-in-expand max-h-[40rem] overflow-hidden transition-all duration-500 ease-in-out peer-checked:max-h-[5000px] md:max-h-none"
         >
           <slot />
         </div>
@@ -44,7 +44,7 @@
         >
           <!-- Gradient fade -->
           <div
-            class="h-full w-full bg-gradient-to-b from-transparent via-base-100/80 to-black"
+            class="h-full w-full bg-gradient-to-b from-transparent via-base-100/80 to-base-100"
           ></div>
 
           <!-- Gradual blur with mask -->
@@ -54,14 +54,14 @@
               mask-image: linear-gradient(
                 to bottom,
                 transparent 0%,
-                black 50%,
-                black 100%
+                oklch(var(--b1)) 50%,
+                oklch(var(--b1)) 100%
               );
               -webkit-mask-image: linear-gradient(
                 to bottom,
                 transparent 0%,
-                black 50%,
-                black 100%
+                oklch(var(--b1)) 50%,
+                oklch(var(--b1)) 100%
               );
             "
           ></div>

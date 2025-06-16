@@ -21,21 +21,22 @@ defineOgImage({
 
 // Lazy load below-the-fold components for better performance
 const LazyHomeExperience = defineAsyncComponent(
-  () => import("~/components/Home/Experience.vue"),
+  () => import("../components/Home/Experience.vue"),
 );
 const LazyHomeProjects = defineAsyncComponent(
-  () => import("~/components/Home/Projects.vue"),
+  () => import("../components/Home/Projects.vue"),
 );
 const LazyHomeContact = defineAsyncComponent(
-  () => import("~/components/Home/Contact.vue"),
+  () => import("../components/Home/Contact.vue"),
 );
 </script>
 
 <template>
   <div>
     <HomeHero
-      buttonText="Exploding Chickens: Celebrating 1,750+ Games Played!"
-      buttonUrl="https://chickens.rakerman.com"
+      buttonText="Explore Changelog: What & How I Build"
+      buttonTextShort="Explore Changelog: How I Build"
+      buttonUrl="https://changelog.radison.io"
     >
       I lead and build exceptional software experiences. Currently, I'm
       responsible for all software initiatives at
