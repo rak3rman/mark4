@@ -9,30 +9,11 @@
 
   <Meta charset="utf-8" />
 
-  <!-- Critical resource hints -->
   <Link rel="preconnect" href="https://imagedelivery.net" crossorigin />
   <Link rel="dns-prefetch" href="//imagedelivery.net" />
 
-  <!-- Preload critical fonts-->
-  <Link
-    rel="preload"
-    href="/fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <Link
-    rel="preload"
-    href="/fonts/SF-Pro-Display/SF-Pro-Display-Medium.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-
-  <!-- Optimized favicon with multiple sizes -->
   <FaviconLinks id="cbeec7ce-7b51-4cc2-81bb-e72289777900" />
 
-  <!-- DNS prefetch for external domains -->
   <Link rel="dns-prefetch" href="//chickens.rakerman.com" />
   <Link rel="dns-prefetch" href="//vistapower.com" />
   <Link rel="dns-prefetch" href="//spacex.com" />
@@ -40,7 +21,6 @@
   <Link rel="dns-prefetch" href="//uic.edu" />
   <Link rel="dns-prefetch" href="//radicalplatforms.org" />
 
-  <!-- PWA theme colors -->
   <Meta name="theme-color" content="#08090a" />
   <Meta name="apple-mobile-web-app-capable" content="yes" />
   <Meta
@@ -49,7 +29,6 @@
   />
   <Meta name="apple-mobile-web-app-title" content="Radison" />
 
-  <!-- Performance hints -->
   <Meta name="format-detection" content="telephone=no" />
   <Meta
     name="viewport"

@@ -20,61 +20,67 @@
       description="I'm obsessed with building true end-to-end technical infrastructure and user interfaces."
       fade
     >
-      <div>
-        <!-- Resume download link -->
-        <NuxtLink
-          to="/radison-akerman-resume.pdf"
-          target="_blank"
-          class="mr-3 mt-4 inline-flex items-center"
-        >
-          <ButtonPillOutlineLarge>
-            Resume
-            <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
-          </ButtonPillOutlineLarge>
-        </NuxtLink>
+      <!-- Resume download link -->
+      <a
+        href="/radison-akerman-resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mr-3 mt-4 inline-flex items-center"
+      >
+        <ButtonPillOutlineLarge>
+          Resume
+          <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
+        </ButtonPillOutlineLarge>
+      </a>
 
-        <!-- CV download link -->
-        <NuxtLink
-          to="/radison-akerman-cv.pdf"
-          target="_blank"
-          class="mt-4 inline-flex items-center"
-        >
-          <ButtonPillOutlineLarge>
-            Curriculum Vitae
-            <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
-          </ButtonPillOutlineLarge>
-        </NuxtLink>
-      </div>
+      <!-- CV download link -->
+      <a
+        href="/radison-akerman-cv.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-4 inline-flex items-center"
+      >
+        <ButtonPillOutlineLarge>
+          Curriculum Vitae
+          <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
+        </ButtonPillOutlineLarge>
+      </a>
     </Header>
 
     <div class="mt-4">
       <!-- Floating resume preview (desktop only) -->
-      <div
-        class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-[4.8px] lg:block"
-      >
-        <NuxtLink href="/radison-akerman-resume.pdf" target="_blank">
-          <!-- Resume preview container with styling -->
-          <div
-            class="-m-2 rounded-xl bg-base-200/60 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-3"
+      <ClientOnly fallback-tag="div">
+        <div
+          class="relative z-10 float-right hidden max-w-md pb-5 pl-10 pt-[4.8px] lg:block"
+        >
+          <a
+            href="/radison-akerman-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
+            <!-- Resume preview container with styling -->
             <div
-              data-theme="dark"
-              class="rounded-lg bg-base-200 p-6 shadow-2xl ring-1 ring-accent/10"
+              class="-m-2 rounded-xl bg-base-200/60 p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-3"
             >
-              <!-- Scaled resume component -->
-              <SummarizeResume
-                class="h-[30.3rem] origin-top-left scale-[41%]"
-              />
+              <div
+                data-theme="dark"
+                class="rounded-lg bg-base-200 p-6 shadow-2xl ring-1 ring-accent/10"
+              >
+                <!-- Scaled resume component -->
+                <SummarizeResume
+                  class="h-[30.3rem] origin-top-left scale-[41%]"
+                />
+              </div>
             </div>
-          </div>
 
-          <!-- Click instruction text -->
-          <div class="flex justify-center pt-6 text-xs text-neutral">
-            <CursorArrowRaysIcon class="h-4 pr-0.5" />
-            <i>Click to view a slick, light-mode version of this resume!</i>
-          </div>
-        </NuxtLink>
-      </div>
+            <!-- Click instruction text -->
+            <div class="flex justify-center pt-6 text-xs text-neutral">
+              <CursorArrowRaysIcon class="h-4 pr-0.5" />
+              <i>Click to view a slick, light-mode version of this resume!</i>
+            </div>
+          </a>
+        </div>
+      </ClientOnly>
 
       <!-- Professional disciplines section -->
       <div class="z-0">

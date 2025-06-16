@@ -3,7 +3,8 @@
   Primary landing component with introduction, portrait, and call-to-action button
   
   Props:
-  - buttonText (string, optional): Text for the call-to-action button
+  - buttonText (string, optional): Text for the call-to-action button (desktop)
+  - buttonTextShort (string, optional): Short text for mobile call-to-action button
   - buttonUrl (string, optional): URL for the call-to-action button
   
   Features:
@@ -60,13 +61,19 @@
 
           <!-- Call-to-action button -->
           <div
-            class="fade-in-hero mb-2 hidden items-center py-1 text-left text-accent sm:flex sm:py-2"
+            class="fade-in-hero mb-2 mt-1 flex items-center py-1 text-left text-accent sm:py-2"
             :style="{ 'transition-delay': (pageLoaded ? 0 : 600) + 'ms' }"
-            v-if="buttonText"
+            v-if="buttonText || buttonTextShort"
           >
             <NuxtLink :to="buttonUrl">
               <ButtonPillOutlineLarge>
-                {{ buttonText }}
+                <!-- Show short text on mobile, long text on desktop -->
+                <span class="sm:hidden">{{
+                  buttonTextShort || buttonText
+                }}</span>
+                <span class="hidden sm:inline">{{
+                  buttonText || buttonTextShort
+                }}</span>
                 <ChevronRightIcon class="-mr-1 h-5 w-5" />
               </ButtonPillOutlineLarge>
             </NuxtLink>
@@ -81,14 +88,32 @@
 import { ref, onMounted } from "vue";
 import { ChevronRightIcon } from "@heroicons/vue/16/solid";
 
-interface Props {
-  buttonText?: string;
-  buttonUrl?: string;
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  buttonText: undefined,
-  buttonUrl: undefined,
+// Component props with validation
+const props = defineProps({
+  buttonText: {
+    type: String,
+    default: undefined,
+    validator: (value: string | undefined) => {
+      if (!value) return true;
+      return value.trim().length > 0;
+    },
+  },
+  buttonTextShort: {
+    type: String,
+    default: undefined,
+    validator: (value: string | undefined) => {
+      if (!value) return true;
+      return value.trim().length > 0;
+    },
+  },
+  buttonUrl: {
+    type: String,
+    default: undefined,
+    validator: (value: string | undefined) => {
+      if (!value) return true;
+      return value.trim().length > 0;
+    },
+  },
 });
 
 const pageLoaded = ref(false);
