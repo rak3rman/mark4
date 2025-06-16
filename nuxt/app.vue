@@ -9,6 +9,7 @@
 
   <!-- Critical resource hints for performance -->
   <Link rel="preconnect" href="https://imagedelivery.net" crossorigin />
+  <Link rel="dns-prefetch" href="//imagedelivery.net" />
 
   <!-- Preload critical fonts for better performance -->
   <Link
@@ -25,12 +26,18 @@
     type="font/woff2"
     crossorigin="anonymous"
   />
+  <Link
+    rel="preload"
+    href="/fonts/SF-Pro-Display/SF-Pro-Display-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
 
   <!-- Optimized favicon with multiple sizes -->
   <FaviconLinks id="cbeec7ce-7b51-4cc2-81bb-e72289777900" />
 
   <!-- DNS prefetch for external domains -->
-  <Link rel="dns-prefetch" href="//imagedelivery.net" />
   <Link rel="dns-prefetch" href="//chickens.rakerman.com" />
   <Link rel="dns-prefetch" href="//vistapower.com" />
   <Link rel="dns-prefetch" href="//spacex.com" />

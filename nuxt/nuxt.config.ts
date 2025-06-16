@@ -93,6 +93,14 @@ export default defineNuxtConfig({
         headers: { "cache-control": "s-maxage=31536000, immutable" },
       },
       "/sw.js": { headers: { "cache-control": "no-cache" } },
+      "/sitemap.xml": {
+        prerender: true,
+        headers: { "cache-control": "s-maxage=86400" }, // 1 day
+      },
+      "/robots.txt": {
+        prerender: true,
+        headers: { "cache-control": "s-maxage=86400" }, // 1 day
+      },
       "/radison-akerman-resume.pdf": {
         prerender: false,
         headers: { "cache-control": "s-maxage=86400" }, // 1 day, can update frequently
@@ -121,10 +129,33 @@ export default defineNuxtConfig({
     build: {
       cssCodeSplit: true,
       chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Split vendor libraries
+            heroicons: ["@heroicons/vue"],
+            headlessui: ["@headlessui/vue"],
+          },
+        },
+      },
     },
     ssr: {
       noExternal: ["@heroicons/vue"],
     },
+    // Additional performance optimizations
+    optimizeDeps: {
+      include: ["@heroicons/vue", "@headlessui/vue"],
+    },
+  },
+
+  // Performance and SEO optimizations
+  experimental: {
+    payloadExtraction: false, // Reduces bundle size
+  },
+
+  // Additional performance features
+  features: {
+    inlineStyles: false, // Prevents inline styles bloat
   },
 
   site: {
