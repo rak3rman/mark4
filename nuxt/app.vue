@@ -7,21 +7,16 @@
     data-theme="dark"
   />
 
-  <!-- Critical resource hints for performance -->
+  <Meta charset="utf-8" />
+
+  <!-- Critical resource hints -->
   <Link rel="preconnect" href="https://imagedelivery.net" crossorigin />
   <Link rel="dns-prefetch" href="//imagedelivery.net" />
 
-  <!-- Preload critical fonts for better performance -->
+  <!-- Preload critical fonts-->
   <Link
     rel="preload"
     href="/fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin="anonymous"
-  />
-  <Link
-    rel="preload"
-    href="/fonts/SF-Pro-Display/SF-Pro-Display-Bold.woff2"
     as="font"
     type="font/woff2"
     crossorigin="anonymous"
