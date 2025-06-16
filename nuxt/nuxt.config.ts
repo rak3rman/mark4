@@ -222,8 +222,8 @@ export default defineNuxtConfig({
     fonts: [
       {
         name: "SF Pro Display",
-        weight: 400,
-        path: "/fonts/SF-Pro-Display/SF-Pro-Display-Regular.woff",
+        weight: 500,
+        path: "/fonts/SF-Pro-Display/SF-Pro-Display-Medium.woff",
       },
       {
         name: "SF Pro Display",
