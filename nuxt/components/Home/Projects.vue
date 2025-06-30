@@ -28,7 +28,7 @@
           class="mt-4 inline-flex items-center"
         >
           <ButtonPillOutlineLarge>
-            Explore Changelog
+            Changelog
             <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
           </ButtonPillOutlineLarge>
         </NuxtLink>

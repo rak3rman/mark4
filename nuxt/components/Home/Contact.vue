@@ -12,7 +12,17 @@
       title="Let's connect."
       punchline="Drop a line, not a packet."
       description="I'm always excited to talk tech, share ideas, or explore potential collaborations."
-    />
+    >
+      <NuxtLink
+        to="https://linkedin.com/in/radison/"
+        class="mt-4 inline-flex items-center"
+      >
+        <ButtonPillOutlineLarge>
+          Connect on LinkedIn
+          <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
+        </ButtonPillOutlineLarge>
+      </NuxtLink>
+    </Header>
 
     <!-- Contact form section -->
     <div class="w-full lg:grid lg:grid-cols-5 lg:gap-8">
@@ -93,5 +103,6 @@
 </template>
 
 <script setup lang="ts">
+import { ArrowUpRightIcon } from "@heroicons/vue/16/solid";
 import { SparklesIcon } from "@heroicons/vue/24/outline";
 </script>
