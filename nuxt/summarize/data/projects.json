@@ -157,10 +157,7 @@
     ],
     "short_description": "A minimalist website showcasing Pulqra's vision, product, and collaborations worldwide",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"],
-    "media": {
-      "external": "https://www.pulqra.com"
-    }
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"]
   },
   {
     "title": "RRATFR Manager",
