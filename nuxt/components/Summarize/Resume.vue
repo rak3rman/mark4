@@ -51,7 +51,7 @@
       />
 
       <!-- Portfolio links -->
-      <div class="mt-2 text-xs font-light italic">
+      <!-- <div class="mt-2 text-xs font-light italic">
         See all 20+ projects at
         <a class="font-medium" href="https://radison.io#projects"
           >radison.io#projects</a
@@ -59,7 +59,7 @@
         <a class="font-medium" href="https://radison.io/publications"
           >radison.io/publications</a
         >
-      </div>
+      </div> -->
     </SummarizePage>
   </div>
 </template>

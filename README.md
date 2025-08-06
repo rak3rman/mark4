@@ -1,6 +1,6 @@
 # Mark 4
 
-The 4th iteration of Radison Akerman's personal website, built on next-gen Nuxt v3 and Tailwinds
+The 4th iteration of Radison Akerman's personal website, built on next-gen Nuxt v3 and Tailwind
 
 [![Nuxt Production](https://github.com/rak3rman/mark4/actions/workflows/production_deploy.yml/badge.svg)](https://github.com/rak3rman/mark4/actions/workflows/production_deploy.yml)
 

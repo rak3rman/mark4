@@ -184,12 +184,12 @@
 
                     <!-- Project title and badges -->
                     <div
-                      class="flex items-center text-xl font-medium leading-6 tracking-tight text-primary"
+                      class="flex items-center text-xl font-medium leading-6 tracking-normal text-primary"
                     >
                       {{ project.title }}
                       <div class="ml-1.5 inline-flex" v-if="project.tag">
                         <span
-                          class="inline-flex h-[20px] items-center rounded-full border border-secondary px-[7px] text-[0.7rem] font-medium text-secondary"
+                          class="inline-flex h-[20px] items-center rounded-lg border border-secondary px-[7px] text-[0.7rem] font-medium text-secondary"
                         >
                           {{ project.tag }}
                         </span>
@@ -202,7 +202,7 @@
                         "
                       >
                         <span
-                          class="inline-flex h-[20px] items-center rounded-full border border-accent-focus px-[7px] text-[0.7rem] font-medium text-accent-focus"
+                          class="inline-flex h-[20px] items-center rounded-lg border border-accent-focus px-[7px] text-[0.7rem] font-medium text-accent-focus"
                         >
                           Archived
                         </span>

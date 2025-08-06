@@ -12,16 +12,19 @@
     "discipline": "professional",
     "bullets": [
       {
-        "text": "Directed software strategy company-wide and ensured seamless execution across product, infra, and data systems"
+        "text": "Founding engineer at YC-backed Vista Power, directed software strategy across product, infrastructure, and data systems"
       },
       {
-        "text": "Owned Multimeter, an energy data aggregator that durably parsed and stored usage and billing records from PDFs, CSVs using AI"
+        "text": "Built Multimeter, a utility data aggregation and enrichment platform that generates solar + storage proposals in minutes"
       },
       {
-        "text": "Architected Quoder, a sales tool capable of generating near instant quotes for commercial battery energy storage + solar systems"
+        "text": "Delivered 95%+ accurate bill-processing pipeline using AI + OCR with logical redundancy checks, removed key proposal bottleneck"
       },
       {
-        "text": "Developed a seamless internal data plane using Hasura DDN, Temporal, Timescale DB, Docker, and Cloudflare Zero Trust"
+        "text": "Developed a Next.js UI for project management, entity linking, workflow kickoff, and visualization of synthetic energy usage data"
+      },
+      {
+        "text": "Architected a unified data plane with Hasura DDN, Temporal, Timescale DB, Docker, GCP, and Cloudflare Zero Trust"
       }
     ],
     "media": {
@@ -102,7 +105,7 @@
         "text": "Integrated a software version verification Python library concurrently into a Rust operations platform, reducing deploy time by 40%"
       },
       {
-        "text": "Built functioning UI mockups in Lit, CSS as part of Starship software deploys rework, participated in design conversations and CDRs"
+        "text": "Built functioning UI mockups in Lit as part of Starship software deploys rework, participated in design conversations and CDRs"
       }
     ],
     "media": {
@@ -124,10 +127,10 @@
     "discipline": "professional",
     "bullets": [
       {
-        "text": "Completely rebuilt campaign website from the ground up using Nuxt, Tailwinds; visited by 1,000’s of Wisconsinites daily"
+        "text": "Completely rebuilt campaign website from the ground up using Nuxt, Tailwind; visited by 1,000s of Wisconsinites daily"
       },
       {
-        "text": "Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN, Informr"
+        "text": "Secured sensitive campaign data and digital infrastructure against cyber attacks using Cloudflare, NGP VAN"
       },
       {
         "text": "Worked with a team of web developers and content creators to rapidly push media; took photographs in the field"
@@ -183,7 +186,7 @@
         "text": "Maintained and redesigned a custom space-and-physical-access management system using Laravel, Vue, SQL"
       },
       {
-        "text": "Created new documentation and issue reporting standards with Atlassian Jira, Bitbucket; increasing readability by 3-fold"
+        "text": "Created new documentation and issue reporting standards in Atlassian Jira, Bitbucket; increasing readability and triage speed by 3-fold"
       },
       {
         "text": "Presented projects to university admin and trained faculty/staff on application usage regularly via MS Teams"
@@ -208,13 +211,13 @@
     "discipline": "professional",
     "bullets": [
       {
-        "text": "Lead front-end web developer on an enterprise-grade, on-prem security unification solution (MTOP) built using Node.js, MongoDB"
+        "text": "Frontend lead on an enterprise-grade, on-prem security unification solution (MTOP) built using Node.js, Handlebars, MongoDB"
       },
       {
-        "text": "Configured mission-critical SLA networks and infrastructure in the field; physically installed switches, IP cameras, access control"
+        "text": "Configured mission-critical SLA networks and IT infrastructure in the field; physically installed switches, IP cameras, access control"
       },
       {
-        "text": "Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100’s of deployed edge policing units across Rockford, IL"
+        "text": "Coordinated IoT devices R&D (Particle, Raspberry Pi, Cradlepoint) for use in 100's of deployed edge policing units across Rockford, IL"
       }
     ],
     "on_resume": true
@@ -236,7 +239,7 @@
         "text": "Co-built and operationally led Pulqra, a mission-capitalist creative marketing collective based in Rockford, Madison, and Chicago"
       },
       {
-        "text": "Reimagined businesses and artists by rapidly designing 5+ commercial websites and social portfolios from scratch using Nuxt, Tailwinds"
+        "text": "Reimagined businesses and artists by rapidly designing 5+ commercial websites and social portfolios from scratch using Nuxt, Tailwind"
       },
       {
         "text": "Rendered services to 80+ clients worldwide — from full-on creative design to photography to copywriting"
@@ -286,10 +289,7 @@
         "text": "Volunteered as a permanent event captain for all Life Time athletic events hosted in Chicago"
       },
       {
-        "text": "Helped organize and lead around 750 volunteers who aided nearly 8,000 athletes per event"
-      },
-      {
-        "text": "Assisted in event operations at scale — deployed and tore down aid stations, start, finish lines"
+        "text": "Helped organize and lead 750+ volunteers who aided 8,000+ athletes per event; together we setup aid stations, start/finish lines"
       }
     ],
     "media": {

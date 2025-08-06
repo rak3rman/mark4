@@ -40,31 +40,21 @@
 
         <!-- Fade/blur effect at bottom (mobile only) -->
         <div
-          class="pointer-events-none absolute bottom-0 left-0 right-0 z-10 h-[8rem] peer-checked:hidden md:hidden"
+          class="pointer-events-none absolute bottom-0 left-0 right-0 z-10 h-[8rem] peer-checked:hidden md:hidden -m-3"
         >
           <!-- Gradient fade -->
           <div
-            class="h-full w-full bg-gradient-to-b from-transparent via-base-100/80 to-base-100"
+            class="h-full w-full bg-gradient-to-b from-transparent via-base-100/95 to-base-100"
           ></div>
 
-          <!-- Gradual blur with mask -->
-          <div
-            class="absolute left-0 top-0 h-full w-full backdrop-blur-[2px]"
-            style="
-              mask-image: linear-gradient(
-                to bottom,
-                transparent 0%,
-                oklch(var(--b1)) 50%,
-                oklch(var(--b1)) 100%
-              );
-              -webkit-mask-image: linear-gradient(
-                to bottom,
-                transparent 0%,
-                oklch(var(--b1)) 50%,
-                oklch(var(--b1)) 100%
-              );
-            "
-          ></div>
+          <!-- Gradual blur (terrible workaround, I know)-->
+          <div class="absolute left-0 bottom-0 h-[4rem] w-full backdrop-blur-[0.1px]"></div>
+          <div class="absolute left-0 bottom-0 h-[3.75rem] w-full backdrop-blur-[0.2px]"></div>
+          <div class="absolute left-0 bottom-0 h-[3.5rem] w-full backdrop-blur-[0.3px]"></div>
+          <div class="absolute left-0 bottom-0 h-[3rem] w-full backdrop-blur-[0.4px]"></div>
+          <div class="absolute left-0 bottom-0 h-[2.75rem] w-full backdrop-blur-[0.5px]"></div>
+          <div class="absolute left-0 bottom-0 h-[2.5rem] w-full backdrop-blur-[0.6px]"></div>
+          <div class="absolute left-0 bottom-0 h-[2rem] w-full backdrop-blur-[0.7px]"></div>
         </div>
 
         <!-- Read more button (mobile only) -->

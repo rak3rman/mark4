@@ -67,7 +67,7 @@
         :presentation="obj"
       />
       <div class="mt-2 text-xs font-light italic">
-        See all presentation details at
+        See presentation details at
         <a class="font-medium" href="https://radison.io/publications"
           >radison.io/publications</a
         >
@@ -83,7 +83,7 @@
         show-subheader
       />
       <div class="mt-2 text-xs font-light italic">
-        See all project details at
+        See project details at
         <a class="font-medium" href="https://radison.io#projects"
           >radison.io#projects</a
         >

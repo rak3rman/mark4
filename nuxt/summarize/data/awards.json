@@ -1,5 +1,21 @@
 [
   {
+    "title": "Finalist, Technical Track",
+    "organization": "Caffeine Hackathon",
+    "location": "San Francisco, CA",
+    "dates": [
+      {
+        "start": "2025-07",
+        "end": "2025-07"
+      }
+    ],
+    "description": "Singlehandedly placed top 9 overall and top 5 on the technical track at the Caffeine hackathon, 80+ participants at large",
+    "media": {
+      "github": "https://github.com/radicalplatforms/gather",
+      "youtube": "https://youtu.be/BZdgUfQIyUY"
+    }
+  },
+  {
     "title": "Runner-up, Empowerment Track",
     "organization": "Sparkhacks Hackathon",
     "location": "Chicago, IL",
@@ -114,17 +130,5 @@
       }
     ],
     "description": "Awarded to students who receive scores of 3 or higher on 3 or more AP Exams"
-  },
-  {
-    "title": "IESA State Chess Champions",
-    "organization": "Illinois Elementary School Association",
-    "location": "Peoria, IL",
-    "dates": [
-      {
-        "start": "2016-05",
-        "end": "2016-05"
-      }
-    ],
-    "description": "A member of the 2016 state-winning chess team as board 6 of 8, 45+ teams at large"
   }
 ]

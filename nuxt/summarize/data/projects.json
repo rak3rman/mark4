@@ -1,5 +1,36 @@
 [
   {
+    "title": "Changelog",
+    "organization": "Personal Project",
+    "dates": [
+      {
+        "start": "2025-06"
+      }
+    ],
+    "short_description": "A simple changelog template. Currently used to share personal updates, improvements, and notes.",
+    "type": "website",
+    "tools": ["Next.js", "Lit", "MDX"],
+    "media": {
+      "external": "https://changelog.radison.io"
+    }
+  },
+  {
+    "title": "Shafa",
+    "organization": "Personal Project",
+    "dates": [
+      {
+        "start": "2023-04"
+      }
+    ],
+    "short_description": "A wardrobe logging, composition, and organization app",
+    "type": "application",
+    "tag": "Alpha",
+    "tools": ["Next.js", "Postgres", "Typescript", "Hono", "Tailwind"],
+    "media": {
+      "external": "https://shafa.app"
+    }
+  },
+  {
     "title": "m8",
     "organization": "Personal Project",
     "dates": [
@@ -10,7 +41,7 @@
     "short_description": "A media upload, organization, and display tool leveraging Cloudflare Workers",
     "type": "microservice",
     "tag": "Alpha",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwind"],
     "media": {
       "external": "https://media.rakerman.com"
     }
@@ -24,7 +55,7 @@
       }
     ],
     "short_description": "A beautiful, online alternative to the popular Exploding Kittens card game",
-    "long_description": "A beautiful, online alternative to the popular Exploding Kittens card game. Built on Node.js with nearly 1750+ games played by 600+ players, led development and a team of 5.",
+    "long_description": "A beautiful, online alternative to the popular Exploding Kittens card game. Built on Node.js with 1,750+ games played by 600+ players, led development and a team of 5.",
     "type": "application",
     "tools": [
       "Node.js",
@@ -32,7 +63,7 @@
       "Mocha",
       "Handlebars",
       "Vue",
-      "Tailwinds",
+      "Tailwind",
       "Auth0",
       "Stripe"
     ],
@@ -64,7 +95,7 @@
     "short_description": "A foundational website supporting Steven Olikara's run for the U.S. Senate in Wisconsin",
     "long_description": "A foundational website supporting Steven Olikara's 2022 run for the U.S. Senate in Wisconsin. Completely rebuilt from the ground up with unified colors, textures, and mobile optimizations.",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"],
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwind"],
     "media": {
       "desktop_screenshot_id": "7ec8d3a0-11a6-4c6f-70bd-538647806a00",
       "external": "https://www.stevenolikara.com"
@@ -79,11 +110,11 @@
         "start": "2022-12"
       }
     ],
-    "short_description": "A centralized user management backbone for all RAkerman Foundation services",
-    "long_description": "A centralized user management backbone for all RAkerman Foundation services. Instead of manipulating user data on each RF service, Author serves as a \"one-stop-shop\" for users and RF services.",
+    "short_description": "A centralized user management backbone",
+    "long_description": "A centralized user management backbone. Author provides a consistent user experience among all of Radison's web services.",
     "type": "microservice",
     "tag": "Alpha",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwind"],
     "bullets": [
       {
         "text": "A centralized user management backbone leveraging edge cloud compute, built using Cloudflare Workers, Nuxt, Auth0"
@@ -109,7 +140,7 @@
       }
     ],
     "short_description": "A web form submission intermediary leveraging edge cloud compute",
-    "long_description": "(In Private Beta) A no-nonsense web form endpoint that enables web developers to handle form submissions faster. Leverages edge compute to offer high request volume and low cost.",
+    "long_description": "A no-nonsense web form endpoint that enables web developers to handle form submissions faster. Leverages edge compute to offer high request volume and low cost.",
     "type": "microservice",
     "tag": "Beta",
     "tools": [
@@ -117,7 +148,7 @@
       "Cloudflare Workers/KV/R2",
       "Auth0",
       "Typescript",
-      "Tailwinds",
+      "Tailwind",
       "Mailgun"
     ],
     "bullets": [
@@ -145,19 +176,20 @@
     ],
     "short_description": "A razor-sharp business portfolio website for a nationwide leader in Neuroscience",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"]
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwind"]
   },
   {
     "title": "Pulqra Website",
     "organization": "Pulqra",
     "dates": [
       {
-        "start": "2022-05"
+        "start": "2022-05",
+        "end": "2024-04"
       }
     ],
     "short_description": "A minimalist website showcasing Pulqra's vision, product, and collaborations worldwide",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"]
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwind"]
   },
   {
     "title": "RRATFR Manager",
@@ -186,9 +218,9 @@
       }
     ],
     "short_description": "A global fallback web server and status monitor designed to be deployed at scale",
-    "long_description": "A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all \"subscribers\" via RAkerman Notify. Pretty cool right?",
+    "long_description": "A fallback web server and status monitor for all RAkerman-related services. RAkerman Status is built of top of a couple state-of-the-art technologies (Nuxt 3, Cloudflare Workers) that allow it to be deployed on a global scale. And oh yeah, whenever a service comes offline it sends an email alert to all technical subscribers. Pretty cool right?",
     "type": "microservice",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwind"],
     "media": {
       "desktop_screenshot_id": "77d26ff0-fe47-4365-44e8-be30483d8000",
       "external": "https://status.rakerman.com",
@@ -242,9 +274,9 @@
       }
     ],
     "short_description": "A npm package that integrates Shibboleth's SAML SSO with Node.js Express web apps",
-    "long_description": "A Nodejs-Express-Passport authentication strategy that works with the University of Illinois Chicago's Shibboleth single-sign on service. Extends the passport-saml npm module, but sets all the default options so that it works with the UIC Shibboleth Identity Provider (IdP). Built out an entire sample project using Vite, Vue 3, and Tailwinds along with a \"Shibalike\" emulator for local testing. Wrote extensive documentation and recorded a walkthrough video for others to understand how to use passport-uicshib.",
+    "long_description": "A Nodejs-Express-Passport authentication strategy that works with the University of Illinois Chicago's Shibboleth single-sign on service. Extends the passport-saml npm module, but sets all the default options so that it works with the UIC Shibboleth Identity Provider (IdP). Built out an entire sample project using Vite, Vue 3, and Tailwind along with a \"Shibalike\" emulator for local testing. Wrote extensive documentation and recorded a walkthrough video for others to understand how to use passport-uicshib.",
     "type": "package",
-    "tools": ["Node.js", "Express", "SAML", "Vite", "Tailwinds"],
+    "tools": ["Node.js", "Express", "SAML", "Vite", "Tailwind"],
     "media": {
       "github": "https://github.com/rak3rman/passport-uicshib"
     }
@@ -261,7 +293,7 @@
     "short_description": "A simple url shortener that can be deployed in a pinch on Cloudflare Workers + KV",
     "long_description": "A simple url shortener that can be deployed over multiple domains simultaneously. RAkerman Linker leverages the power of Nuxt 3 and Cloudflare Workers KV to handle a unified list of custom redirects on a global scale. Specify a shortened url along with a target url in the Cloudflare Workers KV interface, and this service will handle the rest.",
     "type": "microservice",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwinds"],
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Typescript", "Tailwind"],
     "media": {
       "external": "https://link.rakerman.com",
       "github": "https://github.com/rak3rman/rakerman-linker"
@@ -343,10 +375,10 @@
     ],
     "short_description": "A fourth attempt at Radison Akerman's personal website. Notes of programming, cleanliness, and unification",
     "type": "website",
-    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwinds"],
+    "tools": ["Nuxt", "Cloudflare Workers/KV", "Tailwind"],
     "bullets": [
       {
-        "text": "Radison Akerman's 4th personal portfolio website, built as a lightweight frontend using Nuxt, Cloudflare Workers, Tailwinds"
+        "text": "Radison Akerman's 4th personal portfolio website, built as a lightweight frontend using Nuxt, Cloudflare Workers, Tailwind"
       },
       {
         "text": "Hosts a Resume/CV export tool that converts JSON-ified experience data to styled HTML/CSS to PDF using Puppeteer, Github Actions"

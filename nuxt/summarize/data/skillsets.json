@@ -9,10 +9,7 @@
       "C++",
       "Rust",
       "Java",
-      "F#",
-      "Go",
       "SQL",
-      "GraphQL",
       "Bash",
       "HTML",
       "CSS"
@@ -30,16 +27,15 @@
       "Node.js",
       "Express",
       "Flask",
-      "SQLAlchemy",
       "Postgres",
       "MongoDB",
       "Vue",
       "React",
-      ".NET"
+      "Next.js"
     ]
   },
   {
-    "set": "Interests",
+    "set": "Specialties",
     "skills": [
       "Leadership",
       "UI/UX",
