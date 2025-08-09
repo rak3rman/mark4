@@ -86,7 +86,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { ChevronRightIcon } from "@heroicons/vue/16/solid";
+import { ChevronRightIcon } from "@heroicons/vue/20/solid";
 
 // Component props with validation
 const props = defineProps({

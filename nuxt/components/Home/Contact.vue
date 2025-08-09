@@ -103,6 +103,6 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowUpRightIcon } from "@heroicons/vue/16/solid";
-import { SparklesIcon } from "@heroicons/vue/24/outline";
+import { SparklesIcon } from "@heroicons/vue/16/solid";
+import { ArrowUpRightIcon } from "@heroicons/vue/20/solid";
 </script>

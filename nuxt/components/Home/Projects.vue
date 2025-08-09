@@ -24,11 +24,11 @@
         description="Every project serves as a foundational learning experience, yielding pixel-perfect applications that solve real problems."
       >
         <NuxtLink
-          to="https://changelog.radison.io"
+          to="https://log.radison.io"
           class="mt-4 inline-flex items-center"
         >
           <ButtonPillOutlineLarge>
-            Changelog
+            Monolog
             <ArrowUpRightIcon class="-mr-1 mb-1.5 ml-0.5 h-3.5 w-3.5" />
           </ButtonPillOutlineLarge>
         </NuxtLink>
@@ -49,26 +49,18 @@
 
         <!-- View toggle controls -->
         <div class="mt-5 flex space-x-3 pr-2">
-          <a
-            class="tooltip tooltip-bottom tooltip-secondary"
-            data-tip="View as grid"
-          >
+          <button @click="grid = true">
             <Squares2X2Icon
               class="h-6 w-6 transition duration-300 ease-in-out hover:text-secondary"
               :class="{ 'text-secondary': grid }"
-              @click="grid = true"
             />
-          </a>
-          <a
-            class="tooltip tooltip-bottom tooltip-secondary"
-            data-tip="View as table"
-          >
+          </button>
+          <button @click="grid = false">
             <Bars4Icon
               class="h-6 w-6 transition duration-300 ease-in-out hover:text-secondary"
               :class="{ 'text-secondary': !grid }"
-              @click="grid = false"
             />
-          </a>
+          </button>
         </div>
       </div>
 
@@ -83,8 +75,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { Squares2X2Icon, Bars4Icon } from "@heroicons/vue/20/solid";
-import { ArrowUpRightIcon } from "@heroicons/vue/16/solid";
+import { Squares2X2Icon, Bars4Icon, ArrowUpRightIcon } from "@heroicons/vue/20/solid";
 import { z } from "zod";
 import { Project } from "~/summarize/models/Project";
 

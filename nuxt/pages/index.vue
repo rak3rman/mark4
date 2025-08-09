@@ -34,9 +34,9 @@ const LazyHomeContact = defineAsyncComponent(
 <template>
   <div>
     <HomeHero
-      buttonText="Explore Changelog: What I'm Building"
-      buttonTextShort="Changelog: What I'm Building"
-      buttonUrl="https://changelog.radison.io"
+      buttonText="Explore Monolog: An ongoing personal ledger"
+      buttonTextShort="Monolog: A personal ledger"
+      buttonUrl="https://log.radison.io"
     >
       I lead and build exceptional software experiences. Currently, I'm
       responsible for all software initiatives at

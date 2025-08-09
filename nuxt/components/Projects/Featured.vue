@@ -55,7 +55,7 @@
 
             <!-- Project description -->
             <div
-              class="mb-3 rounded-lg bg-transparent p-4 shadow-xl backdrop-blur-[1.5px] backdrop-brightness-[0.4] md:bg-base-200"
+              class="mb-4 rounded-lg bg-transparent p-4 shadow-xl backdrop-blur-[1.5px] backdrop-brightness-[0.4] md:bg-base-200"
             >
               <h6 class="text-md text-accent">
                 {{ project.long_description }}
@@ -64,7 +64,7 @@
 
             <!-- Technology stack -->
             <div
-              class="mb-1 flex flex-wrap font-mono text-xs font-light text-accent"
+              class="mb-3 flex flex-wrap font-mono text-xs font-light text-accent"
               :class="index % 2 === 0 ? 'flex-row-reverse' : ''"
             >
               <h6
@@ -79,7 +79,7 @@
 
             <!-- External links -->
             <div
-              class="mx-3 mt-1 flex"
+              class="mx-3"
               :class="index % 2 === 0 ? 'float-right' : 'float-left'"
             >
               <ProjectsExtIcons :project="project" />

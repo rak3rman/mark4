@@ -7,24 +7,14 @@
   @props {Project} project - Object containing project details and media links
 -->
 <template>
-  <div class="flex pb-1.5">
+  <div class="flex gap-3 items-center">
     <!-- YouTube link -->
     <NuxtLink
       v-if="project?.media?.youtube"
-      class="-mb-1 -mt-[1px] transition duration-300 ease-in-out hover:text-secondary"
+      class="transition duration-300 ease-in-out hover:text-secondary"
       :to="project.media.youtube"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 576 512"
-        fill="currentColor"
-        class="-mb-2 mr-2.5 h-7 w-7"
-      >
-        <title>YouTube</title>
-        <path
-          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-        />
-      </svg>
+      <VideoCameraIcon class="h-5 w-5" />
     </NuxtLink>
 
     <!-- GitHub link -->
@@ -36,13 +26,13 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         role="img"
-        viewBox="0 0 24 24"
+        viewBox="0 0 26 22"
         fill="none"
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="-mb-2 mr-2.5 mt-1 h-5 w-5"
+        class="h-5 w-5"
       >
         <title>GitHub</title>
         <path
@@ -57,22 +47,7 @@
       class="transition duration-300 ease-in-out hover:text-secondary"
       :to="project.media.external"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="-mb-2 h-6 w-6"
-      >
-        <title>External Link</title>
-        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-        <polyline points="15 3 21 3 21 9" />
-        <line x1="10" y1="14" x2="21" y2="3" />
-      </svg>
+      <LinkIcon class="h-5 w-5" />  
     </NuxtLink>
   </div>
 </template>
@@ -80,6 +55,7 @@
 <script setup lang="ts">
 import { z } from "zod";
 import { Project } from "~/summarize/models/Project";
+import { LinkIcon, VideoCameraIcon } from "@heroicons/vue/24/outline";
 
 // Types
 type ProjectType = z.infer<typeof Project>;

@@ -70,43 +70,15 @@
               </td>
 
               <!-- Project title with type icon -->
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-primary">
-                {{ project.title }}
-                <RectangleGroupIcon
-                  class="-mt-[3px] inline h-4 w-4 text-secondary"
-                  aria-hidden="true"
-                  v-if="project.type === 'website'"
-                />
-                <ComputerDesktopIcon
-                  class="-mt-[3px] inline h-4 w-4 text-secondary"
-                  aria-hidden="true"
-                  v-else-if="project.type === 'application'"
-                />
-                <PuzzlePieceIcon
-                  class="-mt-[3px] inline h-4 w-4 text-secondary"
-                  aria-hidden="true"
-                  v-else-if="project.type === 'microservice'"
-                />
-                <TagIcon
-                  class="-mt-[3px] inline h-4 w-4 text-secondary"
-                  aria-hidden="true"
-                  v-else-if="project.type === 'package'"
-                />
-                <CpuChipIcon
-                  class="-mt-[3px] inline h-4 w-4 text-secondary"
-                  aria-hidden="true"
-                  v-else-if="project.type === 'electronics'"
-                />
-                <WrenchIcon
-                  class="-mt-[3px] inline h-4 w-4 text-secondary"
-                  aria-hidden="true"
-                  v-else-if="project.type === 'utility'"
-                />
-                <FolderIcon
-                  class="-mt-[3px] inline h-4 w-4 text-secondary"
-                  aria-hidden="true"
-                  v-else
-                />
+              <td class="px-3 py-4 text-sm text-primary">
+                <div class="flex items-center gap-1.5">
+                  <span class="whitespace-nowrap">{{ project.title }}</span>
+                  <component 
+                    :is="projectTypeIcons[project.type] || FolderIcon"
+                    class="h-4 w-4 text-secondary"
+                    aria-hidden="true"
+                  />
+                </div>
                 <!-- Mobile organization display -->
                 <span class="table-cell font-light text-accent md:hidden">
                   {{ project.organization }}
@@ -135,9 +107,7 @@
               <td
                 class="hidden whitespace-nowrap px-3 py-4 text-sm text-accent md:table-cell"
               >
-                <div class="flex items-center">
-                  <ProjectsExtIcons :project="project" />
-                </div>
+                <ProjectsExtIcons :project="project" />
               </td>
             </tr>
           </tbody>
@@ -156,7 +126,7 @@ import {
   PuzzlePieceIcon,
   WrenchIcon,
   TagIcon,
-} from "@heroicons/vue/24/outline";
+} from "@heroicons/vue/16/solid";
 import { z } from "zod";
 import { sortEventDates } from "~/utils/sortEventDates";
 import { formatEventDates } from "~/utils/formatEventDates";
@@ -165,8 +135,18 @@ import ProjectsJSON from "~/summarize/data/projects.json";
 
 type Project = z.infer<typeof Project>;
 
+// Project type to icon mapping
+const projectTypeIcons: Record<string, typeof FolderIcon> = {
+  website: RectangleGroupIcon,
+  application: ComputerDesktopIcon,
+  microservice: PuzzlePieceIcon,
+  package: TagIcon,
+  electronics: CpuChipIcon,
+  utility: WrenchIcon,
+};
+
 // Parse and sort projects
-const ProjectsParsed: Project[] = ProjectsJSON.map((obj: any) =>
+const ProjectsParsed: Project[] = ProjectsJSON.map((obj: unknown) =>
   Project.readonly().parse(obj),
 ).sort(sortEventDates);
 

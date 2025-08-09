@@ -11,7 +11,7 @@
     "type": "website",
     "tools": ["Next.js", "Lit", "MDX"],
     "media": {
-      "external": "https://changelog.radison.io"
+      "external": "https://log.radison.io"
     }
   },
   {

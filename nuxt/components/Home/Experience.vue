@@ -75,7 +75,7 @@
 
             <!-- Click instruction text -->
             <div class="flex justify-center pt-6 text-xs text-neutral">
-              <CursorArrowRaysIcon class="h-4 pr-0.5" />
+              <CursorArrowRippleIcon class="h-4 pr-0.5" />
               <i>Click to view a slick, light-mode version of this resume!</i>
             </div>
           </a>
@@ -101,16 +101,10 @@
               <div class="relative justify-start py-8 md:py-[1.3em]">
                 <!-- Tab icon -->
                 <div
-                  class="bg-base-100-focus mb-4 block w-9 rounded-lg transition duration-300 ease-in-out sm:mb-0"
+                  class="mb-4 block w-9 rounded-lg transition duration-300 ease-in-out sm:mb-0"
                 >
                   <div class="flex sm:absolute sm:left-0 sm:mt-1">
-                    <svg
-                      aria-hidden="true"
-                      class="h-9 w-9 rounded-lg bg-base-200 p-[7.5px] transition duration-300 ease-in-out"
-                      fill="#fff"
-                      :viewBox="tab.viewbox"
-                      v-html="tab.icon"
-                    ></svg>
+                    <component :is="tab.icon" class="h-9 w-9 rounded-lg bg-base-300 p-[7.5px] transition duration-300 ease-in-out" />
                   </div>
                 </div>
 
@@ -172,8 +166,14 @@
 </template>
 
 <script setup lang="ts">
-import { CursorArrowRaysIcon } from "@heroicons/vue/20/solid";
-import { ArrowUpRightIcon } from "@heroicons/vue/16/solid";
+import { ArrowUpRightIcon, CursorArrowRippleIcon } from "@heroicons/vue/20/solid";
+import { 
+  UserGroupIcon, 
+  ArrowsRightLeftIcon, 
+  CursorArrowRaysIcon,
+  CpuChipIcon,
+  Square3Stack3DIcon
+} from "@heroicons/vue/24/solid";
 
 // Professional discipline tabs configuration
 const expTabs = [
@@ -181,36 +181,31 @@ const expTabs = [
     id: "product-leadership",
     name: "Technical Leadership",
     desc: "Proven ability to lead software initiatives from concept to launch with strategic, technical, and product-driven clarity.",
-    icon: '<path d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.49 15.326a.78.78 0 0 1-.358-.442 3 3 0 0 1 4.308-3.516 6.484 6.484 0 0 0-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 0 1-2.07-.655ZM16.44 15.98a4.97 4.97 0 0 0 2.07-.654.78.78 0 0 0 .357-.442 3 3 0 0 0-4.308-3.517 6.484 6.484 0 0 1 1.907 3.96 2.32 2.32 0 0 1-.026.654ZM18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5.304 16.19a.844.844 0 0 1-.277-.71 5 5 0 0 1 9.947 0 .843.843 0 0 1-.277.71A6.975 6.975 0 0 1 10 18a6.974 6.974 0 0 1-4.696-1.81Z" />',
-    viewbox: "0 0 20 20",
+    icon: UserGroupIcon,
   },
   {
     id: "web-interfaces",
     name: "User Interfaces & Experiences",
     desc: 'I eat pain points for breakfast. Obsessive about design details, user flow, and "wow, they thought of everything" moments.',
-    icon: '<path d="M10 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 1ZM5.05 3.05a.75.75 0 0 1 1.06 0l1.062 1.06A.75.75 0 1 1 6.11 5.173L5.05 4.11a.75.75 0 0 1 0-1.06ZM14.95 3.05a.75.75 0 0 1 0 1.06l-1.06 1.062a.75.75 0 0 1-1.062-1.061l1.061-1.06a.75.75 0 0 1 1.06 0ZM3 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 3 8ZM14 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 14 8ZM7.172 10.828a.75.75 0 0 1 0 1.061L6.11 12.95a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0ZM10.766 7.51a.75.75 0 0 0-1.37.365l-.492 6.861a.75.75 0 0 0 1.204.65l1.043-.799.985 3.678a.75.75 0 0 0 1.45-.388l-.978-3.646 1.292.204a.75.75 0 0 0 .74-1.16l-3.874-5.764Z" />',
-    viewbox: "0 0 20 20",
+    icon: CursorArrowRaysIcon,
   },
   {
     id: "fullstack",
     name: "APIs & Data Systems",
     desc: "Experience building composable services and data ingestion pipelines that serve critical environments.",
-    icon: '<path fill-rule="evenodd" d="M13.2 2.24a.75.75 0 0 0 .04 1.06l2.1 1.95H6.75a.75.75 0 0 0 0 1.5h8.59l-2.1 1.95a.75.75 0 1 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 0 0-1.06.04Zm-6.4 8a.75.75 0 0 0-1.06-.04l-3.5 3.25a.75.75 0 0 0 0 1.1l3.5 3.25a.75.75 0 1 0 1.02-1.1l-2.1-1.95h8.59a.75.75 0 0 0 0-1.5H4.66l2.1-1.95a.75.75 0 0 0 .04-1.06Z" clip-rule="evenodd" />',
-    viewbox: "0 0 20 20",
+    icon: ArrowsRightLeftIcon,
   },
   {
     id: "network",
     name: "Platform Infrastructure",
     desc: "Expertise in designing scalable, cloud-native architecture that is automated, modular, and built for developer velocity.",
-    icon: '<path d="m3.196 12.87-.825.483a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .758 0l7.25-4.25a.75.75 0 0 0 0-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 0 1-2.276 0L3.196 12.87Z" /><path d="m3.196 8.87-.825.483a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .758 0l7.25-4.25a.75.75 0 0 0 0-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 0 1-2.276 0L3.196 8.87Z" /><path d="M10.38 1.103a.75.75 0 0 0-.76 0l-7.25 4.25a.75.75 0 0 0 0 1.294l7.25 4.25a.75.75 0 0 0 .76 0l7.25-4.25a.75.75 0 0 0 0-1.294l-7.25-4.25Z" />',
-    viewbox: "0 0 20 20",
+    icon: Square3Stack3DIcon,
   },
   {
     id: "ce",
     name: "Computer Engineering",
     desc: "I've designed and fabricated complete products. Self-taught in microcontrollers, CAD, 3D printing, and PCB design.",
-    icon: '<path d="M14 6H6v8h8V6Z" /><path fill-rule="evenodd" d="M9.25 3V1.75a.75.75 0 0 1 1.5 0V3h1.5V1.75a.75.75 0 0 1 1.5 0V3h.5A2.75 2.75 0 0 1 17 5.75v.5h1.25a.75.75 0 0 1 0 1.5H17v1.5h1.25a.75.75 0 0 1 0 1.5H17v1.5h1.25a.75.75 0 0 1 0 1.5H17v.5A2.75 2.75 0 0 1 14.25 17h-.5v1.25a.75.75 0 0 1-1.5 0V17h-1.5v1.25a.75.75 0 0 1-1.5 0V17h-1.5v1.25a.75.75 0 0 1-1.5 0V17h-.5A2.75 2.75 0 0 1 3 14.25v-.5H1.75a.75.75 0 0 1 0-1.5H3v-1.5H1.75a.75.75 0 0 1 0-1.5H3v-1.5H1.75a.75.75 0 0 1 0-1.5H3v-.5A2.75 2.75 0 0 1 5.75 3h.5V1.75a.75.75 0 0 1 1.5 0V3h1.5ZM4.5 5.75c0-.69.56-1.25 1.25-1.25h8.5c.69 0 1.25.56 1.25 1.25v8.5c0 .69-.56 1.25-1.25 1.25h-8.5c-.69 0-1.25-.56-1.25-1.25v-8.5Z" clip-rule="evenodd" />',
-    viewbox: "0 0 20 20",
+    icon: CpuChipIcon,
   },
 ];
 </script>

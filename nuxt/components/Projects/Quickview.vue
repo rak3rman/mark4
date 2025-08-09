@@ -210,7 +210,7 @@
                     </div>
 
                     <!-- Organization -->
-                    <div class="mt-1.5 flex items-center text-sm text-accent">
+                    <div class="mt-2 flex items-center text-sm text-accent">
                       <AtSymbolIcon
                         class="float-left mr-1.5 h-4 w-4 text-secondary"
                       />
@@ -226,7 +226,7 @@
                     </div>
 
                     <!-- Description -->
-                    <div class="mt-1.5 text-sm text-accent">
+                    <div class="mt-2 text-sm text-accent">
                       {{
                         project.long_description
                           ? project.long_description
@@ -235,7 +235,7 @@
                     </div>
 
                     <!-- Tools used -->
-                    <div class="mt-3 flex flex-grow items-end">
+                    <div class="mt-4 flex flex-grow items-end">
                       <div
                         class="flex flex-wrap font-mono text-xs font-light text-accent"
                       >
@@ -246,7 +246,7 @@
                     </div>
 
                     <!-- External links -->
-                    <div class="mt-3 flex">
+                    <div class="mt-4">
                       <ProjectsExtIcons :project="project" />
                     </div>
                   </div>
@@ -267,7 +267,10 @@ import {
   TransitionChild,
   TransitionRoot,
 } from "@headlessui/vue";
-import { XMarkIcon } from "@heroicons/vue/24/outline";
+import {
+  CalendarDaysIcon,
+  AtSymbolIcon,
+} from "@heroicons/vue/16/solid";
 import {
   ComputerDesktopIcon,
   CpuChipIcon,
@@ -275,8 +278,7 @@ import {
   RectangleGroupIcon,
   TagIcon,
   WrenchIcon,
-  CalendarDaysIcon,
-  AtSymbolIcon,
+  XMarkIcon
 } from "@heroicons/vue/24/outline";
 import { z } from "zod";
 import { formatEventDates } from "~/utils/formatEventDates";
