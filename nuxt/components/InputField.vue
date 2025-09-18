@@ -154,7 +154,29 @@ const inputClass = computed(() => {
   if (props.inputClass) return props.inputClass;
 
   const baseClasses =
-    "block w-full rounded-xl border-neutral bg-base-100 px-3 py-2.5 text-primary shadow-md focus:border-secondary focus:ring-secondary";
+    "block w-full rounded-xl border-[1.5px] border-neutral bg-base-100 px-3 py-2.5 text-accent transition-all duration-200 ease-out hover:border-primary hover:text-primary focus:border-accent focus:text-primary";
   return baseClasses;
 });
 </script>
+
+<style scoped>
+input,
+textarea {
+  transition:
+    transform 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 200ms ease-out,
+    color 200ms ease-out;
+}
+
+textarea {
+  min-height: 80px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+</style>
