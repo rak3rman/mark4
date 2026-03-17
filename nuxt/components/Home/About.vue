@@ -21,6 +21,10 @@
     />
 
     <div>
+      <img src ="https://imagedelivery.net/5zM6Rdl2uV8Hmr9WxRh20g/8a478f01-20e5-4fa9-a1dd-71cd47602100/lg" class="w-full h-full object-cover border-[1.5px] border-base-200 rounded-xl mb-10 sm:hidden" />
+    </div>
+
+    <div>
       <!-- Content Text Slot -->
       <div class="relative mx-auto text-accent">
         <!-- Hidden checkbox to control expand/collapse -->
