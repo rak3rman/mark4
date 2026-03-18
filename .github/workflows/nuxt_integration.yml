@@ -5,7 +5,7 @@ on: pull_request
 env:
   CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
   DEPLOY_TAG: mark4-nuxt-stage-${{ github.event.number }}
-  DEPLOY_ROUTE: https://mark4-nuxt-stage-${{ github.event.number }}.radicalplatforms.workers.dev
+  DEPLOY_ROUTE: https://mark4-nuxt-stage-${{ github.event.number }}.radison.workers.dev
 
 jobs:
   cf_deploy_nuxt_prod:
