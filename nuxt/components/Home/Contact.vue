@@ -1,7 +1,7 @@
 <template>
   <HomeWrapper id="contact">
     <Header
-      num="04."
+      :num="String(CONTACT_SECTION_NUM)"
       topic="Contact"
       title="Let's connect."
       punchline="Drop a line, not a packet."
@@ -97,6 +97,7 @@
 </template>
 
 <script setup lang="ts">
+import { CONTACT_SECTION_NUM } from "~/constants/sections";
 import { SparklesIcon } from "@heroicons/vue/16/solid";
 import { ArrowUpRightIcon } from "@heroicons/vue/20/solid";
 </script>

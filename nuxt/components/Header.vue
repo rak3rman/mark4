@@ -3,23 +3,16 @@
     <div class="relative w-full">
       <!-- Top border accent line -->
       <div class="items-top pointer-events-none absolute inset-0 flex">
-        <div class="w-full border-t border-accent" />
+        <div class="w-full border-t border-neutral" />
       </div>
 
       <!-- Topic section -->
       <div class="relative flex justify-start pt-5">
-        <h6
-          class="text-md flex items-center text-left leading-tight text-accent"
-        >
-          <span class="pr-1 font-mono text-[15px] text-neutral">
-            {{ props.num }}
-          </span>
-          {{ props.topic }}
-        </h6>
+        <DrawingLabel prefix="SECTION" :num="`${props.num}.0`" :label="props.topic" />
       </div>
 
       <!-- Main content grid -->
-      <div class="grid w-full grid-cols-12 gap-8 py-[5em]">
+      <div class="grid w-full grid-cols-12 gap-8 py-[5.5em]">
         <div
           class="col-span-12 flex flex-col justify-center sm:col-span-9 lg:col-span-7"
         >

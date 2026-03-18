@@ -2,7 +2,7 @@
   <HomeWrapper id="experience">
     <!-- Section header with resume/CV links -->
     <Header
-      num="02."
+      :num="String(EXPERIENCE_SECTION_NUM)"
       topic="Experience"
       title="Redefining <i>full-stack</i>."
       punchline="Technical depth, and breadth."
@@ -62,10 +62,14 @@
               </div>
             </div>
 
-            <!-- Click instruction text -->
-            <div class="flex justify-center pt-6 text-xs text-neutral">
-              <CursorArrowRippleIcon class="h-4 pr-0.5" />
-              <i>Click to view a slick, light-mode version of this resume!</i>
+            <!-- Caption label -->
+            <div class="flex justify-between px-5 pt-7">
+              <DrawingLabel
+                prefix="FIG"
+                :num="`${EXPERIENCE_SECTION_NUM}.1`"
+                label="RESUME"
+              />
+              <DrawingLabel label="READY TO EXPORT" />
             </div>
           </a>
         </div>
@@ -93,7 +97,10 @@
                   class="mb-4 block w-9 rounded-lg transition duration-300 ease-in-out sm:mb-0"
                 >
                   <div class="flex sm:absolute sm:left-0 sm:mt-1">
-                    <component :is="tab.icon" class="h-9 w-9 rounded-lg bg-base-300 p-[7.5px] transition duration-300 ease-in-out" />
+                    <component
+                      :is="tab.icon"
+                      class="h-9 w-9 rounded-lg bg-base-300 p-[7.5px] transition duration-300 ease-in-out"
+                    />
                   </div>
                 </div>
 
@@ -124,8 +131,8 @@
     >
       <span class="text-primary">On a quest for quality.</span>
       I thrive in fast-moving, early-stage teams where the pressure's real and
-      the product matters. I bring contagious energy, craft under constraint,
-      and the kind of care that shows up in the edge cases.
+      the product matters. Expect contagious energy, craft under constraint, and
+      the kind of care that shows up in the edge cases.
     </div>
 
     <!-- Company logos grid -->
@@ -155,13 +162,14 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowUpRightIcon, CursorArrowRippleIcon } from "@heroicons/vue/20/solid";
-import { 
-  UserGroupIcon, 
-  ArrowsRightLeftIcon, 
+import { EXPERIENCE_SECTION_NUM } from "~/constants/sections";
+import { ArrowUpRightIcon } from "@heroicons/vue/20/solid";
+import {
+  UserGroupIcon,
+  ArrowsRightLeftIcon,
   CursorArrowRaysIcon,
   CpuChipIcon,
-  Square3Stack3DIcon
+  Square3Stack3DIcon,
 } from "@heroicons/vue/24/solid";
 
 const expTabs = [
