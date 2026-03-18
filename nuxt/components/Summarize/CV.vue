@@ -1,15 +1,3 @@
-<!--
-  Summarize CV Component
-  Multi-page comprehensive CV layout
-  
-  Features:
-  - Multi-page CV format (3 pages)
-  - Complete professional history
-  - Separate sections for professional and teaching experience
-  - Awards, skills, presentations, and projects
-  - Links to full portfolio and publications
-  - Academic CV format with comprehensive details
--->
 <template>
   <div>
     <!-- Page 1: Contact, Education, Professional Experience -->

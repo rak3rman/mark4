@@ -1,9 +1,3 @@
-<!--
-  Projects Featured Component
-  
-  Displays featured projects in an alternating layout with images and descriptions.
-  Features responsive design with different layouts for mobile and desktop.
--->
 <template>
   <div class="mb-6 mt-4 space-y-24 lg:mb-10 lg:mt-8">
     <div
@@ -96,7 +90,6 @@ import { z } from "zod";
 import { Project } from "~/summarize/models/Project";
 import ProjectsJSON from "~/summarize/data/projects.json";
 
-// Types
 type ProjectType = z.infer<typeof Project>;
 
 /**

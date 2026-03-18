@@ -1,14 +1,3 @@
-<!--
-  Home Experience Component
-  
-  Professional experience showcase with interactive discipline tabs and company logos.
-  
-  Features:
-  - Floating resume preview with click-to-view functionality
-  - Professional disciplines list with animated tabs
-  - Company logo cloud display
-  - Technical specialization categorization
--->
 <template>
   <HomeWrapper id="experience">
     <!-- Section header with resume/CV links -->
@@ -175,7 +164,6 @@ import {
   Square3Stack3DIcon
 } from "@heroicons/vue/24/solid";
 
-// Professional discipline tabs configuration
 const expTabs = [
   {
     id: "product-leadership",

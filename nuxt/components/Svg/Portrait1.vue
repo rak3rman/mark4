@@ -1,14 +1,3 @@
-<!--
-  SVG Portrait1 Component
-  Custom portrait illustration artwork
-  
-  Features:
-  - Scalable vector graphics
-  - Responsive design with 100% width/height
-  - Theme-aware color scheme (#586cb2)
-  - Preserves aspect ratio and fill rules
-  - Complex layered illustration with multiple paths and transforms
--->
 <template>
   <svg
     width="100%"

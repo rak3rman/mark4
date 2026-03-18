@@ -1,12 +1,3 @@
-<!--
-  Docs Bookmark Component
-  
-  A bookmark-style link component for documentation with icons and descriptions.
-  Features presentation or link icons and responsive layout with hover effects.
-  
-  @props {String} link - The URL to link to
-  @props {Boolean} presentation - Whether to show a presentation icon instead of link icon
--->
 <template>
   <NuxtLink
     :to="props.link"

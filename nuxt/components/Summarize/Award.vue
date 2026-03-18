@@ -1,11 +1,3 @@
-<!--
-  Summarize Award Component
-  
-  Displays award information including title, organization, dates, location, and description.
-  Used in resume/CV for achievements and recognition.
-  
-  @props {Award} award - Object containing award details
--->
 <template>
   <div>
     <!-- Award title and organization -->

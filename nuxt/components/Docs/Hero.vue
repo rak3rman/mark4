@@ -1,9 +1,3 @@
-<!--
-  Docs Hero Component
-  
-  A hero section specifically designed for documentation pages.
-  Features animated text content with staggered delays and slot-based content.
--->
 <template>
   <BaseHero :arrow-delay="400">
     <div class="w-full">

@@ -1,12 +1,3 @@
-<!--
-  Summarize Project Component
-  
-  Displays project information including title, external link, dates, and bullets.
-  Used in resume/CV for project portfolio with optional subheader display.
-  
-  @props {Project} project - Object containing project details
-  @props {Boolean} showSubheader - Whether to show the subheader with dates
--->
 <template>
   <div>
     <!-- Project title with optional external link -->

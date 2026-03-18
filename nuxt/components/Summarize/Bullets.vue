@@ -1,11 +1,3 @@
-<!--
-  Summarize Bullets Component
-  
-  Renders a list of bullet points for summarize/resume content.
-  Each bullet is formatted with a bullet point character and proper spacing.
-  
-  @props {Bullets} bullets - Array of bullet point objects with text content
--->
 <template>
   <ul class="list-none p-0">
     <li v-for="bullet in bullets" :key="bullet.text" class="p-0">

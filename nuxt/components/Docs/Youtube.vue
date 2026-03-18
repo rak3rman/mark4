@@ -1,9 +1,3 @@
-<!--
-  Docs Youtube Component
-  
-  A responsive YouTube video embed wrapper for documentation content.
-  Provides consistent aspect ratio and responsive layout for embedded videos.
--->
 <template>
   <div class="flex justify-center">
     <div class="max-w-4xl flex-1">

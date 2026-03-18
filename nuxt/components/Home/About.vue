@@ -1,14 +1,3 @@
-<!--
-  Home About Component
-  About section with expandable content and fade/blur effect on mobile
-  
-  Features:
-  - Expandable content on mobile with smooth animation
-  - Visual fade/blur gradient for collapsed state
-  - "Read more" toggle functionality
-  - Automatic reset on component mount
-  - Responsive behavior (expansion only on mobile)
--->
 <template>
   <HomeWrapper id="about">
     <!-- Section header -->

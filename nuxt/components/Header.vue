@@ -1,15 +1,3 @@
-<!--
-  Header Component
-  
-  A reusable header component with slot content.
-  Features a numbered topic, title, punchline, and description layout.
-  
-  @props {String} num - The number/prefix for the topic
-  @props {String} topic - The main topic/category text  
-  @props {String} title - The main title (supports HTML)
-  @props {String} punchline - Highlighted punchline text
-  @props {String} description - Supporting description text
--->
 <template>
   <div class="pt-[5em]">
     <div class="relative w-full">

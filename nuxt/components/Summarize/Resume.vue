@@ -1,15 +1,3 @@
-<!--
-  Summarize Resume Component
-  Single-page resume layout with filtered content
-  
-  Features:
-  - Single-page resume format
-  - Filtered content (only items marked for resume)
-  - Contact information header
-  - Experience, education, skills, and projects sections
-  - Links to full portfolio and publications
-  - Professional summary format
--->
 <template>
   <div>
     <SummarizePage>
@@ -87,7 +75,6 @@ type Project = z.infer<typeof Project>;
 type SkillSet = z.infer<typeof SkillSet>;
 type Config = z.infer<typeof Config>;
 
-// Parse and sort data
 const EducationParsed: Education[] = EducationJSON.map((obj: any) =>
   Education.readonly().parse(obj),
 ).sort(sortEventDates);

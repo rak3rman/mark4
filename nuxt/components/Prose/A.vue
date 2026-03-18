@@ -1,12 +1,3 @@
-<!--
-  Prose A Component
-  
-  A styled anchor/link component for prose content.
-  Features consistent underline styling with secondary color accent.
-  
-  @props {String} href - The URL or route to link to
-  @props {String} target - Optional target attribute for link behavior
--->
 <template>
   <NuxtLink
     class="underline decoration-secondary decoration-[1.5px] underline-offset-2"

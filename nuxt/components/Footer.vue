@@ -1,9 +1,3 @@
-<!--
-  Footer Component
-  
-  Application footer with social navigation links, copyright info, and legal/status links.
-  Displays company information with responsive layout and hover effects.
--->
 <template>
   <footer class="pt-14">
     <div

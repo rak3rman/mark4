@@ -1,18 +1,3 @@
-<!--
-  Projects List Component
-  Table view of all projects with sortable columns and type icons
-  
-  Events:
-  - quick: Emitted when a project row is clicked with project data
-  
-  Features:
-  - Responsive table design
-  - Project type icons
-  - Formatted date ranges
-  - Technology stack display
-  - External links (desktop only)
-  - Mobile-friendly organization display
--->
 <template>
   <div class="flex flex-col">
     <div class="-mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">

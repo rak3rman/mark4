@@ -1,13 +1,3 @@
-<!--
-  Navbar Component
-  
-  A responsive navigation bar with intersection observer functionality.
-  Features dynamic styling based on scroll position and active sections.
-  
-  @props {Array} nav_elements - Array of navigation items with name, href, and optional is_cta
-  @props {Boolean} has_hero - Whether the page has a hero section to observe
-  @props {Boolean} nav_listen - Whether to listen for section changes for navigation highlighting
--->
 <template>
   <div
     class="fixed left-0 right-0 top-0 z-50 border-b-[1px] transition duration-300 ease-in"
@@ -51,14 +41,14 @@
               class="fade-in-nav my-1 -mr-1 flex items-center md:hidden"
               :style="{ 'transition-delay': 100 + 'ms' }"
             >
-              <NuxtLink
-                v-for="section in ctaElements"
-                :key="section.name"
-                :to="section.href"
-                :target="section.target || '_self'"
-              >
-                <ButtonPillSolidSmall>{{ section.name }}</ButtonPillSolidSmall>
-              </NuxtLink>
+              <template v-for="section in ctaElements" :key="section.href">
+                <NuxtLink
+                  :to="section.href"
+                  :target="section.target || '_self'"
+                >
+                  <ButtonPillSolidSmall>{{ section.name }}</ButtonPillSolidSmall>
+                </NuxtLink>
+              </template>
             </div>
           </div>
         </div>
@@ -94,14 +84,14 @@
                 (navLoaded ? 50 : navElements.length * 100 + 300) + 'ms',
             }"
           >
-            <NuxtLink
-              v-for="section in ctaElements"
-              :key="section.name"
-              :to="section.href"
-              :target="section.target || '_self'"
-            >
-              <ButtonPillSolidSmall>{{ section.name }}</ButtonPillSolidSmall>
-            </NuxtLink>
+            <template v-for="section in ctaElements" :key="section.href">
+              <NuxtLink
+                :to="section.href"
+                :target="section.target || '_self'"
+              >
+                <ButtonPillSolidSmall>{{ section.name }}</ButtonPillSolidSmall>
+              </NuxtLink>
+            </template>
           </span>
         </div>
       </nav>
@@ -112,7 +102,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 
-// Types
 interface NavElement {
   name: string;
   href: string;
@@ -120,7 +109,6 @@ interface NavElement {
   is_cta?: boolean;
 }
 
-// Component props with validation
 const props = defineProps({
   nav_elements: {
     type: Array as PropType<NavElement[]>,
@@ -139,20 +127,17 @@ const props = defineProps({
   },
 });
 
-// Reactive state
 const activeSection = ref<string>("hero");
 const navLoaded = ref<boolean>(false);
 
-// Computed properties
 const navElements = computed(() => props.nav_elements.filter((e) => !e.is_cta));
 const ctaElements = computed(() => props.nav_elements.filter((e) => e.is_cta));
 
-// Intersection observers
 let heroObserver: IntersectionObserver | null = null;
 let navObserver: IntersectionObserver | null = null;
 
 /**
- * Scrolls to the top of the page smoothly
+ * Scroll the page back to the top.
  */
 const scrollToTop = (): void => {
   window.scrollTo({
@@ -162,7 +147,7 @@ const scrollToTop = (): void => {
 };
 
 /**
- * Sets up intersection observer for hero section
+ * Observe the hero section to switch navbar styling.
  */
 const setupHeroObserver = (): void => {
   if (!props.has_hero) return;
@@ -190,7 +175,7 @@ const setupHeroObserver = (): void => {
 };
 
 /**
- * Sets up intersection observer for navigation sections
+ * Observe content sections to keep the active nav item in sync.
  */
 const setupNavObserver = (): void => {
   if (!props.nav_listen) return;
@@ -229,7 +214,6 @@ const setupNavLoadTiming = (): void => {
   );
 };
 
-// Lifecycle hooks
 onMounted(() => {
   setupHeroObserver();
   setupNavObserver();
