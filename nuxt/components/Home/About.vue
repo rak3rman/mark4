@@ -2,7 +2,7 @@
   <HomeWrapper id="about">
     <!-- Section header -->
     <Header
-      num="01."
+      :num="String(ABOUT_SECTION_NUM)"
       topic="About"
       title="Relentlessly radical."
       punchline="High impact, high quality."
@@ -60,6 +60,7 @@
 </template>
 
 <script setup lang="ts">
+import { ABOUT_SECTION_NUM } from "~/constants/sections";
 import { ref, onMounted } from "vue";
 import { ChevronDownIcon } from "@heroicons/vue/16/solid";
 

@@ -11,7 +11,7 @@
 
       <!-- Featured projects section -->
       <Header
-        num="03."
+        :num="String(PROJECTS_SECTION_NUM)"
         topic="Projects"
         title="Projects make perfect."
         punchline="From prototype to powerhouse."
@@ -27,6 +27,7 @@
           </ButtonPillOutlineLarge>
         </NuxtLink>
       </Header>
+      
       <ProjectsFeatured />
 
       <!-- Noteworthy projects header with view toggle -->
@@ -36,7 +37,7 @@
             class="max-w-5xl text-left text-2xl leading-tight text-neutral md:text-3xl"
           >
             <span class="text-primary">Trial by wireframe.</span>
-            These projects weren't assignments — they were love letters to real
+            These projects weren't assignments. They were love letters to real
             painpoints I've discovered in my own life.
           </div>
         </div>
@@ -68,6 +69,7 @@
 </template>
 
 <script setup lang="ts">
+import { PROJECTS_SECTION_NUM } from "~/constants/sections";
 import { ref } from "vue";
 import { Squares2X2Icon, Bars4Icon, ArrowUpRightIcon } from "@heroicons/vue/20/solid";
 import { z } from "zod";
