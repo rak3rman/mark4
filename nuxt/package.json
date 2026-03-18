@@ -25,7 +25,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/luxon": "^3.3.5",
     "@unhead/vue": "^2.0.10",
-    "@vite-pwa/nuxt": "^0.6.0",
+    "@vite-pwa/nuxt": "^1.0.4",
     "daisyui": "^2.52.0",
     "git-describe": "^4.1.1",
     "nuxt": "^3.17.5",
