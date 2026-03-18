@@ -56,7 +56,9 @@
                 class="rounded-lg bg-base-200 p-6 shadow-2xl ring-1 ring-accent/10"
               >
                 <!-- Scaled resume component -->
-                <SummarizeResumePreview class="origin-top-left scale-[49%]" />
+                <SummarizeResume
+                  class="h-[30.3rem] origin-top-left scale-[41%]"
+                />
               </div>
             </div>
 
