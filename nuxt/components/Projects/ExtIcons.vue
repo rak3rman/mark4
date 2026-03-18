@@ -1,11 +1,3 @@
-<!--
-  Projects ExtIcons Component
-  
-  Displays external link icons for projects (YouTube, GitHub, External Link).
-  Features hover effects and conditional rendering based on available media links.
-  
-  @props {Project} project - Object containing project details and media links
--->
 <template>
   <div class="flex gap-3 items-center">
     <!-- YouTube link -->
@@ -57,10 +49,8 @@ import { z } from "zod";
 import { Project } from "~/summarize/models/Project";
 import { LinkIcon, VideoCameraIcon } from "@heroicons/vue/24/outline";
 
-// Types
 type ProjectType = z.infer<typeof Project>;
 
-// Component props with validation
 defineProps({
   project: {
     type: Object as PropType<ProjectType>,

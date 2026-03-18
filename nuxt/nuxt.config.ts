@@ -1,3 +1,5 @@
+import { shouldPrecachePwaAsset } from "./utils/pwaPrecache";
+
 const { gitDescribeSync } = require("git-describe");
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
@@ -12,10 +14,22 @@ export default defineNuxtConfig({
     [
       "@vite-pwa/nuxt",
       {
-        registerType: "autoUpdate",
+        registerType: "prompt",
         workbox: {
+          clientsClaim: true,
           globPatterns: ["**/*.{js,css,html,png,svg,ico,woff2,pdf}"],
           maximumFileSizeToCacheInBytes: 10000000, // 10MB to include large fonts, PDFs
+          navigateFallback: "/",
+          manifestTransforms: [
+            async (manifestEntries) => {
+              return {
+                manifest: manifestEntries.filter((entry) =>
+                  shouldPrecachePwaAsset(entry.url),
+                ),
+                warnings: [],
+              };
+            },
+          ],
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/imagedelivery\.net\/.*/i,
@@ -28,7 +42,6 @@ export default defineNuxtConfig({
                 },
               },
             },
-            // Runtime cache for .woff fonts (OG image generation)
             {
               urlPattern: /\.woff$/,
               handler: "CacheFirst",
@@ -182,7 +195,6 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/tailwind.css"],
 
-  // Build optimizations
   vite: {
     build: {
       cssCodeSplit: true,
@@ -190,7 +202,6 @@ export default defineNuxtConfig({
       rollupOptions: {
         output: {
           manualChunks: {
-            // Split vendor libraries
             heroicons: ["@heroicons/vue"],
             headlessui: ["@headlessui/vue"],
           },
@@ -200,28 +211,24 @@ export default defineNuxtConfig({
     ssr: {
       noExternal: ["@heroicons/vue"],
     },
-    // Additional performance optimizations
     optimizeDeps: {
       include: ["@heroicons/vue", "@headlessui/vue"],
     },
-    // CSS optimization - remove charset declarations to reduce bundle size
     define: {
       __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
     },
   },
 
-  // Performance and SEO optimizations
   experimental: {
+    checkOutdatedBuildInterval: false,
     payloadExtraction: false, // Reduces bundle size
     treeshakeClientOnly: true, // Remove client-only code from server bundle
   },
 
-  // Additional performance features
   features: {
     inlineStyles: false, // Prevents inline styles bloat
   },
 
-  // Router optimization for better code splitting
   router: {
     options: {
       hashMode: false,
@@ -234,9 +241,6 @@ export default defineNuxtConfig({
     name: "Radison Akerman",
   },
 
-  // Image optimization - Flexible variants and responsive optimization
-  // This configuration provides multiple presets for different image types
-  // with automatic format selection (AVIF, WebP, JPEG fallback) and responsive sizing
   image: {
     quality: 80,
     format: ["avif", "webp", "jpg", "png"],
@@ -249,12 +253,9 @@ export default defineNuxtConfig({
       xxl: 1536,
     },
     densities: [1, 2],
-    // Optimize loading strategy
     loading: "lazy",
     placeholder: "blur",
-    // Enable responsive images by default
     presets: {
-      // Avatar/Logo images - small, high quality
       avatar: {
         modifiers: {
           format: "webp",
@@ -263,7 +264,6 @@ export default defineNuxtConfig({
           quality: 90,
         },
       },
-      // Logo images with flexible sizes
       logo: {
         modifiers: {
           format: "webp",
@@ -271,7 +271,6 @@ export default defineNuxtConfig({
           fit: "contain",
         },
       },
-      // Hero/Featured images - responsive with multiple sizes
       hero: {
         modifiers: {
           format: "webp",
@@ -279,7 +278,6 @@ export default defineNuxtConfig({
           fit: "cover",
         },
       },
-      // Project screenshots - optimized for display
       project: {
         modifiers: {
           format: "webp",
@@ -287,7 +285,6 @@ export default defineNuxtConfig({
           fit: "cover",
         },
       },
-      // Thumbnail images
       thumbnail: {
         modifiers: {
           format: "webp",
@@ -297,7 +294,6 @@ export default defineNuxtConfig({
           fit: "cover",
         },
       },
-      // Experience logos - small but crisp
       experienceLogo: {
         modifiers: {
           format: "webp",
@@ -307,9 +303,7 @@ export default defineNuxtConfig({
         },
       },
     },
-    // Global responsive settings
     sizes: "xs:100vw sm:50vw md:400px lg:500px xl:600px",
-    // Image provider settings for external CDN
     providers: {
       imagedelivery: {
         name: "imagedelivery",
@@ -319,7 +313,6 @@ export default defineNuxtConfig({
         },
       },
     },
-    // Default provider
     provider: "ipx",
   },
 
@@ -354,7 +347,6 @@ export default defineNuxtConfig({
     },
   },
 
-  // Ensure SSR is enabled for better SEO and initial load
   ssr: true,
 
   vue: {

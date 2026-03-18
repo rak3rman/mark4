@@ -1,11 +1,3 @@
-<!--
-  BaseHero Component
-  
-  A foundational hero section with animated scroll indicator.
-  Features intersection observer functionality to control scroll arrow visibility.
-  
-  @props {Number} arrowDelay - Delay in milliseconds for the scroll arrow animation
--->
 <template>
   <div class="relative overflow-hidden" id="hero">
     <!-- Main hero content -->
@@ -33,7 +25,6 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { ChevronDoubleDownIcon } from "@heroicons/vue/24/solid";
 
-// Component props with validation
 const props = defineProps({
   arrowDelay: {
     type: Number,
@@ -42,10 +33,8 @@ const props = defineProps({
   },
 });
 
-// Reactive state
 const isMuted = ref<boolean>(false);
 
-// Intersection observer instance
 let observer: IntersectionObserver | null = null;
 
 /**
@@ -66,7 +55,6 @@ const setupIntersectionObserver = (): void => {
   observer.observe(heroElement);
 };
 
-// Lifecycle hooks
 onMounted(() => {
   setupIntersectionObserver();
 });

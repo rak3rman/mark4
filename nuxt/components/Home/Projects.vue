@@ -1,9 +1,3 @@
-<!--
-  Home Projects Component
-  
-  A projects showcase section with featured projects, grid/list toggle, and quickview modal.
-  Features dynamic view switching and project interaction handling.
--->
 <template>
   <div id="projects">
     <HomeWrapper :no-margin-bottom="grid">
@@ -79,10 +73,8 @@ import { Squares2X2Icon, Bars4Icon, ArrowUpRightIcon } from "@heroicons/vue/20/s
 import { z } from "zod";
 import { Project } from "~/summarize/models/Project";
 
-// Type definition for Project
 type Project = z.infer<typeof Project>;
 
-// Reactive state
 const grid = ref<boolean>(true);
 const quickProject = ref<Project | null>(null);
 const quickShow = ref<boolean>(false);

@@ -1,18 +1,3 @@
-<!--
-  Home Hero Component
-  Primary landing component with introduction, portrait, and call-to-action button
-  
-  Props:
-  - buttonText (string, optional): Text for the call-to-action button (desktop)
-  - buttonTextShort (string, optional): Short text for mobile call-to-action button
-  - buttonUrl (string, optional): URL for the call-to-action button
-  
-  Features:
-  - Responsive design with different layouts for mobile and desktop
-  - Animated fade-in sequence with staggered timings
-  - Portrait SVG integration
-  - MDC slot content support
--->
 <template>
   <BaseHero :arrow-delay="700">
     <!-- Main grid layout -->
@@ -88,7 +73,6 @@
 import { ref, onMounted } from "vue";
 import { ChevronRightIcon } from "@heroicons/vue/20/solid";
 
-// Component props with validation
 const props = defineProps({
   buttonText: {
     type: String,

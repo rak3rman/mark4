@@ -1,11 +1,3 @@
-<!--
-  Linker Component
-  
-  A styled link component with animated underline effect.
-  Features smooth hover transitions and consistent styling across the application.
-  
-  @props {String} href - The URL or route to link to
--->
 <template>
   <NuxtLink
     :to="props.href"

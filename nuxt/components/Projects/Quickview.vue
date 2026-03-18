@@ -1,22 +1,3 @@
-<!--
-  Projects Quickview Modal Component
-  Modal dialog for detailed project viewing with media display
-  
-  Props:
-  - show (boolean): Controls modal visibility
-  - project (Project, optional): Project data to display
-  
-  Events:
-  - clear: Emitted when modal should be closed
-  
-  Features:
-  - Responsive modal with fade transitions
-  - Spline 3D viewer integration
-  - Project type icons and status badges
-  - Media display (Spline or desktop screenshots)
-  - Animated background blur elements
-  - External link icons
--->
 <template>
   <TransitionRoot as="template" :show="show" v-if="project">
     <Dialog as="div" class="relative z-10" @close="emit('clear')">
@@ -297,7 +278,6 @@ const emit = defineEmits<{
   clear: [];
 }>();
 
-// Load Spline viewer script
 useHead({
   script: [
     {

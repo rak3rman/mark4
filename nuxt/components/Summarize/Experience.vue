@@ -1,11 +1,3 @@
-<!--
-  Summarize Experience Component
-  
-  Displays work experience information including title, organization, dates, location, and bullets.
-  Used in resume/CV for professional experience section.
-  
-  @props {Experience} experience - Object containing experience details
--->
 <template>
   <div>
     <!-- Job title and organization -->

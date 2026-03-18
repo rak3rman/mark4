@@ -1,6 +1,12 @@
 import { DateTime } from "luxon";
 
-export const defaultExperienceFilters = (exp: any) => {
+type ExperienceFilterInput = {
+  bullets: readonly unknown[];
+  start: string;
+  end: string;
+};
+
+export const defaultExperienceFilters = (exp: ExperienceFilterInput) => {
   // Has bullets
   if (exp.bullets.length === 0) {
     return false;

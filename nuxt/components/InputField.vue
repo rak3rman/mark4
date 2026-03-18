@@ -1,24 +1,3 @@
-<!--
-  InputField Component
-  
-  A flexible form input component supporting both input and textarea elements.
-  Features customizable styling, validation states, and proper accessibility.
-  
-  @props {String|Number} modelValue - The input value (v-model binding)
-  @props {String} label - Optional label text
-  @props {String} id - Input element ID for accessibility
-  @props {String} name - Input name attribute
-  @props {String} type - Input type (text, email, password, etc.)
-  @props {String} placeholder - Placeholder text
-  @props {Boolean} required - Whether the field is required
-  @props {String} autocomplete - Autocomplete attribute value
-  @props {Boolean} textarea - Whether to render as textarea
-  @props {Number} rows - Number of rows for textarea
-  @props {Boolean} disabled - Whether the input is disabled
-  @props {String} inputClass - Custom CSS classes for input element
-  @props {String} wrapperClass - Custom CSS classes for wrapper
-  @props {String} inputWrapperClass - Custom CSS classes for input wrapper
--->
 <template>
   <div :class="wrapperClass">
     <!-- Label -->

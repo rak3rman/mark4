@@ -19,9 +19,7 @@ module.exports = {
       sans: ["SF Pro Display"],
     },
   },
-  // Performance optimizations
   corePlugins: {
-    // Disable unused plugins to reduce bundle size
     preflight: true,
     container: false, // Not used
     accessibility: true,
@@ -33,9 +31,7 @@ module.exports = {
     mixBlendMode: false, // Not used
     backgroundBlendMode: false, // Not used
   },
-  // Optimize purging
   safelist: [
-    // Keep essential animation classes
     "fade-in-hero",
     "fade-in-nav",
   ],

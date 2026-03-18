@@ -1,11 +1,3 @@
-<!--
-  Summarize Presentation Component
-  
-  Displays presentation information including title, organization, dates, location, description, and bullets.
-  Used in resume/CV for conference presentations and speaking engagements.
-  
-  @props {Presentation} presentation - Object containing presentation details
--->
 <template>
   <div>
     <!-- Presentation title and organization -->

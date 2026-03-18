@@ -1,11 +1,3 @@
-<!--
-  FaviconLinks Component
-  
-  Generates optimized favicon links for different devices and sizes.
-  Uses Cloudflare Image Delivery for responsive favicon generation.
-  
-  @props {String} id - The image ID from Cloudflare Image Delivery for the favicon
--->
 <template>
   <!-- Optimized favicon with multiple sizes -->
   <Link
@@ -32,11 +24,9 @@
 <script setup lang="ts">
 import { buildImageUrl } from "~/utils/imageDelivery";
 
-// Types
 interface Props {
   id: string;
 }
 
-// Component props with validation
 defineProps<Props>();
 </script>

@@ -1,18 +1,3 @@
-<!--
-  Projects Grid Component
-  Grid layout for displaying non-featured projects as cards
-  
-  Events:
-  - quick: Emitted when a project card is clicked with project data
-  
-  Features:
-  - Responsive grid with horizontal scroll
-  - Snap scrolling behavior
-  - Project type icons and status badges
-  - Technology stack display
-  - External link icons
-  - Filters out featured projects
--->
 <template>
   <div>
     <!-- Projects grid -->

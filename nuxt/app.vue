@@ -1,5 +1,3 @@
-<!-- RF Nuxt Header, Rev. 04/17/23 -->
-
 <template>
   <Html
     class="h-full scroll-smooth bg-base-100 tracking-wide"
@@ -9,7 +7,7 @@
 
   <Meta charset="utf-8" />
 
-  <Link rel="preconnect" href="https://imagedelivery.net" crossorigin />
+  <Link rel="preconnect" href="https://imagedelivery.net" crossorigin="anonymous" />
   <Link rel="dns-prefetch" href="//imagedelivery.net" />
 
   <FaviconLinks id="cbeec7ce-7b51-4cc2-81bb-e72289777900" />
@@ -46,12 +44,3 @@
     </NuxtLayout>
   </div>
 </template>
-
-<script setup>
-// PWA update handler
-if (process.client) {
-  navigator.serviceWorker?.addEventListener("controllerchange", () => {
-    window.location.reload();
-  });
-}
-</script>

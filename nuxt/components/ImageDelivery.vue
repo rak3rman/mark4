@@ -1,19 +1,3 @@
-<!--
-  ImageDelivery Component
-  
-  A wrapper for NuxtImg that integrates with Cloudflare Image Delivery service.
-  Provides optimized image loading with presets and responsive sizing.
-  
-  @props {String} id - The unique image ID from Cloudflare Image Delivery
-  @props {String} alt - Alt text for accessibility
-  @props {String} variant - Image variant/size (default: 'sm')
-  @props {String} type - Image type for preset and sizing logic
-  @props {String} class - Custom CSS classes
-  @props {Number} width - Optional explicit width
-  @props {Number} height - Optional explicit height
-  @props {String} loading - Loading strategy ('lazy' or 'eager')
-  @props {String} customSizes - Custom responsive sizes string
--->
 <template>
   <NuxtImg
     :src="imageUrl"

@@ -1,9 +1,3 @@
-<!--
-  Home Contact Component
-  
-  A contact form section with form fields and submission handling.
-  Features a responsive grid layout and integration with Informr service.
--->
 <template>
   <HomeWrapper id="contact">
     <Header

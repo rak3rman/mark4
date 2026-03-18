@@ -1,11 +1,3 @@
-<!--
-  Summarize Education Component
-  
-  Displays education information including organization, dates, location, and description.
-  Used in resume/CV for academic background information.
-  
-  @props {Education} education - Object containing education details
--->
 <template>
   <div>
     <!-- Institution name -->

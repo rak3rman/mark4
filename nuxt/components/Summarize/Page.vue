@@ -1,12 +1,3 @@
-<!--
-  Summarize Page Component
-  
-  A page layout wrapper for resume/CV content with fixed dimensions and footer.
-  Provides consistent page sizing and includes page numbering and version info.
-  
-  @props {Number} page - Current page number
-  @props {Number} total - Total number of pages
--->
 <template>
   <div class="h-[73.68rem] w-[54rem]">
     <div class="flex h-full flex-col overflow-hidden">

@@ -1,12 +1,3 @@
-<!--
-  Home Wrapper Component
-  
-  A wrapper component for home page sections with configurable margins.
-  Provides consistent spacing and layout structure for home content areas.
-  
-  @props {Boolean} noMarginTop - Whether to remove top margin
-  @props {Boolean} noMarginBottom - Whether to remove bottom margin
--->
 <template>
   <ContentContainer :class="containerClass">
     <slot />
@@ -16,7 +7,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-// Component props with defaults
 const props = defineProps({
   noMarginTop: {
     type: Boolean,
@@ -28,9 +18,6 @@ const props = defineProps({
   },
 });
 
-/**
- * Computed CSS classes based on margin configuration
- */
 const containerClass = computed(() => [
   "container",
   "snap-none",

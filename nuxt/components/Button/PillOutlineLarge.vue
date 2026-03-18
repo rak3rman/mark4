@@ -1,11 +1,3 @@
-<!--
-  PillOutlineLarge Button Component
-  
-  A large pill-shaped button with outline styling and hover effects.
-  Features smooth transitions and active state scaling.
-  
-  @props {String} class - Optional custom CSS classes to override default styling
--->
 <template>
   <div
     class="flex items-center rounded-xl border-[1.5px] px-[20px] py-[7px] transition-all duration-200 ease-out active:scale-95"

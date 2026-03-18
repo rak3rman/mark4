@@ -1,11 +1,3 @@
-<!--
-  Summarize SkillSet Component
-  
-  Displays a skill set with title and comma-separated skills list.
-  Used in resume/CV for organizing technical skills by category.
-  
-  @props {SkillSet} skillset - Object containing set name and skills array
--->
 <template>
   <div>
     <SummarizeHeader class="-mb-0.5 flex flex-row items-center">
