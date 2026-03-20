@@ -2,40 +2,47 @@
   <div>
     <SummarizePage>
       <!-- Personal header -->
-      <SummarizeTitle>{{ ConfigParsed.name }}</SummarizeTitle>
+      <SummarizeTitle>{{ resumeConfig.name }}</SummarizeTitle>
       <SummarizeSubtitle>
-        {{ ConfigParsed.email + (ConfigParsed.email ? "&ensp;" : "") }}
-        {{ ConfigParsed.website + (ConfigParsed.website ? "&ensp;" : "") }}
-        {{ ConfigParsed.linkedin + (ConfigParsed.linkedin ? "&ensp;" : "") }}
+        {{ resumeConfig.email + (resumeConfig.email ? "&ensp;" : "") }}
+        {{ resumeConfig.website + (resumeConfig.website ? "&ensp;" : "") }}
+        {{ resumeConfig.linkedin + (resumeConfig.linkedin ? "&ensp;" : "") }}
       </SummarizeSubtitle>
 
       <!-- Experience section -->
       <SummarizeHeading>Experience</SummarizeHeading>
       <SummarizeExperience
-        v-for="obj in ExperiencesParsed.filter(
-          (e: Experience) => defaultExperienceFilters(e) && e.on_resume,
+        v-for="experience in resumeExperiences.filter(
+          (item) => defaultExperienceFilters(item) && item.on_resume,
         )"
-        :experience="obj"
+        :key="`${experience.organization}-${experience.title}`"
+        :experience="experience"
       />
 
       <!-- Education section -->
       <SummarizeHeading>Education</SummarizeHeading>
       <SummarizeEducation
-        v-for="obj in EducationParsed.filter((e) => e.on_resume)"
-        :education="obj"
+        v-for="education in resumeEducation.filter((item) => item.on_resume)"
+        :key="education.organization"
+        :education="education"
       />
 
       <!-- Skills section -->
       <SummarizeHeading>Skills</SummarizeHeading>
-      <SummarizeSkillSet v-for="obj in SkillSetsParsed" :skillset="obj" />
+      <SummarizeSkillSet
+        v-for="skillSet in resumeSkillSets"
+        :key="skillSet.set"
+        :skillset="skillSet"
+      />
 
       <!-- Projects section -->
       <SummarizeHeading>Projects</SummarizeHeading>
       <SummarizeProject
-        v-for="obj in ProjectsParsed.filter(
-          (e: Project) => e.on_resume && e.bullets && e.bullets.length > 0,
+        v-for="project in resumeProjects.filter(
+          (item) => item.on_resume && item.bullets && item.bullets.length > 0,
         )"
-        :project="obj"
+        :key="project.title"
+        :project="project"
       />
 
       <!-- Portfolio links -->
@@ -53,43 +60,14 @@
 </template>
 
 <script setup lang="ts">
-import { z } from "zod";
-import { sortEventDates } from "~/utils/sortEventDates";
 import { defaultExperienceFilters } from "~/utils/defaultExperienceFilters";
+import { loadResumeData } from "~/summarize/utils/resumeData";
 
-import { Education } from "~/summarize/models/Education";
-import { Experience } from "~/summarize/models/Experience";
-import { Project } from "~/summarize/models/Project";
-import { SkillSet } from "~/summarize/models/SkillSet";
-import { Config } from "~/summarize/models/Config";
-
-import EducationJSON from "~/summarize/data/education.json";
-import ExperiencesJSON from "~/summarize/data/experiences.json";
-import ProjectsJSON from "~/summarize/data/projects.json";
-import SkillSetsJSON from "~/summarize/data/skillsets.json";
-import ConfigJSON from "~/summarize/data/config.json";
-
-type Education = z.infer<typeof Education>;
-type Experience = z.infer<typeof Experience>;
-type Project = z.infer<typeof Project>;
-type SkillSet = z.infer<typeof SkillSet>;
-type Config = z.infer<typeof Config>;
-
-const EducationParsed: Education[] = EducationJSON.map((obj: any) =>
-  Education.readonly().parse(obj),
-).sort(sortEventDates);
-
-const ExperiencesParsed: Experience[] = ExperiencesJSON.map((obj: any) =>
-  Experience.readonly().parse(obj),
-).sort(sortEventDates);
-
-const ProjectsParsed: Project[] = ProjectsJSON.map((obj: any) =>
-  Project.readonly().parse(obj),
-);
-
-const SkillSetsParsed: SkillSet[] = SkillSetsJSON.map((obj: any) =>
-  SkillSet.readonly().parse(obj),
-);
-
-const ConfigParsed: Config = Config.readonly().parse(ConfigJSON);
+const {
+  config: resumeConfig,
+  education: resumeEducation,
+  experiences: resumeExperiences,
+  projects: resumeProjects,
+  skillSets: resumeSkillSets,
+} = loadResumeData();
 </script>

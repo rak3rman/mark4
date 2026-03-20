@@ -29,6 +29,7 @@ const LazyHomeProjects = defineAsyncComponent(
 const LazyHomeContact = defineAsyncComponent(
   () => import("../components/Home/Contact.vue"),
 );
+
 </script>
 
 <template>
@@ -48,6 +49,38 @@ const LazyHomeContact = defineAsyncComponent(
 
     <HomeAbout>
       <template #default>
+        <div class="mb-4 flex w-full flex-wrap items-start gap-4">
+          <ExpandableInsetImage
+            id="f0372a9a-4fc0-44f8-6fb7-f91d25d27e00"
+            alt="Portrait"
+            expand-label="Expand portrait"
+          >
+            <template #caption>
+              <DrawingLabel prefix="FIG" num="1.1" label="PORTRAIT" />
+            </template>
+          </ExpandableInsetImage>
+
+          <ExpandableInsetImage
+            id="b9349549-14de-4937-15f2-22dfbc29bc00"
+            alt="FIRST LEGO League"
+            expand-label="Expand FIRST LEGO League photo"
+          >
+            <template #caption>
+              <DrawingLabel prefix="FIG" num="1.2" label="FIRST LEGO LEAGUE" />
+            </template>
+          </ExpandableInsetImage>
+
+          <ExpandableInsetImage
+            id="cd909e04-a366-443e-0cf5-2afe34036400"
+            alt="SAE Formula E"
+            expand-label="Expand SAE Formula E photo"
+          >
+            <template #caption>
+              <DrawingLabel prefix="FIG" num="1.3" label="SAE FORMULA E" />
+            </template>
+          </ExpandableInsetImage>
+        </div>
+
         <ProseP>
           Hey there! I'm Radison, a software engineer obsessed with building and
           leading quality software products. My interest in digital technology
