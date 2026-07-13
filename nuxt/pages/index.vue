@@ -39,11 +39,12 @@ const LazyHomeContact = defineAsyncComponent(
       buttonUrl="https://log.radison.io"
     >
       I lead and build exceptional software experiences. Currently, I'm
-      responsible for all software initiatives at
-      <ProseA href="https://vistapower.com">Vista Power</ProseA>
-      (YC W24) and Section Leading Stanford's
+      working on high-impact manufacturing software at
+      <ProseA href="https://www.heliux.com">Heliux</ProseA> and Section Leading
+      Stanford's
       <ProseA href="https://codeinplace.stanford.edu">Code in Place</ProseA>.
-      Previously at <ProseA href="https://spacex.com">SpaceX</ProseA>.
+      Previously at <ProseA href="https://spacex.com">SpaceX</ProseA>,
+      <ProseA href="https://vistapower.com">Vista Power</ProseA> (YC W24).
     </HomeHero>
 
     <HomeAbout>
@@ -57,8 +58,8 @@ const LazyHomeContact = defineAsyncComponent(
         </ProseP>
 
         <ProseP>
-          I've worked across industries including commercial clean energy,
-          spacecraft manufacturing, tech consulting, university administration,
+          I've worked across industries including spacecraft manufacturing,
+          commercial clean energy, tech consulting, university administration,
           political campaigns, enterprise security systems, film + television
           production, and athletic special events. Through each experience, I've
           proven I can adapt quickly to new challenges, be industry agnostic,
@@ -66,13 +67,11 @@ const LazyHomeContact = defineAsyncComponent(
         </ProseP>
 
         <ProseP>
-          Nowadays, I lead all software engineering efforts at
-          <ProseA href="https://vistapower.com">Vista Power</ProseA>. We deliver
-          clean energy as a service for commercial, industrial, and municipal
-          facilities at low or no upfront cost, powered by safe, modular, and
-          cost-effective solar power and battery energy storage. We're moving
-          incredibly fast and dangerously talent-dense (entire leadership team
-          is ex-SpaceX).
+          Previously, I led all software engineering efforts at
+          <ProseA href="https://vistapower.com">Vista Power</ProseA>. We
+          delivered clean energy as a service for commercial, industrial, and
+          municipal facilities at low or no upfront cost, powered by safe,
+          modular, and cost-effective solar power and battery energy storage.
         </ProseP>
 
         <ProseP>
